@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, li {
     font-family: roboto;
-	color: white;
+	color: white;	
 }
 
 li {
@@ -80,7 +80,7 @@ a:visited {
     font-size: 18px;
     word-spacing: 30px;
     padding: 10px;
-    box-shadow: 0 2.5px 10px #000000;
+    box-shadow: 0 2.5px 10px #000000;	
 }
 
 #topnav a:hover {
@@ -191,14 +191,14 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(55%);
+    transform: translateY(55%);	
 }
 
 #press-start:hover {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
     text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
     background-color: rgba(176, 224, 230, 0.75);
-    border: 2.5px solid rgba(0, 0, 96, 0.35);
+    border: 2.5px solid rgba(0, 0, 96, 0.35);						
 }
 
 
@@ -476,7 +476,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 #cv-resume:hover {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
     text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
-    background-color: rgba(176, 224, 230, 0.75);
+    background-color: rgba(176, 224, 230, 0.75);					
 }
 
 

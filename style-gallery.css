@@ -1,0 +1,185 @@
+/***** MAKE BACKUPS YO *****/
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| ALL ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+/*change bg b/c deeper into site*/
+body {
+    background: #616266 url("gamebox.png") no-repeat fixed center;
+    background-size: cover;
+    margin: 5% 7.5%;
+}
+
+/*banner on top*/
+.header-img {
+}
+
+/*project name*/
+h1 {
+}
+
+/*what is it? short description/subtitle*/
+.subtitle {
+    font-size: 36px;
+}
+
+/*labels for sections - e.g. overview/TLDR, detailed process, lessons, next steps*/
+.story-section {
+    font-weight: 700;
+    font-family: titillium web;
+    font-size: 30px;
+    text-align: left;
+}
+
+.story-chapter {
+    font-weight: 600;
+    font-family: titillium web;
+    font-size: 24px;
+    text-align: left;
+}
+
+.story-subchapter {
+    font-weight: 600;
+    font-family: titillium web;
+    font-size: 18px;
+    text-align: left;
+}
+
+/*press button after you've reached the end to go back*/
+.return-button {
+    background-color: rgba(176, 224, 230, 0.5);
+    border: 2.5px solid rgba(0, 0, 96, 0.25);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    color: rgb(255, 255, 255);
+    /*position: fixed;
+        bottom: 0%;*/
+    z-index: 20;
+    text-align: center;
+    padding: 15px;
+    clear: both;
+    font-family: titillium web;				
+}
+
+.return-button:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
+    background-color: rgba(176, 224, 230, 0.75);
+}
+
+.links {
+    text-decoration: underline;
+}
+
+.pdf-links {
+    text-align: center;
+}
+
+/*|||||||||||||||||||| IMAGES ||||||||||||||||||||*/
+
+.project-pics {
+    /* max-width: 600px; */
+    max-width: 75%;
+    /*float: left;
+    margin: 0 0 10px 10px;*/
+    display: block;
+    margin: auto;
+}
+
+.inline-img {
+    display: inline;
+}
+
+.pdf-embed {
+    /* width: 85%; */
+    width: 75%;
+    display: block;
+    margin: auto;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    width: 75%;
+}
+
+.invision-iframe {
+    width: 100%;
+}
+
+/*|||||||||||||||||||| COLUMN (LAYOUT) ATTRIBUTES ||||||||||||||||||||*/
+
+/* for both columns - parent */
+.gallery-columns {
+    margin: 0% 5%;
+}
+
+/* for images */
+.gallery-left-column {
+    display: inline-block;
+    float: left;
+    width: 60%;
+}
+
+/* for text - height dependent on height of left column */
+.gallery-right-column {
+    display: inline-block;
+    width: 30%;
+    height: 1000px;
+    overflow: auto;
+    padding: 0% 2.5%;
+    background-color: rgba(54, 69, 79, .5);
+    border: 5px solid rgba(54, 69, 79, .75);
+    border-radius: 5px;
+}
+
+/* overview, process, links, etc. */
+.tab-bar {
+    text-align: center;
+    word-spacing: 20px;
+    margin: auto;
+    padding: 1%;
+}
+
+.section-tabs {
+    font-family: titillium web;
+    background-color: rgba(54, 69, 79, .5);
+    border: 5px solid rgba(54, 69, 79, .75);
+    border-radius: 5px;
+    width: 33.333%;
+}
+
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| INDIVIDUAL - GD ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+body.gd-bg {
+    background: #616266 url("gamebox-gd.png") no-repeat fixed center;
+    background-size: cover;
+}
+
+/*|||||||||||||||||||| PERILLO ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| BU-DONG ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| NCMNS ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| PANDORA ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| FOLDS ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| HARMONY ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| ARE3 ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| LIZARDS ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| RELIEF ||||||||||||||||||||*/
+
+/*|||||||||||||||||||| LIPS ||||||||||||||||||||*/
