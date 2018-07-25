@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+ 
+<!----- BACKUP THIS STUFF YO ----->
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Jasmine Lang</title>
+
+        <!-- FAVICON LINK - doesn't work for whatever reason -->
+        <!-- hahaha it works in all pages besides index.html -->
+        <link rel="icon" type="image/png" href="logo-favicon.png" sizes="16x16" />
+
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web" rel="stylesheet">
+
+        <!-- CSS LINKS -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <!-- JS LINKS -->
+        <!--  let's use CSS to create crossfade instead
+        <script type="text/javascript" src="slideshow.js"></script>
+        -->
+        <!-- ext link not working for some reason, but putting it directly in HTML does somehow... -->
+
+    </head>
+
+	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--|||||||||| TOPNAV ||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+
+    <body>
+    	<nav id="topnav">
+			<a href="./" id="logo"></a>
+			<a href="./">Home</a>
+			<a href="about.html">About</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="contact.html">Contact</a>
+    	</nav>
+
+    	<!--<div class="alert">
+    	    <h2 style="font-size: 24px">
+    	        Quick updates (as of June 2018)
+    	    </h2>
+			<p>
+			    I'll be studying abroad in Hong Kong this semester (Spring 2018), so it's best that you try to contact me via
+			    <a href="mailto:jlang2@ncsu.edu" class="links">email</a>. From there, we can arrange a time to call and chat
+			    that works for both of us.
+			    Please note that I may take longer to respond because of the time difference.
+                Sorry for the inconvenience!
+			</p>
+			<p>
+			    Coming soon: Project pages about the interactive media projects I have worked on in Hong Kong! Stay tuned!
+			</p>
+			<p>
+			    Coming soon: a new 2-column layout for Gallery pages with improved story navigation! Project images will be easier to see and backstories will require less scrolling to read. As this update is being implemented, please be mindful that certain pages may not render correctly at times. Thank you!
+			</p>
+    	</div>-->
+
+
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--|||||||||| MISSION? ||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+
+    	<!--
+    	<h1><a href="./">Jasmine Lang</a></h1>
+    	-->
+
+
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--|||||||||| START SCREEN ||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+
+ 		<div id="theater"> <!-- like theater mode in youtube -->
+			<a href="gallery.html">
+				<!--lets have my identity be the "game title"-->
+				<div id="slideshow"> <!-- black rectangle container (bg) -->
+					<h1 id="game-name">Jasmine Lang<h1>
+					<h2 id="press-start"> - Press Start - </h2>
+
+					<!--
+					<div class="fadeSlides fade">
+						<h2 id="press-start"> - Press Start - </h2>
+						<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Pho_in_Saigon.jpg">
+					</div>
+					<div class="fadeSlides fade">
+						<h2 id="press-start"> - Press Start - </h2>
+						<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/0/06/China_Palace%2C_ExCeL%2C_London_%282580367428%29.jpg">
+					</div>
+					<div class="fadeSlides fade">
+						<h2 id="press-start"> - Press Start - </h2>
+						<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Egg_custard_tarts.jpg/1920px-Egg_custard_tarts.jpg">
+					</div>
+					-->
+
+					<!-- I learned how to make this slideshow from a Stack Overflow post, if I recall correctly. -->
+					<!-- I haven't been able to find it, but I'll put the link here when I do. -->
+                        <figure class="slide-img fadeSlides fade" id="slide-1"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-2"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-3"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-4"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-5"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-6"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-7"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-8"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-9"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-10"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-11"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-12"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-13"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-14"></figure>
+                        <figure class="slide-img fadeSlides fade" id="slide-15"></figure>
+
+					<script type="text/javascript" src="slideshow.js"></script>
+				<!-- it works here!!! -->
+				</div>
+			</a>
+    	</div>
+
+    	<div class="larger-margin">
+            <h2>Hi there!</h2>
+            <p style="text-align:center; font-size: 24px">
+                This website is an ongoing effort to showcase my portfolio and adventures,
+                explore interaction design, and learn responsive web design, so check back frequently for updates!
+            </p>
+            <p style="text-align:center">(Website currently best viewed in the desktop versions of Chrome and Firefox; however, efforts are being made to make this website design responsive and improve user friendliness!)</p>
+    	</div>
+
+    </body>
+</html>
