@@ -1,0 +1,987 @@
+/***** MAKE BACKUPS YO *****/
+/* i need to clean up the redundancies one day */
+/* and need to make this more consistent */
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| ALL ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+body {
+    margin: 5% 7.5%;
+    /*margin: 100px 300px;*/
+    background: #616266 url("wandering_pattern.png") no-repeat fixed center;
+    background-size: cover;
+}
+
+@media all and (
+    min-width: 600px) { /* for setting flex and order on smaller screens */
+}
+
+/* temporary reminder banners */
+.to-fix {
+    background-color: darkcyan;
+    color: white;
+    font-family: roboto;
+    font-size: 18px;
+    padding: 10px 50px;
+    margin: 0px 300px;
+}
+
+/*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: titillium web;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+}
+
+p, li {
+    font-family: roboto;
+	color: white;
+}
+
+li {
+    margin: 1% 0%;
+}
+
+a {
+    text-decoration: none;
+	color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+.links {
+    text-decoration: underline;
+}
+
+/* so the line length isn't so long */
+.larger-margin {
+    margin: 0% 20%;
+}
+
+/*|||||||||||||||||||| TOP NAV ||||||||||||||||||||*/
+
+#topnav {
+    font-family: titillium web;
+    text-align: center;
+    position: fixed;
+        top: 0px;
+        left: 50%;
+    margin: 0 auto;
+        left: 0px;
+        right: 0px;
+    background-color: #36454F;
+    z-index: 100;
+    font-size: 18px;
+    word-spacing: 30px;
+    padding: 10px;
+    box-shadow: 0 2.5px 10px #000000;
+}
+
+#topnav a:hover {
+    color: powderblue;
+}
+
+.alert {
+    background-color: rgba(0, 139, 139, 0.5);
+    border: 5px solid rgba(0, 139, 139, 0.75);
+    border-radius: 5px;
+    color: white;
+    font-family: roboto;
+    font-size: 18px;
+    padding: 10px 50px;
+    margin: 0px 300px;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+    z-index: 10;
+}
+
+#logo {
+    /*font-size: 24px;*/
+    /*position: fixed;*/
+    /*left: 350px;*/
+    /*top: 0.5px;*/
+    vertical-align: middle;
+    float: left;
+    /*margin: 0px -350px 0px 350px;*/
+    background-image: url("logo-favicon.png");
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    z-index: 110;
+}
+
+#logo:hover {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, .5);
+}
+
+/*|||||||||||||||||||| FOOTER ||||||||||||||||||||*/
+
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| HOME ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+/*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
+
+#theater {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 50%;
+    position: relative;
+    border-radius: 5px;
+    /*
+    display: flex;
+    justify-content: center;
+    */
+}
+
+#slideshow {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+    background-color: black;
+    position: relative;
+}
+
+#game-name {
+    text-align: center;
+    z-index: 90;
+    position: absolute;
+    margin: auto;
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+    transform: translateY(30%);
+    font-size: 72px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+
+
+/*|||||||||||||||||||| PRESS START BUTTON ||||||||||||||||||||*/
+
+#press-start {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    margin: auto;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    height: 10%;
+    width: 30%;
+    background-color: rgba(176, 224, 230, 0.5);
+    border: 2.5px solid rgba(0, 0, 96, 0.25);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(55%);
+}
+
+#press-start:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
+    background-color: rgba(176, 224, 230, 0.75);
+    border: 2.5px solid rgba(0, 0, 96, 0.35);
+}
+
+
+/*|||||||||||||||||||| SLIDES AND ANIMATION ||||||||||||||||||||*/
+
+.slide-img {
+    height: 600px;
+    max-width: 750px;
+    background-size: auto 600px;
+    margin: auto;
+    background: no-repeat center;
+}
+
+#slide-1 {
+    background-image: url("gallery-img/perillo-chair-1.jpg");
+    background-size: cover;
+}
+
+#slide-2 {
+    background-image: url("gallery-img/budong-structure.png");
+    background-size: cover;
+}
+
+#slide-3 {
+    background-image: url("gallery-img/Day-at-NCMNS-Storyboard.jpg");
+    background-size: cover;
+}
+
+#slide-4 {
+    background-image: url("gallery-img/pandoras-box-start.png");
+    background-size: cover;
+}
+
+#slide-5 {
+    background-image: url("gallery-img/touch-crane-screen.jpg");
+    background-size: cover;
+}
+
+#slide-6 {
+    background-image: url("gallery-img/Harmony-header.jpg");
+    background-size: cover;
+}
+
+#slide-7 {
+    background-image: url("gallery-img/ARE3-cover.jpg");
+    background-size: cover;
+}
+
+#slide-8 {
+    background-image: url("gallery-img/Handbook-cover.jpg");
+    background-size: cover;
+}
+
+#slide-9 {
+    background-image: url("gallery-img/relief-installation.jpg");
+    background-size: cover;
+}
+
+#slide-10 {
+    background-image: url("gallery-img/LiPS-Logos-Portfolio-sq-29.png");
+    background-size: cover;
+}
+
+#slide-11 {
+    background-image: url("gallery-img/StarryReader-Header.jpg");
+    background-size: cover;
+}
+
+#slide-12 {
+    background-image: url("gallery-img/Jasmine-Flipboard-F.jpg");
+    background-size: cover;
+}
+
+#slide-13 {
+    background-image: url("gallery-img/mmg-cover-01.png");
+    background-size: cover;
+}
+
+#slide-14 {
+    background-image: url("gallery-img/Picture-Booth-Context.jpg");
+    background-size: cover;
+}
+
+#slide-15 {
+    background-image: url("gallery-img/After-Kendama-03.png");
+    background-size: cover;
+}
+
+.slide-img:nth-child(1) {
+    -webkit-animation: xfade 75s 0s infinite; /* start at 0s */
+    -moz-animation: xfade 75s 0s infinite;
+    -o-animation: xfade 75s 0s infinite;
+    animation: xfade 75s 0s infinite;
+    z-index: 100;
+}
+
+.slide-img:nth-child(2) {
+    -webkit-animation: xfade 75s 5s infinite; /* start at 5s */
+    -moz-animation: xfade 75s 5s infinite;
+    -o-animation: xfade 75s 5s infinite;
+    animation: xfade 75s 5s infinite;
+    z-index: 90;
+}
+
+.slide-img:nth-child(3) {
+    -webkit-animation: xfade 75s 10s infinite; /* start at 10s */
+    -moz-animation: xfade 75s 10s infinite;
+    -o-animation: xfade 75s 10s infinite;
+    animation: xfade 75s 10s infinite;
+    z-index: 80;
+}
+
+.slide-img:nth-child(4) {
+    -webkit-animation: xfade 75s 15s infinite; /* start at 15s */
+    -moz-animation: xfade 75s 15s infinite;
+    -o-animation: xfade 75s 15s infinite;
+    animation: xfade 75s 15s infinite;
+    z-index: 70;
+}
+
+.slide-img:nth-child(5) {
+    -webkit-animation: xfade 75s 20s infinite; /* start at 20s */
+    -moz-animation: xfade 75s 20s infinite;
+    -o-animation: xfade 75s 20s infinite;
+    animation: xfade 75s 20s infinite;
+    z-index: 60;
+}
+
+.slide-img:nth-child(6) {
+    -webkit-animation: xfade 75s 25s infinite; /* start at 25s */
+    -moz-animation: xfade 75s 25s infinite;
+    -o-animation: xfade 75s 25s infinite;
+    animation: xfade 75s 25s infinite;
+    z-index: 50;
+}
+
+.slide-img:nth-child(7) {
+    -webkit-animation: xfade 75s 30s infinite; /* start at 30s */
+    -moz-animation: xfade 75s 30s infinite;
+    -o-animation: xfade 75s 30s infinite;
+    animation: xfade 75s 30s infinite;
+    z-index: 40;
+}
+
+.slide-img:nth-child(8) {
+    -webkit-animation: xfade 75s 35s infinite; /* start at 35s */
+    -moz-animation: xfade 75s 35s infinite;
+    -o-animation: xfade 75s 35s infinite;
+    animation: xfade 75s 35s infinite;
+    z-index: 30;
+}
+
+.slide-img:nth-child(9) {
+    -webkit-animation: xfade 75s 40s infinite; /* start at 40s */
+    -moz-animation: xfade 75s 40s infinite;
+    -o-animation: xfade 75s 40s infinite;
+    animation: xfade 75s 40s infinite;
+    z-index: 20;
+}
+
+.slide-img:nth-child(10) {
+    -webkit-animation: xfade 75s 45s infinite; /* start at 45s */
+    -moz-animation: xfade 75s 45s infinite;
+    -o-animation: xfade 75s 45s infinite;
+    animation: xfade 75s 45s infinite;
+    z-index: 10;
+}
+
+.slide-img:nth-child(11) {
+    -webkit-animation: xfade 75s 50s infinite; /* start at 50s */
+    -moz-animation: xfade 75s 50s infinite;
+    -o-animation: xfade 75s 50s infinite;
+    animation: xfade 75s 50s infinite;
+    z-index: 9;
+}
+
+.slide-img:nth-child(12) {
+    -webkit-animation: xfade 75s 55s infinite; /* start at 55s */
+    -moz-animation: xfade 75s 55s infinite;
+    -o-animation: xfade 75s 55s infinite;
+    animation: xfade 75s 55s infinite;
+    z-index: 8;
+}
+
+.slide-img:nth-child(13) {
+    -webkit-animation: xfade 75s 60s infinite; /* start at 60s */
+    -moz-animation: xfade 75s 60s infinite;
+    -o-animation: xfade 75s 60s infinite;
+    animation: xfade 75s 60s infinite;
+    z-index: 7;
+}
+
+.slide-img:nth-child(14) {
+    -webkit-animation: xfade 75s 65s infinite; /* start at 65s */
+    -moz-animation: xfade 75s 65s infinite;
+    -o-animation: xfade 75s 65s infinite;
+    animation: xfade 75s 65s infinite;
+    z-index: 7;
+}
+
+.slide-img:nth-child(15) {
+    -webkit-animation: xfade 75s 70s infinite; /* start at 70s */
+    -moz-animation: xfade 75s 70s infinite;
+    -o-animation: xfade 75s 70s infinite;
+    animation: xfade 75s 70s infinite;
+    z-index: 7;
+}
+
+/*
+.fadeSlides {
+    max-width: 750px;
+	position: absolute;
+}
+
+.fade {
+    animation: fading 5s infinite;
+}
+*/
+
+/*
+SYNTAX = animation: name duration timing-function delay iteration-count direction
+- animation timing (when to xfade out) = 100%/# of slides
+- % before fade-out, fade-in
+- animation duration = # of slides * display time
+- see https://stackoverflow.com/questions/22547763/fading-css-slideshow-without-js-that-loops
+*/
+
+@-webkit-keyframes xfade {
+    0%{opacity:1;} /* each image is visible */
+    23.3%{opacity:1;} /* fading out */
+    33.3%{opacity:0;} /* invisible */
+    90%{opacity:0;} /* fading in */
+    100%{opacity:1;} /* visible again */
+}
+
+@keyframes xfade {
+    0%{opacity:1;}
+    23.3%{opacity:1;}
+    33.3%{opacity:0;}
+    90%{opacity:0;}
+    100%{opacity:1;}
+}
+
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| ABOUT ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+.about-img {
+    background-image: url("me-snake.jpg");
+    height: 400px;
+    width: 600px;
+    background-size: 1200px 400px;
+    display: block;
+    margin: auto;
+}
+
+.about-img:hover {
+    background-position: -600px 0px;
+}
+
+#cv-resume {
+    background-color: rgba(176, 224, 230, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    border: 2.5px solid rgba(0, 0, 96, 0.5);
+    border-radius: 5px;
+    font-family: titillium web;
+}
+
+#cv-resume:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
+    background-color: rgba(176, 224, 230, 0.75);
+}
+
+
+/*|||||||||||||||||||| INTERACTIVE CV ||||||||||||||||||||*/
+
+/*the containers*/
+.interactive-cv {
+    background-color: rgba(176, 224, 230, .25);
+    border: 2.5px solid rgba(0, 0, 96, .25);
+    border-radius: 5px;
+    padding: 25px;
+    margin: 25px 0px;
+    /*display: inline; ---it doesn't like this --- */
+    display: block;
+}
+
+.cv-click {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    vertical-align: top;
+}
+
+.cv-click:hover {
+    background-color: rgba(176, 224, 230, .5);
+    border: 2.5px solid rgba(0, 0, 96, .5);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .75);
+}
+
+/*how to make expandable/collapsable?*/
+/*
+.interactive-cv div:target {
+    display: none;
+}
+*/
+
+.cv-header-1 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 700; /*bold*/
+}
+
+.cv-header-2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600; /*semibold*/
+}
+
+.cv-header-3 {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600; /*semibold*/
+}
+
+.cv-body-txt {
+    font-family: roboto;
+	font-size: 12px;
+}
+
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| GALLERY ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+/*|||||||||||||||||||| FRAME ||||||||||||||||||||*/
+
+#gallery-strip {
+    position: relative;
+}
+
+.gallery-topic {
+    clear: both;
+    font-size: 36px;
+}
+
+.gallery-container {
+    margin: 0 -50px;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+    z-index: 10;
+}
+
+#gd-menu {
+    background-color: rgba(54, 69, 79, 0.5);
+    border: 5px solid rgba(54, 69, 79, 0.75);
+    border-radius: 3px;
+}
+
+#art-menu {
+    background-color: rgba(176, 224, 230, 0.5);
+    border: 5px solid rgba(176, 224, 230, 0.75);
+    border-radius: 3px;
+}
+
+#other-menu {
+    background-color: rgba(0, 0, 96, 0.5);
+    border: 5px solid rgba(0, 0, 96, 0.75);
+    border-radius: 3px;
+}
+
+.gallery-container-2 {
+    text-align: center;
+    position: relative;
+    display: table;
+}
+
+
+/*|||||||||||||||||||| GRID ||||||||||||||||||||*/
+
+.grid {
+    /*background-color: powderblue;*/
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    /*float: left; */
+    margin: 20px;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    border-radius: 1.5px;
+    transition: transform 0.5s 0s; /* when descending (no longer hovering) */
+    /*
+    background-image: url("WWW4-GD-hover_states.jpg");
+    background-size: 400px 2000px;
+    */
+}
+
+.grid:hover {
+    /*background-color: #9cc9ce;*/
+    cursor: pointer;
+    transform: scale(1.2); /* grow a bit bigger */
+    transition: transform 0.2s 0s; /* when ascending */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    background-position: -200px 0px;
+}
+
+.hidden-item {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    background-image: none;
+}
+
+.hidden-item:hover {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: auto;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    background-image: none;
+}
+
+
+/*|||||||||||||||||||| GD GRID HOVER STATES ||||||||||||||||||||*/
+
+.gd-grid {
+    background-image: url("WWW4-GD-hover_states-1.jpg");
+	background-size: 400px 2000px;
+}
+
+#perillo-grid {
+    background-position: 0px 0px;
+}
+
+#perillo-grid:hover {
+    background-position: -200px 0px;
+}
+
+#bu-dong-grid {
+    background-position: 0px -200px;
+}
+
+#bu-dong-grid:hover {
+    background-position: -200px -200px;
+}
+
+#ncmns-grid {
+    background-position: 0px -400px;
+}
+
+#ncmns-grid:hover {
+    background-position: -200px -400px;
+}
+
+#pandoras-grid {
+    background-position: 0px -600px;
+}
+
+#pandoras-grid:hover {
+    background-position: -200px -600px;
+}
+
+#folds-grid {
+    background-position: 0px -800px;
+}
+
+#folds-grid:hover {
+    background-position: -200px -800px;
+}
+
+#harmony-grid {
+    background-position: 0px -1000px;
+}
+
+#harmony-grid:hover {
+    background-position: -200px -1000px;
+}
+
+#are3-grid {
+    background-position: 0px -1200px;
+}
+
+#are3-grid:hover {
+    background-position: -200px -1200px;
+}
+
+#lizards-grid {
+    background-position: 0px -1400px;
+}
+
+#lizards-grid:hover {
+    background-position: -200px -1400px;
+}
+
+#relief-grid {
+    background-position: 0px -1600px;
+}
+
+#relief-grid:hover {
+    background-position: -200px -1600px;
+}
+
+#lips-grid {
+    background-position: 0px -1800px;
+}
+
+#lips-grid:hover {
+    background-position: -200px -1800px;
+}
+
+
+.gd-grid-2 {
+    background-image: url("WWW4-GD-hover_states-2.jpg");
+    background-size: 400px 600px;
+}
+
+#starry-grid {
+    background-position: 0px 0px;
+}
+
+#starry-grid:hover {
+    background-position: -200px 0px;
+}
+
+#flipboard-grid {
+    background-position: 0px -200px;
+}
+
+#flipboard-grid:hover {
+    background-position: -200px -200px;
+}
+
+#mmg-grid {
+    background-position: 0px -400px;
+}
+
+#mmg-grid:hover {
+    background-position: -200px -400px;
+}
+
+.gd-grid-3 {
+    background-image: url("WWW4-GD-hover_states-3.jpg");
+    background-size: 400px 400px;
+}
+
+#pb-grid {
+    background-position: 0px 0px;
+}
+
+#pb-grid:hover {
+    background-position: -200px 0px;
+}
+
+#recon-grid {
+    background-position: 0px -200px;
+}
+
+#recon-grid:hover {
+    background-position: -200px -200px;
+}
+
+/*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
+
+.art-grid {
+    background-image: url("WWW4-other-hover_states.jpg");
+    background-size: 400px 600px;
+    background-position: 0px -400px;
+}
+
+.art-grid:hover {
+    background-position: -200px -400px;
+}
+
+#art-1 {
+}
+
+#art-2 {
+}
+
+#art-3 {
+}
+
+#art-4 {
+}
+
+#art-5 {
+}
+
+#art-6 {
+}
+
+#art-7 {
+}
+
+#art-8 {
+}
+
+#art-9 {
+}
+
+
+/*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
+
+.other-grid {
+    background-image: url("WWW4-other-hover_states.jpg");
+    background-size: 400px 600px;
+    background-position: 0px -400px;
+}
+
+.other-grid:hover {
+    background-position: -200px -400px;
+}
+
+#cmms-grid {
+    background-position: 0px 0px;
+}
+
+#cmms-grid:hover {
+    background-position: -200px 0px;
+}
+
+#sights-grid {
+    background-position: 0px -200px;
+}
+
+#sights-grid:hover {
+    background-position: -200px -200px;
+}
+
+
+/*|||||||||||||||||||| BUTTONS ||||||||||||||||||||*/
+
+.menu-button {
+    /*border: none;*/
+    display: inline-block;
+    outline:0;
+    /*padding:16px 24px;*/
+    padding: 20% 24px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    position: absolute;
+        top: 50%;
+    font-family: titillium web;
+    background-color: rgb(20, 20, 20);
+    color: #cccccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    z-index: 20;
+    border-radius: 1.5px;
+    border: 2.5px solid rgba(204, 204, 204, .5);
+    transform: translateY(-50%);
+}
+
+
+.menu-button:hover {
+    color: rgb(20, 20, 20);
+    background-color: #cccccc;
+    cursor: pointer;
+    border: 2.5px solid rgba(20, 20, 20, .5);
+}
+
+.menu-left {
+    left: -6.25%;
+}
+
+.menu-right {
+    right: -6.25%;
+}
+
+
+/*|||||||||||||||||||| TABS ||||||||||||||||||||*/
+
+.section-tab {
+    top: 100%;
+    width: 33.333%;
+    position: absolute;
+    border: 2.5px solid rgb(50, 50, 50);
+    z-index: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    font-size: 12;
+    padding:16px 24px;
+    transform: none;
+}
+
+.section-tab:hover {
+    color: #ffffff;
+}
+
+#gd-tab {
+    background-color: rgba(54, 69, 79, 0.5);
+    border: 5px solid rgba(54, 69, 79, 0.75);
+    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
+    border-top: none;
+}
+
+#art-tab {
+    margin: 0 auto;
+    left: 25%;
+    right: 25%;
+    background-color: rgba(176, 224, 230, 0.5);
+    border: 5px solid rgba(176, 224, 230, 0.75);
+    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
+    border-top: none;
+}
+
+#other-tab {
+    right: 0%;
+    background-color: rgba(0, 0, 96, 0.5);
+    border: 5px solid rgba(0, 0, 96, 0.75);
+    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
+    border-top: none;
+}
+
+.current-tab {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: -16px -24px;
+    background-color: #cccccc;
+    z-index: 40;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+}
+
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| CONTACT ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+
+form {
+    color: white;
+	font-family: roboto;
+}
+
+input[type=text], textarea {
+    font-family: roboto;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+
+textarea {
+    max-width: 100%;
+}
+
+.c-label {
+    line-height: 1.5;
+    font-family: titillium web;
+}
+
+input[type=submit] {
+    background-color: powderblue;
+    border-radius: 5px;
+    border: 2.5px solid rgba(0, 0, 96, 0.5);
+    font-family: titillium web;
+    font-size: 12px;
+    color: white;
+}
+
+input[type=submit]:hover {
+    background-color: #9cc9ce;
+	cursor: pointer;
+}
+
+.frame {
+    background-color: #36454F;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+}
