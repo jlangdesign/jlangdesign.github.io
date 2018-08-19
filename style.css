@@ -28,9 +28,15 @@
     --blue-btn-hover-glow: 0px 0px 10px rgba(255, 255, 255, .5);
 
     /* Top navbar */
+    --top-nav-height: 35px;
     --top-nav-font-size: 18px;
     --top-nav-padding: 10px;
+    --logo-box-left-position: calc((100vw - 75vw) / 2);
+    --logo-box-top-position: 10px;
     --logo-side-length: 32px;
+    --logo-margin: 0px 10px 0px 0px;
+    --logo-name-size: 24px;
+    --top-nav-tab-padding: 0px 10px;
 
     /* Other */
     --body-margin: 5vh 7.5vw;
@@ -123,7 +129,7 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
+    height: var(--top-nav-height);
 }
 
 /* Blue hover state of links to other pages */
@@ -134,8 +140,8 @@ a:visited {
 /* Container with square JL logo and the "Jasmine Lang" text */
 #logo-box {
   position: fixed;
-    left: calc((100vw - 75vw) / 2);
-    top: 10px;
+    left: var(--logo-box-left-position);
+    top: var(--logo-box-top-position);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -147,7 +153,7 @@ a:visited {
     width: var(--logo-side-length);
     height: var(--logo-side-length);
     z-index: 110;
-    margin: 0 10px;
+    margin: var(--logo-margin);
 }
 
 /* Glowing hover state of logo */
@@ -157,14 +163,14 @@ a:visited {
 
 /* Text attached to logo */
 #logo-name {
-  font-size: 24px;
+  font-size: var(--logo-name-size);
   color: var(--font-color);
   font-weight: bold;
 }
 
 /* Container with links to different pages */
 .top-nav-tab {
-  padding: 0px 10px;
+  padding: var(--top-nav-tab-padding);
 }
 
 
@@ -198,21 +204,27 @@ a:visited {
         right: 0%;
     background-color: black;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for #game-name and #press-start */
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 95;
 }
 
 /* Text on top of the slides */
 #game-name {
     text-align: center;
-    z-index: 90;
-    position: absolute;
-    margin: auto;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-    transform: translateY(30%);
     font-size: 72px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    margin: 0px 0px 30px 0px;
 }
 
 
@@ -221,23 +233,16 @@ a:visited {
 #press-start {
     font-size: 24px;
     color: var(--font-color);
-    position: absolute;
-    margin: auto;
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-    height: 10%;
-    width: 30%;
+    height: 10vh;
+    width: 20vw;
     background-color: rgba(var(--secondary-color), 0.5);
     border: 2.5px solid rgba(var(--tertiary-color), 0.25);
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    z-index: 90;
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(55%);
 }
 
 /* Glowing hover state of button*/
@@ -257,6 +262,7 @@ a:visited {
     background-size: calc(100vh - 52px);
     margin: auto;
     background: no-repeat center;
+    opacity: .8;
 }
 
 /* TODO set up file loading so we don't have all this clutter in the CSS */
