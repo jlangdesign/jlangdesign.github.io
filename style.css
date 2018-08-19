@@ -1,45 +1,46 @@
-/***** MAKE BACKUPS YO *****/
-/* i need to clean up the redundancies one day */
-/* and need to make this more consistent */
-
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*|||||||||||||||||||| ALL ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+:root {
+  /* Typography */
+  --heading-font: titillium web;
+  --body-font: roboto;
+  --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+
+  /* Color scheme */
+  --primary-color: 54, 69, 79; /* charcoal (#36454f) */
+  --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
+  --tertiary-color: 0, 0, 96; /* navy (#000060) */
+  --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
+
+  /* Shadows and glows */
+  --glow-color: rgba(255, 255, 255, .5);
+}
 
 body {
     margin: 5% 7.5%;
-    /*margin: 100px 300px;*/
-    background: #616266 url("wandering_pattern.png") no-repeat fixed center;
+    background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
     background-size: cover;
 }
 
-@media all and (
-    min-width: 600px) { /* for setting flex and order on smaller screens */
-}
+/* TODO set flex and order on smaller screens */
+@media all and (min-width: 600px) {
 
-/* temporary reminder banners */
-.to-fix {
-    background-color: darkcyan;
-    color: white;
-    font-family: roboto;
-    font-size: 18px;
-    padding: 10px 50px;
-    margin: 0px 300px;
 }
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
 h1, h2, h3, h4, h5, h6 {
-    font-family: titillium web;
-    color: white;
+    font-family: var(--heading-font);
+    color: var(--font-color);
     text-align: center;
     font-size: 48px;
 }
 
 p, li {
-    font-family: roboto;
-	color: white;	
+    font-family: var(--body-font);
+    color: var(--font-color);
 }
 
 li {
@@ -48,11 +49,11 @@ li {
 
 a {
     text-decoration: none;
-	color: white;
+  	color: var(--font-color);
 }
 
 a:visited {
-    color: white;
+    color: var(--font-color);
 }
 
 .links {
@@ -67,7 +68,7 @@ a:visited {
 /*|||||||||||||||||||| TOP NAV ||||||||||||||||||||*/
 
 #topnav {
-    font-family: titillium web;
+    font-family: var(--heading-font);
     text-align: center;
     position: fixed;
         top: 0px;
@@ -75,30 +76,16 @@ a:visited {
     margin: 0 auto;
         left: 0px;
         right: 0px;
-    background-color: #36454F;
+    background-color: rgb(var(--primary-color));
     z-index: 100;
     font-size: 18px;
     word-spacing: 30px;
     padding: 10px;
-    box-shadow: 0 2.5px 10px #000000;	
+    box-shadow: 0 2.5px 10px #000000;
 }
 
 #topnav a:hover {
-    color: powderblue;
-}
-
-.alert {
-    background-color: rgba(0, 139, 139, 0.5);
-    border: 5px solid rgba(0, 139, 139, 0.75);
-    border-radius: 5px;
-    color: white;
-    font-family: roboto;
-    font-size: 18px;
-    padding: 10px 50px;
-    margin: 0px 300px;
-    position: relative;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
-    z-index: 10;
+    color: rgb(var(--secondary-color));
 }
 
 #logo {
@@ -109,7 +96,7 @@ a:visited {
     vertical-align: middle;
     float: left;
     /*margin: 0px -350px 0px 350px;*/
-    background-image: url("logo-favicon.png");
+    background-image: url("assets/logo-favicon.png");
     width: 32px;
     height: 32px;
     background-size: 32px 32px;
@@ -117,7 +104,7 @@ a:visited {
 }
 
 #logo:hover {
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, .5);
+    box-shadow: 0px 0px 5px var(--glow-color);
 }
 
 /*|||||||||||||||||||| FOOTER ||||||||||||||||||||*/
@@ -174,7 +161,7 @@ a:visited {
 
 #press-start {
     font-size: 24px;
-    color: rgb(255, 255, 255);
+    color: var(--font-color);
     position: absolute;
     margin: auto;
         left: 0%;
@@ -183,22 +170,22 @@ a:visited {
         bottom: 0%;
     height: 10%;
     width: 30%;
-    background-color: rgba(176, 224, 230, 0.5);
-    border: 2.5px solid rgba(0, 0, 96, 0.25);
+    background-color: rgba(var(--secondary-color), 0.5);
+    border: 2.5px solid rgba(var(--tertiary-color), 0.25);
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
     z-index: 90;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(55%);	
+    transform: translateY(55%);
 }
 
 #press-start:hover {
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
-    text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
-    background-color: rgba(176, 224, 230, 0.75);
-    border: 2.5px solid rgba(0, 0, 96, 0.35);						
+    box-shadow: 0px 0px 10px var(--glow-color);
+    text-shadow: 0px 0px 1px var(--glow-color);
+    background-color: rgba(var(--secondary-color), 0.75);
+    border: 2.5px solid rgba(var(--tertiary-color), 0.35);
 }
 
 
@@ -450,7 +437,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*||||||||||||||||||||||||||||||||||||||||*/
 
 .about-img {
-    background-image: url("me-snake.jpg");
+    background-image: url("assets/me-snake.jpg");
     height: 400px;
     width: 600px;
     background-size: 1200px 400px;
@@ -463,20 +450,20 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 #cv-resume {
-    background-color: rgba(176, 224, 230, 0.5);
+    background-color: rgba(var(--secondary-color), 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, .25);
     padding: 10px;
     margin: auto;
     text-align: center;
-    border: 2.5px solid rgba(0, 0, 96, 0.5);
+    border: 2.5px solid rgba(var(--tertiary-color), 0.5);
     border-radius: 5px;
-    font-family: titillium web;
+    font-family: var(--heading-font);
 }
 
 #cv-resume:hover {
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
-    text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
-    background-color: rgba(176, 224, 230, 0.75);					
+    box-shadow: 0px 0px 10px var(--glow-color);
+    text-shadow: 0px 0px 1px var(--glow-color);
+    background-color: rgba(var(--secondary-color), 0.75);
 }
 
 
@@ -484,8 +471,8 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 /*the containers*/
 .interactive-cv {
-    background-color: rgba(176, 224, 230, .25);
-    border: 2.5px solid rgba(0, 0, 96, .25);
+    background-color: rgba(var(--secondary-color), .25);
+    border: 2.5px solid rgba(var(--tertiary-color), .25);
     border-radius: 5px;
     padding: 25px;
     margin: 25px 0px;
@@ -501,9 +488,9 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 .cv-click:hover {
-    background-color: rgba(176, 224, 230, .5);
-    border: 2.5px solid rgba(0, 0, 96, .5);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, .75);
+    background-color: rgba(var(--secondary-color), .5);
+    border: 2.5px solid rgba(var(--tertiary-color), .5);
+    box-shadow: 0px 0px 10px var(--glow-color);
 }
 
 /*how to make expandable/collapsable?*/
@@ -532,8 +519,8 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 .cv-body-txt {
-    font-family: roboto;
-	font-size: 12px;
+    font-family: var(--body-font);
+  	font-size: 12px;
 }
 
 
@@ -564,20 +551,20 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 #gd-menu {
-    background-color: rgba(54, 69, 79, 0.5);
-    border: 5px solid rgba(54, 69, 79, 0.75);
+    background-color: rgba(var(--primary-color), 0.5);
+    border: 5px solid rgba(var(--primary-color), 0.75);
     border-radius: 3px;
 }
 
 #art-menu {
-    background-color: rgba(176, 224, 230, 0.5);
-    border: 5px solid rgba(176, 224, 230, 0.75);
+    background-color: rgba(var(--secondary-color), 0.5);
+    border: 5px solid rgba(var(--secondary-color), 0.75);
     border-radius: 3px;
 }
 
 #other-menu {
-    background-color: rgba(0, 0, 96, 0.5);
-    border: 5px solid rgba(0, 0, 96, 0.75);
+    background-color: rgba(var(--tertiary-color), 0.5);
+    border: 5px solid rgba(var(--tertiary-color), 0.75);
     border-radius: 3px;
 }
 
@@ -636,8 +623,8 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*|||||||||||||||||||| GD GRID HOVER STATES ||||||||||||||||||||*/
 
 .gd-grid {
-    background-image: url("WWW4-GD-hover_states-1.jpg");
-	background-size: 400px 2000px;
+    background-image: url("assets/WWW4-GD-hover_states-1.jpg");
+  	background-size: 400px 2000px;
 }
 
 #perillo-grid {
@@ -722,7 +709,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 
 .gd-grid-2 {
-    background-image: url("WWW4-GD-hover_states-2.jpg");
+    background-image: url("assets/WWW4-GD-hover_states-2.jpg");
     background-size: 400px 600px;
 }
 
@@ -751,7 +738,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 .gd-grid-3 {
-    background-image: url("WWW4-GD-hover_states-3.jpg");
+    background-image: url("assets/WWW4-GD-hover_states-3.jpg");
     background-size: 400px 400px;
 }
 
@@ -774,7 +761,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
 
 .art-grid {
-    background-image: url("WWW4-other-hover_states.jpg");
+    background-image: url("assets/WWW4-other-hover_states.jpg");
     background-size: 400px 600px;
     background-position: 0px -400px;
 }
@@ -783,38 +770,11 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     background-position: -200px -400px;
 }
 
-#art-1 {
-}
-
-#art-2 {
-}
-
-#art-3 {
-}
-
-#art-4 {
-}
-
-#art-5 {
-}
-
-#art-6 {
-}
-
-#art-7 {
-}
-
-#art-8 {
-}
-
-#art-9 {
-}
-
 
 /*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
 
 .other-grid {
-    background-image: url("WWW4-other-hover_states.jpg");
+    background-image: url("assets/WWW4-other-hover_states.jpg");
     background-size: 400px 600px;
     background-position: 0px -400px;
 }
@@ -856,7 +816,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     white-space: nowrap;
     position: absolute;
         top: 50%;
-    font-family: titillium web;
+    font-family: var(--heading-font);
     background-color: rgb(20, 20, 20);
     color: #cccccc;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
@@ -898,12 +858,12 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 .section-tab:hover {
-    color: #ffffff;
+    color: var(--font-color);
 }
 
 #gd-tab {
-    background-color: rgba(54, 69, 79, 0.5);
-    border: 5px solid rgba(54, 69, 79, 0.75);
+    background-color: rgba(var(--primary-color), 0.5);
+    border: 5px solid rgba(var(--primary-color), 0.75);
     border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
     border-top: none;
 }
@@ -912,16 +872,16 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     margin: 0 auto;
     left: 25%;
     right: 25%;
-    background-color: rgba(176, 224, 230, 0.5);
-    border: 5px solid rgba(176, 224, 230, 0.75);
+    background-color: rgba(var(--secondary-color), 0.5);
+    border: 5px solid rgba(var(--secondary-color), 0.75);
     border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
     border-top: none;
 }
 
 #other-tab {
     right: 0%;
-    background-color: rgba(0, 0, 96, 0.5);
-    border: 5px solid rgba(0, 0, 96, 0.75);
+    background-color: rgba(var(--tertiary-color), 0.5);
+    border: 5px solid rgba(var(--tertiary-color), 0.75);
     border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
     border-top: none;
 }
@@ -944,12 +904,12 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*||||||||||||||||||||||||||||||||||||||||*/
 
 form {
-    color: white;
-	font-family: roboto;
+    color: var(--font-color);
+  	font-family: var(--body-font);
 }
 
 input[type=text], textarea {
-    font-family: roboto;
+    font-family: var(--body-font);
     background-color: #f4f4f4;
     border: none;
     border-radius: 4px;
@@ -962,25 +922,25 @@ textarea {
 
 .c-label {
     line-height: 1.5;
-    font-family: titillium web;
+    font-family: var(--heading-font);
 }
 
 input[type=submit] {
-    background-color: powderblue;
+    background-color: rgb(var(--secondary-color));
     border-radius: 5px;
-    border: 2.5px solid rgba(0, 0, 96, 0.5);
-    font-family: titillium web;
+    border: 2.5px solid rgba(var(--tertiary-color), 0.5);
+    font-family: var(--heading-font);
     font-size: 12px;
-    color: white;
+    color: var(--font-color);
 }
 
 input[type=submit]:hover {
     background-color: #9cc9ce;
-	cursor: pointer;
+  	cursor: pointer;
 }
 
 .frame {
-    background-color: #36454F;
+    background-color: var(--primary-color);
     border-radius: 5px;
     padding: 20px;
     width: 100%;
