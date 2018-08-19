@@ -34,12 +34,19 @@
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 
     <body>
-    	<nav id="topnav">
-			<a href="./" id="logo"></a>
-			<a href="./">Home</a>
-			<a href="about.html">About</a>
-			<a href="gallery.html">Gallery</a>
-			<a href="contact.html">Contact</a>
+      <nav id="topnav">
+        <div>
+          <a href="./" id="logo-box">
+    			  <img src="logo-favicon.png" id="logo">
+            <span id="logo-name">Jasmine Lang</span>
+          </a>
+        </div>
+        <div id="top-nav-tab-group">
+    			<a href="./" class="top-nav-tab">Home</a>
+    			<a href="about.html" class="top-nav-tab">About</a>
+    			<a href="gallery.html" class="top-nav-tab">Gallery</a>
+    			<a href="contact.html" class="top-nav-tab">Contact</a>
+        </div>
     	</nav>
 
 
@@ -50,14 +57,16 @@
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 
  		<div id="theater"> <!-- like theater mode in youtube -->
-			<a href="gallery.html">
 				<!--lets have my identity be the "game title"-->
-				<div id="slideshow"> <!-- black rectangle container (bg) -->
-					<h1 id="game-name">Jasmine Lang<h1>
-					<h2 id="press-start"> - Press Start - </h2>
+        <a href="gallery.html">
+  				<div id="slideshow"> <!-- black rectangle container (bg) -->
+            <div>
+    				  <h1 id="game-name">Jasmine Lang<h1>
+  					  <h2 id="press-start"> - Press Start - </h2>
+            </div>
 
-					<!-- I learned how to make this slideshow from a Stack Overflow post, if I recall correctly. -->
-					<!-- I haven't been able to find it, but I'll put the link here when I do. -->
+  					<!-- I learned how to make this slideshow from a Stack Overflow post, if I recall correctly. -->
+  					<!-- I haven't been able to find it, but I'll put the link here when I do. -->
               <figure class="slide-img fadeSlides fade" id="slide-1"></figure>
               <figure class="slide-img fadeSlides fade" id="slide-2"></figure>
               <figure class="slide-img fadeSlides fade" id="slide-3"></figure>
@@ -74,10 +83,10 @@
               <figure class="slide-img fadeSlides fade" id="slide-14"></figure>
               <figure class="slide-img fadeSlides fade" id="slide-15"></figure>
 
-					<script type="text/javascript" src="slideshow.js"></script>
-				<!-- it works here!!! -->
-				</div>
-			</a>
+  					<script type="text/javascript" src="slideshow.js"></script>
+  				<!-- it works here!!! -->
+          </div>
+        </a>
     	</div>
 
     	<div id="welcome">

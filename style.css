@@ -3,6 +3,7 @@
 /*|||||||||||||||||||| ALL ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+/* All CSS custom properties */
 :root {
     /********************/
     /***** SITEWIDE *****/
@@ -28,10 +29,8 @@
 
     /* Top navbar */
     --top-nav-font-size: 18px;
-    --top-nav-word-spacing: 30px;
     --top-nav-padding: 10px;
     --logo-side-length: 32px;
-    --logo-bg-size: var(--logo-side-length) var(--logo-side-length);
 
     /* Other */
     --body-margin: 5vh 7.5vw;
@@ -52,7 +51,7 @@
     /***** CONTACT PAGE *****/
     /********************/
 }
-
+/* Body element */
 body {
     margin: var(--body-margin);
     background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
@@ -61,6 +60,7 @@ body {
 
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
+/* Heading tags */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--font-color);
@@ -68,10 +68,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--default-heading-size);
 }
 
+/* Headings that are page titles (e.g. About, Gallery, Contact) */
 .page-title {
   margin-top: var(--page-title-top-margin);
 }
 
+/* Paragraph and list elements */
 p, li {
     font-family: var(--body-font);
     color: var(--font-color);
@@ -79,29 +81,33 @@ p, li {
     padding: var(--para-padding);
 }
 
+/* Properties specific to elements */
 li {
     margin: var(--list-margin);
 }
 
+/* Anchor elements */
 a {
     text-decoration: none;
   	color: var(--font-color);
 }
 
+/* Visited links */
 a:visited {
     color: var(--font-color);
 }
 
+/* Formatting for text in anchors */
 .links {
     text-decoration: underline;
 }
 
 
 /*|||||||||||||||||||| TOP NAV ||||||||||||||||||||*/
-
+/* TODO set up automatic nav bar insertion */
+/* Top navigation bar, including logo and links to other pages */
 #topnav {
     font-family: var(--heading-font);
-    text-align: center;
     position: fixed;
         top: 0px;
         left: 50%;
@@ -111,32 +117,54 @@ a:visited {
     background-color: rgb(var(--primary-color));
     z-index: 100;
     font-size: var(--top-nav-font-size);
-    word-spacing: var(--top-nav-word-spacing);
     padding: var(--top-nav-padding);
     box-shadow: 0 2.5px 10px #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
 }
 
+/* Blue hover state of links to other pages */
 #topnav a:hover {
     color: rgb(var(--secondary-color));
 }
 
-#logo {
-    /*font-size: 24px;*/
-    /*position: fixed;*/
-    /*left: 350px;*/
-    /*top: 0.5px;*/
-    vertical-align: middle;
-    float: left;
-    /*margin: 0px -350px 0px 350px;*/
-    background-image: url("assets/logo-favicon.png");
-    width: var(--logo-side-length);
-    height: var(--logo-side-length);
-    background-size: var(--logo-bg-size);
-    z-index: 110;
+/* Container with square JL logo and the "Jasmine Lang" text */
+#logo-box {
+  position: fixed;
+    left: calc((100vw - 75vw) / 2);
+    top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Actual logo image */
+#logo {
+    width: var(--logo-side-length);
+    height: var(--logo-side-length);
+    z-index: 110;
+    margin: 0 10px;
+}
+
+/* Glowing hover state of logo */
 #logo:hover {
     box-shadow: var(--blue-btn-hover-glow);
+}
+
+/* Text attached to logo */
+#logo-name {
+  font-size: 24px;
+  color: var(--font-color);
+  font-weight: bold;
+}
+
+/* Container with links to different pages */
+.top-nav-tab {
+  padding: 0px 10px;
 }
 
 
@@ -147,7 +175,7 @@ a:visited {
 /*||||||||||||||||||||||||||||||||||||||||*/
 
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
-
+/* Partially transparent black container behind the slideshow container */
 #theater {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
@@ -156,6 +184,7 @@ a:visited {
     margin: 0vh -7.5vw;
 }
 
+/* Container with all the image slides */
 #slideshow {
     text-align: center;
     height: auto;
@@ -171,6 +200,7 @@ a:visited {
     position: relative;
 }
 
+/* Text on top of the slides */
 #game-name {
     text-align: center;
     z-index: 90;
@@ -187,7 +217,7 @@ a:visited {
 
 
 /*|||||||||||||||||||| PRESS START BUTTON ||||||||||||||||||||*/
-
+/* Button on top of slides that takes you to gallery */
 #press-start {
     font-size: 24px;
     color: var(--font-color);
@@ -210,6 +240,7 @@ a:visited {
     transform: translateY(55%);
 }
 
+/* Glowing hover state of button*/
 #press-start:hover {
     box-shadow: var(--blue-btn-hover-glow);
     text-shadow: 0px 0px 1px var(--glow-color);
@@ -219,7 +250,7 @@ a:visited {
 
 
 /*|||||||||||||||||||| SLIDES AND ANIMATION ||||||||||||||||||||*/
-
+/* Class of each image in slideshow */
 .slide-img {
     height: calc(100vh - 52px);
     width: 75vw;
@@ -228,6 +259,7 @@ a:visited {
     background: no-repeat center;
 }
 
+/* TODO set up file loading so we don't have all this clutter in the CSS */
 #slide-1 {
     background-image: url("gallery-img/perillo-chair-1.jpg");
     background-size: cover;
@@ -303,6 +335,7 @@ a:visited {
     background-size: cover;
 }
 
+/* TODO write for loop to go through each image */
 .slide-img:nth-child(1) {
     -webkit-animation: xfade 75s 0s infinite; /* start at 0s */
     -moz-animation: xfade 75s 0s infinite;
@@ -434,6 +467,7 @@ a:visited {
 }
 */
 
+/* TODO move this code */
 /*
 SYNTAX = animation: name duration timing-function delay iteration-count direction
 - animation timing (when to xfade out) = 100%/# of slides
@@ -459,10 +493,12 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 /*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
+/* Short welcome message and description of this site below the slideshow */
 #welcome {
   text-align: center;
 }
 
+/* Text of the welcome message */
 #welcome-txt {
   font-size: 24px;
 }
@@ -473,7 +509,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*|||||||||||||||||||| ABOUT ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
-
+/* Header image for About page */
 .about-img {
     background-image: url("assets/me-snake.jpg");
     height: 400px;
@@ -483,10 +519,12 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     margin: auto;
 }
 
+/* Hover state of About image (changes to a different image) */
 .about-img:hover {
     background-position: -600px 0px;
 }
 
+/* Button to open up CV/resume PDF */
 #cv-resume {
     background-color: rgba(var(--secondary-color), 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, .25);
@@ -498,6 +536,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     font-family: var(--heading-font);
 }
 
+/* Glowing hover state of cv-resume button */
 #cv-resume:hover {
     box-shadow: var(--blue-btn-hover-glow);
     text-shadow: 0px 0px 1px var(--glow-color);
@@ -506,7 +545,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 
 /*|||||||||||||||||||| INTERACTIVE CV ||||||||||||||||||||*/
-
+/* TODO implement interactive flexbox HTML CV */
 /*the containers*/
 .interactive-cv {
     background-color: rgba(var(--secondary-color), .25);
@@ -569,16 +608,18 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*||||||||||||||||||||||||||||||||||||||||*/
 
 /*|||||||||||||||||||| FRAME ||||||||||||||||||||*/
-
+/* Container for all Gallery elements */
 #gallery-strip {
     position: relative;
 }
 
+/* Name of Gallery section*/
 .gallery-topic {
     clear: both;
     font-size: 36px;
 }
 
+/* Box containing Gallery topic and matrix */
 .gallery-container {
     margin: 0 -50px;
     padding: 10px 0;
@@ -588,24 +629,28 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     z-index: 10;
 }
 
+/* Box containing the Graphic Design matrix */
 #gd-menu {
     background-color: rgba(var(--primary-color), 0.5);
     border: 5px solid rgba(var(--primary-color), 0.75);
     border-radius: 3px;
 }
 
+/* Box containing the Art matrix */
 #art-menu {
     background-color: rgba(var(--secondary-color), 0.5);
     border: 5px solid rgba(var(--secondary-color), 0.75);
     border-radius: 3px;
 }
 
+/* Box containing the Other matrix */
 #other-menu {
     background-color: rgba(var(--tertiary-color), 0.5);
     border: 5px solid rgba(var(--tertiary-color), 0.75);
     border-radius: 3px;
 }
 
+/* Subcontainer containing Gallery matrix */
 .gallery-container-2 {
     text-align: center;
     position: relative;
@@ -614,7 +659,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 
 /*|||||||||||||||||||| GRID ||||||||||||||||||||*/
-
+/* The matrix of projects */
 .grid {
     /*background-color: powderblue;*/
     height: 200px;
@@ -633,6 +678,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     */
 }
 
+/* Transformation (rising) hover state of matrix items */
 .grid:hover {
     /*background-color: #9cc9ce;*/
     cursor: pointer;
@@ -642,12 +688,14 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     background-position: -200px 0px;
 }
 
+/* Invisible matrix items */
 .hidden-item {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     background-image: none;
 }
 
+/* Hover state of matrix items (no visible changes) */
 .hidden-item:hover {
     background-color: rgba(0, 0, 0, 0);
     cursor: auto;
@@ -659,7 +707,8 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 
 /*|||||||||||||||||||| GD GRID HOVER STATES ||||||||||||||||||||*/
-
+/* TODO set up automatic file loading*/
+/* Project images to load for the Graphic Design matrix */
 .gd-grid {
     background-image: url("assets/WWW4-GD-hover_states-1.jpg");
   	background-size: 400px 2000px;
@@ -797,7 +846,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 /*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
-
+/* Project images to load for the Art matrix */
 .art-grid {
     background-image: url("assets/WWW4-other-hover_states.jpg");
     background-size: 400px 600px;
@@ -810,7 +859,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 
 /*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
-
+/* Project images to load for the Other matrix */
 .other-grid {
     background-image: url("assets/WWW4-other-hover_states.jpg");
     background-size: 400px 600px;
@@ -839,7 +888,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 
 
 /*|||||||||||||||||||| BUTTONS ||||||||||||||||||||*/
-
+/* Right/left buttons for Gallery matrix */
 .menu-button {
     /*border: none;*/
     display: inline-block;
@@ -864,7 +913,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     transform: translateY(-50%);
 }
 
-
+/* Gray hover state of Gallery section buttons */
 .menu-button:hover {
     color: rgb(20, 20, 20);
     background-color: #cccccc;
@@ -872,17 +921,19 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     border: 2.5px solid rgba(20, 20, 20, .5);
 }
 
+/* Button to go to previous Gallery section */
 .menu-left {
     left: -6.25%;
 }
 
+/* Button to go to next Gallery section */
 .menu-right {
     right: -6.25%;
 }
 
 
 /*|||||||||||||||||||| TABS ||||||||||||||||||||*/
-
+/* Tabs denoting different sections of Gallery */
 .section-tab {
     top: 100%;
     width: 33.333%;
@@ -895,10 +946,12 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     transform: none;
 }
 
+/* Opaque white text hover state for section tabs */
 .section-tab:hover {
     color: var(--font-color);
 }
 
+/* Styling for Graphic Design tab */
 #gd-tab {
     background-color: rgba(var(--primary-color), 0.5);
     border: 5px solid rgba(var(--primary-color), 0.75);
@@ -906,6 +959,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     border-top: none;
 }
 
+/* Styling for Art tab */
 #art-tab {
     margin: 0 auto;
     left: 25%;
@@ -916,6 +970,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     border-top: none;
 }
 
+/* Styling for Other tab */
 #other-tab {
     right: 0%;
     background-color: rgba(var(--tertiary-color), 0.5);
@@ -924,6 +979,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     border-top: none;
 }
 
+/* Styling for tab of current selected section */
 .current-tab {
     color: #ffffff;
     font-weight: bold;
@@ -940,7 +996,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*|||||||||||||||||||| CONTACT ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
-
+/* TODO fix this */
 form {
     color: var(--font-color);
   	font-family: var(--body-font);

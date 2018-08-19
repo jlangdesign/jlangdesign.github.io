@@ -6,23 +6,23 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Of Lizards and Cat-thingies | Jasmine Lang</title>
-		
+
         <!-- FAVICON LINK -->
         <link rel="icon" type="image/png" href="../logo-favicon.png" sizes="16x16" />
-        
+
         <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web" rel="stylesheet">
-        
+
         <!-- CSS LINKS -->
         <link rel="stylesheet" type="text/css" href="../style.css" />
-		<link rel="stylesheet" type="text/css" href="../style-gallery.css" />		
+		<link rel="stylesheet" type="text/css" href="../style-gallery.css" />
 	</head>
 
-	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->	
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->	
+	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
 
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
@@ -32,33 +32,40 @@
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 
 	<body bgcolor="#000000;" class="gd-bg">
-    	<nav id="topnav">
-		<a id="logo" href="../"></a>
-    	<a href="../">Home</a>
-    	<a href="../about.html">About</a>
-    	<a href="../gallery.html">Gallery</a>
-    	<a href="../contact.html">Contact</a>
-    	</nav>
-		
-		
+		<nav id="topnav">
+      <div>
+        <a href="../" id="logo-box">
+  			  <img src="../logo-favicon.png" id="logo">
+          <span id="logo-name">Jasmine Lang</span>
+        </a>
+      </div>
+      <div id="top-nav-tab-group">
+  			<a href="../" class="top-nav-tab">Home</a>
+  			<a href="../about.html" class="top-nav-tab">About</a>
+  			<a href="../gallery.html" class="top-nav-tab">Gallery</a>
+  			<a href="../contact.html" class="top-nav-tab">Contact</a>
+      </div>
+  	</nav>
+
+
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 	<!--|||||||||| HEADER ||||||||||-->
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		
+
 		<div class="larger-margin">
             <h1><a href="lizards-and-cat-thingies.html">Of Lizards and Cat-thingies</a></h1>
             <h3 class="subtitle">An interactive story about my friend's creatures coming to life</h3>
 		</div>
 
-		
+
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 	<!--|||||||||| FUN STUFF ||||||||||-->
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
 	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		
+
 		<div class="larger-margin">
             <img src="../gallery-img/Handbook-cover.jpg" class="project-pics">
             <br>
@@ -67,29 +74,29 @@
                 <p>(Click here to open book at full size)</p>
             </a>
             <br>
-            
+
 		    <h1 class="story-section">Overview</h1>
 		    <p>
-                Explore the wonderful bizarre, trippy world of Katie Hall through this book! Designed based off of hand mannerisms Katie displays while creating her creatures, Of Lizards and Cat-thingies allows readers to read and learn with 
+                Explore the wonderful bizarre, trippy world of Katie Hall through this book! Designed based off of hand mannerisms Katie displays while creating her creatures, Of Lizards and Cat-thingies allows readers to read and learn with
 their eyes and hands! Each spread, full of color and illustrations, features a creature in need as well as a hand interaction (e.g. coloring, rotating, sweeping, etc.) based on Katie’s actions. Your goal is to help all the creatures come to life by performing these interactions.
             </p>
             <p>
-            The book’s folding system is essentially two accordion books nested into each other and united in the back. So you 
+            The book’s folding system is essentially two accordion books nested into each other and united in the back. So you
 would flip main pages in alternating directions - up, down, up, down...The actions featured in this book are from research conducted for a previous project in which we had to study how people use their hands in certain contexts and create a video about them. My video about Katie can be found <a href="https://youtu.be/FJnbnYi7h1E" target="_blank" class="links">here</a>.
             </p>
 		    <br>
-		    
+
 		    <h1 class="story-section">Process</h1>
-            
+
             <h1 class="story-chapter">Mission</h1>
             <p>
             Create an interactive "handbook for hands" that teaches the reader about someone else's usage of hands. Break down the usage of hands!
             </p>
             <br>
-            
+
             <h1 class="story-chapter">Playthrough</h1>
             <p>
-            Since my book is about Katie's hands, I knew it had to be wild and bizarre. From my previous study of her drawing, I chose the most important actions she performed - coloring, rotating, passing, erasing, sharpening, sweeping, and signing. I then thought about how those actions could be abstracted, differentiated, and made more fun. It made sense to make the user interact with her creatures too as if they were learning how to draw them, Katie-style. To push the weirdness, I had to devise a folding structure more complicated than a standard 2-page spread. Eventually, I ended up with this confusing accordion-brochure amalgamation (prototype of unfolding 
+            Since my book is about Katie's hands, I knew it had to be wild and bizarre. From my previous study of her drawing, I chose the most important actions she performed - coloring, rotating, passing, erasing, sharpening, sweeping, and signing. I then thought about how those actions could be abstracted, differentiated, and made more fun. It made sense to make the user interact with her creatures too as if they were learning how to draw them, Katie-style. To push the weirdness, I had to devise a folding structure more complicated than a standard 2-page spread. Eventually, I ended up with this confusing accordion-brochure amalgamation (prototype of unfolding
             <a href="https://youtu.be/cFOqyeSokoI" target="_blank" class="links">here</a>
             ). But that was okay because one of Katie's signature lines is, "Don't make me make sense!"
             </p>
@@ -97,7 +104,7 @@ would flip main pages in alternating directions - up, down, up, down...The actio
             After some extensive prototyping, storyboarding, and style (visual and voice) development, the only thing left was to actually build the book. Having to make all the interactions function correctly was the most difficult (and frustrating) part. I wasn't even sure if the book would close properly because there were so many layers! But I think doing another project like this would be worthwhile - it's interesting to explore interactions with surfaces that are not screens.
             </p>
             <br>
-            
+
             <h1 class="story-chapter">Results</h1>
             <!--
             <embed src="../gallery-img/handbook-physical-reduced.pdf" height="750px" class="pdf-embed">
@@ -140,7 +147,7 @@ would flip main pages in alternating directions - up, down, up, down...The actio
             </div>
             <p>(Thanks Katie for allowing me to use your drawings!)</p>
             <br>
-		
+
             <h1 class="story-section">Links</h1>
             <p class="links">
                 <a href="https://drive.google.com/drive/folders/0B1Jb2pATB84RYnJ1RVhPSmhPNXM?usp=sharing" target="_blank">
@@ -155,9 +162,9 @@ would flip main pages in alternating directions - up, down, up, down...The actio
             <p class="links"><a href="../gallery-img/handbook-printing-spreads.pdf" target="_blank">Spreads for printing</a></p>
             <p class="links"><a href="https://youtu.be/FJnbnYi7h1E" target="_blank">KT Colors: The Making of the Cat-thingy (Katie coloring in one of her psychedelic creatures!)</a></p>
             <br>
-        
+
             <a href="../gallery.html"><p class="return-button">- Return to Gallery -</p></a>
 		</div>
-		
+
 	</body>
 </html>
