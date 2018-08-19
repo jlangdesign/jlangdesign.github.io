@@ -4,47 +4,78 @@
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 :root {
-  /* Typography */
-  --heading-font: titillium web;
-  --body-font: roboto;
-  --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+    /********************/
+    /***** SITEWIDE *****/
+    /********************/
+    /* Typography */
+    --heading-font: titillium web;
+    --body-font: roboto;
+    --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+    --list-margin: 1vh 0vw;
+    --max-line-length: 750px;
+    --para-padding: 0vh 20vw;
+    --default-heading-size: 48px;
 
-  /* Color scheme */
-  --primary-color: 54, 69, 79; /* charcoal (#36454f) */
-  --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
-  --tertiary-color: 0, 0, 96; /* navy (#000060) */
-  --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
+    /* Color scheme */
+    --primary-color: 54, 69, 79; /* charcoal (#36454f) */
+    --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
+    --tertiary-color: 0, 0, 96; /* navy (#000060) */
+    --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
 
-  /* Shadows and glows */
-  --glow-color: rgba(255, 255, 255, .5);
+    /* Shadows and glows */
+    --blue-btn-hover-glow: 0px 0px 10px rgba(255, 255, 255, .5);
+
+    /* Top navbar */
+    --top-nav-font-size: 18px;
+    --top-nav-word-spacing: 30px;
+    --top-nav-padding: 10px;
+    --logo-side-length: 32px;
+    --logo-bg-size: var(--logo-side-length) var(--logo-side-length);
+
+    /* Other */
+    --body-margin: 5vh 7.5vw;
+
+    /********************/
+    /***** HOME PAGE *****/
+    /********************/
+
+    /********************/
+    /***** ABOUT PAGE *****/
+    /********************/
+
+    /********************/
+    /***** GALLERY PAGE *****/
+    /********************/
+
+    /********************/
+    /***** CONTACT PAGE *****/
+    /********************/
 }
 
 body {
-    margin: 5% 7.5%;
+    margin: var(--body-margin);
     background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
     background-size: cover;
 }
 
-/* TODO set flex and order on smaller screens */
-@media all and (min-width: 600px) {
-
-}
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--font-color);
     text-align: center;
-    font-size: 48px;
+    font-size: var(--default-heading-size);
 }
 
 p, li {
     font-family: var(--body-font);
     color: var(--font-color);
+    max-width: var(--max-line-length);
+    padding: var(--para-padding);
 }
 
 li {
-    margin: 1% 0%;
+    margin: var(--list-margin);
 }
 
 a {
@@ -60,10 +91,6 @@ a:visited {
     text-decoration: underline;
 }
 
-/* so the line length isn't so long */
-.larger-margin {
-    margin: 0% 20%;
-}
 
 /*|||||||||||||||||||| TOP NAV ||||||||||||||||||||*/
 
@@ -78,9 +105,9 @@ a:visited {
         right: 0px;
     background-color: rgb(var(--primary-color));
     z-index: 100;
-    font-size: 18px;
-    word-spacing: 30px;
-    padding: 10px;
+    font-size: var(--top-nav-font-size);
+    word-spacing: var(--top-nav-word-spacing);
+    padding: var(--top-nav-padding);
     box-shadow: 0 2.5px 10px #000000;
 }
 
@@ -97,17 +124,15 @@ a:visited {
     float: left;
     /*margin: 0px -350px 0px 350px;*/
     background-image: url("assets/logo-favicon.png");
-    width: 32px;
-    height: 32px;
-    background-size: 32px 32px;
+    width: var(--logo-side-length);
+    height: var(--logo-side-length);
+    background-size: var(--logo-bg-size);
     z-index: 110;
 }
 
 #logo:hover {
-    box-shadow: 0px 0px 5px var(--glow-color);
+    box-shadow: var(--blue-btn-hover-glow);
 }
-
-/*|||||||||||||||||||| FOOTER ||||||||||||||||||||*/
 
 
 /*||||||||||||||||||||||||||||||||||||||||*/
@@ -182,7 +207,7 @@ a:visited {
 }
 
 #press-start:hover {
-    box-shadow: 0px 0px 10px var(--glow-color);
+    box-shadow: var(--blue-btn-hover-glow);
     text-shadow: 0px 0px 1px var(--glow-color);
     background-color: rgba(var(--secondary-color), 0.75);
     border: 2.5px solid rgba(var(--tertiary-color), 0.35);
@@ -429,6 +454,15 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
     100%{opacity:1;}
 }
 
+/*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
+#welcome {
+  text-align: center;
+}
+
+#welcome-txt {
+  font-size: 24px;
+}
+
 
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
@@ -461,7 +495,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 }
 
 #cv-resume:hover {
-    box-shadow: 0px 0px 10px var(--glow-color);
+    box-shadow: var(--blue-btn-hover-glow);
     text-shadow: 0px 0px 1px var(--glow-color);
     background-color: rgba(var(--secondary-color), 0.75);
 }
@@ -490,7 +524,7 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 .cv-click:hover {
     background-color: rgba(var(--secondary-color), .5);
     border: 2.5px solid rgba(var(--tertiary-color), .5);
-    box-shadow: 0px 0px 10px var(--glow-color);
+    box-shadow: var(--blue-btn-hover-glow);
 }
 
 /*how to make expandable/collapsable?*/
@@ -940,8 +974,28 @@ input[type=submit]:hover {
 }
 
 .frame {
-    background-color: var(--primary-color);
+    background-color: rgb(var(--primary-color));
     border-radius: 5px;
     padding: 20px;
-    width: 100%;
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+
+
+
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| MEDIA QUERIES ||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/* TODO set flex and order on larger and smaller screens */
+@media (min-width: 600px) {
+
 }
