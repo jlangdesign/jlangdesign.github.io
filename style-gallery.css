@@ -8,9 +8,14 @@
 
 /*change bg b/c deeper into site*/
 body {
-    background: #616266 url("gamebox.png") no-repeat fixed center;
+    background: #616266 url("assets/gamebox.png") no-repeat fixed center;
     background-size: cover;
     margin: 5% 7.5%;
+}
+
+/* TODO temp change so site looks okay - need to make responsive */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0vh 20vw;
 }
 
 /*banner on top*/
@@ -61,7 +66,8 @@ h1 {
     text-align: center;
     padding: 15px;
     clear: both;
-    font-family: titillium web;				
+    font-family: titillium web;
+    margin: 0 auto;
 }
 
 .return-button:hover {
@@ -95,12 +101,14 @@ h1 {
 
 .pdf-embed {
     /* width: 85%; */
+    height: 600px;
     width: 75%;
     display: block;
     margin: auto;
 }
 
 iframe {
+    height: 600px;
     display: block;
     margin: auto;
     width: 75%;
@@ -160,7 +168,7 @@ iframe {
 /*||||||||||||||||||||||||||||||||||||||||*/
 
 body.gd-bg {
-    background: #616266 url("gamebox-gd.png") no-repeat fixed center;
+    background: #616266 url("assets/gamebox-gd.png") no-repeat fixed center;
     background-size: cover;
 }
 
