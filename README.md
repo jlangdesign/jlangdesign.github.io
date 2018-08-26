@@ -7,10 +7,18 @@ Hi there! This is the GitHub repo for my portfolio website, which features my wo
 Want to get in touch? Email me at [jlang2@ncsu.edu](mailto:jlang2@ncsu.edu)!
 
 ## Education
+### North Carolina State University
+### Hong Kong Polytechnic University
 
 ## Projects and Experience
+### Immersive Scholar
+### Online Portfolio
+### AHECTA Logos
+### LiPS Logos
 
 ## Honors and Awards
+### Art2Wear Student Exhibition
+### Dean's List
 
 ## Software Proficiencies
 
