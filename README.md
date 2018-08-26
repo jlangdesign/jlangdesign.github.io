@@ -6,29 +6,4 @@ Hi there! This is the GitHub repo for my portfolio website, which features my wo
 
 Want to get in touch? Email me at [jlang2@ncsu.edu](mailto:jlang2@ncsu.edu)!
 
-## Education
-### North Carolina State University
-
-Bachelor of Graphic Design  
-Minor in Computer Programming  
-Fall 2015 - Present
-
-### Hong Kong Polytechnic University
-Interactive Media (Study Abroad)  
-Spring 2018
-
-## Projects and Experience
-### Immersive Scholar
-### Online Portfolio
-### AHECTA Logos
-### LiPS Logos
-
-## Honors and Awards
-### Art2Wear Student Exhibition
-### Dean's List
-
-## Software Proficiencies
-
-## Design Skills
-
-## Languages
+You can view my CV [ here](https://jlangdesign.github.io/assets/cv-resume.pdf).
