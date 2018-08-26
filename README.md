@@ -8,7 +8,14 @@ Want to get in touch? Email me at [jlang2@ncsu.edu](mailto:jlang2@ncsu.edu)!
 
 ## Education
 ### North Carolina State University
+
+Bachelor of Graphic Design  
+Minor in Computer Programming  
+Fall 2015 - Present
+
 ### Hong Kong Polytechnic University
+Interactive Media (Study Abroad)  
+Spring 2018
 
 ## Projects and Experience
 ### Immersive Scholar
