@@ -5,3 +5,5 @@ Hi there! This is the GitHub repo for my portfolio website, which features my wo
 Want to get in touch? Email me at [jlang2@ncsu.edu](mailto:jlang2@ncsu.edu)!
 
 You can view my CV [ here](https://jlangdesign.github.io/assets/cv-resume.pdf).
+
+Note: The website should work on most laptop/desktop displays, but it's not optimized for smaller devices yet.
