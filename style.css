@@ -518,6 +518,11 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*|||||||||||||||||||| ABOUT ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+/* Image and text for About page */
+.about-content {
+  display: flex;
+}
+
 /* Header image for About page */
 .about-img {
     background-image: url("assets/me-snake.jpg");
