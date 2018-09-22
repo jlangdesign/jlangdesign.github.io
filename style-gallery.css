@@ -15,7 +15,7 @@ body {
 
 /* TODO temp change so site looks okay - need to make responsive */
 h1, h2, h3, h4, h5, h6 {
-    padding: 0vh 20vw;
+  padding: 0vh 20vw;
 }
 
 /*banner on top*/
@@ -118,57 +118,27 @@ iframe {
     width: 100%;
 }
 
-/**************************************************/
-/**************************************************/
-/* TODO implement more responsive layout with flexbox */
-/**************************************************/
-/**************************************************/
-body {
-    background: #616266 url("assets/gamebox.png") no-repeat fixed center;
-    background-size: cover;
-    margin: 5% 0%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    padding: 0vh 0vw;
-}
-
-p {
-  padding: 0;
-}
-
-.project-pics, .pdf-embed, iframe {
-    margin: 0;
-    width: 90%;
-    max-width: 90%;
-    padding: 0% 5%;
-}
-
 /*|||||||||||||||||||| COLUMN (LAYOUT) ATTRIBUTES ||||||||||||||||||||*/
 
 /* for both columns - parent */
 .gallery-columns {
-    display: flex;
-    align-items: center;
-    padding-bottom: 5%;
-    /*margin: 0% 5%;*/
+    margin: 0% 5%;
 }
 
 /* for images */
 .gallery-left-column {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 60vw;
-    height: 80vh;
-    overflow: auto;
+    display: inline-block;
+    float: left;
+    width: 60%;
 }
 
 /* for text - height dependent on height of left column */
 .gallery-right-column {
-    width: 30vw;
-    height: 80vh;
+    display: inline-block;
+    width: 30%;
+    height: 1000px;
     overflow: auto;
+    padding: 0% 2.5%;
     background-color: rgba(54, 69, 79, .5);
     border: 5px solid rgba(54, 69, 79, .75);
     border-radius: 5px;
@@ -176,12 +146,10 @@ p {
 
 /* overview, process, links, etc. */
 .tab-bar {
-    display: flex;
     text-align: center;
     word-spacing: 20px;
     margin: auto;
     padding: 1%;
-    positon: absolute;
 }
 
 .section-tabs {
@@ -195,7 +163,7 @@ p {
 
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
-/*|||||||||||||||||||| GD PROJECTS ||||||||||||||||||||*/
+/*|||||||||||||||||||| INDIVIDUAL - GD ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 
