@@ -1,59 +1,68 @@
-/* TODO add variables and clean up code */
-
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*|||||||||||||||||||| ALL ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+/* All CSS custom properties */
+:root {
+    /* Typography */
+    --heading-padding: 0vh 20vw;
+    --subtitle-size: 36px;
+    --story-heading-text-align: left;
+    --story-section-font: 700 30px var(--heading-font);
+    --story-chapter-font: 600 24px var(--heading-font);
+    --story-subchapter-font: 600 18px var(--heading-font);
 
-/*change bg b/c deeper into site*/
+    /* Imagery */
+    --project-media-width: 75%;
+}
+
+/* Change BG since you're deeper into site */
 body {
     background: #616266 url("assets/gamebox.png") no-repeat fixed center;
     background-size: cover;
-    margin: 5% 7.5%;
+    /*margin: 5% 7.5%;*/
+    margin: 0px;
 }
 
-/* TODO temp change so site looks okay - need to make responsive */
+/* General heading properties */
 h1, h2, h3, h4, h5, h6 {
-  padding: 0vh 20vw;
+  padding: var(--heading-padding);
 }
 
-/*banner on top*/
+/* Banner on top */
 .header-img {
 }
 
-/*project name*/
-h1 {
+/* Project name at the very top */
+.project-name {
 }
 
-/*what is it? short description/subtitle*/
+/* Short description/subtitle below the project name */
 .subtitle {
-    font-size: 36px;
+    font-size: var(--subtitle-size);
 }
 
-/*labels for sections - e.g. overview/TLDR, detailed process, lessons, next steps*/
+/* Headings for Overview, Process, and Links sections */
 .story-section {
-    font-weight: 700;
-    font-family: titillium web;
-    font-size: 30px;
-    text-align: left;
+    font: var(--story-section-font);
+    text-align: var(--story-heading-text-align);
 }
 
+/* Headings for Mission, Playthrough, and Results sections (in Process section) */
 .story-chapter {
-    font-weight: 600;
-    font-family: titillium web;
-    font-size: 24px;
-    text-align: left;
+    font: var(--story-chapter-font);
+    text-align: var(--story-heading-text-align);
 }
 
+/* Any headings within the story chapters */
 .story-subchapter {
-    font-weight: 600;
-    font-family: titillium web;
-    font-size: 18px;
-    text-align: left;
+    font: var(--story-subchapter-font);
+    text-align: var(--story-heading-text-align);
 }
 
-/*press button after you've reached the end to go back*/
+/* TODO make this consistent with other buttons on site */
+/* Button that'll take you back to Gallery page when clicked */
 .return-button {
     background-color: rgba(176, 224, 230, 0.5);
     border: 2.5px solid rgba(0, 0, 96, 0.25);
@@ -70,69 +79,77 @@ h1 {
     margin: 0 auto;
 }
 
+/* Hover state for return button */
 .return-button:hover {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
     text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
     background-color: rgba(176, 224, 230, 0.75);
 }
 
+/* Links in the Links section */
 .links {
     text-decoration: underline;
 }
 
+/* Links underneath PDFs that open the PDF in a separate tab */
 .pdf-links {
     text-align: center;
 }
 
-/*|||||||||||||||||||| IMAGES ||||||||||||||||||||*/
-
+/*|||||||||||||||||||| IMAGES/OTHER VISUAL MEDIA ||||||||||||||||||||*/
+/* TODO change this to "project-media" and include videos, PDFs, and InVision apps */
+/* All images */
 .project-pics {
     /* max-width: 600px; */
-    max-width: 75%;
+    max-width: var(--project-media-width);
     /*float: left;
     margin: 0 0 10px 10px;*/
     display: block;
     margin: auto;
 }
 
+/* Image that needs to be displayed in the same line as another one */
 .inline-img {
     display: inline;
 }
 
+/* PDF files */
 .pdf-embed {
-    /* width: 85%; */
     height: 600px;
-    width: 75%;
+    width: var(--project-media-width);
     display: block;
     margin: auto;
 }
 
+/* Youtube videos */
 iframe {
     height: 600px;
     display: block;
     margin: auto;
-    width: 75%;
+    width: var(--project-media-width);
 }
 
+/* Interactive InVision prototypes */
 .invision-iframe {
-    width: 100%;
+    /*width: 100%;*/
+    width: var(--project-media-width);
 }
 
 /*|||||||||||||||||||| COLUMN (LAYOUT) ATTRIBUTES ||||||||||||||||||||*/
-
-/* for both columns - parent */
+/* TODO new layout that requires less scrolling */
+/* Parent container that contains both columns */
 .gallery-columns {
     margin: 0% 5%;
 }
 
-/* for images */
+/* Left column in layout - for images */
 .gallery-left-column {
     display: inline-block;
     float: left;
     width: 60%;
 }
 
-/* for text - height dependent on height of left column */
+/* Right column in layout - for text - height dependent on height of left column */
 .gallery-right-column {
     display: inline-block;
     width: 30%;
@@ -144,7 +161,7 @@ iframe {
     border-radius: 5px;
 }
 
-/* overview, process, links, etc. */
+/* Collection of section tabs for easy navigation */
 .tab-bar {
     text-align: center;
     word-spacing: 20px;
@@ -152,7 +169,8 @@ iframe {
     padding: 1%;
 }
 
-.section-tabs {
+/* Anchor that allows you to jump to the different sections */
+.section-tab {
     font-family: titillium web;
     background-color: rgba(54, 69, 79, .5);
     border: 5px solid rgba(54, 69, 79, .75);
@@ -166,8 +184,28 @@ iframe {
 /*|||||||||||||||||||| INDIVIDUAL - GD ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
-
+/* Background for GD projects */
 body.gd-bg {
     background: #616266 url("assets/gamebox-gd.png") no-repeat fixed center;
     background-size: cover;
+}
+
+
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| Media queries ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/* Values for tablet-sized displays */
+@media (max-width: 768px) {
+    :root {
+
+    }
+}
+
+/* Values for mobile-sized displays */
+@media (max-width: 600px) {
+    :root {
+
+    }
 }
