@@ -61,29 +61,12 @@ h1, h2, h3, h4, h5, h6 {
     text-align: var(--story-heading-text-align);
 }
 
-/* TODO make this consistent with other buttons on site */
 /* Button that'll take you back to Gallery page when clicked */
 .return-button {
-    background-color: rgba(176, 224, 230, 0.5);
-    border: 2.5px solid rgba(0, 0, 96, 0.25);
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    color: rgb(255, 255, 255);
-    /*position: fixed;
-        bottom: 0%;*/
-    z-index: 20;
-    text-align: center;
-    padding: 15px;
-    clear: both;
-    font-family: titillium web;
-    margin: 0 auto;
 }
 
 /* Hover state for return button */
 .return-button:hover {
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, .5);
-    text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);
-    background-color: rgba(176, 224, 230, 0.75);
 }
 
 /* Links in the Links section */
