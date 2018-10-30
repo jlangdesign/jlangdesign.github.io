@@ -6,6 +6,7 @@
 /* All CSS custom properties */
 :root {
     /* Typography */
+    --page-title-bottom-padding: 10px;
     --heading-padding: 0vh 20vw;
     --subtitle-size: 36px;
     --story-heading-text-align: left;
@@ -27,7 +28,7 @@ body {
 
 /* General heading properties */
 h1, h2, h3, h4, h5, h6 {
-  padding: var(--heading-padding);
+    padding: var(--heading-padding);
 }
 
 /* Banner on top */
@@ -41,6 +42,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Short description/subtitle below the project name */
 .subtitle {
     font-size: var(--subtitle-size);
+    padding: 0px;
+    padding-bottom: 25px;
 }
 
 /* Headings for Overview, Process, and Links sections */

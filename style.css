@@ -15,8 +15,9 @@
     --list-margin: 1vh 20vw;
     --max-line-length: 750px;
     --para-padding: 0vh 20vw;
-    --default-heading-size: 48px;
-    --page-title-top-margin: 5%;
+    --default-heading-size: 60px;
+    --page-title-top-padding: 75px;
+    --page-title-bottom-padding: 25px;
 
     /* Color scheme */
     --primary-color: 54, 69, 79; /* charcoal (#36454f) */
@@ -51,7 +52,7 @@
     --start-screen-height: calc(100vh - 50px);
     --slideshow-max-width: 75vw;
     --slideshow-max-height: 100vh;
-    --game-name-size: 72px;
+    --game-name-size: 96px;
     --press-start-font-size: 24px;
     --press-start-button-height: 10vh;
     --press-start-button-width: 20vw;
@@ -85,18 +86,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--font-color);
     text-align: center;
     font-size: var(--default-heading-size);
+    margin: 0px;
 }
 
 /* Headings that are page titles (e.g. About, Gallery, Contact) */
 .page-title {
-    margin-top: var(--page-title-top-margin);
+    padding-top: var(--page-title-top-padding);
+    padding-bottom: var(--page-title-bottom-padding);
 }
 
 /* Paragraph elements */
 p {
     font-family: var(--body-font);
     color: var(--font-color);
-    max-width: var(--max-line-length);
+    /*max-width: var(--max-line-length);*/
     padding: var(--para-padding);
 }
 
