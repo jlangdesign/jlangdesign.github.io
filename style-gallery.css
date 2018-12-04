@@ -88,7 +88,8 @@ h1 {
 
 .project-pics {
     /* max-width: 600px; */
-    max-width: 75%;
+    /*max-width: 75%;*/
+    max-width: 60%;
     /*float: left;
     margin: 0 0 10px 10px;*/
     display: block;
