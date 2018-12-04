@@ -5,6 +5,14 @@
 /*|||||||||||||||||||| ALL ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+#content {
+  width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 
 /*change bg b/c deeper into site*/
 body {
