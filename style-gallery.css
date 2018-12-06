@@ -104,6 +104,12 @@ h1 {
     margin: auto;
 }
 
+.temp-project-pics {
+  max-width: 75%;
+  display: block;
+  margin: auto;
+}
+
 .inline-img {
     display: inline;
 }
