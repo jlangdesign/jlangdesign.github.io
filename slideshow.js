@@ -1,20 +1,16 @@
-var myIndex = 0;
-carousel();
+var current = 0;
+var slides = document.getElementsByClassName("slide-img");
 
-//JS etiquette - use 4 spaces instead of one tab indent
+setInterval(function() {
+	for (var i = 0; i < slides.length; i++) {
+		slides[i].style.opacity = 0;
+	}
 
-function carousel() {
-	var x = document.getElementsByClassName("fadeSlides");
-	for (var i = 0; i < x.length; i++) {
-		x[i].style.display = "none";
-		}
-	myIndex++;
-	
-	if (myIndex > x.length) {
-	    myIndex = 1
-    }
-    
-	x[myIndex-1].style.display = "block";
-	setTimeout(carousel, 5000); //5 sec
-}	
-		
+	if (current != slides.length - 1) {
+		current++;
+	} else {
+		current = 0;
+	}
+
+	slides[current].style.opacity = 1;
+}, 3000);

@@ -235,8 +235,8 @@ a:visited {
 /* Container with all the image slides */
 #slideshow {
     text-align: center;
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
     max-width: var(--slideshow-max-width);
     max-height: var(--slideshow-max-height);
     margin: auto;
@@ -257,7 +257,6 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     z-index: 95;
 }
 
@@ -293,243 +292,17 @@ a:visited {
 .slide-img {
     height: var(--start-screen-height);
     width: var(--slideshow-max-width);
-    background-size: var(--start-screen-height);
     margin: auto;
-    background: no-repeat center;
-    opacity: .8;
+    transition: opacity .5s ease-in;
+    position: absolute;
+      top: 0;
+    object-fit: cover;
 }
 
-/* TODO set up file loading so we don't have all this clutter in the CSS */
-#slide-1 {
-    background-image: url("gallery-img/perillo-chair-1.jpg");
-    background-size: cover;
+.slide-img + .slide-img {
+  opacity: 0;
 }
 
-#slide-2 {
-    background-image: url("gallery-img/budong-structure.png");
-    background-size: cover;
-}
-
-#slide-3 {
-    background-image: url("gallery-img/Day-at-NCMNS-Storyboard.jpg");
-    background-size: cover;
-}
-
-#slide-4 {
-    background-image: url("gallery-img/pandoras-box-start.png");
-    background-size: cover;
-}
-
-#slide-5 {
-    background-image: url("gallery-img/touch-crane-screen.jpg");
-    background-size: cover;
-}
-
-#slide-6 {
-    background-image: url("gallery-img/Harmony-header.jpg");
-    background-size: cover;
-}
-
-#slide-7 {
-    background-image: url("gallery-img/ARE3-cover.jpg");
-    background-size: cover;
-}
-
-#slide-8 {
-    background-image: url("gallery-img/Handbook-cover.jpg");
-    background-size: cover;
-}
-
-#slide-9 {
-    background-image: url("gallery-img/relief-installation.jpg");
-    background-size: cover;
-}
-
-#slide-10 {
-    background-image: url("gallery-img/LiPS-Logos-Portfolio-sq-29.png");
-    background-size: cover;
-}
-
-#slide-11 {
-    background-image: url("gallery-img/StarryReader-Header.jpg");
-    background-size: cover;
-}
-
-#slide-12 {
-    background-image: url("gallery-img/Jasmine-Flipboard-F.jpg");
-    background-size: cover;
-}
-
-#slide-13 {
-    background-image: url("gallery-img/mmg-cover-01.png");
-    background-size: cover;
-}
-
-#slide-14 {
-    background-image: url("gallery-img/Picture-Booth-Context.jpg");
-    background-size: cover;
-}
-
-#slide-15 {
-    background-image: url("gallery-img/After-Kendama-03.png");
-    background-size: cover;
-}
-
-/* TODO write for loop to go through each image */
-.slide-img:nth-child(1) {
-    -webkit-animation: xfade 75s 0s infinite; /* start at 0s */
-    -moz-animation: xfade 75s 0s infinite;
-    -o-animation: xfade 75s 0s infinite;
-    animation: xfade 75s 0s infinite;
-    z-index: 100;
-}
-
-.slide-img:nth-child(2) {
-    -webkit-animation: xfade 75s 5s infinite; /* start at 5s */
-    -moz-animation: xfade 75s 5s infinite;
-    -o-animation: xfade 75s 5s infinite;
-    animation: xfade 75s 5s infinite;
-    z-index: 90;
-}
-
-.slide-img:nth-child(3) {
-    -webkit-animation: xfade 75s 10s infinite; /* start at 10s */
-    -moz-animation: xfade 75s 10s infinite;
-    -o-animation: xfade 75s 10s infinite;
-    animation: xfade 75s 10s infinite;
-    z-index: 80;
-}
-
-.slide-img:nth-child(4) {
-    -webkit-animation: xfade 75s 15s infinite; /* start at 15s */
-    -moz-animation: xfade 75s 15s infinite;
-    -o-animation: xfade 75s 15s infinite;
-    animation: xfade 75s 15s infinite;
-    z-index: 70;
-}
-
-.slide-img:nth-child(5) {
-    -webkit-animation: xfade 75s 20s infinite; /* start at 20s */
-    -moz-animation: xfade 75s 20s infinite;
-    -o-animation: xfade 75s 20s infinite;
-    animation: xfade 75s 20s infinite;
-    z-index: 60;
-}
-
-.slide-img:nth-child(6) {
-    -webkit-animation: xfade 75s 25s infinite; /* start at 25s */
-    -moz-animation: xfade 75s 25s infinite;
-    -o-animation: xfade 75s 25s infinite;
-    animation: xfade 75s 25s infinite;
-    z-index: 50;
-}
-
-.slide-img:nth-child(7) {
-    -webkit-animation: xfade 75s 30s infinite; /* start at 30s */
-    -moz-animation: xfade 75s 30s infinite;
-    -o-animation: xfade 75s 30s infinite;
-    animation: xfade 75s 30s infinite;
-    z-index: 40;
-}
-
-.slide-img:nth-child(8) {
-    -webkit-animation: xfade 75s 35s infinite; /* start at 35s */
-    -moz-animation: xfade 75s 35s infinite;
-    -o-animation: xfade 75s 35s infinite;
-    animation: xfade 75s 35s infinite;
-    z-index: 30;
-}
-
-.slide-img:nth-child(9) {
-    -webkit-animation: xfade 75s 40s infinite; /* start at 40s */
-    -moz-animation: xfade 75s 40s infinite;
-    -o-animation: xfade 75s 40s infinite;
-    animation: xfade 75s 40s infinite;
-    z-index: 20;
-}
-
-.slide-img:nth-child(10) {
-    -webkit-animation: xfade 75s 45s infinite; /* start at 45s */
-    -moz-animation: xfade 75s 45s infinite;
-    -o-animation: xfade 75s 45s infinite;
-    animation: xfade 75s 45s infinite;
-    z-index: 10;
-}
-
-.slide-img:nth-child(11) {
-    -webkit-animation: xfade 75s 50s infinite; /* start at 50s */
-    -moz-animation: xfade 75s 50s infinite;
-    -o-animation: xfade 75s 50s infinite;
-    animation: xfade 75s 50s infinite;
-    z-index: 9;
-}
-
-.slide-img:nth-child(12) {
-    -webkit-animation: xfade 75s 55s infinite; /* start at 55s */
-    -moz-animation: xfade 75s 55s infinite;
-    -o-animation: xfade 75s 55s infinite;
-    animation: xfade 75s 55s infinite;
-    z-index: 8;
-}
-
-.slide-img:nth-child(13) {
-    -webkit-animation: xfade 75s 60s infinite; /* start at 60s */
-    -moz-animation: xfade 75s 60s infinite;
-    -o-animation: xfade 75s 60s infinite;
-    animation: xfade 75s 60s infinite;
-    z-index: 7;
-}
-
-.slide-img:nth-child(14) {
-    -webkit-animation: xfade 75s 65s infinite; /* start at 65s */
-    -moz-animation: xfade 75s 65s infinite;
-    -o-animation: xfade 75s 65s infinite;
-    animation: xfade 75s 65s infinite;
-    z-index: 7;
-}
-
-.slide-img:nth-child(15) {
-    -webkit-animation: xfade 75s 70s infinite; /* start at 70s */
-    -moz-animation: xfade 75s 70s infinite;
-    -o-animation: xfade 75s 70s infinite;
-    animation: xfade 75s 70s infinite;
-    z-index: 7;
-}
-
-/*
-.fadeSlides {
-    max-width: 750px;
-	position: absolute;
-}
-.fade {
-    animation: fading 5s infinite;
-}
-*/
-
-/* TODO move this code */
-/*
-SYNTAX = animation: name duration timing-function delay iteration-count direction
-- animation timing (when to xfade out) = 100%/# of slides
-- % before fade-out, fade-in
-- animation duration = # of slides * display time
-- see https://stackoverflow.com/questions/22547763/fading-css-slideshow-without-js-that-loops
-*/
-
-@-webkit-keyframes xfade {
-    0%{opacity:1;} /* each image is visible */
-    23.3%{opacity:1;} /* fading out */
-    33.3%{opacity:0;} /* invisible */
-    90%{opacity:0;} /* fading in */
-    100%{opacity:1;} /* visible again */
-}
-
-@keyframes xfade {
-    0%{opacity:1;}
-    23.3%{opacity:1;}
-    33.3%{opacity:0;}
-    90%{opacity:0;}
-    100%{opacity:1;}
-}
 
 /*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
 /* Short welcome message and description of this site below the slideshow */
