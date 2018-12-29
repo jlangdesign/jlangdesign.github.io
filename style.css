@@ -8,6 +8,8 @@
   /********************/
   /***** SITEWIDE *****/
   /********************/
+  --main-content-padding: 0vw 20vw;
+
   /* Typography */
   --default-vw: 1440; /* 100 vw = 1440 px */
   --heading-font: titillium web;
@@ -75,6 +77,7 @@
   /***** CONTACT PAGE *****/
   /********************/
 }
+
 /* Body element */
 body {
   margin: 0px;
@@ -82,6 +85,10 @@ body {
   background-size: cover;
 }
 
+/* Main content (content outside of topnav) */
+.main-content {
+  padding: var(--main-content-padding);
+}
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
 /* Heading tags */
@@ -104,7 +111,7 @@ p {
   font-family: var(--body-font);
   color: var(--font-color);
   /*max-width: var(--max-line-length);*/
-  padding: var(--para-padding);
+  /* padding: var(--para-padding); */
 }
 
 /* List elements */
@@ -324,7 +331,7 @@ a:visited {
 
 /* Text of the welcome message */
 #welcome-txt {
-  padding: var(--para-padding);
+  /* padding: var(--para-padding); */
   max-width: initial;
   font-size: var(--welcome-text-size);
 }
@@ -354,6 +361,11 @@ a:visited {
 /* Hover state of About image (changes to a different image) */
 .about-img:hover {
   background-position: calc(var(--about-img-width) * -1) 0px;
+}
+
+.musing {
+  color: #999999;
+  font-size: 9px;
 }
 
 /* Button to open up CV/resume PDF */
@@ -877,6 +889,8 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
+    --main-content-padding: 0vw 10vw;
+
     /* Typography */
     --para-padding: 0vh 10vw;
 
@@ -916,6 +930,8 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
+    --main-content-padding: 0vw 5vw;
+
     /* Typography */
     --para-padding: 0vh 5vw;
 
