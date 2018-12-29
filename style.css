@@ -9,6 +9,7 @@
   /***** SITEWIDE *****/
   /********************/
   /* Typography */
+  --default-vw: 1440; /* 100 vw = 1440 px */
   --heading-font: titillium web;
   --body-font: roboto;
   --font-color: rgb(255, 255, 255); /* white (#ffffff) */
@@ -63,6 +64,9 @@
   /********************/
   /***** ABOUT PAGE *****/
   /********************/
+  --about-img-width: calc(600 / var(--default-vw) * 100vw);
+  --about-img-height: calc(400 / var(--default-vw) * 100vw);
+  --about-img-bg-size: calc(var(--about-img-width) * 2) var(--about-img-height);
 
   /********************/
   /***** GALLERY PAGE *****/
@@ -341,16 +345,16 @@ a:visited {
 /* Header image for About page */
 .about-img {
   background-image: url("assets/me-snake.jpg");
-  height: 400px;
-  width: 600px;
-  background-size: 1200px 400px;
+  height: var(--about-img-height);
+  width: var(--about-img-width);
+  background-size: var(--about-img-bg-size);
   display: block;
   margin: auto;
 }
 
 /* Hover state of About image (changes to a different image) */
 .about-img:hover {
-  background-position: -600px 0px;
+  background-position: calc(var(--about-img-width) * -1) 0px;
 }
 
 /* Button to open up CV/resume PDF */
@@ -887,6 +891,12 @@ input[type=submit]:hover {
       --press-start-button-height: 7.5vh;
       --press-start-button-width: 30vw;
       --welcome-text-padding: 0vh 10vw;
+
+      /********************/
+      /***** ABOUT PAGE *****/
+      /********************/
+      --about-img-width: calc(900 / var(--default-vw) * 100vw);
+      --about-img-height: calc(600 / var(--default-vw) * 100vw);
   }
 
   #top-nav-tab-group {
@@ -916,6 +926,12 @@ input[type=submit]:hover {
     --press-start-button-width: 40vw;
     --welcome-text-size: 18px;
     --welcome-text-padding: 0vh 5vw;
+
+    /********************/
+    /***** ABOUT PAGE *****/
+    /********************/
+    --about-img-width: calc(1200 / var(--default-vw) * 100vw);
+    --about-img-height: calc(800 / var(--default-vw) * 100vw);
   }
 
   #logo-box {
