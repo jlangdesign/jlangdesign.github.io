@@ -58,7 +58,6 @@
   --press-start-font-size: 24px;
   --press-start-button-height: 10vh;
   --press-start-button-width: 20vw;
-  --welcome-text-padding: 0vh 20vw;
   --welcome-text-size: 24px;
 
   /********************/
@@ -325,14 +324,14 @@ a:visited {
 
 /* Text of the welcome message */
 #welcome-txt {
-  padding: var(--welcome-text-padding);
+  padding: var(--para-padding);
   max-width: initial;
   font-size: var(--welcome-text-size);
 }
 
 /* Note about responsiveness */
 #limitation {
-  padding: var(--welcome-text-padding);
+  padding: var(--para-padding);
   max-width: initial;
 }
 
@@ -875,28 +874,30 @@ input[type=submit]:hover {
 /* Values for tablet-sized displays */
 @media (max-width: 930px) {
   :root {
-      /********************/
-      /***** SITEWIDE *****/
-      /********************/
-      /* Top navbar */
-      --top-nav-flex-direction: column;
-      --logo-box-left-position: 5vw;
+    /********************/
+    /***** SITEWIDE *****/
+    /********************/
+    /* Typography */
+    --para-padding: 0vh 10vw;
 
-      /********************/
-      /***** HOME PAGE *****/
-      /********************/
-      --slideshow-max-width: 100vw;
-      --game-name-size: 60px;
-      --press-start-font-size: 18px;
-      --press-start-button-height: 7.5vh;
-      --press-start-button-width: 30vw;
-      --welcome-text-padding: 0vh 10vw;
+    /* Top navbar */
+    --top-nav-flex-direction: column;
+    --logo-box-left-position: 5vw;
 
-      /********************/
-      /***** ABOUT PAGE *****/
-      /********************/
-      --about-img-width: calc(900 / var(--default-vw) * 100vw);
-      --about-img-height: calc(600 / var(--default-vw) * 100vw);
+    /********************/
+    /***** HOME PAGE *****/
+    /********************/
+    --slideshow-max-width: 100vw;
+    --game-name-size: 60px;
+    --press-start-font-size: 18px;
+    --press-start-button-height: 7.5vh;
+    --press-start-button-width: 30vw;
+
+    /********************/
+    /***** ABOUT PAGE *****/
+    /********************/
+    --about-img-width: calc(900 / var(--default-vw) * 100vw);
+    --about-img-height: calc(600 / var(--default-vw) * 100vw);
   }
 
   #top-nav-tab-group {
@@ -915,6 +916,9 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
+    /* Typography */
+    --para-padding: 0vh 5vw;
+
     /* Top navbar */
     --top-nav-height: 75px;
 
@@ -925,7 +929,6 @@ input[type=submit]:hover {
     --game-name-size: 48px;
     --press-start-button-width: 40vw;
     --welcome-text-size: 18px;
-    --welcome-text-padding: 0vh 5vw;
 
     /********************/
     /***** ABOUT PAGE *****/
