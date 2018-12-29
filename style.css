@@ -8,10 +8,10 @@
   /********************/
   /***** SITEWIDE *****/
   /********************/
-  --main-content-padding: 0vw 20vw;
+  --default-vw: 1440; /* 100 vw = 1440 px */
+  --main-content-padding: 0vw 20vw 15px 20vw;
 
   /* Typography */
-  --default-vw: 1440; /* 100 vw = 1440 px */
   --heading-font: titillium web;
   --body-font: roboto;
   --font-color: rgb(255, 255, 255); /* white (#ffffff) */
@@ -321,7 +321,6 @@ a:visited {
 #welcome {
   text-align: center;
   padding-top: 70px;
-  padding-bottom: 15px;
 }
 
 /* Friendly interjection */
@@ -889,10 +888,11 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: 0vw 10vw;
+    --main-content-padding: 0vw 10vw 15px 10vw;
 
     /* Typography */
     --para-padding: 0vh 10vw;
+    --default-heading-size: 54px;
 
     /* Top navbar */
     --top-nav-flex-direction: column;
@@ -906,6 +906,7 @@ input[type=submit]:hover {
     --press-start-font-size: 18px;
     --press-start-button-height: 7.5vh;
     --press-start-button-width: 30vw;
+    --welcome-text-size: 21px;
 
     /********************/
     /***** ABOUT PAGE *****/
@@ -930,10 +931,11 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: 0vw 5vw;
+    --main-content-padding: 40px 5vw 15px 5vw;
 
     /* Typography */
     --para-padding: 0vh 5vw;
+    --default-heading-size: 48px;
 
     /* Top navbar */
     --top-nav-height: 75px;
@@ -968,6 +970,6 @@ input[type=submit]:hover {
   }
 
   #welcome {
-    padding-top: 110px;
+    /* padding-top: 110px; */
   }
 }
