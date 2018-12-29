@@ -5,30 +5,30 @@
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* All CSS custom properties */
 :root {
-    /* Typography */
-    --page-title-bottom-padding: 10px;
-    --heading-padding: 0vh 20vw;
-    --subtitle-size: 36px;
-    --story-heading-text-align: left;
-    --story-section-font: 700 30px var(--heading-font);
-    --story-chapter-font: 600 24px var(--heading-font);
-    --story-subchapter-font: 600 18px var(--heading-font);
+  /* Typography */
+  --page-title-bottom-padding: 10px;
+  --heading-padding: 0vh 20vw;
+  --subtitle-size: 36px;
+  --story-heading-text-align: left;
+  --story-section-font: 700 30px var(--heading-font);
+  --story-chapter-font: 600 24px var(--heading-font);
+  --story-subchapter-font: 600 18px var(--heading-font);
 
-    /* Imagery */
-    --project-media-width: 75%;
+  /* Imagery */
+  --project-media-width: 75%;
 }
 
 /* Change BG since you're deeper into site */
 body {
-    background: #616266 url("assets/gamebox.png") no-repeat fixed center;
-    background-size: cover;
-    /*margin: 5% 7.5%;*/
-    margin: 0px;
+  background: #616266 url("assets/gamebox.png") no-repeat fixed center;
+  background-size: cover;
+  /*margin: 5% 7.5%;*/
+  margin: 0px;
 }
 
 /* General heading properties */
 h1, h2, h3, h4, h5, h6 {
-    padding: var(--heading-padding);
+  padding: var(--heading-padding);
 }
 
 /* Banner on top */
@@ -41,27 +41,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Short description/subtitle below the project name */
 .subtitle {
-    font-size: var(--subtitle-size);
-    padding: 0px;
-    padding-bottom: 25px;
+  font-size: var(--subtitle-size);
+  padding: 0px;
+  padding-bottom: 25px;
 }
 
 /* Headings for Overview, Process, and Links sections */
 .story-section {
-    font: var(--story-section-font);
-    text-align: var(--story-heading-text-align);
+  font: var(--story-section-font);
+  text-align: var(--story-heading-text-align);
 }
 
 /* Headings for Mission, Playthrough, and Results sections (in Process section) */
 .story-chapter {
-    font: var(--story-chapter-font);
-    text-align: var(--story-heading-text-align);
+  font: var(--story-chapter-font);
+  text-align: var(--story-heading-text-align);
 }
 
 /* Any headings within the story chapters */
 .story-subchapter {
-    font: var(--story-subchapter-font);
-    text-align: var(--story-heading-text-align);
+  font: var(--story-subchapter-font);
+  text-align: var(--story-heading-text-align);
 }
 
 /* Button that'll take you back to Gallery page when clicked */
@@ -74,94 +74,94 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links in the Links section */
 .links {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Links underneath PDFs that open the PDF in a separate tab */
 .pdf-links {
-    text-align: center;
+  text-align: center;
 }
 
 /*|||||||||||||||||||| IMAGES/OTHER VISUAL MEDIA ||||||||||||||||||||*/
 /* TODO change this to "project-media" and include videos, PDFs, and InVision apps */
 /* All images */
 .project-pics {
-    /* max-width: 600px; */
-    max-width: var(--project-media-width);
-    /*float: left;
-    margin: 0 0 10px 10px;*/
-    display: block;
-    margin: auto;
+  /* max-width: 600px; */
+  max-width: var(--project-media-width);
+  /*float: left;
+  margin: 0 0 10px 10px;*/
+  display: block;
+  margin: auto;
 }
 
 /* Image that needs to be displayed in the same line as another one */
 .inline-img {
-    display: inline;
+  display: inline;
 }
 
 /* PDF files */
 .pdf-embed {
-    height: 600px;
-    width: var(--project-media-width);
-    display: block;
-    margin: auto;
+  height: 600px;
+  width: var(--project-media-width);
+  display: block;
+  margin: auto;
 }
 
 /* Youtube videos */
 iframe {
-    height: 600px;
-    display: block;
-    margin: auto;
-    width: var(--project-media-width);
+  height: 600px;
+  display: block;
+  margin: auto;
+  width: var(--project-media-width);
 }
 
 /* Interactive InVision prototypes */
 .invision-iframe {
-    /*width: 100%;*/
-    width: var(--project-media-width);
+  /*width: 100%;*/
+  width: var(--project-media-width);
 }
 
 /*|||||||||||||||||||| COLUMN (LAYOUT) ATTRIBUTES ||||||||||||||||||||*/
 /* TODO new layout that requires less scrolling */
 /* Parent container that contains both columns */
 .gallery-columns {
-    margin: 0% 5%;
+  margin: 0% 5%;
 }
 
 /* Left column in layout - for images */
 .gallery-left-column {
-    display: inline-block;
-    float: left;
-    width: 60%;
+  display: inline-block;
+  float: left;
+  width: 60%;
 }
 
 /* Right column in layout - for text - height dependent on height of left column */
 .gallery-right-column {
-    display: inline-block;
-    width: 30%;
-    height: 1000px;
-    overflow: auto;
-    padding: 0% 2.5%;
-    background-color: rgba(54, 69, 79, .5);
-    border: 5px solid rgba(54, 69, 79, .75);
-    border-radius: 5px;
+  display: inline-block;
+  width: 30%;
+  height: 1000px;
+  overflow: auto;
+  padding: 0% 2.5%;
+  background-color: rgba(54, 69, 79, .5);
+  border: 5px solid rgba(54, 69, 79, .75);
+  border-radius: 5px;
 }
 
 /* Collection of section tabs for easy navigation */
 .tab-bar {
-    text-align: center;
-    word-spacing: 20px;
-    margin: auto;
-    padding: 1%;
+  text-align: center;
+  word-spacing: 20px;
+  margin: auto;
+  padding: 1%;
 }
 
 /* Anchor that allows you to jump to the different sections */
 .section-tab {
-    font-family: titillium web;
-    background-color: rgba(54, 69, 79, .5);
-    border: 5px solid rgba(54, 69, 79, .75);
-    border-radius: 5px;
-    width: 33.333%;
+  font-family: titillium web;
+  background-color: rgba(54, 69, 79, .5);
+  border: 5px solid rgba(54, 69, 79, .75);
+  border-radius: 5px;
+  width: 33.333%;
 }
 
 
@@ -172,8 +172,8 @@ iframe {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Background for GD projects */
 body.gd-bg {
-    background: #616266 url("assets/gamebox-gd.png") no-repeat fixed center;
-    background-size: cover;
+  background: #616266 url("assets/gamebox-gd.png") no-repeat fixed center;
+  background-size: cover;
 }
 
 
@@ -184,14 +184,14 @@ body.gd-bg {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Values for tablet-sized displays */
 @media (max-width: 768px) {
-    :root {
+  :root {
 
-    }
+  }
 }
 
 /* Values for mobile-sized displays */
 @media (max-width: 600px) {
-    :root {
+  :root {
 
-    }
+  }
 }

@@ -5,147 +5,148 @@
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* All CSS custom properties */
 :root {
-    /********************/
-    /***** SITEWIDE *****/
-    /********************/
-    /* Typography */
-    --heading-font: titillium web;
-    --body-font: roboto;
-    --font-color: rgb(255, 255, 255); /* white (#ffffff) */
-    --list-margin: 1vh 20vw;
-    --max-line-length: 750px;
-    --para-padding: 0vh 20vw;
-    --default-heading-size: 60px;
-    --page-title-top-padding: 75px;
-    --page-title-bottom-padding: 25px;
+  /********************/
+  /***** SITEWIDE *****/
+  /********************/
+  /* Typography */
+  --heading-font: titillium web;
+  --body-font: roboto;
+  --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+  --list-margin: 1vh 20vw;
+  --max-line-length: 750px;
+  --para-padding: 0vh 20vw;
+  --default-heading-size: 60px;
+  --page-title-top-padding: 75px;
+  --page-title-bottom-padding: 25px;
 
-    /* Color scheme */
-    --primary-color: 54, 69, 79; /* charcoal (#36454f) */
-    --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
-    --tertiary-color: 0, 0, 96; /* navy (#000060) */
-    --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
+  /* Color scheme */
+  --primary-color: 54, 69, 79; /* charcoal (#36454f) */
+  --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
+  --tertiary-color: 0, 0, 96; /* navy (#000060) */
+  --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
 
-    /* Top navbar */
-    --top-nav-height: 35px;
-    --top-nav-font-size: 18px;
-    --top-nav-padding: 10px;
-    --logo-box-left-position: calc((100vw - 75vw) / 2);
-    --logo-box-top-position: 10px;
-    --logo-side-length: 32px;
-    --logo-margin: 0px 10px 0px 0px;
-    --logo-name-size: 24px;
-    --top-nav-tab-padding: 0px 10px;
+  /* Top navbar */
+  --top-nav-flex-direction: row;
+  --top-nav-height: 35px;
+  --top-nav-font-size: 18px;
+  --top-nav-padding: 10px;
+  --logo-box-left-position: calc((100vw - 75vw) / 2);
+  --logo-box-top-position: 10px;
+  --logo-side-length: 32px;
+  --logo-margin: 0px 10px 0px 0px;
+  --logo-name-size: 24px;
+  --top-nav-tab-padding: 0px 10px;
 
-    /* Buttons */
-    --button-bg-color: rgba(var(--secondary-color), 0.5);
-    --button-border: 2.5px solid rgba(var(--tertiary-color), 0.25);
-    --button-border-radius: 5px;
-    --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    --button-padding: 15px;
-    --button-bg-color-hover: rgba(var(--secondary-color), 0.75);
-    --button-glow-hover: 0px 0px 10px rgba(255, 255, 255, 0.5);
-    --button-text-glow-hover: 0 0 1px rgba(255, 255, 255, 0.5);
+  /* Buttons */
+  --button-bg-color: rgba(var(--secondary-color), 0.5);
+  --button-border: 2.5px solid rgba(var(--tertiary-color), 0.25);
+  --button-border-radius: 5px;
+  --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --button-padding: 15px;
+  --button-bg-color-hover: rgba(var(--secondary-color), 0.75);
+  --button-glow-hover: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  --button-text-glow-hover: 0 0 1px rgba(255, 255, 255, 0.5);
 
-    /********************/
-    /***** HOME PAGE *****/
-    /********************/
-    --start-screen-height: calc(100vh - 50px);
-    --slideshow-max-width: 75vw;
-    --slideshow-max-height: 100vh;
-    --game-name-size: 96px;
-    --press-start-font-size: 24px;
-    --press-start-button-height: 10vh;
-    --press-start-button-width: 20vw;
-    --welcome-text-padding: 0vh 20vw;
-    --welcome-text-size: 24px;
+  /********************/
+  /***** HOME PAGE *****/
+  /********************/
+  --start-screen-height: calc(100vh - 50px);
+  --slideshow-max-width: 75vw;
+  --slideshow-max-height: 100vh;
+  --game-name-size: 96px;
+  --press-start-font-size: 24px;
+  --press-start-button-height: 10vh;
+  --press-start-button-width: 20vw;
+  --welcome-text-padding: 0vh 20vw;
+  --welcome-text-size: 24px;
 
-    /********************/
-    /***** ABOUT PAGE *****/
-    /********************/
+  /********************/
+  /***** ABOUT PAGE *****/
+  /********************/
 
-    /********************/
-    /***** GALLERY PAGE *****/
-    /********************/
+  /********************/
+  /***** GALLERY PAGE *****/
+  /********************/
 
-    /********************/
-    /***** CONTACT PAGE *****/
-    /********************/
+  /********************/
+  /***** CONTACT PAGE *****/
+  /********************/
 }
 /* Body element */
 body {
-    margin: 0px;
-    background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
-    background-size: cover;
+  margin: 0px;
+  background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
+  background-size: cover;
 }
 
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
 /* Heading tags */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--font-color);
-    text-align: center;
-    font-size: var(--default-heading-size);
-    margin: 0px;
+  font-family: var(--heading-font);
+  color: var(--font-color);
+  text-align: center;
+  font-size: var(--default-heading-size);
+  margin: 0px;
 }
 
 /* Headings that are page titles (e.g. About, Gallery, Contact) */
 .page-title {
-    padding-top: var(--page-title-top-padding);
-    padding-bottom: var(--page-title-bottom-padding);
+  padding-top: var(--page-title-top-padding);
+  padding-bottom: var(--page-title-bottom-padding);
 }
 
 /* Paragraph elements */
 p {
-    font-family: var(--body-font);
-    color: var(--font-color);
-    /*max-width: var(--max-line-length);*/
-    padding: var(--para-padding);
+  font-family: var(--body-font);
+  color: var(--font-color);
+  /*max-width: var(--max-line-length);*/
+  padding: var(--para-padding);
 }
 
 /* List elements */
 li {
-    font-family: var(--body-font);
-    color: var(--font-color);
-    max-width: var(--max-line-length);
-    margin: var(--list-margin);
+  font-family: var(--body-font);
+  color: var(--font-color);
+  max-width: var(--max-line-length);
+  margin: var(--list-margin);
 }
 
 /* Anchor elements */
 a {
-    text-decoration: none;
-  	color: var(--font-color);
+  text-decoration: none;
+	color: var(--font-color);
 }
 
 /* Visited links */
 a:visited {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 /* Formatting for text in anchors */
 .links {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Buttons used sitewide */
 .button {
-    font-family: var(--heading-font);
-    color: var(--font-color);
-    background-color: var(--button-bg-color);
-    border: var(--button-border);
-    border-radius: var(--button-border-radius);
-    box-shadow: var(--button-box-shadow);
-    /*margin: 0px;*/
-    margin: auto;
-    text-align: center;
-    padding: var(--button-padding);
+  font-family: var(--heading-font);
+  color: var(--font-color);
+  background-color: var(--button-bg-color);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  box-shadow: var(--button-box-shadow);
+  /*margin: 0px;*/
+  margin: auto;
+  text-align: center;
+  padding: var(--button-padding);
 }
 
 /* Hover state for sitewide buttons */
 .button:hover {
-    box-shadow: var(--button-glow-hover);
-    text-shadow: var(--button-text-glow-hover);
-    background-color: var(--button-bg-color-hover);
+  box-shadow: var(--button-glow-hover);
+  text-shadow: var(--button-text-glow-hover);
+  background-color: var(--button-bg-color-hover);
 }
 
 
@@ -153,64 +154,65 @@ a:visited {
 /* TODO set up automatic nav bar insertion */
 /* Top navigation bar, including logo and links to other pages */
 #topnav {
-    font-family: var(--heading-font);
-    position: fixed;
-        top: 0px;
-        left: 50%;
-    margin: 0 auto;
-        left: 0px;
-        right: 0px;
-    background-color: rgb(var(--primary-color));
-    z-index: 100;
-    font-size: var(--top-nav-font-size);
-    padding: var(--top-nav-padding);
-    box-shadow: 0 2.5px 10px #000000;
+  font-family: var(--heading-font);
+  position: fixed;
+      top: 0px;
+      left: 50%;
+  margin: 0 auto;
+      left: 0px;
+      right: 0px;
+  background-color: rgb(var(--primary-color));
+  z-index: 100;
+  font-size: var(--top-nav-font-size);
+  padding: var(--top-nav-padding);
+  box-shadow: 0 2.5px 10px #000000;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--top-nav-height);
+  display: flex;
+  flex-direction: var(--top-nav-flex-direction);
+  justify-content: center;
+  align-items: center;
+  height: var(--top-nav-height);
 }
 
 /* Blue hover state of links to other pages */
 #topnav a:hover {
-    color: rgb(var(--secondary-color));
+  color: rgb(var(--secondary-color));
 }
 
 /* Container with square JL logo and the "Jasmine Lang" text */
 #logo-box {
-    position: fixed;
-      left: var(--logo-box-left-position);
-      top: var(--logo-box-top-position);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+    left: var(--logo-box-left-position);
+    top: var(--logo-box-top-position);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Actual logo image */
 #logo {
-    width: var(--logo-side-length);
-    height: var(--logo-side-length);
-    z-index: 110;
-    margin: var(--logo-margin);
+  width: var(--logo-side-length);
+  height: var(--logo-side-length);
+  z-index: 110;
+  margin: var(--logo-margin);
 }
 
 /* Glowing hover state of logo */
 #logo:hover {
-    box-shadow: var(--button-glow-hover);
+  box-shadow: var(--button-glow-hover);
 }
 
 /* Text attached to logo */
 #logo-name {
-    font-size: var(--logo-name-size);
-    color: var(--font-color);
-    font-weight: bold;
+  font-size: var(--logo-name-size);
+  color: var(--font-color);
+  font-weight: bold;
 }
 
 /* Container with links to different pages */
 .top-nav-tab {
-    padding: var(--top-nav-tab-padding);
+  padding: var(--top-nav-tab-padding);
 }
 
 
@@ -223,63 +225,63 @@ a:visited {
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
 /* Partially transparent black container behind the slideshow container */
 #theater {
-    position: relative;
-        top: calc(2 * var(--top-nav-padding) + var(--top-nav-height));
-    background-color: rgba(0, 0, 0, 0.5);
-    /*width: 100vw;*/
-    width: 100%;
-    height: var(--start-screen-height);
-    border-radius: 5px;
+  position: relative;
+      top: calc(2 * var(--top-nav-padding) + var(--top-nav-height));
+  background-color: rgba(0, 0, 0, 0.5);
+  /*width: 100vw;*/
+  width: 100%;
+  height: var(--start-screen-height);
+  border-radius: 5px;
 }
 
 /* Container with all the image slides */
 #slideshow {
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    max-width: var(--slideshow-max-width);
-    max-height: var(--slideshow-max-height);
-    margin: auto;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-    background-color: black;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  max-width: var(--slideshow-max-width);
+  max-height: var(--slideshow-max-height);
+  margin: auto;
+      top: 0%;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Container for #game-name and #press-start */
 #start-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 95;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 95;
 }
 
 /* Text on top of the slides */
 #game-name {
-    text-align: center;
-    font-size: var(--game-name-size);
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, .75);
-    margin: 0px 0px 30px 0px;
+  text-align: center;
+  font-size: var(--game-name-size);
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, .75);
+  margin: 0px 0px 30px 0px;
 }
 
 
 /*|||||||||||||||||||| PRESS START BUTTON ||||||||||||||||||||*/
 /* Button on top of slides that takes you to gallery */
 #press-start {
-    font-size: var(--press-start-font-size);
-    height: var(--press-start-button-height);
-    width: var(--press-start-button-width);
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: var(--press-start-font-size);
+  height: var(--press-start-button-height);
+  width: var(--press-start-button-width);
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Glowing hover state of button*/
@@ -290,13 +292,13 @@ a:visited {
 /*|||||||||||||||||||| SLIDES AND ANIMATION ||||||||||||||||||||*/
 /* Class of each image in slideshow */
 .slide-img {
-    height: var(--start-screen-height);
-    width: var(--slideshow-max-width);
-    margin: auto;
-    transition: opacity .5s ease-in;
-    position: absolute;
-      top: 0;
-    object-fit: cover;
+  height: var(--start-screen-height);
+  width: var(--slideshow-max-width);
+  margin: auto;
+  transition: opacity .5s ease-in;
+  position: absolute;
+    top: 0;
+  object-fit: cover;
 }
 
 .slide-img + .slide-img {
@@ -307,26 +309,27 @@ a:visited {
 /*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
 /* Short welcome message and description of this site below the slideshow */
 #welcome {
-    text-align: center;
-    padding-top: 10vh;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 15px;
 }
 
 /* Friendly interjection */
 #greeting {
-    margin: 0;
+  margin: 0;
 }
 
 /* Text of the welcome message */
 #welcome-txt {
-    padding: var(--welcome-text-padding);
-    max-width: initial;
-    font-size: var(--welcome-text-size);
+  padding: var(--welcome-text-padding);
+  max-width: initial;
+  font-size: var(--welcome-text-size);
 }
 
 /* Note about responsiveness */
 #limitation {
-    padding: var(--welcome-text-padding);
-    max-width: initial;
+  padding: var(--welcome-text-padding);
+  max-width: initial;
 }
 
 
@@ -337,17 +340,17 @@ a:visited {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Header image for About page */
 .about-img {
-    background-image: url("assets/me-snake.jpg");
-    height: 400px;
-    width: 600px;
-    background-size: 1200px 400px;
-    display: block;
-    margin: auto;
+  background-image: url("assets/me-snake.jpg");
+  height: 400px;
+  width: 600px;
+  background-size: 1200px 400px;
+  display: block;
+  margin: auto;
 }
 
 /* Hover state of About image (changes to a different image) */
 .about-img:hover {
-    background-position: -600px 0px;
+  background-position: -600px 0px;
 }
 
 /* Button to open up CV/resume PDF */
@@ -363,56 +366,56 @@ a:visited {
 /* TODO implement interactive flexbox HTML CV */
 /*the containers*/
 .interactive-cv {
-    background-color: rgba(var(--secondary-color), .25);
-    border: 2.5px solid rgba(var(--tertiary-color), .25);
-    border-radius: 5px;
-    padding: 25px;
-    margin: 25px 0px;
-    /*display: inline; ---it doesn't like this --- */
-    display: block;
+  background-color: rgba(var(--secondary-color), .25);
+  border: 2.5px solid rgba(var(--tertiary-color), .25);
+  border-radius: 5px;
+  padding: 25px;
+  margin: 25px 0px;
+  /*display: inline; ---it doesn't like this --- */
+  display: block;
 }
 
 .cv-click {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    vertical-align: top;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  vertical-align: top;
 }
 
 .cv-click:hover {
-    background-color: rgba(var(--secondary-color), .5);
-    border: 2.5px solid rgba(var(--tertiary-color), .5);
-    box-shadow: var(--button-glow-hover);
+  background-color: rgba(var(--secondary-color), .5);
+  border: 2.5px solid rgba(var(--tertiary-color), .5);
+  box-shadow: var(--button-glow-hover);
 }
 
 /*how to make expandable/collapsable?*/
 /*
 .interactive-cv div:target {
-    display: none;
+  display: none;
 }
 */
 
 .cv-header-1 {
-    text-align: left;
-    font-size: 48px;
-    font-weight: 700; /*bold*/
+  text-align: left;
+  font-size: 48px;
+  font-weight: 700; /*bold*/
 }
 
 .cv-header-2 {
-    text-align: left;
-    font-size: 24px;
-    font-weight: 600; /*semibold*/
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600; /*semibold*/
 }
 
 .cv-header-3 {
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600; /*semibold*/
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600; /*semibold*/
 }
 
 .cv-body-txt {
-    font-family: var(--body-font);
-  	font-size: 12px;
+  font-family: var(--body-font);
+	font-size: 12px;
 }
 
 
@@ -425,99 +428,99 @@ a:visited {
 /*|||||||||||||||||||| FRAME ||||||||||||||||||||*/
 /* Container for all Gallery elements */
 #gallery-strip {
-    position: relative;
+  position: relative;
 }
 
 /* Name of Gallery section*/
 .gallery-topic {
-    clear: both;
-    font-size: 36px;
+  clear: both;
+  font-size: 36px;
 }
 
 /* Box containing Gallery topic and matrix */
 .gallery-container {
-    margin: 0 -50px;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
-    z-index: 10;
+  margin: 0 -50px;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+  z-index: 10;
 }
 
 /* Box containing the Graphic Design matrix */
 #gd-menu {
-    background-color: rgba(var(--primary-color), 0.5);
-    border: 5px solid rgba(var(--primary-color), 0.75);
-    border-radius: 3px;
+  background-color: rgba(var(--primary-color), 0.5);
+  border: 5px solid rgba(var(--primary-color), 0.75);
+  border-radius: 3px;
 }
 
 /* Box containing the Art matrix */
 #art-menu {
-    background-color: rgba(var(--secondary-color), 0.5);
-    border: 5px solid rgba(var(--secondary-color), 0.75);
-    border-radius: 3px;
+  background-color: rgba(var(--secondary-color), 0.5);
+  border: 5px solid rgba(var(--secondary-color), 0.75);
+  border-radius: 3px;
 }
 
 /* Box containing the Other matrix */
 #other-menu {
-    background-color: rgba(var(--tertiary-color), 0.5);
-    border: 5px solid rgba(var(--tertiary-color), 0.75);
-    border-radius: 3px;
+  background-color: rgba(var(--tertiary-color), 0.5);
+  border: 5px solid rgba(var(--tertiary-color), 0.75);
+  border-radius: 3px;
 }
 
 /* Subcontainer containing Gallery matrix */
 .gallery-container-2 {
-    text-align: center;
-    position: relative;
-    display: table;
+  text-align: center;
+  position: relative;
+  display: table;
 }
 
 
 /*|||||||||||||||||||| GRID ||||||||||||||||||||*/
 /* The matrix of projects */
 .grid {
-    /*background-color: powderblue;*/
-    height: 200px;
-    width: 200px;
-    display: inline-block;
-    /*float: left; */
-    margin: 20px;
-    z-index: 10;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    border-radius: 1.5px;
-    transition: transform 0.5s 0s; /* when descending (no longer hovering) */
-    /*
-    background-image: url("WWW4-GD-hover_states.jpg");
-    background-size: 400px 2000px;
-    */
+  /*background-color: powderblue;*/
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  /*float: left; */
+  margin: 20px;
+  z-index: 10;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  border-radius: 1.5px;
+  transition: transform 0.5s 0s; /* when descending (no longer hovering) */
+  /*
+  background-image: url("WWW4-GD-hover_states.jpg");
+  background-size: 400px 2000px;
+  */
 }
 
 /* Transformation (rising) hover state of matrix items */
 .grid:hover {
-    /*background-color: #9cc9ce;*/
-    cursor: pointer;
-    transform: scale(1.2); /* grow a bit bigger */
-    transition: transform 0.2s 0s; /* when ascending */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-    background-position: -200px 0px;
+  /*background-color: #9cc9ce;*/
+  cursor: pointer;
+  transform: scale(1.2); /* grow a bit bigger */
+  transition: transform 0.2s 0s; /* when ascending */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+  background-position: -200px 0px;
 }
 
 /* Invisible matrix items */
 .hidden-item {
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
-    background-image: none;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  background-image: none;
 }
 
 /* Hover state of matrix items (no visible changes) */
 .hidden-item:hover {
-    background-color: rgba(0, 0, 0, 0);
-    cursor: auto;
-    transform: none;
-    transition: none;
-    box-shadow: none;
-    background-image: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: auto;
+  transform: none;
+  transition: none;
+  box-shadow: none;
+  background-image: none;
 }
 
 
@@ -525,284 +528,284 @@ a:visited {
 /* TODO set up automatic file loading*/
 /* Project images to load for the Graphic Design matrix */
 .gd-grid {
-    background-image: url("assets/WWW4-GD-hover_states-1.jpg");
-  	background-size: 400px 2000px;
+  background-image: url("assets/WWW4-GD-hover_states-1.jpg");
+	background-size: 400px 2000px;
 }
 
 #perillo-grid {
-    background-position: 0px 0px;
+  background-position: 0px 0px;
 }
 
 #perillo-grid:hover {
-    background-position: -200px 0px;
+  background-position: -200px 0px;
 }
 
 #bu-dong-grid {
-    background-position: 0px -200px;
+  background-position: 0px -200px;
 }
 
 #bu-dong-grid:hover {
-    background-position: -200px -200px;
+  background-position: -200px -200px;
 }
 
 #ncmns-grid {
-    background-position: 0px -400px;
+  background-position: 0px -400px;
 }
 
 #ncmns-grid:hover {
-    background-position: -200px -400px;
+  background-position: -200px -400px;
 }
 
 #pandoras-grid {
-    background-position: 0px -600px;
+  background-position: 0px -600px;
 }
 
 #pandoras-grid:hover {
-    background-position: -200px -600px;
+  background-position: -200px -600px;
 }
 
 #folds-grid {
-    background-position: 0px -800px;
+  background-position: 0px -800px;
 }
 
 #folds-grid:hover {
-    background-position: -200px -800px;
+  background-position: -200px -800px;
 }
 
 #harmony-grid {
-    background-position: 0px -1000px;
+  background-position: 0px -1000px;
 }
 
 #harmony-grid:hover {
-    background-position: -200px -1000px;
+  background-position: -200px -1000px;
 }
 
 #are3-grid {
-    background-position: 0px -1200px;
+  background-position: 0px -1200px;
 }
 
 #are3-grid:hover {
-    background-position: -200px -1200px;
+  background-position: -200px -1200px;
 }
 
 #lizards-grid {
-    background-position: 0px -1400px;
+  background-position: 0px -1400px;
 }
 
 #lizards-grid:hover {
-    background-position: -200px -1400px;
+  background-position: -200px -1400px;
 }
 
 #relief-grid {
-    background-position: 0px -1600px;
+  background-position: 0px -1600px;
 }
 
 #relief-grid:hover {
-    background-position: -200px -1600px;
+  background-position: -200px -1600px;
 }
 
 #lips-grid {
-    background-position: 0px -1800px;
+  background-position: 0px -1800px;
 }
 
 #lips-grid:hover {
-    background-position: -200px -1800px;
+  background-position: -200px -1800px;
 }
 
 
 .gd-grid-2 {
-    background-image: url("assets/WWW4-GD-hover_states-2.jpg");
-    background-size: 400px 600px;
+  background-image: url("assets/WWW4-GD-hover_states-2.jpg");
+  background-size: 400px 600px;
 }
 
 #starry-grid {
-    background-position: 0px 0px;
+  background-position: 0px 0px;
 }
 
 #starry-grid:hover {
-    background-position: -200px 0px;
+  background-position: -200px 0px;
 }
 
 #flipboard-grid {
-    background-position: 0px -200px;
+  background-position: 0px -200px;
 }
 
 #flipboard-grid:hover {
-    background-position: -200px -200px;
+  background-position: -200px -200px;
 }
 
 #mmg-grid {
-    background-position: 0px -400px;
+  background-position: 0px -400px;
 }
 
 #mmg-grid:hover {
-    background-position: -200px -400px;
+  background-position: -200px -400px;
 }
 
 .gd-grid-3 {
-    background-image: url("assets/WWW4-GD-hover_states-3.jpg");
-    background-size: 400px 400px;
+  background-image: url("assets/WWW4-GD-hover_states-3.jpg");
+  background-size: 400px 400px;
 }
 
 #pb-grid {
-    background-position: 0px 0px;
+  background-position: 0px 0px;
 }
 
 #pb-grid:hover {
-    background-position: -200px 0px;
+  background-position: -200px 0px;
 }
 
 #recon-grid {
-    background-position: 0px -200px;
+  background-position: 0px -200px;
 }
 
 #recon-grid:hover {
-    background-position: -200px -200px;
+  background-position: -200px -200px;
 }
 
 /*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Art matrix */
 .art-grid {
-    background-image: url("assets/WWW4-other-hover_states.jpg");
-    background-size: 400px 600px;
-    background-position: 0px -400px;
+  background-image: url("assets/WWW4-other-hover_states.jpg");
+  background-size: 400px 600px;
+  background-position: 0px -400px;
 }
 
 .art-grid:hover {
-    background-position: -200px -400px;
+  background-position: -200px -400px;
 }
 
 
 /*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Other matrix */
 .other-grid {
-    background-image: url("assets/WWW4-other-hover_states.jpg");
-    background-size: 400px 600px;
-    background-position: 0px -400px;
+  background-image: url("assets/WWW4-other-hover_states.jpg");
+  background-size: 400px 600px;
+  background-position: 0px -400px;
 }
 
 .other-grid:hover {
-    background-position: -200px -400px;
+  background-position: -200px -400px;
 }
 
 #cmms-grid {
-    background-position: 0px 0px;
+  background-position: 0px 0px;
 }
 
 #cmms-grid:hover {
-    background-position: -200px 0px;
+  background-position: -200px 0px;
 }
 
 #sights-grid {
-    background-position: 0px -200px;
+  background-position: 0px -200px;
 }
 
 #sights-grid:hover {
-    background-position: -200px -200px;
+  background-position: -200px -200px;
 }
 
 
 /*|||||||||||||||||||| BUTTONS ||||||||||||||||||||*/
 /* Right/left buttons for Gallery matrix */
 .menu-button {
-    /*border: none;*/
-    display: inline-block;
-    outline:0;
-    /*padding:16px 24px;*/
-    padding: 20% 24px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    position: absolute;
-        top: 50%;
-    font-family: var(--heading-font);
-    background-color: rgb(20, 20, 20);
-    color: #cccccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    z-index: 20;
-    border-radius: 1.5px;
-    border: 2.5px solid rgba(204, 204, 204, .5);
-    transform: translateY(-50%);
+  /*border: none;*/
+  display: inline-block;
+  outline:0;
+  /*padding:16px 24px;*/
+  padding: 20% 24px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  position: absolute;
+      top: 50%;
+  font-family: var(--heading-font);
+  background-color: rgb(20, 20, 20);
+  color: #cccccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  z-index: 20;
+  border-radius: 1.5px;
+  border: 2.5px solid rgba(204, 204, 204, .5);
+  transform: translateY(-50%);
 }
 
 /* Gray hover state of Gallery section buttons */
 .menu-button:hover {
-    color: rgb(20, 20, 20);
-    background-color: #cccccc;
-    cursor: pointer;
-    border: 2.5px solid rgba(20, 20, 20, .5);
+  color: rgb(20, 20, 20);
+  background-color: #cccccc;
+  cursor: pointer;
+  border: 2.5px solid rgba(20, 20, 20, .5);
 }
 
 /* Button to go to previous Gallery section */
 .menu-left {
-    left: -6.25%;
+  left: -6.25%;
 }
 
 /* Button to go to next Gallery section */
 .menu-right {
-    right: -6.25%;
+  right: -6.25%;
 }
 
 
 /*|||||||||||||||||||| TABS ||||||||||||||||||||*/
 /* Tabs denoting different sections of Gallery */
 .section-tab {
-    top: 0%;
-    width: 33.333%;
-    position: absolute;
-    border: 2.5px solid rgb(50, 50, 50);
-    z-index: 20;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    font-size: 12px;
-    padding:16px 24px;
-    transform: none;
+  top: 0%;
+  width: 33.333%;
+  position: absolute;
+  border: 2.5px solid rgb(50, 50, 50);
+  z-index: 20;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  font-size: 12px;
+  padding:16px 24px;
+  transform: none;
 }
 
 /* Opaque white text hover state for section tabs */
 .section-tab:hover {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 /* Styling for Graphic Design tab */
 #gd-tab {
-    background-color: rgba(var(--primary-color), 0.5);
-    border: 5px solid rgba(var(--primary-color), 0.75);
-    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
-    border-bottom: none;
+  background-color: rgba(var(--primary-color), 0.5);
+  border: 5px solid rgba(var(--primary-color), 0.75);
+  border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
+  border-bottom: none;
 }
 
 /* Styling for Art tab */
 #art-tab {
-    margin: 0 auto;
-    left: 25%;
-    right: 25%;
-    background-color: rgba(var(--secondary-color), 0.5);
-    border: 5px solid rgba(var(--secondary-color), 0.75);
-    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
-    border-bottom: none;
+  margin: 0 auto;
+  left: 25%;
+  right: 25%;
+  background-color: rgba(var(--secondary-color), 0.5);
+  border: 5px solid rgba(var(--secondary-color), 0.75);
+  border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
+  border-bottom: none;
 }
 
 /* Styling for Other tab */
 #other-tab {
-    right: 0%;
-    background-color: rgba(var(--tertiary-color), 0.5);
-    border: 5px solid rgba(var(--tertiary-color), 0.75);
-    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
-    border-bottom: none;
+  right: 0%;
+  background-color: rgba(var(--tertiary-color), 0.5);
+  border: 5px solid rgba(var(--tertiary-color), 0.75);
+  border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
+  border-bottom: none;
 }
 
 /* Styling for tab of current selected section */
 .current-tab {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    /*padding: -16px -24px;*/
-    background-color: #cccccc;
-    z-index: 40;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  /*padding: -16px -24px;*/
+  background-color: #cccccc;
+  z-index: 40;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
 }
 
 
@@ -813,42 +816,42 @@ a:visited {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* TODO fix this */
 form {
-    color: var(--font-color);
-  	font-family: var(--body-font);
+  color: var(--font-color);
+	font-family: var(--body-font);
 }
 
 input[type=text], textarea {
-    font-family: var(--body-font);
-    background-color: #f4f4f4;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
+  font-family: var(--body-font);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
 }
 
 textarea {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .c-label {
-    line-height: 1.5;
-    font-family: var(--heading-font);
+  line-height: 1.5;
+  font-family: var(--heading-font);
 }
 
 input[type=submit] {
-    width: 100%;
-    font-size: 16px;
+  width: 100%;
+  font-size: 16px;
 }
 
 input[type=submit]:hover {
-  	cursor: pointer;
+	cursor: pointer;
 }
 
 .frame {
-    background-color: rgb(var(--primary-color));
-    border-radius: 5px;
-    padding: 20px;
-    margin: 0 auto;
-    width: 50%;
+  background-color: rgb(var(--primary-color));
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 50%;
 }
 
 
@@ -865,37 +868,71 @@ input[type=submit]:hover {
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/* TODO set flex and order on larger and smaller screens */
-
 /* Values for tablet-sized displays */
-@media (max-width: 768px) {
-    :root {
-        /********************/
-        /***** SITEWIDE *****/
-        /********************/
-        /* Top navbar */
-        --logo-box-left-position: 5vw;
+@media (max-width: 930px) {
+  :root {
+      /********************/
+      /***** SITEWIDE *****/
+      /********************/
+      /* Top navbar */
+      --top-nav-flex-direction: column;
+      --logo-box-left-position: 5vw;
 
-        /********************/
-        /***** HOME PAGE *****/
-        /********************/
-        --slideshow-max-width: 100vw;
-        --game-name-size: 60px;
-        --press-start-font-size: 18px;
-        --press-start-button-height: 7.5vh;
-        --press-start-button-width: 30vw;
-        --welcome-text-padding: 0vh 10vw;
-    }
+      /********************/
+      /***** HOME PAGE *****/
+      /********************/
+      --slideshow-max-width: 100vw;
+      --game-name-size: 60px;
+      --press-start-font-size: 18px;
+      --press-start-button-height: 7.5vh;
+      --press-start-button-width: 30vw;
+      --welcome-text-padding: 0vh 10vw;
+  }
+
+  #top-nav-tab-group {
+    position: fixed;
+    right: var(--logo-box-left-position);
+  }
+
+  #game-name {
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 /* Values for mobile-sized displays */
 @media (max-width: 600px) {
-    :root {
-        /********************/
-        /***** HOME PAGE *****/
-        /********************/
-        --game-name-size: 48px;
-        --welcome-text-size: 18px;
-        --welcome-text-padding: 0vh 5vw;
-    }
+  :root {
+    /********************/
+    /***** SITEWIDE *****/
+    /********************/
+    /* Top navbar */
+    --top-nav-height: 75px;
+
+    /********************/
+    /***** HOME PAGE *****/
+    /********************/
+    --start-screen-height: calc(100vh - 95px);
+    --game-name-size: 48px;
+    --press-start-button-width: 40vw;
+    --welcome-text-size: 18px;
+    --welcome-text-padding: 0vh 5vw;
+  }
+
+  #logo-box {
+    position: static;
+  }
+
+  #top-nav-tab-group {
+    position: static;
+    right: auto;
+    padding-top: 10px;
+  }
+
+  #game-name {
+    margin: 0px 0px 10px 0px;
+  }
+
+  #welcome {
+    padding-top: 110px;
+  }
 }
