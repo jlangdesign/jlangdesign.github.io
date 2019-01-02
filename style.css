@@ -501,6 +501,7 @@ a:visited {
   /* background-color: black; */
   height: 200px;
   width: 200px;
+  background-size: 400px 200px;
   display: inline-block;
   /*float: left; */
   margin: 20px;
@@ -540,142 +541,60 @@ a:visited {
 
 /*|||||||||||||||||||| GD GRID HOVER STATES ||||||||||||||||||||*/
 /* TODO set up automatic file loading */
+/**
+ * Automatically insert header img and create hover state by changing the class.
+ * Opacity lowers to .5 on a black bg and a blur filter is applied upon hover.
+ * Scale also increases slightly.
+ * Refer to: https://stackoverflow.com/a/25876303
+ */
 /* Project images to load for the Graphic Design matrix */
 .gd-grid {
-  background-image: url("assets/WWW4-GD-hover_states-1.jpg");
-	background-size: 400px 2000px;
 }
 
 #bu-dong-grid {
-  background-position: 0px -200px;
-}
-
-#bu-dong-grid:hover {
-  background-position: -200px -200px;
+  background-image: url("assets/Tile-bu-Dong.png");
 }
 
 #pandoras-grid {
-  background-position: 0px -600px;
-}
-
-#pandoras-grid:hover {
-  background-position: -200px -600px;
+  background-image: url("assets/Tile-Pandoras-Box.png");
 }
 
 #harmony-grid {
-  background-position: 0px -1000px;
-}
-
-#harmony-grid:hover {
-  background-position: -200px -1000px;
+  background-image: url("assets/Tile-Harmony.png");
 }
 
 #are3-grid {
-  background-position: 0px -1200px;
-}
-
-#are3-grid:hover {
-  background-position: -200px -1200px;
+  background-image: url("assets/Tile-ARE3.png");
 }
 
 #lizards-grid {
-  background-position: 0px -1400px;
-}
-
-#lizards-grid:hover {
-  background-position: -200px -1400px;
-}
-
-.gd-grid-2 {
-  background-image: url("assets/WWW4-GD-hover_states-2.jpg");
-  background-size: 400px 600px;
+  background-image: url("assets/Tile-Of-Lizards.png");
 }
 
 #starry-grid {
-  background-position: 0px 0px;
-}
-
-#starry-grid:hover {
-  background-position: -200px 0px;
-}
-
-#flipboard-grid {
-  background-position: 0px -200px;
-}
-
-#flipboard-grid:hover {
-  background-position: -200px -200px;
-}
-
-#mmg-grid {
-  background-position: 0px -400px;
-}
-
-#mmg-grid:hover {
-  background-position: -200px -400px;
-}
-
-.gd-grid-3 {
-  background-image: url("assets/WWW4-GD-hover_states-3.jpg");
-  background-size: 400px 400px;
+  background-image: url("assets/Tile-StarryReader.png");
 }
 
 #pb-grid {
-  background-position: 0px 0px;
-}
-
-#pb-grid:hover {
-  background-position: -200px 0px;
+  background-image: url("assets/Tile-Picture-Booth.png");
 }
 
 #recon-grid {
-  background-position: 0px -200px;
-}
-
-#recon-grid:hover {
-  background-position: -200px -200px;
+  background-image: url("assets/Tile-Reconstruction.png");
 }
 
 
 /*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Art matrix */
 .art-grid {
-  background-image: url("assets/WWW4-other-hover_states.jpg");
-  background-size: 400px 600px;
-  background-position: 0px -400px;
-}
-
-.art-grid:hover {
-  background-position: -200px -400px;
+  background-image: url("assets/Tile-Mystery.jpg");
 }
 
 
 /*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Other matrix */
 .other-grid {
-  background-image: url("assets/WWW4-other-hover_states.jpg");
-  background-size: 400px 600px;
-  background-position: 0px -400px;
-}
-
-.other-grid:hover {
-  background-position: -200px -400px;
-}
-
-#cmms-grid {
-  background-position: 0px 0px;
-}
-
-#cmms-grid:hover {
-  background-position: -200px 0px;
-}
-
-#sights-grid {
-  background-position: 0px -200px;
-}
-
-#sights-grid:hover {
-  background-position: -200px -200px;
+  background-image: url("assets/Tile-Mystery.jpg");
 }
 
 
@@ -781,7 +700,7 @@ a:visited {
   font-weight: bold;
   font-size: 18px;
   background-color: #cccccc;
-  z-index: 7.5;
+  z-index: 7;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
   top: -8px;
 }
@@ -847,6 +766,32 @@ input[type=submit]:hover {
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/* Values for larger desktop displays */
+@media (min-width: 1600px) {
+  .menu-button {
+    padding: 10% 24px;
+  }
+
+  .section-tab {
+    padding: 16px 24px;
+  }
+}
+
+/* Values for smaller laptop displays */
+@media (max-width: 1410px) {
+  :root {
+    --gallery-page-padding: 0vw 12.5vw 15px 12.5vw;
+  }
+
+  .menu-button {
+    padding: 30% 24px;
+  }
+
+  .section-tab {
+    padding: 16px 24px;
+  }
+}
+
 /* Values for tablet-sized displays */
 @media (max-width: 930px) {
   :root {
@@ -882,6 +827,7 @@ input[type=submit]:hover {
     /********************/
     /***** GALLERY PAGE *****/
     /********************/
+    --gallery-page-padding: 0vw 20vw 15px 20vw;
 
     /********************/
     /***** CONTACT PAGE *****/
