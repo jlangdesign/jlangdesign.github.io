@@ -499,12 +499,18 @@ a:visited {
 /* The matrix of projects */
 .grid {
   /* background-color: black; */
+  /*
   height: 200px;
   width: 200px;
   background-size: 400px 200px;
+  */
+  height: calc(200 / var(--default-vw) * 100vw);
+  width: calc(200 / var(--default-vw) * 100vw);
+  background-size: calc(400 / var(--default-vw) * 100vw) calc(200 / var(--default-vw) * 100vw);
   display: inline-block;
   /*float: left; */
-  margin: 20px;
+  /* margin: 20px; */
+  margin: calc(20 / var(--default-vw) * 100vw);
   z-index: 10;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
@@ -518,7 +524,8 @@ a:visited {
   transform: scale(1.2); /* grow a bit bigger */
   transition: transform 0.2s 0s; /* when ascending */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-  background-position: -200px 0px;
+  /* background-position: -200px 0px; */
+  background-position: calc(-200 / var(--default-vw) * 100vw) 0px;
 }
 
 /* Invisible matrix items */
@@ -611,7 +618,7 @@ a:visited {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   position: absolute;
       top: 50%;
   font-family: var(--heading-font);
@@ -778,7 +785,7 @@ input[type=submit]:hover {
 }
 
 /* Values for smaller laptop displays */
-@media (max-width: 1410px) {
+@media (max-width: 1280px) {
   :root {
     --gallery-page-padding: 0vw 12.5vw 15px 12.5vw;
   }
@@ -789,6 +796,16 @@ input[type=submit]:hover {
 
   .section-tab {
     padding: 16px 24px;
+  }
+
+  .grid {
+    height: calc(225 / var(--default-vw) * 100vw);
+    width: calc(225 / var(--default-vw) * 100vw);
+    background-size: calc(450 / var(--default-vw) * 100vw) calc(225 / var(--default-vw) * 100vw);
+  }
+
+  .grid:hover {
+    background-position: calc(-225 / var(--default-vw) * 100vw) 0px;
   }
 }
 
@@ -842,6 +859,28 @@ input[type=submit]:hover {
   #game-name {
     margin: 0px 0px 20px 0px;
   }
+
+  .menu-button {
+    padding: 100% 24px;
+  }
+
+  .section-tab {
+    padding: 16px 12px;
+  }
+
+  .grid {
+    height: calc(400 / var(--default-vw) * 100vw);
+    width: calc(400 / var(--default-vw) * 100vw);
+    background-size: calc(800 / var(--default-vw) * 100vw) calc(400 / var(--default-vw) * 100vw);
+  }
+
+  .grid:hover {
+    background-position: calc(-400 / var(--default-vw) * 100vw) 0px;
+  }
+
+  .gallery-topic {
+    font-size: 30px;
+  }
 }
 
 /* Values for mobile-sized displays */
@@ -872,6 +911,15 @@ input[type=submit]:hover {
     /********************/
     --about-img-width: calc(1200 / var(--default-vw) * 100vw);
     --about-img-height: calc(800 / var(--default-vw) * 100vw);
+
+    /********************/
+    /***** GALLERY PAGE *****/
+    /********************/
+    --gallery-page-padding: 40px 20vw 15px 20vw;
+
+    /********************/
+    /***** CONTACT PAGE *****/
+    /********************/
   }
 
   #logo-box {
@@ -890,5 +938,28 @@ input[type=submit]:hover {
 
   #welcome {
     /* padding-top: 110px; */
+  }
+
+  .menu-button {
+    padding: 300% 24px;
+  }
+
+  .section-tab {
+    padding: 16px 12px;
+  }
+
+  .grid {
+    height: calc(700 / var(--default-vw) * 100vw);
+    width: calc(700 / var(--default-vw) * 100vw);
+    background-size: calc(1400 / var(--default-vw) * 100vw) calc(700 / var(--default-vw) * 100vw);
+    margin: calc(40 / var(--default-vw) * 100vw);
+  }
+
+  .grid:hover {
+    background-position: calc(-700 / var(--default-vw) * 100vw) 0px;
+  }
+
+  .gallery-topic {
+    font-size: 24px;
   }
 }
