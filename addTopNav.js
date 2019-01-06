@@ -1,7 +1,6 @@
 /**
  * Appends topnav bar to a page.
  */
-
 window.onload = function() {
   // Create topnav containers
   var db = document.body;
