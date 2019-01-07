@@ -644,6 +644,11 @@ a:visited {
   border: 2.5px solid rgba(20, 20, 20, .5);
 }
 
+/* Arrow buttons for navigating between different tabs*/
+.arrow {
+  font-size: 14px;
+}
+
 /* Button to go to previous Gallery section */
 .menu-left {
   left: -60px;
@@ -780,11 +785,11 @@ input[type=submit]:hover {
 /* Values for larger desktop displays */
 @media (min-width: 1600px) {
   .menu-button {
-    padding: 10% 24px;
+    padding: 10% 12px;
   }
 
   .section-tab {
-    padding: 16px 24px;
+    padding: 16px 12px;
   }
 }
 
@@ -795,11 +800,11 @@ input[type=submit]:hover {
   }
 
   .menu-button {
-    padding: 30% 24px;
+    padding: 30% 12px;
   }
 
   .section-tab {
-    padding: 16px 24px;
+    padding: 16px 12px;
   }
 
   .grid {
@@ -865,7 +870,7 @@ input[type=submit]:hover {
   }
 
   .menu-button {
-    padding: 100% 24px;
+    padding: 100% 12px;
     position: fixed;
     /* width: 20vw; */
   }
@@ -892,11 +897,13 @@ input[type=submit]:hover {
     top: 12px;
     color: white;
     font-size: 14px;
+    height: 63px;
   }
 
   .current-tab {
     top: 0px;
     font-size: 18px;
+    height: 69px;
   }
 
   #gd-tab {
@@ -943,6 +950,18 @@ input[type=submit]:hover {
   }
 }
 
+/* Values for smaller tablet-sized displays */
+@media (max-width: 650px) {
+  .section-tab {
+    font-size: 12px;
+    padding: 16px 8px;
+  }
+
+  .current-tab {
+    font-size: 16px;
+  }
+}
+
 /* Values for mobile-sized displays */
 @media (max-width: 600px) {
   :root {
@@ -975,7 +994,7 @@ input[type=submit]:hover {
     /********************/
     /***** GALLERY PAGE *****/
     /********************/
-    --gallery-page-padding: 40px 20vw 15px 20vw;
+    --gallery-page-padding: 40px 17.5vw 15px 17.5vw;
 
     /********************/
     /***** CONTACT PAGE *****/
@@ -1000,26 +1019,55 @@ input[type=submit]:hover {
     /* padding-top: 110px; */
   }
 
-  .menu-button {
-    padding: 300% 24px;
+  .arrow {
+    font-size: 10px;
+    width: 50px;
   }
 
   .section-tab {
-    padding: 16px 12px;
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+
+  .current-tab {
+    font-size: 14px;
+  }
+
+  #tab-group {
+    left: 50px;
+    width: calc(100% - 100px);
   }
 
   .grid {
-    height: calc(700 / var(--default-vw) * 100vw);
-    width: calc(700 / var(--default-vw) * 100vw);
-    background-size: calc(1400 / var(--default-vw) * 100vw) calc(700 / var(--default-vw) * 100vw);
+    height: calc(800 / var(--default-vw) * 100vw);
+    width: calc(800 / var(--default-vw) * 100vw);
+    background-size: calc(1600 / var(--default-vw) * 100vw) calc(800 / var(--default-vw) * 100vw);
     margin: calc(40 / var(--default-vw) * 100vw);
   }
 
   .grid:hover {
-    background-position: calc(-700 / var(--default-vw) * 100vw) 0px;
+    background-position: calc(-800 / var(--default-vw) * 100vw) 0px;
   }
 
   .gallery-topic {
     font-size: 24px;
+  }
+}
+
+/* Values for smaller mobile-sized displays */
+@media (max-width: 400px) {
+  :root {
+    /********************/
+    /***** GALLERY PAGE *****/
+    /********************/
+    --gallery-page-padding: 40px 20vw 15px 20vw;
+  }
+
+  .section-tab {
+    font-size: 10px;
+  }
+
+  .current-tab {
+    font-size: 12px;
   }
 }
