@@ -8,9 +8,9 @@
   /* Typography */
   --page-title-bottom-padding: 10px;
   --heading-padding: 0vh 20vw;
-  --subtitle-size: 36px;
+  --subtitle-size: 24px;
   --story-heading-text-align: left;
-  --story-section-font: 700 30px var(--heading-font);
+  --story-section-font: 700 36px var(--heading-font);
   --story-chapter-font: 600 24px var(--heading-font);
   --story-subchapter-font: 600 18px var(--heading-font);
 
