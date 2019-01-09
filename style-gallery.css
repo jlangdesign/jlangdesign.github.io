@@ -9,29 +9,36 @@
   --page-title-bottom-padding: 10px;
   --heading-padding: 0vh 20vw;
   --subtitle-size: 24px;
+  --story-padding: 0vh 10vw;
   --story-heading-text-align: left;
   --story-section-font: 700 36px var(--heading-font);
   --story-chapter-font: 600 24px var(--heading-font);
   --story-subchapter-font: 600 18px var(--heading-font);
 
   /* Imagery */
-  --project-media-width: 75%;
+  --project-media-width: 100%;
 }
 
 /* Change BG since you're deeper into site */
 body {
   background: #616266 url("assets/gamebox.png") no-repeat fixed center;
   background-size: cover;
-  /*margin: 5% 7.5%;*/
   margin: 0px;
 }
 
-/* General heading properties */
+/* General headings */
 h1, h2, h3, h4, h5, h6 {
 }
 
+/* List items */
 li {
   margin: 0;
+  list-style-position: inside;
+}
+
+/* All story text */
+p, .story-section, .story-chapter, .story-subchapter, li {
+  padding: var(--story-padding);
 }
 
 /* Banner on top */
@@ -86,13 +93,11 @@ li {
 }
 
 /*|||||||||||||||||||| IMAGES/OTHER VISUAL MEDIA ||||||||||||||||||||*/
-/* TODO change this to "project-media" and include videos, PDFs, and InVision apps */
+/* TODO change to "project-media" and include videos, iframes, PDFs, and InVision/Figma apps */
 /* All images */
 .project-pics {
-  /* max-width: 600px; */
-  max-width: var(--project-media-width);
-  /*float: left;
-  margin: 0 0 10px 10px;*/
+  /* max-width: var(--project-media-width); */
+  width: var(--project-media-width);
   display: block;
   margin: auto;
 }
@@ -120,36 +125,10 @@ iframe {
 
 /* Interactive InVision prototypes */
 .invision-iframe {
-  /*width: 100%;*/
   width: var(--project-media-width);
 }
 
-/*|||||||||||||||||||| COLUMN (LAYOUT) ATTRIBUTES ||||||||||||||||||||*/
-/* TODO new layout that requires less scrolling */
-/* Parent container that contains both columns */
-.gallery-columns {
-  margin: 0% 5%;
-}
-
-/* Left column in layout - for images */
-.gallery-left-column {
-  display: inline-block;
-  float: left;
-  width: 60%;
-}
-
-/* Right column in layout - for text - height dependent on height of left column */
-.gallery-right-column {
-  display: inline-block;
-  width: 30%;
-  height: 1000px;
-  overflow: auto;
-  padding: 0% 2.5%;
-  background-color: rgba(54, 69, 79, .5);
-  border: 5px solid rgba(54, 69, 79, .75);
-  border-radius: 5px;
-}
-
+/*|||||||||||||||||||| PROJECT NAV ATTRIBUTES ||||||||||||||||||||*/
 /* Collection of section tabs for easy navigation */
 .tab-bar {
   text-align: center;
@@ -158,13 +137,18 @@ iframe {
   padding: 1%;
 }
 
-/* Anchor that allows you to jump to the different sections */
+/* Anchor that allows you to jump to the different main sections */
 .section-tab {
   font-family: titillium web;
   background-color: rgba(54, 69, 79, .5);
   border: 5px solid rgba(54, 69, 79, .75);
   border-radius: 5px;
   width: 33.333%;
+}
+
+/* Anchor that allows you to jump to the different sub sections */
+.section-sub-tab {
+
 }
 
 
@@ -185,6 +169,13 @@ body.gd-bg {
 /*|||||||||||||||||||| Media queries ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+/* Values for larger desktop-sized displays */
+@media (min-width: 1600px) {
+  :root {
+
+  }
+}
+
 /* Values for tablet-sized displays */
 @media (max-width: 768px) {
   :root {
@@ -194,6 +185,13 @@ body.gd-bg {
 
 /* Values for mobile-sized displays */
 @media (max-width: 600px) {
+  :root {
+
+  }
+}
+
+/* Values for smaller mobile-sized displays */
+@media (max-width: 400px) {
   :root {
 
   }
