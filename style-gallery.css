@@ -126,6 +126,7 @@ iframe {
 /* Interactive InVision prototypes */
 .invision-iframe {
   width: var(--project-media-width);
+  height: 1030px;
 }
 
 /*|||||||||||||||||||| PROJECT NAV ATTRIBUTES ||||||||||||||||||||*/
