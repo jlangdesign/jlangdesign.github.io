@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 
-<!----- BACKUP THIS STUFF YO ----->
-
 <html>
 	<head>
 		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>StarryReader | Jasmine Lang</title>
 
-        <!-- FAVICON LINK -->
-        <link rel="icon" type="image/png" href="../logo-favicon.png" sizes="16x16" />
+    <!-- FAVICON LINK -->
+    <link rel="icon" type="image/png" href="../logo-favicon.png" sizes="16x16" />
 
-        <!-- GOOGLE FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web" rel="stylesheet">
 
-        <!-- CSS LINKS -->
-        <link rel="stylesheet" type="text/css" href="../style.css" />
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="../style.css" />
 		<link rel="stylesheet" type="text/css" href="../style-gallery.css" />
+
+		<!-- JS LINKS -->
+    <script type="text/javascript" src="../addTopNav.js"></script>
 	</head>
 
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
@@ -24,129 +27,90 @@
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
+	<body class="gd-bg">
+		<main class="main-content">
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||| HEADER |||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
 
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--|||||||||| TOPNAV ||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-
-	<body bgcolor="#000000;" class="gd-bg">
-		<nav id="topnav">
 			<div>
-				<a href="../" id="logo-box">
-					<img src="../logo-favicon.png" id="logo">
-					<span id="logo-name">Jasmine Lang</span>
-				</a>
+        <h1 class="page-title"><a href="starryreader.html">StarryReader</a></h1>
+        <h3 class="subtitle">A mobile app for streaming bedtime stories</h3>
 			</div>
-			<div id="top-nav-tab-group">
-				<a href="../" class="top-nav-tab">Home</a>
-				<a href="../about.html" class="top-nav-tab">About</a>
-				<a href="../gallery.html" class="top-nav-tab">Gallery</a>
-				<a href="../contact.html" class="top-nav-tab">Contact</a>
+
+
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||| FUN STUFF |||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+
+			<div>
+        <img src="../gallery-img/StarryReader-Header.jpg" class="project-pics">
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XWjT2vy-duw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <br>
+        <embed src="../gallery-img/StarryReader-Pres.pdf" height="350px" class="pdf-embed">
+        <br>
+        <a href="../gallery-img/StarryReader-Pres.pdf" target="_blank" class="links pdf-links">
+          <p>(Click here to open presentation at full size)</p>
+        </a>
+        <br>
+
+        <h1 class="story-section">Overview</h1>
+        <p>
+          Sometimes, we wish we had someone to read a bedtime story to us. Other times, we wish we had someone to read bedtime stories to. With StarryReader, you can do both. StarryReader is a mobile app that allows you to "broadcast" - aka livestream - your voice when reading bedtime stories to listeners around the world.
+        </p>
+        <br>
+
+        <h1 class="story-section">Process</h1>
+
+        <h1 class="story-chapter">Mission</h1>
+        <p>
+          Design an app that utilizes crowdsourcing and data visualization that shows the user the impact of their
+          contribution. This app must address the needs of a certain "dreamy nanny," a 20-year-old who has trouble
+          detaching herself from her phone, reading books, and falling asleep.
+        </p>
+        <br>
+
+        <h1 class="story-chapter">Playthrough</h1>
+        <p>
+          Meet one of our target users, Bree Searer. Bree is a 20-year-old full-time nanny, but she doesn't know what she wants to do with her life. She is very attached to her phone and always trying to find others to socialize with, but she never seems motivated enough to reach out to these people. This loneliness stresses her out every night and prevents her from getting a good night sleep. One thing she tries to do before bed is read some books and relax, but her addiction to her phone - or rather, her Etsy and Tinder - prevents her from doing so.
+        </p>
+        <p>
+          Instead of creating an app that would limit access to her phone or apps, I thought would be more beneficial to utilize her addiction to her phone, storytelling skills (acquired from being a nanny), and desire to make connections. Hence the "storytelling stream" concept was born. Bedtime reading shouldn't be an activity that requires a lot of effort, so I tried to simplify the streaming process as much as possible in my wireframes. I broke the simple tasks of preparing to stream, streaming, and ending the stream into even simpler tasks. Because the app is meant to be used by more than one person and facilitate connections, I had to consider the needs of other readers and listeners. To make the experience more accessible to readers of varying ages, I included specific instructions on each screen. As for the listeners - I had to include steps for entering info about the reading session so they could choose streams more easily. This inconveniences the reader (even if the info can be used to benefit them later), so I had to brainstorm ways to reduce the hassle. The steps transformed from voice input to picture-scanning and eventually to barcode scanning. While creating the visualizations to show the reader their impact, I decided to keep those simple as well to not be too distracting while reading.
+        </p>
+        <p>
+          Next came brand development. The most time consuming part was just figuring out a name for the app! After hours of thinking of words related to "night," "buddy," and "read" - and ways those words could be combined or modified - I came up with "StarryReader." It seemed fun, and the "star" part also made me think of a prize or achievement (so you could become a "top star reader"). For the logo, it made sense to include a star and a book. I opted for a star coming out of a book because it symbolized new worlds and possibilities opening up when a book was opened. The color scheme was derived from Cresselia - the Pokémon of good dreams. As for the typography, I opted for Alegreya because it looked book-like yet contemporary.
+        </p>
+        <br>
+
+        <h1 class="story-chapter">Results</h1>
+        <p>
+          The app opens with the book in the logo opening and a star popping out to feel inviting and fun. The user is then given the choice to "listen" or "read" (indicated by icons resembling an ear and mouth, respectively). Pulling on one of the tabs or "bookmarks" opens its section. In the given scenario, Bree opens the "Read" section to begin a stream. She first scans the barcode of her book to automatically input details that would help listeners find her stream. If she didn't have a barcode for her story, she could manually enter the details via typing or audio. After using the swipe gesture to move between setup screens - which emulates flipping through pages of a book - and entering the necessary details, Bree can begin streaming her voice.
+        </p>
+        <p>
+          As Bree reads, StarryReader keeps track of how long she has been reading and shows her where her listeners are tuning in from. The moving sound waves confirm that her phone is registering her voice. She decides to end the session early. After it ends, Bree receives points based on the duration of her session and the number of listeners ("people she helped fall asleep"), which could be exchanged for prizes (e.g. free e-books). She is also be able to see trends - such as how her reading duration has changed over time - and comments from other users about her reading. By allowing her to see how many people are listening to her and rewarding her for reading to others, StarryReader addresses Bree's needs. Not only does she feel less lonely, but she can earn more e-books and continue reading. And of course, reading helps her fall asleep earlier, thereby benefitting her mental health.
+        <p>
+          If Bree wanted to listen to a story for a change, she would navigate to the "Listen" section. She could do this by either pulling the "Listen" tab on the opening screen, or - if she was in the "Read" section - she could tap on the "Read" icon in the upper-left corner to switch modes. Once there, Bree could scroll through a feed of streams in different categories or perform a search based on specific criteria - much like using YouTube. She could then simply tap on a stream to begin listening to the story and relax. Points would also be awarded for listening to streams, but most of the points would come from reading in order to encourage more people to read.
+        </p>
+        <br>
+
+        <h1 class="story-section">Links</h1>
+        <a href="https://drive.google.com/open?id=0B1Jb2pATB84RZXcxSTBvYzc4MHM" target="_blank" class="links">
+          <p>Process pictures</p>
+        </a>
+        <a href="https://youtu.be/XWjT2vy-duw" target="_blank" class="links">
+          <p>Animated prototype</p>
+        </a>
+        <br>
+
+        <br>
+
+        <a href="../gallery.html"><p class="button return-button">- Return to Gallery -</p></a>
 			</div>
-		</nav>
-
-
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--|||||||||| HEADER ||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-
-		<div class="larger-margin">
-            <h1><a href="starryreader.html">StarryReader</a></h1>
-            <h3 class="subtitle">A mobile app for streaming bedtime stories</h3>
-		</div>
-
-
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--|||||||||| FUN STUFF ||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-
-		<div class="larger-margin">
-
-            <img src="../gallery-img/StarryReader-Header.jpg" class="project-pics">
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/XWjT2vy-duw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            <br>
-            <embed src="../gallery-img/StarryReader-Pres.pdf" height="350px" class="pdf-embed">
-            <br>
-            <a href="../gallery-img/StarryReader-Pres.pdf" target="_blank" class="links pdf-links">
-                <p>(Click here to open presentation at full size)</p>
-            </a>
-            <br>
-
-            <h1 class="story-section">Overview</h1>
-            <p>
-                Sometimes, we wish we had someone to read a bedtime story to us. Other times, we wish we had someone to read bedtime stories to. With StarryReader, you can do both. StarryReader is a mobile app that allows you to "broadcast" - aka livestream - your voice when reading bedtime stories to listeners around the world.
-            </p>
-            <br>
-
-
-            <h1 class="story-section">Process</h1>
-
-            <h1 class="story-chapter">Mission</h1>
-            <p>
-                Design an app that utilizes crowdsourcing and data visualization that shows the user the impact of their
-                contribution. This app must address the needs of a certain "dreamy nanny," a 20-year-old who has trouble
-                detaching herself from her phone, reading books, and falling asleep.
-            </p>
-            <br>
-
-            <h1 class="story-chapter">Playthrough</h1>
-            <p>
-                Meet one of our target users, Bree Searer. Bree is a 20-year-old full-time nanny, but she doesn't know what she wants to do with her life. She is very attached to her phone and always trying to find others to socialize with, but she never seems motivated enough to reach out to these people. This loneliness stresses her out every night and prevents her from getting a good night sleep. One thing she tries to do before bed is read some books and relax, but her addiction to her phone - or rather, her Etsy and Tinder - prevents her from doing so.
-            </p>
-            <p>
-                Instead of creating an app that would limit access to her phone or apps, I thought would be more beneficial to utilize her addiction to her phone, storytelling skills (acquired from being a nanny), and desire to make connections. Hence the "storytelling stream" concept was born. Bedtime reading shouldn't be an activity that requires a lot of effort, so I tried to simplify the streaming process as much as possible in my wireframes. I broke the simple tasks of preparing to stream, streaming, and ending the stream into even simpler tasks. Because the app is meant to be used by more than one person and facilitate connections, I had to consider the needs of other readers and listeners. To make the experience more accessible to readers of varying ages, I included specific instructions on each screen. As for the listeners - I had to include steps for entering info about the reading session so they could choose streams more easily. This inconveniences the reader (even if the info can be used to benefit them later), so I had to brainstorm ways to reduce the hassle. The steps transformed from voice input to picture-scanning and eventually to barcode scanning. While creating the visualizations to show the reader their impact, I decided to keep those simple as well to not be too distracting while reading.
-            </p>
-            <p>
-                Next came brand development. The most time consuming part was just figuring out a name for the app! After hours of thinking of words related to "night," "buddy," and "read" - and ways those words could be combined or modified - I came up with "StarryReader." It seemed fun, and the "star" part also made me think of a prize or achievement (so you could become a "top star reader"). For the logo, it made sense to include a star and a book. I opted for a star coming out of a book because it symbolized new worlds and possibilities opening up when a book was opened. The color scheme was derived from Cresselia - the Pokémon of good dreams. As for the typography, I opted for Alegreya because it looked book-like yet contemporary.
-            </p>
-            <br>
-
-            <h1 class="story-chapter">Results</h1>
-            <!--
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/XWjT2vy-duw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            <br>
-            -->
-            <p>
-                The app opens with the book in the logo opening and a star popping out to feel inviting and fun. The user is then given the choice to "listen" or "read" (indicated by icons resembling an ear and mouth, respectively). Pulling on one of the tabs or "bookmarks" opens its section. In the given scenario, Bree opens the "Read" section to begin a stream. She first scans the barcode of her book to automatically input details that would help listeners find her stream. If she didn't have a barcode for her story, she could manually enter the details via typing or audio. After using the swipe gesture to move between setup screens - which emulates flipping through pages of a book - and entering the necessary details, Bree can begin streaming her voice.
-            </p>
-            <p>
-                As Bree reads, StarryReader keeps track of how long she has been reading and shows her where her listeners are tuning in from. The moving sound waves confirm that her phone is registering her voice. She decides to end the session early. After it ends, Bree receives points based on the duration of her session and the number of listeners ("people she helped fall asleep"), which could be exchanged for prizes (e.g. free e-books). She is also be able to see trends - such as how her reading duration has changed over time - and comments from other users about her reading. By allowing her to see how many people are listening to her and rewarding her for reading to others, StarryReader addresses Bree's needs. Not only does she feel less lonely, but she can earn more e-books and continue reading. And of course, reading helps her fall asleep earlier, thereby benefitting her mental health.
-            <p>
-                If Bree wanted to listen to a story for a change, she would navigate to the "Listen" section. She could do this by either pulling the "Listen" tab on the opening screen, or - if she was in the "Read" section - she could tap on the "Read" icon in the upper-left corner to switch modes. Once there, Bree could scroll through a feed of streams in different categories or perform a search based on specific criteria - much like using YouTube. She could then simply tap on a stream to begin listening to the story and relax. Points would also be awarded for listening to streams, but most of the points would come from reading in order to encourage more people to read.
-            </p>
-            <!--
-            <p>
-                Below is a presentation detailing some of the diagnostics and process work:
-            </p>
-            <br>
-            <embed src="../gallery-img/StarryReader-Pres.pdf" height="350px" class="pdf-embed">
-            <br>
-            <a href="../gallery-img/StarryReader-Pres.pdf" target="_blank" class="links pdf-links">
-                <p>(Click here to open presentation at full size)</p>
-            </a>
-            -->
-            <br>
-
-            <h1 class="story-section">Links</h1>
-            <a href="https://drive.google.com/open?id=0B1Jb2pATB84RZXcxSTBvYzc4MHM" target="_blank" class="links">
-                <p>Process pictures</p>
-            </a>
-            <a href="https://youtu.be/XWjT2vy-duw" target="_blank" class="links">
-                <p>Animated prototype</p>
-            </a>
-            <br>
-
-            <br>
-
-            <a href="../gallery.html"><p class="return-button">- Return to Gallery -</p></a>
-		</div>
-
+		</main>
 	</body>
 </html>

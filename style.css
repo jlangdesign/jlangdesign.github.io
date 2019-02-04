@@ -5,110 +5,163 @@
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* All CSS custom properties */
 :root {
-    /********************/
-    /***** SITEWIDE *****/
-    /********************/
-    /* Typography */
-    --heading-font: titillium web;
-    --body-font: roboto;
-    --font-color: rgb(255, 255, 255); /* white (#ffffff) */
-    --list-margin: 1vh 20vw;
-    --max-line-length: 750px;
-    --para-padding: 0vh 20vw;
-    --default-heading-size: 48px;
-    --page-title-top-margin: 5%;
+  /********************/
+  /***** SITEWIDE *****/
+  /********************/
+  --default-vw: 1440; /* 100 vw = 1440 px */
+  --main-content-padding: 0vw 20vw 15px 20vw;
 
-    /* Color scheme */
-    --primary-color: 54, 69, 79; /* charcoal (#36454f) */
-    --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
-    --tertiary-color: 0, 0, 96; /* navy (#000060) */
-    --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
+  /* Typography */
+  --heading-font: titillium web;
+  --body-font: roboto;
+  --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+  --list-margin: 1vh 20vw;
+  --max-line-length: 750px;
+  --para-padding: 0vh 20vw;
+  --default-heading-size: 60px;
+  --page-title-top-padding: 75px;
+  --page-title-bottom-padding: 25px;
 
-    /* Shadows and glows */
-    --blue-btn-hover-glow: 0px 0px 10px rgba(255, 255, 255, .5);
+  /* Color scheme */
+  --primary-color: 54, 69, 79; /* charcoal (#36454f) */
+  --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
+  --tertiary-color: 0, 0, 96; /* navy (#000060) */
+  --main-bg-color: rgb(97, 98, 102); /* gray (#616266) */
 
-    /* Top navbar */
-    --top-nav-height: 35px;
-    --top-nav-font-size: 18px;
-    --top-nav-padding: 10px;
-    --logo-box-left-position: calc((100vw - 75vw) / 2);
-    --logo-box-top-position: 10px;
-    --logo-side-length: 32px;
-    --logo-margin: 0px 10px 0px 0px;
-    --logo-name-size: 24px;
-    --top-nav-tab-padding: 0px 10px;
+  /* Top navbar */
+  --top-nav-flex-direction: row;
+  --top-nav-height: 35px;
+  --top-nav-font-size: 18px;
+  --top-nav-padding: 10px;
+  --logo-box-left-position: calc((100vw - 75vw) / 2);
+  --logo-box-top-position: 10px;
+  --logo-side-length: 32px;
+  --logo-margin: 0px 10px 0px 0px;
+  --logo-name-size: 24px;
+  --top-nav-tab-padding: 0px 10px;
 
-    /* Other */
-    --body-margin: 5vh 7.5vw;
+  /* Buttons */
+  --button-bg-color: rgba(var(--secondary-color), 0.5);
+  --button-border: 2.5px solid rgba(var(--tertiary-color), 0.25);
+  --button-border-radius: 5px;
+  --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --button-padding: 15px;
+  --button-bg-color-hover: rgba(var(--secondary-color), 0.75);
+  --button-glow-hover: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  --button-text-glow-hover: 0 0 1px rgba(255, 255, 255, 0.5);
 
-    /********************/
-    /***** HOME PAGE *****/
-    /********************/
+  /********************/
+  /***** HOME PAGE *****/
+  /********************/
+  --start-screen-height: calc(100vh - 50px);
+  --slideshow-max-width: 75vw;
+  --slideshow-max-height: 100vh;
+  --game-name-size: 96px;
+  --press-start-font-size: 24px;
+  --press-start-button-height: 10vh;
+  --press-start-button-width: 20vw;
+  --welcome-text-size: 24px;
 
-    /********************/
-    /***** ABOUT PAGE *****/
-    /********************/
+  /********************/
+  /***** ABOUT PAGE *****/
+  /********************/
+  --about-img-width: calc(600 / var(--default-vw) * 100vw);
+  --about-img-height: calc(400 / var(--default-vw) * 100vw);
+  --about-img-bg-size: calc(var(--about-img-width) * 2) var(--about-img-height);
 
-    /********************/
-    /***** GALLERY PAGE *****/
-    /********************/
+  /********************/
+  /***** GALLERY PAGE *****/
+  /********************/
+  --gallery-page-padding: 0vw 10vw 15px 10vw;
 
-    /********************/
-    /***** CONTACT PAGE *****/
-    /********************/
+  /********************/
+  /***** CONTACT PAGE *****/
+  /********************/
 }
+/* HTML element */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body element */
 body {
-    margin: var(--body-margin);
-    background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
-    background-size: cover;
+  margin: 0px;
+  background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center;
+  background-size: cover;
 }
 
+/* Main content (content outside of topnav) */
+.main-content {
+  padding: var(--main-content-padding);
+}
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
 /* Heading tags */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--font-color);
-    text-align: center;
-    font-size: var(--default-heading-size);
+  font-family: var(--heading-font);
+  color: var(--font-color);
+  text-align: center;
+  font-size: var(--default-heading-size);
+  margin: 0px;
 }
 
 /* Headings that are page titles (e.g. About, Gallery, Contact) */
 .page-title {
-    margin-top: var(--page-title-top-margin);
+  padding-top: var(--page-title-top-padding);
+  padding-bottom: var(--page-title-bottom-padding);
 }
 
 /* Paragraph elements */
 p {
-    font-family: var(--body-font);
-    color: var(--font-color);
-    max-width: var(--max-line-length);
-    padding: var(--para-padding);
+  font-family: var(--body-font);
+  color: var(--font-color);
+  /*max-width: var(--max-line-length);*/
+  /* padding: var(--para-padding); */
 }
 
 /* List elements */
 li {
-    font-family: var(--body-font);
-    color: var(--font-color);
-    max-width: var(--max-line-length);
-    margin: var(--list-margin);
+  font-family: var(--body-font);
+  color: var(--font-color);
+  max-width: var(--max-line-length);
+  margin: var(--list-margin);
 }
 
 /* Anchor elements */
 a {
-    text-decoration: none;
-  	color: var(--font-color);
+  text-decoration: none;
+	color: var(--font-color);
 }
 
 /* Visited links */
 a:visited {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 /* Formatting for text in anchors */
 .links {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* Buttons used sitewide */
+.button {
+  font-family: var(--heading-font);
+  color: var(--font-color);
+  background-color: var(--button-bg-color);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  box-shadow: var(--button-box-shadow);
+  /*margin: 0px;*/
+  margin: auto;
+  text-align: center;
+  padding: var(--button-padding);
+}
+
+/* Hover state for sitewide buttons */
+.button:hover {
+  box-shadow: var(--button-glow-hover);
+  text-shadow: var(--button-text-glow-hover);
+  background-color: var(--button-bg-color-hover);
 }
 
 
@@ -116,64 +169,65 @@ a:visited {
 /* TODO set up automatic nav bar insertion */
 /* Top navigation bar, including logo and links to other pages */
 #topnav {
-    font-family: var(--heading-font);
-    position: fixed;
-        top: 0px;
-        left: 50%;
-    margin: 0 auto;
-        left: 0px;
-        right: 0px;
-    background-color: rgb(var(--primary-color));
-    z-index: 100;
-    font-size: var(--top-nav-font-size);
-    padding: var(--top-nav-padding);
-    box-shadow: 0 2.5px 10px #000000;
+  font-family: var(--heading-font);
+  position: fixed;
+      top: 0px;
+      left: 50%;
+  margin: 0 auto;
+      left: 0px;
+      right: 0px;
+  background-color: rgb(var(--primary-color));
+  z-index: 100;
+  font-size: var(--top-nav-font-size);
+  padding: var(--top-nav-padding);
+  box-shadow: 0 2.5px 10px #000000;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--top-nav-height);
+  display: flex;
+  flex-direction: var(--top-nav-flex-direction);
+  justify-content: center;
+  align-items: center;
+  height: var(--top-nav-height);
 }
 
 /* Blue hover state of links to other pages */
 #topnav a:hover {
-    color: rgb(var(--secondary-color));
+  color: rgb(var(--secondary-color));
 }
 
 /* Container with square JL logo and the "Jasmine Lang" text */
 #logo-box {
-    position: fixed;
-      left: var(--logo-box-left-position);
-      top: var(--logo-box-top-position);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+    left: var(--logo-box-left-position);
+    top: var(--logo-box-top-position);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Actual logo image */
 #logo {
-    width: var(--logo-side-length);
-    height: var(--logo-side-length);
-    z-index: 110;
-    margin: var(--logo-margin);
+  width: var(--logo-side-length);
+  height: var(--logo-side-length);
+  z-index: 110;
+  margin: var(--logo-margin);
 }
 
 /* Glowing hover state of logo */
 #logo:hover {
-    box-shadow: var(--blue-btn-hover-glow);
+  box-shadow: var(--button-glow-hover);
 }
 
 /* Text attached to logo */
 #logo-name {
-    font-size: var(--logo-name-size);
-    color: var(--font-color);
-    font-weight: bold;
+  font-size: var(--logo-name-size);
+  color: var(--font-color);
+  font-weight: bold;
 }
 
 /* Container with links to different pages */
 .top-nav-tab {
-    padding: var(--top-nav-tab-padding);
+  padding: var(--top-nav-tab-padding);
 }
 
 
@@ -186,329 +240,110 @@ a:visited {
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
 /* Partially transparent black container behind the slideshow container */
 #theater {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: calc(100vh - 55px);
-    border-radius: 5px;
-    margin: 0vh -7.5vw;
+  position: relative;
+      top: calc(2 * var(--top-nav-padding) + var(--top-nav-height));
+  background-color: rgba(0, 0, 0, 0.5);
+  /*width: 100vw;*/
+  width: 100%;
+  height: var(--start-screen-height);
+  border-radius: 5px;
 }
 
 /* Container with all the image slides */
 #slideshow {
-    text-align: center;
-    height: auto;
-    width: auto;
-    max-width: 75vw;
-    max-height: 100vh;
-    margin: auto;
-        top: 0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-    background-color: black;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  max-width: var(--slideshow-max-width);
+  max-height: var(--slideshow-max-height);
+  margin: auto;
+      top: 0%;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Container for #game-name and #press-start */
 #start-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 95;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 95;
 }
 
 /* Text on top of the slides */
 #game-name {
-    text-align: center;
-    font-size: 72px;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, .75);
-    margin: 0px 0px 30px 0px;
+  text-align: center;
+  font-size: var(--game-name-size);
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, .75);
+  margin: 0px 0px 30px 0px;
 }
 
 
 /*|||||||||||||||||||| PRESS START BUTTON ||||||||||||||||||||*/
 /* Button on top of slides that takes you to gallery */
 #press-start {
-    font-size: 24px;
-    color: var(--font-color);
-    height: 10vh;
-    width: 20vw;
-    background-color: rgba(var(--secondary-color), 0.5);
-    border: 2.5px solid rgba(var(--tertiary-color), 0.25);
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, .75);
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: var(--press-start-font-size);
+  height: var(--press-start-button-height);
+  width: var(--press-start-button-width);
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Glowing hover state of button*/
 #press-start:hover {
-    box-shadow: var(--blue-btn-hover-glow);
-    text-shadow: 0px 0px 1px var(--glow-color);
-    background-color: rgba(var(--secondary-color), 0.75);
-    border: 2.5px solid rgba(var(--tertiary-color), 0.35);
 }
 
 
 /*|||||||||||||||||||| SLIDES AND ANIMATION ||||||||||||||||||||*/
 /* Class of each image in slideshow */
 .slide-img {
-    height: calc(100vh - 55px);
-    width: 75vw;
-    background-size: calc(100vh - 55px);
-    margin: auto;
-    background: no-repeat center;
-    opacity: .8;
+  height: var(--start-screen-height);
+  width: var(--slideshow-max-width);
+  margin: auto;
+  transition: opacity .5s ease-in;
+  position: absolute;
+    top: 0;
+  object-fit: cover;
 }
 
-/* TODO set up file loading so we don't have all this clutter in the CSS */
-#slide-1 {
-    background-image: url("gallery-img/perillo-chair-1.jpg");
-    background-size: cover;
+.slide-img + .slide-img {
+  opacity: 0;
 }
 
-#slide-2 {
-    background-image: url("gallery-img/budong-structure.png");
-    background-size: cover;
-}
-
-#slide-3 {
-    background-image: url("gallery-img/Day-at-NCMNS-Storyboard.jpg");
-    background-size: cover;
-}
-
-#slide-4 {
-    background-image: url("gallery-img/pandoras-box-start.png");
-    background-size: cover;
-}
-
-#slide-5 {
-    background-image: url("gallery-img/touch-crane-screen.jpg");
-    background-size: cover;
-}
-
-#slide-6 {
-    background-image: url("gallery-img/Harmony-header.jpg");
-    background-size: cover;
-}
-
-#slide-7 {
-    background-image: url("gallery-img/ARE3-cover.jpg");
-    background-size: cover;
-}
-
-#slide-8 {
-    background-image: url("gallery-img/Handbook-cover.jpg");
-    background-size: cover;
-}
-
-#slide-9 {
-    background-image: url("gallery-img/relief-installation.jpg");
-    background-size: cover;
-}
-
-#slide-10 {
-    background-image: url("gallery-img/LiPS-Logos-Portfolio-sq-29.png");
-    background-size: cover;
-}
-
-#slide-11 {
-    background-image: url("gallery-img/StarryReader-Header.jpg");
-    background-size: cover;
-}
-
-#slide-12 {
-    background-image: url("gallery-img/Jasmine-Flipboard-F.jpg");
-    background-size: cover;
-}
-
-#slide-13 {
-    background-image: url("gallery-img/mmg-cover-01.png");
-    background-size: cover;
-}
-
-#slide-14 {
-    background-image: url("gallery-img/Picture-Booth-Context.jpg");
-    background-size: cover;
-}
-
-#slide-15 {
-    background-image: url("gallery-img/After-Kendama-03.png");
-    background-size: cover;
-}
-
-/* TODO write for loop to go through each image */
-.slide-img:nth-child(1) {
-    -webkit-animation: xfade 75s 0s infinite; /* start at 0s */
-    -moz-animation: xfade 75s 0s infinite;
-    -o-animation: xfade 75s 0s infinite;
-    animation: xfade 75s 0s infinite;
-    z-index: 100;
-}
-
-.slide-img:nth-child(2) {
-    -webkit-animation: xfade 75s 5s infinite; /* start at 5s */
-    -moz-animation: xfade 75s 5s infinite;
-    -o-animation: xfade 75s 5s infinite;
-    animation: xfade 75s 5s infinite;
-    z-index: 90;
-}
-
-.slide-img:nth-child(3) {
-    -webkit-animation: xfade 75s 10s infinite; /* start at 10s */
-    -moz-animation: xfade 75s 10s infinite;
-    -o-animation: xfade 75s 10s infinite;
-    animation: xfade 75s 10s infinite;
-    z-index: 80;
-}
-
-.slide-img:nth-child(4) {
-    -webkit-animation: xfade 75s 15s infinite; /* start at 15s */
-    -moz-animation: xfade 75s 15s infinite;
-    -o-animation: xfade 75s 15s infinite;
-    animation: xfade 75s 15s infinite;
-    z-index: 70;
-}
-
-.slide-img:nth-child(5) {
-    -webkit-animation: xfade 75s 20s infinite; /* start at 20s */
-    -moz-animation: xfade 75s 20s infinite;
-    -o-animation: xfade 75s 20s infinite;
-    animation: xfade 75s 20s infinite;
-    z-index: 60;
-}
-
-.slide-img:nth-child(6) {
-    -webkit-animation: xfade 75s 25s infinite; /* start at 25s */
-    -moz-animation: xfade 75s 25s infinite;
-    -o-animation: xfade 75s 25s infinite;
-    animation: xfade 75s 25s infinite;
-    z-index: 50;
-}
-
-.slide-img:nth-child(7) {
-    -webkit-animation: xfade 75s 30s infinite; /* start at 30s */
-    -moz-animation: xfade 75s 30s infinite;
-    -o-animation: xfade 75s 30s infinite;
-    animation: xfade 75s 30s infinite;
-    z-index: 40;
-}
-
-.slide-img:nth-child(8) {
-    -webkit-animation: xfade 75s 35s infinite; /* start at 35s */
-    -moz-animation: xfade 75s 35s infinite;
-    -o-animation: xfade 75s 35s infinite;
-    animation: xfade 75s 35s infinite;
-    z-index: 30;
-}
-
-.slide-img:nth-child(9) {
-    -webkit-animation: xfade 75s 40s infinite; /* start at 40s */
-    -moz-animation: xfade 75s 40s infinite;
-    -o-animation: xfade 75s 40s infinite;
-    animation: xfade 75s 40s infinite;
-    z-index: 20;
-}
-
-.slide-img:nth-child(10) {
-    -webkit-animation: xfade 75s 45s infinite; /* start at 45s */
-    -moz-animation: xfade 75s 45s infinite;
-    -o-animation: xfade 75s 45s infinite;
-    animation: xfade 75s 45s infinite;
-    z-index: 10;
-}
-
-.slide-img:nth-child(11) {
-    -webkit-animation: xfade 75s 50s infinite; /* start at 50s */
-    -moz-animation: xfade 75s 50s infinite;
-    -o-animation: xfade 75s 50s infinite;
-    animation: xfade 75s 50s infinite;
-    z-index: 9;
-}
-
-.slide-img:nth-child(12) {
-    -webkit-animation: xfade 75s 55s infinite; /* start at 55s */
-    -moz-animation: xfade 75s 55s infinite;
-    -o-animation: xfade 75s 55s infinite;
-    animation: xfade 75s 55s infinite;
-    z-index: 8;
-}
-
-.slide-img:nth-child(13) {
-    -webkit-animation: xfade 75s 60s infinite; /* start at 60s */
-    -moz-animation: xfade 75s 60s infinite;
-    -o-animation: xfade 75s 60s infinite;
-    animation: xfade 75s 60s infinite;
-    z-index: 7;
-}
-
-.slide-img:nth-child(14) {
-    -webkit-animation: xfade 75s 65s infinite; /* start at 65s */
-    -moz-animation: xfade 75s 65s infinite;
-    -o-animation: xfade 75s 65s infinite;
-    animation: xfade 75s 65s infinite;
-    z-index: 7;
-}
-
-.slide-img:nth-child(15) {
-    -webkit-animation: xfade 75s 70s infinite; /* start at 70s */
-    -moz-animation: xfade 75s 70s infinite;
-    -o-animation: xfade 75s 70s infinite;
-    animation: xfade 75s 70s infinite;
-    z-index: 7;
-}
-
-/*
-.fadeSlides {
-    max-width: 750px;
-	position: absolute;
-}
-.fade {
-    animation: fading 5s infinite;
-}
-*/
-
-/* TODO move this code */
-/*
-SYNTAX = animation: name duration timing-function delay iteration-count direction
-- animation timing (when to xfade out) = 100%/# of slides
-- % before fade-out, fade-in
-- animation duration = # of slides * display time
-- see https://stackoverflow.com/questions/22547763/fading-css-slideshow-without-js-that-loops
-*/
-
-@-webkit-keyframes xfade {
-    0%{opacity:1;} /* each image is visible */
-    23.3%{opacity:1;} /* fading out */
-    33.3%{opacity:0;} /* invisible */
-    90%{opacity:0;} /* fading in */
-    100%{opacity:1;} /* visible again */
-}
-
-@keyframes xfade {
-    0%{opacity:1;}
-    23.3%{opacity:1;}
-    33.3%{opacity:0;}
-    90%{opacity:0;}
-    100%{opacity:1;}
-}
 
 /*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
 /* Short welcome message and description of this site below the slideshow */
 #welcome {
   text-align: center;
+  padding-top: 70px;
+}
+
+/* Friendly interjection */
+#greeting {
+  margin: 0;
 }
 
 /* Text of the welcome message */
 #welcome-txt {
-  font-size: 24px;
+  /* padding: var(--para-padding); */
+  max-width: initial;
+  font-size: var(--welcome-text-size);
+}
+
+/* Note about responsiveness */
+#limitation {
+  padding: var(--para-padding);
+  max-width: initial;
 }
 
 
@@ -519,36 +354,30 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Header image for About page */
 .about-img {
-    background-image: url("assets/me-snake.jpg");
-    height: 400px;
-    width: 600px;
-    background-size: 1200px 400px;
-    display: block;
-    margin: auto;
+  background-image: url("assets/me-snake.jpg");
+  height: var(--about-img-height);
+  width: var(--about-img-width);
+  background-size: var(--about-img-bg-size);
+  display: block;
+  margin: auto;
 }
 
 /* Hover state of About image (changes to a different image) */
 .about-img:hover {
-    background-position: -600px 0px;
+  background-position: calc(var(--about-img-width) * -1) 0px;
+}
+
+.musing {
+  color: #999999;
+  font-size: 9px;
 }
 
 /* Button to open up CV/resume PDF */
 #cv-resume {
-    background-color: rgba(var(--secondary-color), 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
-    padding: 10px;
-    margin: auto;
-    text-align: center;
-    border: 2.5px solid rgba(var(--tertiary-color), 0.5);
-    border-radius: 5px;
-    font-family: var(--heading-font);
 }
 
 /* Glowing hover state of cv-resume button */
 #cv-resume:hover {
-    box-shadow: var(--blue-btn-hover-glow);
-    text-shadow: 0px 0px 1px var(--glow-color);
-    background-color: rgba(var(--secondary-color), 0.75);
 }
 
 
@@ -556,56 +385,56 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /* TODO implement interactive flexbox HTML CV */
 /*the containers*/
 .interactive-cv {
-    background-color: rgba(var(--secondary-color), .25);
-    border: 2.5px solid rgba(var(--tertiary-color), .25);
-    border-radius: 5px;
-    padding: 25px;
-    margin: 25px 0px;
-    /*display: inline; ---it doesn't like this --- */
-    display: block;
+  background-color: rgba(var(--secondary-color), .25);
+  border: 2.5px solid rgba(var(--tertiary-color), .25);
+  border-radius: 5px;
+  padding: 25px;
+  margin: 25px 0px;
+  /*display: inline; ---it doesn't like this --- */
+  display: block;
 }
 
 .cv-click {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    vertical-align: top;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  vertical-align: top;
 }
 
 .cv-click:hover {
-    background-color: rgba(var(--secondary-color), .5);
-    border: 2.5px solid rgba(var(--tertiary-color), .5);
-    box-shadow: var(--blue-btn-hover-glow);
+  background-color: rgba(var(--secondary-color), .5);
+  border: 2.5px solid rgba(var(--tertiary-color), .5);
+  box-shadow: var(--button-glow-hover);
 }
 
 /*how to make expandable/collapsable?*/
 /*
 .interactive-cv div:target {
-    display: none;
+  display: none;
 }
 */
 
 .cv-header-1 {
-    text-align: left;
-    font-size: 48px;
-    font-weight: 700; /*bold*/
+  text-align: left;
+  font-size: 48px;
+  font-weight: 700; /*bold*/
 }
 
 .cv-header-2 {
-    text-align: left;
-    font-size: 24px;
-    font-weight: 600; /*semibold*/
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600; /*semibold*/
 }
 
 .cv-header-3 {
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600; /*semibold*/
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600; /*semibold*/
 }
 
 .cv-body-txt {
-    font-family: var(--body-font);
-  	font-size: 12px;
+  font-family: var(--body-font);
+	font-size: 12px;
 }
 
 
@@ -614,388 +443,282 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*|||||||||||||||||||| GALLERY ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+#gallery-page {
+  padding: var(--gallery-page-padding);
+}
 
 /*|||||||||||||||||||| FRAME ||||||||||||||||||||*/
 /* Container for all Gallery elements */
 #gallery-strip {
-    position: relative;
+  position: relative;
+  padding-top: 56px;
 }
 
 /* Name of Gallery section*/
 .gallery-topic {
-    clear: both;
-    font-size: 36px;
+  clear: both;
+  font-size: 36px;
 }
 
 /* Box containing Gallery topic and matrix */
 .gallery-container {
-    margin: 0 -50px;
-    padding: 10px 0;
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
-    z-index: 10;
+  margin: 0 -50px;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+  z-index: 10;
 }
 
 /* Box containing the Graphic Design matrix */
 #gd-menu {
-    background-color: rgba(var(--primary-color), 0.5);
-    border: 5px solid rgba(var(--primary-color), 0.75);
-    border-radius: 3px;
+  background-color: rgba(var(--primary-color), 0.5);
+  border: 5px solid rgba(var(--primary-color), 0.75);
+  border-radius: 3px;
 }
 
 /* Box containing the Art matrix */
 #art-menu {
-    background-color: rgba(var(--secondary-color), 0.5);
-    border: 5px solid rgba(var(--secondary-color), 0.75);
-    border-radius: 3px;
+  background-color: rgba(var(--secondary-color), 0.5);
+  border: 5px solid rgba(var(--secondary-color), 0.75);
+  border-radius: 3px;
 }
 
 /* Box containing the Other matrix */
 #other-menu {
-    background-color: rgba(var(--tertiary-color), 0.5);
-    border: 5px solid rgba(var(--tertiary-color), 0.75);
-    border-radius: 3px;
+  background-color: rgba(var(--tertiary-color), 0.5);
+  border: 5px solid rgba(var(--tertiary-color), 0.75);
+  border-radius: 3px;
 }
 
 /* Subcontainer containing Gallery matrix */
 .gallery-container-2 {
-    text-align: center;
-    position: relative;
-    display: table;
+  text-align: center;
+  position: relative;
+  display: table;
 }
 
 
 /*|||||||||||||||||||| GRID ||||||||||||||||||||*/
 /* The matrix of projects */
 .grid {
-    /*background-color: powderblue;*/
-    height: 200px;
-    width: 200px;
-    display: inline-block;
-    /*float: left; */
-    margin: 20px;
-    z-index: 10;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    border-radius: 1.5px;
-    transition: transform 0.5s 0s; /* when descending (no longer hovering) */
-    /*
-    background-image: url("WWW4-GD-hover_states.jpg");
-    background-size: 400px 2000px;
-    */
+  /* background-color: black; */
+  /*
+  height: 200px;
+  width: 200px;
+  background-size: 400px 200px;
+  */
+  height: calc(200 / var(--default-vw) * 100vw);
+  width: calc(200 / var(--default-vw) * 100vw);
+  background-size: calc(400 / var(--default-vw) * 100vw) calc(200 / var(--default-vw) * 100vw);
+  display: inline-block;
+  /*float: left; */
+  /* margin: 20px; */
+  margin: calc(20 / var(--default-vw) * 100vw);
+  z-index: 10;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  border-radius: 1.5px;
+  transition: transform 0.5s 0s; /* when descending (no longer hovering) */
 }
 
 /* Transformation (rising) hover state of matrix items */
 .grid:hover {
-    /*background-color: #9cc9ce;*/
-    cursor: pointer;
-    transform: scale(1.2); /* grow a bit bigger */
-    transition: transform 0.2s 0s; /* when ascending */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-    background-position: -200px 0px;
+  cursor: pointer;
+  transform: scale(1.2); /* grow a bit bigger */
+  transition: transform 0.2s 0s; /* when ascending */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+  /* background-position: -200px 0px; */
+  background-position: calc(-200 / var(--default-vw) * 100vw) 0px;
 }
 
 /* Invisible matrix items */
 .hidden-item {
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
-    background-image: none;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  background-image: none;
 }
 
 /* Hover state of matrix items (no visible changes) */
 .hidden-item:hover {
-    background-color: rgba(0, 0, 0, 0);
-    cursor: auto;
-    transform: none;
-    transition: none;
-    box-shadow: none;
-    background-image: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: auto;
+  transform: none;
+  transition: none;
+  box-shadow: none;
+  background-image: none;
 }
 
 
 /*|||||||||||||||||||| GD GRID HOVER STATES ||||||||||||||||||||*/
-/* TODO set up automatic file loading*/
+/* TODO set up automatic file loading */
+/**
+ * Automatically insert header img and create hover state by changing the class.
+ * Opacity lowers to .5 on a black bg and a blur filter is applied upon hover.
+ * Scale also increases slightly.
+ * Refer to: https://stackoverflow.com/a/25876303
+ */
 /* Project images to load for the Graphic Design matrix */
 .gd-grid {
-    background-image: url("assets/WWW4-GD-hover_states-1.jpg");
-  	background-size: 400px 2000px;
-}
-
-#perillo-grid {
-    background-position: 0px 0px;
-}
-
-#perillo-grid:hover {
-    background-position: -200px 0px;
 }
 
 #bu-dong-grid {
-    background-position: 0px -200px;
-}
-
-#bu-dong-grid:hover {
-    background-position: -200px -200px;
-}
-
-#ncmns-grid {
-    background-position: 0px -400px;
-}
-
-#ncmns-grid:hover {
-    background-position: -200px -400px;
+  background-image: url("assets/Tile-bu-Dong.png");
 }
 
 #pandoras-grid {
-    background-position: 0px -600px;
-}
-
-#pandoras-grid:hover {
-    background-position: -200px -600px;
-}
-
-#folds-grid {
-    background-position: 0px -800px;
-}
-
-#folds-grid:hover {
-    background-position: -200px -800px;
+  background-image: url("assets/Tile-Pandoras-Box.png");
 }
 
 #harmony-grid {
-    background-position: 0px -1000px;
-}
-
-#harmony-grid:hover {
-    background-position: -200px -1000px;
+  background-image: url("assets/Tile-Harmony.png");
 }
 
 #are3-grid {
-    background-position: 0px -1200px;
-}
-
-#are3-grid:hover {
-    background-position: -200px -1200px;
+  background-image: url("assets/Tile-ARE3.png");
 }
 
 #lizards-grid {
-    background-position: 0px -1400px;
-}
-
-#lizards-grid:hover {
-    background-position: -200px -1400px;
-}
-
-#relief-grid {
-    background-position: 0px -1600px;
-}
-
-#relief-grid:hover {
-    background-position: -200px -1600px;
-}
-
-#lips-grid {
-    background-position: 0px -1800px;
-}
-
-#lips-grid:hover {
-    background-position: -200px -1800px;
-}
-
-
-.gd-grid-2 {
-    background-image: url("assets/WWW4-GD-hover_states-2.jpg");
-    background-size: 400px 600px;
+  background-image: url("assets/Tile-Of-Lizards.png");
 }
 
 #starry-grid {
-    background-position: 0px 0px;
-}
-
-#starry-grid:hover {
-    background-position: -200px 0px;
-}
-
-#flipboard-grid {
-    background-position: 0px -200px;
-}
-
-#flipboard-grid:hover {
-    background-position: -200px -200px;
-}
-
-#mmg-grid {
-    background-position: 0px -400px;
-}
-
-#mmg-grid:hover {
-    background-position: -200px -400px;
-}
-
-.gd-grid-3 {
-    background-image: url("assets/WWW4-GD-hover_states-3.jpg");
-    background-size: 400px 400px;
+  background-image: url("assets/Tile-StarryReader.png");
 }
 
 #pb-grid {
-    background-position: 0px 0px;
-}
-
-#pb-grid:hover {
-    background-position: -200px 0px;
+  background-image: url("assets/Tile-Picture-Booth.png");
 }
 
 #recon-grid {
-    background-position: 0px -200px;
+  background-image: url("assets/Tile-Reconstruction.png");
 }
 
-#recon-grid:hover {
-    background-position: -200px -200px;
-}
 
 /*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Art matrix */
 .art-grid {
-    background-image: url("assets/WWW4-other-hover_states.jpg");
-    background-size: 400px 600px;
-    background-position: 0px -400px;
-}
-
-.art-grid:hover {
-    background-position: -200px -400px;
+  background-image: url("assets/Tile-Mystery.jpg");
 }
 
 
 /*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Other matrix */
 .other-grid {
-    background-image: url("assets/WWW4-other-hover_states.jpg");
-    background-size: 400px 600px;
-    background-position: 0px -400px;
-}
-
-.other-grid:hover {
-    background-position: -200px -400px;
-}
-
-#cmms-grid {
-    background-position: 0px 0px;
-}
-
-#cmms-grid:hover {
-    background-position: -200px 0px;
-}
-
-#sights-grid {
-    background-position: 0px -200px;
-}
-
-#sights-grid:hover {
-    background-position: -200px -200px;
+  background-image: url("assets/Tile-Mystery.jpg");
 }
 
 
 /*|||||||||||||||||||| BUTTONS ||||||||||||||||||||*/
 /* Right/left buttons for Gallery matrix */
 .menu-button {
-    /*border: none;*/
-    display: inline-block;
-    outline:0;
-    /*padding:16px 24px;*/
-    padding: 20% 24px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    position: absolute;
-        top: 50%;
-    font-family: var(--heading-font);
-    background-color: rgb(20, 20, 20);
-    color: #cccccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    z-index: 20;
-    border-radius: 1.5px;
-    border: 2.5px solid rgba(204, 204, 204, .5);
-    transform: translateY(-50%);
+  /*border: none;*/
+  display: inline-block;
+  outline: 0;
+  /*padding:16px 24px;*/
+  padding: 20% 24px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  /* white-space: nowrap; */
+  position: absolute;
+      top: 50%;
+  font-family: var(--heading-font);
+  background-color: rgb(20, 20, 20);
+  color: #cccccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  z-index: 20;
+  border-radius: 1.5px;
+  border: 2.5px solid rgba(204, 204, 204, .5);
+  transform: translateY(-50%);
+  width: 60px;
 }
 
 /* Gray hover state of Gallery section buttons */
 .menu-button:hover {
-    color: rgb(20, 20, 20);
-    background-color: #cccccc;
-    cursor: pointer;
-    border: 2.5px solid rgba(20, 20, 20, .5);
+  color: rgb(20, 20, 20);
+  background-color: #cccccc;
+  cursor: pointer;
+  border: 2.5px solid rgba(20, 20, 20, .5);
+}
+
+/* Arrow buttons for navigating between different tabs*/
+.arrow {
+  font-size: 14px;
 }
 
 /* Button to go to previous Gallery section */
 .menu-left {
-    left: -6.25%;
+  left: -60px;
 }
 
 /* Button to go to next Gallery section */
 .menu-right {
-    right: -6.25%;
+  right: -60px;
 }
 
 
 /*|||||||||||||||||||| TABS ||||||||||||||||||||*/
+#tab-group {
+  display: flex;
+}
+
 /* Tabs denoting different sections of Gallery */
 .section-tab {
-    top: 100%;
-    width: 33.333%;
-    position: absolute;
-    border: 2.5px solid rgb(50, 50, 50);
-    z-index: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-    font-size: 12;
-    padding:16px 24px;
-    transform: none;
+  top: 2.5px;
+  width: 33.333%;
+  position: absolute;
+  border: 2.5px solid rgb(50, 50, 50);
+  z-index: 5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  /* font-size: 12px; */
+  padding: 16px 24px;
+  transform: none;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0px 0px; /* TL, TR, BR, BL */
 }
 
 /* Opaque white text hover state for section tabs */
 .section-tab:hover {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 /* Styling for Graphic Design tab */
 #gd-tab {
-    background-color: rgba(var(--primary-color), 0.5);
-    border: 5px solid rgba(var(--primary-color), 0.75);
-    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
-    border-top: none;
+  background-color: rgba(var(--primary-color), 0.5);
+  border: 5px solid rgba(var(--primary-color), 0.75);
+  border-bottom: none;
 }
 
 /* Styling for Art tab */
 #art-tab {
-    margin: 0 auto;
-    left: 25%;
-    right: 25%;
-    background-color: rgba(var(--secondary-color), 0.5);
-    border: 5px solid rgba(var(--secondary-color), 0.75);
-    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
-    border-top: none;
+  margin: 0 auto;
+  left: 25%;
+  right: 25%;
+  background-color: rgba(var(--secondary-color), 0.5);
+  border: 5px solid rgba(var(--secondary-color), 0.75);
+  border-bottom: none;
 }
 
 /* Styling for Other tab */
 #other-tab {
-    right: 0%;
-    background-color: rgba(var(--tertiary-color), 0.5);
-    border: 5px solid rgba(var(--tertiary-color), 0.75);
-    border-radius: 0 0 3px 3px; /* TL, TR, BR, BL */
-    border-top: none;
+  right: 0%;
+  background-color: rgba(var(--tertiary-color), 0.5);
+  border: 5px solid rgba(var(--tertiary-color), 0.75);
+  border-bottom: none;
 }
 
 /* Styling for tab of current selected section */
 .current-tab {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    padding: -16px -24px;
-    background-color: #cccccc;
-    z-index: 40;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #cccccc;
+  z-index: 7;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
+  top: -8px;
 }
 
 
@@ -1006,47 +729,43 @@ SYNTAX = animation: name duration timing-function delay iteration-count directio
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* TODO fix this */
 form {
-    color: var(--font-color);
-  	font-family: var(--body-font);
+  color: var(--font-color);
+	font-family: var(--body-font);
 }
 
 input[type=text], textarea {
-    font-family: var(--body-font);
-    background-color: #f4f4f4;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
+  font-family: var(--body-font);
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
 }
 
 textarea {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .c-label {
-    line-height: 1.5;
-    font-family: var(--heading-font);
+  line-height: 1.5;
+  font-family: var(--heading-font);
 }
 
 input[type=submit] {
-    background-color: rgb(var(--secondary-color));
-    border-radius: 5px;
-    border: 2.5px solid rgba(var(--tertiary-color), 0.5);
-    font-family: var(--heading-font);
-    font-size: 12px;
-    color: var(--font-color);
+  width: 100%;
+  font-size: 16px;
 }
 
 input[type=submit]:hover {
-    background-color: #9cc9ce;
-  	cursor: pointer;
+	cursor: pointer;
 }
 
 .frame {
-    background-color: rgb(var(--primary-color));
-    border-radius: 5px;
-    padding: 20px;
-    margin: 0 auto;
-    width: 50%;
+  background-color: rgb(var(--primary-color));
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -1063,7 +782,292 @@ input[type=submit]:hover {
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
-/* TODO set flex and order on larger and smaller screens */
-@media (min-width: 600px) {
+/* Values for larger desktop displays */
+@media (min-width: 1600px) {
+  .menu-button {
+    padding: 10% 12px;
+  }
 
+  .section-tab {
+    padding: 16px 12px;
+  }
+}
+
+/* Values for smaller laptop displays */
+@media (max-width: 1280px) {
+  :root {
+    --gallery-page-padding: 0vw 12.5vw 15px 12.5vw;
+  }
+
+  .menu-button {
+    padding: 30% 12px;
+  }
+
+  .section-tab {
+    padding: 16px 12px;
+  }
+
+  .grid {
+    height: calc(225 / var(--default-vw) * 100vw);
+    width: calc(225 / var(--default-vw) * 100vw);
+    background-size: calc(450 / var(--default-vw) * 100vw) calc(225 / var(--default-vw) * 100vw);
+  }
+
+  .grid:hover {
+    background-position: calc(-225 / var(--default-vw) * 100vw) 0px;
+  }
+}
+
+/* Values for tablet-sized displays */
+@media (max-width: 930px) {
+  :root {
+    /********************/
+    /***** SITEWIDE *****/
+    /********************/
+    --main-content-padding: 0vw 10vw 15px 10vw;
+
+    /* Typography */
+    --para-padding: 0vh 10vw;
+    --default-heading-size: 54px;
+
+    /* Top navbar */
+    --top-nav-flex-direction: column;
+    --logo-box-left-position: 5vw;
+
+    /********************/
+    /***** HOME PAGE *****/
+    /********************/
+    --slideshow-max-width: 100vw;
+    --game-name-size: 60px;
+    --press-start-font-size: 18px;
+    --press-start-button-height: 7.5vh;
+    --press-start-button-width: 30vw;
+    --welcome-text-size: 21px;
+
+    /********************/
+    /***** ABOUT PAGE *****/
+    /********************/
+    --about-img-width: calc(900 / var(--default-vw) * 100vw);
+    --about-img-height: calc(600 / var(--default-vw) * 100vw);
+
+    /********************/
+    /***** GALLERY PAGE *****/
+    /********************/
+    /* --gallery-page-padding: 0vw 20vw 15px 20vw; */
+
+    /********************/
+    /***** CONTACT PAGE *****/
+    /********************/
+  }
+
+  #top-nav-tab-group {
+    position: fixed;
+    right: var(--logo-box-left-position);
+  }
+
+  #game-name {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .menu-button {
+    padding: 100% 12px;
+    position: fixed;
+    /* width: 20vw; */
+  }
+
+  .arrow {
+    height: 53px;
+    padding: 0px;
+    position: fixed;
+      bottom: 0;
+      top: 100vh;
+    transform: translateY(-100%);
+  }
+
+  .menu-left {
+    left: 0;
+  }
+
+  .menu-right {
+    right: 0;
+  }
+
+  .section-tab {
+    padding: 16px 12px;
+    top: 12px;
+    color: white;
+    font-size: 14px;
+    height: 63px;
+  }
+
+  .current-tab {
+    top: 0px;
+    font-size: 18px;
+    height: 69px;
+  }
+
+  #gd-tab {
+    background-color: rgba(var(--primary-color), 0.85);
+    border: 5px solid rgba(var(--primary-color), 1);
+  }
+
+  #art-tab {
+    background-color: rgba(var(--secondary-color), 0.85);
+    border: 5px solid rgba(var(--secondary-color), 1);
+  }
+
+  #other-tab {
+    background-color: rgba(var(--tertiary-color), 0.85);
+    border: 5px solid rgba(var(--tertiary-color), 1);
+  }
+
+  #gallery-strip {
+    padding-top: 0;
+  }
+
+  #tab-group {
+    position: fixed;
+      top: 100vh;
+      left: 60px;
+    width: calc(100% - 120px);
+    z-index: 90;
+    height: 64px;
+    transform: translateY(-100%);
+  }
+
+  .grid {
+    height: calc(400 / var(--default-vw) * 100vw);
+    width: calc(400 / var(--default-vw) * 100vw);
+    background-size: calc(800 / var(--default-vw) * 100vw) calc(400 / var(--default-vw) * 100vw);
+  }
+
+  .grid:hover {
+    background-position: calc(-400 / var(--default-vw) * 100vw) 0px;
+  }
+
+  .gallery-topic {
+    font-size: 30px;
+  }
+}
+
+/* Values for smaller tablet-sized displays */
+@media (max-width: 650px) {
+  .section-tab {
+    font-size: 12px;
+    padding: 16px 8px;
+  }
+
+  .current-tab {
+    font-size: 16px;
+  }
+}
+
+/* Values for mobile-sized displays */
+@media (max-width: 600px) {
+  :root {
+    /********************/
+    /***** SITEWIDE *****/
+    /********************/
+    --main-content-padding: 40px 5vw 15px 5vw;
+
+    /* Typography */
+    --para-padding: 0vh 5vw;
+    --default-heading-size: 48px;
+
+    /* Top navbar */
+    --top-nav-height: 75px;
+
+    /********************/
+    /***** HOME PAGE *****/
+    /********************/
+    --start-screen-height: calc(100vh - 95px);
+    --game-name-size: 48px;
+    --press-start-button-width: 40vw;
+    --welcome-text-size: 18px;
+
+    /********************/
+    /***** ABOUT PAGE *****/
+    /********************/
+    --about-img-width: calc(1200 / var(--default-vw) * 100vw);
+    --about-img-height: calc(800 / var(--default-vw) * 100vw);
+
+    /********************/
+    /***** GALLERY PAGE *****/
+    /********************/
+    --gallery-page-padding: 40px 17.5vw 15px 17.5vw;
+
+    /********************/
+    /***** CONTACT PAGE *****/
+    /********************/
+  }
+
+  #logo-box {
+    position: static;
+  }
+
+  #top-nav-tab-group {
+    position: static;
+    right: auto;
+    padding-top: 10px;
+  }
+
+  #game-name {
+    margin: 0px 0px 10px 0px;
+  }
+
+  #welcome {
+    /* padding-top: 110px; */
+  }
+
+  .arrow {
+    font-size: 10px;
+    width: 50px;
+  }
+
+  .section-tab {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+
+  .current-tab {
+    font-size: 14px;
+  }
+
+  #tab-group {
+    left: 50px;
+    width: calc(100% - 100px);
+  }
+
+  .grid {
+    height: calc(800 / var(--default-vw) * 100vw);
+    width: calc(800 / var(--default-vw) * 100vw);
+    background-size: calc(1600 / var(--default-vw) * 100vw) calc(800 / var(--default-vw) * 100vw);
+    margin: calc(40 / var(--default-vw) * 100vw);
+  }
+
+  .grid:hover {
+    background-position: calc(-800 / var(--default-vw) * 100vw) 0px;
+  }
+
+  .gallery-topic {
+    font-size: 24px;
+  }
+}
+
+/* Values for smaller mobile-sized displays */
+@media (max-width: 400px) {
+  :root {
+    /********************/
+    /***** GALLERY PAGE *****/
+    /********************/
+    --gallery-page-padding: 40px 20vw 15px 20vw;
+  }
+
+  .section-tab {
+    font-size: 10px;
+  }
+
+  .current-tab {
+    font-size: 12px;
+  }
 }

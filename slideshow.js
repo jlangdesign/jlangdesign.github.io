@@ -1,20 +1,26 @@
-var myIndex = 0;
-carousel();
+/**
+ * Code from Daniel Guillan on CodePen:
+ * https://codepen.io/danielguillan/pen/duiAq
+ */
 
-//JS etiquette - use 4 spaces instead of one tab indent
+// Get images
+var current = 0;
+var slides = document.getElementsByClassName("slide-img");
 
-function carousel() {
-	var x = document.getElementsByClassName("fadeSlides");
-	for (var i = 0; i < x.length; i++) {
-		x[i].style.display = "none";
-		}
-	myIndex++;
-	
-	if (myIndex > x.length) {
-	    myIndex = 1
-    }
-    
-	x[myIndex-1].style.display = "block";
-	setTimeout(carousel, 5000); //5 sec
-}	
-		
+setInterval(function() {
+	// Set opacity of all slides to 0
+	for (var i = 0; i < slides.length; i++) {
+		slides[i].style.opacity = 0;
+	}
+
+	// If current slide is last slide, loop back to first slide
+	// Else, go to next slide in array
+	if (current != slides.length - 1) {
+		current++;
+	} else {
+		current = 0;
+	}
+
+	// Set opacity of current slide to 1
+	slides[current].style.opacity = 1;
+}, 3000); // 3000 ms = 3 s

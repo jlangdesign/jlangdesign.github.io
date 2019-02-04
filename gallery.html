@@ -3,79 +3,64 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Gallery | Jasmine Lang</title>
 
-        <!-- FAVICON LINK -->
-        <link rel="icon" type="image/png" href="logo-favicon.png" sizes="16x16" />
+    <!-- FAVICON LINK -->
+    <link rel="icon" type="image/png" href="logo-favicon.png" sizes="16x16" />
 
-        <!-- GOOGLE FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Titillium+Web" rel="stylesheet">
 
-        <!-- CSS LINKS -->
-        <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+		<!-- JS LINKS -->
+    <script type="text/javascript" src="addTopNav.js"></script>
 	</head>
 
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 	<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--|||||||||| TOPNAV ||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+	<body>
+		<main class="main-content" id="gallery-page">
+		<!--||||||||||||||||||||||||||||||||||||||||-->
+		<!--||||||||||||||||||||||||||||||||||||||||-->
+		<!--||||||||||||||| GALLERY HEADER AND STRIP |||||||||||||||-->
+		<!--||||||||||||||||||||||||||||||||||||||||-->
+		<!--||||||||||||||||||||||||||||||||||||||||-->
 
-	<body bgcolor="#000000;">
-		<nav id="topnav">
-			<div>
-				<a href="./" id="logo-box">
-					<img src="logo-favicon.png" id="logo">
-					<span id="logo-name">Jasmine Lang</span>
-				</a>
-			</div>
-			<div id="top-nav-tab-group">
-				<a href="./" class="top-nav-tab">Home</a>
-				<a href="about.html" class="top-nav-tab">About</a>
-				<a href="gallery.html" class="top-nav-tab">Gallery</a>
-				<a href="contact.html" class="top-nav-tab">Contact</a>
-			</div>
-		</nav>
+			<h1 class="page-title"><a href="gallery.html">Gallery</a></h1>
+			<div id="gallery-strip"> <!-- gallery strip begins here -->
 
 
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--|||||||||| GALLERY HEADER AND STRIP ||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-	<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||| GRAPHIC DESIGN MENU |||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
 
-		<h1 class="page-title"><a href="gallery.html">Gallery</a></h1>
-		<div id="gallery-strip"> <!-- gallery strip begins here -->
+				<!-- SECTION BUTTONS/TABS -->
+				<div id="tab-group">
+					<button class="menu-button section-tab" id="gd-tab" onclick="currentDiv(1)">Interaction Design</button>
+					<button class="menu-button section-tab" id="art-tab" onclick="currentDiv(2)">Art</button>
+					<button class="menu-button section-tab" id="other-tab" onclick="currentDiv(3)">Other</button>
+				</div>
 
+				<div class="gallery-container" id="gd-menu"> <!-- colored bg begins -->
+					<h2 class="gallery-topic">Interaction Design</h2>
+					<button class="menu-button menu-left arrow" onclick="plusDivs(-1)">&#9664;</button>
+					<button class="menu-button menu-right arrow" onclick="plusDivs(1)">&#9654;</button>
 
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--|||||||||| GRAPHIC DESIGN MENU ||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-
-			<div class="gallery-container" id="gd-menu"> <!-- colored bg begins -->
-				<h2 class="gallery-topic">Graphic + Interaction Design</h2>
-
+					<!-- TODO add Immersive Scholar and capstone project -->
 					<div class="gallery-container-2"> <!-- table display start -->
-						<a href="gallery-gd/perillo-chair.html">
-							<div class="grid gd-grid" id="perillo-grid"></div>
-						</a>
 						<a href="gallery-gd/bu-dong.html">
 							<div class="grid gd-grid" id="bu-dong-grid"></div>
 						</a>
-						<a href="gallery-gd/day-at-ncmns.html">
-							<div class="grid gd-grid" id="ncmns-grid"></div>
-						</a>
 						<a href="gallery-gd/pandoras-box.html">
 							<div class="grid gd-grid" id="pandoras-grid"></div>
-						</a>
-						<a href="gallery-gd/folds-of-history.html">
-							<div class="grid gd-grid" id="folds-grid"></div>
 						</a>
 						<a href="gallery-gd/harmony.html">
 							<div class="grid gd-grid" id="harmony-grid"></div>
@@ -86,20 +71,8 @@
 						<a href="gallery-gd/lizards-and-cat-thingies.html">
 							<div class="grid gd-grid" id="lizards-grid"></div>
 						</a>
-						<a href="gallery-gd/relief.html">
-							<div class="grid gd-grid" id="relief-grid"></div>
-						</a>
-						<a href="gallery-gd/lips-logos.html">
-							<div class="grid gd-grid" id="lips-grid"></div>
-						</a>
 						<a href="gallery-gd/starryreader.html">
 							<div class="grid gd-grid-2" id="starry-grid"></div>
-						</a>
-						<a href="gallery-gd/flipboard-180.html">
-							<div class="grid gd-grid-2" id="flipboard-grid"></div>
-						</a>
-						<a href="gallery-gd/maan-maan-go.html">
-							<div class="grid gd-grid-2" id="mmg-grid"></div>
 						</a>
 						<a href="gallery-gd/picture-booth.html">
 							<div class="grid gd-grid-3" id="pb-grid"></div>
@@ -107,23 +80,27 @@
 						<a href="gallery-gd/reconstruction.html">
 							<div class="grid gd-grid-3" id="recon-grid"></div>
 						</a>
-
-
+						<a href="">
+							<div class="grid art-grid" id="immersive-grid"></div>
+						</a>
+						<a href="">
+							<div class="grid art-grid" id="pidgepanion-grid"></div>
+						</a>
 					</div> <!-- table display end -->
-			</div> <!-- colored bg ends -->
+				</div> <!-- colored bg ends -->
 
 
-			<!-- do i even have enough storage space for this??? max 2GB -->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||| ART MENU |||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
 
+				<div class="gallery-container" id="art-menu"> <!-- colored bg begins -->
+					<h2 class="gallery-topic">Art</h2>
+					<button class="menu-button menu-left arrow" onclick="plusDivs(-1)">&#9664;</button>
+					<button class="menu-button menu-right arrow" onclick="plusDivs(1)">&#9658;</button>
 
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--|||||||||| ART MENU ||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-
-			<div class="gallery-container" id="art-menu"> <!-- colored bg begins -->
-				<h2 class="gallery-topic">Art</h2>
 					<div class="gallery-container-2"> <!-- table display start -->
 						<a href="">
 							<div class="grid art-grid" id="art-1"></div>
@@ -155,57 +132,22 @@
 						<a href="">
 							<div class="grid art-grid" id="art-10"></div>
 						</a>
-						<a href="">
-							<div class="grid art-grid" id="art-1"></div>
-						</a>
-						<a href="">
-							<div class="grid art-grid" id="art-1"></div>
-						</a>
-						<a href="">
-							<div class="grid art-grid" id="art-1"></div>
-						</a>
-						<a href="">
-							<div class="grid art-grid" id="art-1"></div>
-						</a>
-						<a href="">
-							<div class="grid art-grid" id="art-1"></div>
-						</a>
 					</div> <!-- table display end -->
-			</div> <!-- colored bg ends -->
+				</div> <!-- colored bg ends -->
 
 
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--|||||||||| OTHER MENU ||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
-		<!--||||||||||||||||||||--><!--||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||| OTHER MENU |||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
+			<!--||||||||||||||||||||||||||||||||||||||||-->
 
-			<div class="gallery-container" id="other-menu">	<!-- colored bg begins -->
-				<h2 class="gallery-topic">Other</h2>
+				<div class="gallery-container" id="other-menu">	<!-- colored bg begins -->
+					<h2 class="gallery-topic">Other</h2>
+					<button class="menu-button menu-left arrow" onclick="plusDivs(-1)">&#9664;</button>
+					<button class="menu-button menu-right arrow" onclick="plusDivs(1)">&#9658;</button>
+
 					<div class="gallery-container-2"> <!-- table display start -->
-						<!-- need to make bg and pages for these
-						<a href="">
-							<div class="grid other-grid" id="cmms-grid"></div>
-						</a>
-						<a href="https://www.instagram.com/jasmine.rice.flower" target="_blank">
-							<div class="grid other-grid" id="sights-grid"></div>
-						</a>
-						-->
-						<a href="">
-							<div class="grid other-grid"></div>
-						</a>
-						<a href="">
-							<div class="grid other-grid"></div>
-						</a>
-						<a href="">
-							<div class="grid other-grid"></div>
-						</a>
-						<a href="">
-							<div class="grid other-grid"></div>
-						</a>
-						<a href="">
-							<div class="grid other-grid"></div>
-						</a>
 						<a href="">
 							<div class="grid other-grid"></div>
 						</a>
@@ -237,29 +179,13 @@
 							<div class="grid other-grid"></div>
 						</a>
 					</div> <!-- table display end -->
-			</div><!-- colored bg ends -->
+				</div><!-- colored bg ends -->
+			</div> <!-- gallery strip ends here -->
 
+			<script type="text/javascript" src="galleryMenuShift.js"></script>
 
-			<!-- I learned how to make this slideshow from a Stack Overflow post, if I recall correctly. -->
-      <!-- I haven't been able to find it, but I'll put the link here when I do. -->
-
-			<!-- LEFT AND RIGHT BUTTONS -->
-			<button class="menu-button menu-left" onclick="plusDivs(-1)">&#9664;</button>
-			<button class="menu-button menu-right" onclick="plusDivs(1)">&#9658;</button>
-
-			<!-- SECTION BUTTONS/TABS -->
-			<button class="menu-button section-tab" id="gd-tab" onclick="currentDiv(1)">Graphic + Interaction Design</button>
-			<button class="menu-button section-tab" id="art-tab" onclick="currentDiv(2)">Art</button>
-			<button class="menu-button section-tab" id="other-tab" onclick="currentDiv(3)">Other</button>
-
-		</div> <!-- gallery strip ends here -->
-		<script type="text/javascript" src="gallery-menu-shift.js"></script>
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
+			<br>
+			<br>
+		</main>
 	</body>
 </html>
