@@ -594,6 +594,14 @@ a:visited {
   background-image: url("assets/Tile-Reconstruction.png");
 }
 
+#pidgepanion-grid {
+  background-image: url("assets/Tile-Pidgepanion.png");
+}
+
+#immersive-grid{
+  background-image: url("assets/Tile-Immersive-Scholar.png");
+}
+
 
 /*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
 /* Project images to load for the Art matrix */
