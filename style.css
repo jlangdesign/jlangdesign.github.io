@@ -119,6 +119,12 @@ p {
   /* padding: var(--para-padding); */
 }
 
+/* Lists */
+ul, ol {
+  list-style-position: outside;
+  text-indent: -1em;
+}
+
 /* List elements */
 li {
   font-family: var(--body-font);
