@@ -58,22 +58,10 @@
 				<br>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/gPDLRLo99W8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<br>
-				<!--
-				<iframe src="https://jlangdesign.github.io/tess-celestial/" allowfullscreen></iframe>
-				<a href="https://jlangdesign.github.io/tess-celestial/" target="_blank" class="links pdf-links">
-          <p>(Click here to open display in new tab)</p>
-        </a>
-				<br>
-				<iframe src="https://jlangdesign.github.io/coded-glass/" allowfullscreen></iframe>
-				<a href="https://jlangdesign.github.io/coded-glass/" target="_blank" class="links pdf-links">
-          <p>(Click here to open display in new tab)</p>
-        </a>
-				<br>
-			-->
 
         <h1 class="story-section">Overview</h1>
         <p>
-          (Note: This project is a work in progress, so stay tuned for updates!)
+          <b>(Note: This project is a work in progress, so stay tuned for updates!)</b>
         </p>
         <p>
 					<a href="https://www.immersivescholar.org/" target="_blank" class="links">Immersive Scholar</a> is a project funded by the Andrew W. Mellon Foundation to promote the creation and sharing of digital scholarship in large-scale visualization environments. One key component of the project is an open-source, responsive web app for sharing these visualizations. The app is designed to work on both large-scale, immersive displays as well as personal-sized interfaces. It also contains documentation for optimal usage so other institutions may place their own content in the app to create their own large-scale data visualization displays.
@@ -89,6 +77,9 @@
 						<li><a href="https://communitygardens.generativeartist.com/" target="_blank" class="links">Community Gardens</a> with Lucas Swick (Generative Artist)</li>
 					</ol>
 				</p>
+				<p>
+					(Click the underlined links above to open the web displays in your browser.)
+				</p>
         <br>
 
         <h1 class="story-section">Process</h1>
@@ -100,24 +91,52 @@
         <br>
 
         <h1 class="story-chapter">Playthrough</h1>
+				<h1 class="story-subchapter">Tess-celestial</h1>
         <p>
-					(Coming soon!)
+					Our first resident was Radmila Sazdanović, an assistant professor of Mathematics at NCSU and one of the creators of Tess, the software she used to draw tessellations. She wanted to showcase tessllations of mathematical concepts we encounter in our daily lives. During our initial team meeting, we decided that the display would have two modes: the overall view and the modal view. The overall view would contain a matrix of all the tessellations to create a colorful, visually interesting display to attract passerby. There would also be a sidebar with a brief description about the project. When one of the art pieces is selected, a modal about it appears on the screen. It would display a larger version of the piece for a more close-up look, the story behind it, and some ancillary images or art pieces related to it. The display would continuously cycle through all the matrix items and their stories.
         </p>
+				<p>
+					Now we had about five weeks to build the app from scratch. I started by wireframing different matrix layouts and animating storyboards of the display flow - trying to figure out how the exhibit could convey the idea of "immersion." This led to the "deep dive" animated transition between the overall view and the modal view. When the viewer sees the whole matrix, all they see is the "surface." Then the display "dives" into (zooms into) an art piece to reveal the story behind it. After giving the viewer some time to appreciate the tessellation, the display "resurfaces" from (zooms out of) it back to the overall matrix view.
+				</p>
+				<p>
+					Next, it was time to code the app. I divided the display into four main components: the project description, the matrix, the modal, and the footer. Those parts were further broken down into groups of text and images. Once the HTML structure was established, I used the CSS Grid Layout to align the aforementioned components. I also used flexbox within those sections and media queries to scale elements appropriately when the display size changed. Lastly, I refactored the stylesheet with CSS variables so it would be easier to read and manage. My teammate, Walt Gurley, wrote the JavaScript that loaded the images and stories as well as animated the "diving" and "resurfacing." The two of us also tested the display on Hunt Library's video walls frequently with the rest of the team so we knew what needed fixing. Some of the challenges we encountered included overflow, lag, and dizziness, meaning we had to keep tweaking sizes and speeds.
+				</p>
+				<p>
+					After we debuted Radmila's content in the library and new residencies began, Walt and I continued to update the codebase for Tess-celestial. I added media queries for a wider range of large-scale aspect-ratios as well as for personal-sized displays. Unlike our large-scale displays - which had timed animations because the video walls were noninteractive - personal-sized displays needed some extra interactivity to improve the user experience. Thus, I added JavaScript to allow the user to navigate between modals without zooming back out and also view the ancillary images in greater detail.
+				</p>
+				<br>
+				<h1 class="story-subchapter">Coded Glass</h1>
         <p>
+					Liss LaFleur, artist and assistant professor of New Media Art at the University of North Texas, was our next resident. She created a series of digital stained glass windows inspired by data from the #METOO movement. Her goal was to create meditative spaces around the video walls by telling the story behind a window and slowly panning and zooming through it. The viewer would be able to appreciate the art, learn about #METOO statistics, and reflect on the status of #METOO.
         </p>
+				<p>
+					We adapted the Tess-celestial app to Liss' needs. The circular matrix items for the index page became rectangular, and we removed the modal view. Instead, we linked to slideshows that Liss created using NCSU Libraries' ImageViewer software. For the large-scale displays, we also added timed transitions between the index page and the slideshows.
+				</p>
+				<br>
+				<h1 class="story-subchapter">Community Gardens</h1>
         <p>
+					We hosted Lucas Swick, a generative artist, as our third resident. Lucas engineered a installation about housing and food insecurity at NCSU using threejs. In it, each plant represented a student, and its physical attributes indicated the stressors it endured. He wanted to bring attention to the hidden struggles of students on campus, challenge the stigma of homelessness, and urge individuals to help those in need.
         </p>
+				<p>
+					This time, I didn't code the display, but I did help detail the installation flow and website architecture via storyboards and wireframes, produce visual assets (i.e. plant patterns and mockups), and develop the brand (primarily the logo). When creating the logo, I started with the initials of "Community Gardens." Then I explored visual concepts that conveyed ideas relating to "community," "garden," "data," "generative," and "resilience" while linking the two letters together. As for the typeface, I chose Alegreya because it was "organic" yet "modern" - words that can also be used to describe a digital garden. It was reminiscent of a storybook and inviting, but it was also contemporary.
         <p>
         </p>
         <br>
 
         <h1 class="story-chapter">Results</h1>
+				<h1 class="story-subchapter">Tess-celestial</h1>
         <p>
           (Coming soon!)
         </p>
+				<br>
+				<h1 class="story-subchapter">Coded Glass</h1>
         <p>
+					(Coming soon!)
         </p>
+				<br>
+				<h1 class="story-subchapter">Community Gardens</h1>
         <p>
+					(Coming soon!)
         </p>
         <p>
         </p>
