@@ -107,10 +107,10 @@
 				<br>
 				<h1 class="story-subchapter">Coded Glass</h1>
         <p>
-					Liss LaFleur, artist and assistant professor of New Media Art at the University of North Texas, was our next resident. She created a series of digital stained glass windows inspired by data from the #METOO movement. Her goal was to create meditative spaces around the video walls by telling the story behind a window and slowly panning and zooming through it. The viewer would be able to appreciate the art, learn about #METOO statistics, and reflect on the status of #METOO.
+					Liss LaFleur, artist and assistant professor of New Media Art at the University of North Texas, was our next resident. She created a series of digital stained glass windows inspired by data from the #METOO movement. Her goal was to create meditative spaces around the video walls by telling the story behind a window series and slowly panning and zooming through it. The viewer would be able to appreciate the art, learn about #METOO statistics, and reflect on the status of #METOO.
         </p>
 				<p>
-					We adapted the Tess-celestial app to Liss' needs. The circular matrix items for the index page became rectangular, and we removed the modal view. Instead, we linked to slideshows that Liss created using NCSU Libraries' ImageViewer software. For the large-scale displays, we also added timed transitions between the index page and the slideshows.
+					We adapted the Tess-celestial app to Liss' needs. The circular matrix items for the index page became rectangular, and we removed the modal view. Instead, we linked to slideshows that Liss created using NCSU Libraries' ImageViewer software. For the large-scale displays, we also added timed transitions between the index page and the slideshows. Eventually, to keep all of the content local, we implemented our own custom ImageViewer via JavaScript and moved all of the slideshow images to the web app.
 				</p>
 				<br>
 				<h1 class="story-subchapter">Community Gardens</h1>
@@ -143,13 +143,10 @@
 					Like Tess-celestial, the Coded Glass app is also divided into large-scale displays and personal-sized displays via the 2100px vh breakpoint.
         </p>
 				<p>
-					The large-scale display starts by displaying thumbnails of the windows in a matrix, which are randomly ordered each time. Each thumbnail represents a different series of windows. The user has a minute to read the project description and appreciate the display before it fades into the slideshow of the first series. Each slideshow begins by showing the title, the story behind the series, and then the windows themselves. Each window has the Ken Burns effect applied to it, making the viewer feel calm as they appreciate the glass art and reflect on the story. Once one slideshow is finished playing, the display moves on to the slideshow of the next image in the matrix. It continues playing all of the series before returning to the matrix page. Each time the display returns to the matrix page, the images are shuffled into a different order, meaning the slideshows will be played in a different order.
+					The large-scale display starts by displaying thumbnails of the windows in a matrix, which are randomly ordered each time. Each thumbnail represents a different series of windows. The user has a minute to read the project description and appreciate the display before it fades into the slideshow of the first series. Each slideshow begins by showing the title, the story behind the series, and then the windows themselves. Each window has the Ken Burns effect applied to it, making the viewer feel calm as they appreciate the glass art and reflect on the story. After about 45 seconds, the description (story) overlay fades away, allowing the viewer to better appreciate the details of the glass. Once one slideshow is finished playing, the display moves on to the slideshow series of the next image in the matrix. It continues playing all of the series before returning to the matrix page.
 				</p>
 				<p>
-					The personal-sized display also begins with the matrix, but the user can choose which window series to view. Hovering over a thumbnail shows the series' title. Clicking/tapping a thumbnail will play its slideshow.
-				</p>
-				<p>
-					Currently, the slideshows are hosted in the libraries' ImageViewer. However, there are plans to render videos of the windows and host them locally.
+					The personal-sized display also begins with the matrix, but the user can choose which window series to view. Hovering over a thumbnail shows the series' title. Clicking/tapping a thumbnail will play its slideshow. They can exit a slideshow by clicking anywhere on the slideshow while it's playing. Currently, the slideshow autoplays through each image in the series when clicked on. However, we plan to change this for personal-sized devices so the user can pan/zoom through the images themselves in the order they desire.
 				</p>
 				<p>
 					Check out the Coded Glass GitHub repo and web display <a href="https://github.com/jlangdesign/coded-glass" target="_blank" class="links">here</a>.
