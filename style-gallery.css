@@ -93,18 +93,12 @@ p, .story-section, .story-chapter, .story-subchapter, li {
 }
 
 /*|||||||||||||||||||| IMAGES/OTHER VISUAL MEDIA ||||||||||||||||||||*/
-/* TODO change to "project-media" and include videos, iframes, PDFs, and InVision/Figma apps */
 /* All images */
-.project-pics {
-  /* max-width: var(--project-media-width); */
+.project-media {
   width: var(--project-media-width);
   display: block;
   margin: auto;
-}
-
-/* Image that needs to be displayed in the same line as another one */
-.inline-img {
-  display: inline;
+  border-radius: var(--image-border-radius);
 }
 
 /* PDF files */

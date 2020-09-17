@@ -28,8 +28,8 @@ window.onload = function() {
   logoDiv.appendChild(logoAnchor);
 
   // Create content and append to tabDiv
-  const links = ["/", "/about.html", "/gallery.html", "/contact.html"];
-  const labels = ["Home", "About", "Gallery", "Contact"];
+  const links = ["/", "/#gallery", "/#about", "#contact"];
+  const labels = ["Home", "Gallery", "About", "Contact"];
   for (let i = 0; i < links.length; i++) {
     let tab = document.createElement("a");
     tab.className = "top-nav-tab";

@@ -4,12 +4,12 @@
  */
 
 // Get images
-var current = 0;
-var slides = document.getElementsByClassName("slide-img");
+let current = 0;
+let slides = document.getElementsByClassName("slide-img");
 
 setInterval(function() {
 	// Set opacity of all slides to 0
-	for (var i = 0; i < slides.length; i++) {
+	for (let i = 0; i < slides.length; i++) {
 		slides[i].style.opacity = 0;
 	}
 

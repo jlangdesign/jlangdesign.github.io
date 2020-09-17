@@ -9,7 +9,8 @@
   /***** SITEWIDE *****/
   /********************/
   --default-vw: 1440; /* 100 vw = 1440 px */
-  --main-content-padding: 0vw 20vw 15px 20vw;
+  --primary-spacing: 36px;
+  --main-content-padding: 0vw 20vw var(--primary-spacing) 20vw;
 
   /* Typography */
   --heading-font: titillium web;
@@ -42,18 +43,22 @@
 
   /* Buttons */
   --button-bg-color: rgba(var(--secondary-color), 0.5);
-  --button-border: 2.5px solid rgba(var(--tertiary-color), 0.25);
-  --button-border-radius: 5px;
+  --button-border: 2px solid rgba(var(--tertiary-color), 0.25);
+  --button-border-radius: 4px;
   --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   --button-padding: 15px;
   --button-bg-color-hover: rgba(var(--secondary-color), 0.75);
   --button-glow-hover: 0px 0px 10px rgba(255, 255, 255, 0.5);
   --button-text-glow-hover: 0 0 1px rgba(255, 255, 255, 0.5);
 
+  /* Images */
+  --image-border-radius: 4px;
+  --image-border: 4px solid rgb(var(--secondary-color));
+
   /********************/
   /***** HOME PAGE *****/
   /********************/
-  --start-screen-height: calc(100vh - 50px);
+  --start-screen-height: calc(100vh - 55px);
   --slideshow-max-width: 75vw;
   --slideshow-max-height: 100vh;
   --game-name-size: 96px;
@@ -68,15 +73,6 @@
   --about-img-width: calc(600 / var(--default-vw) * 100vw);
   --about-img-height: calc(400 / var(--default-vw) * 100vw);
   --about-img-bg-size: calc(var(--about-img-width) * 2) var(--about-img-height);
-
-  /********************/
-  /***** GALLERY PAGE *****/
-  /********************/
-  --gallery-page-padding: 0vw 10vw 15px 10vw;
-
-  /********************/
-  /***** CONTACT PAGE *****/
-  /********************/
 }
 /* HTML element */
 html {
@@ -90,9 +86,25 @@ body {
   background-size: cover;
 }
 
-/* Main content (content outside of topnav) */
-.main-content {
+/* So main content and footer are beneath topnav */
+#page {
+  position: relative;
+    top: calc(2 * var(--top-nav-padding) + var(--top-nav-height));
+}
+
+/* Main content (content outside of topnav and footer) */
+.main-content, footer {
   padding: var(--main-content-padding);
+}
+
+/* Divs for the page to jump to so the topnav doesn't overlap with targeted content */
+.anchor {
+  display: block;
+  position: relative;
+    top: calc((2 * var(--top-nav-padding) + var(--top-nav-height)) * -1);
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
 }
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
@@ -149,6 +161,10 @@ a:visited {
   text-decoration: underline;
 }
 
+.links:hover {
+  color: rgb(var(--secondary-color));
+}
+
 /* Buttons used sitewide */
 .button {
   font-family: var(--heading-font);
@@ -168,11 +184,11 @@ a:visited {
   box-shadow: var(--button-glow-hover);
   text-shadow: var(--button-text-glow-hover);
   background-color: var(--button-bg-color-hover);
+  cursor: pointer;
 }
 
 
 /*|||||||||||||||||||| TOP NAV ||||||||||||||||||||*/
-/* TODO set up automatic nav bar insertion */
 /* Top navigation bar, including logo and links to other pages */
 #topnav {
   font-family: var(--heading-font);
@@ -242,12 +258,13 @@ a:visited {
 /*|||||||||||||||||||| HOME ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+.home-section-title {
+  margin-top: var(--primary-spacing);
+}
 
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
 /* Partially transparent black container behind the slideshow container */
 #theater {
-  position: relative;
-      top: calc(2 * var(--top-nav-padding) + var(--top-nav-height));
   background-color: rgba(0, 0, 0, 0.5);
   /*width: 100vw;*/
   width: 100%;
@@ -329,9 +346,8 @@ a:visited {
 
 /*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
 /* Short welcome message and description of this site below the slideshow */
-#welcome {
+#welcome-text {
   text-align: center;
-  padding-top: 70px;
 }
 
 /* Friendly interjection */
@@ -366,6 +382,7 @@ a:visited {
   background-size: var(--about-img-bg-size);
   display: block;
   margin: auto;
+  border-radius: var(--image-border-radius);
 }
 
 /* Hover state of About image (changes to a different image) */
@@ -374,73 +391,8 @@ a:visited {
 }
 
 .musing {
-  color: #999999;
-  font-size: 9px;
-}
-
-/* Button to open up CV/resume PDF */
-#cv-resume {
-}
-
-/* Glowing hover state of cv-resume button */
-#cv-resume:hover {
-}
-
-
-/*|||||||||||||||||||| INTERACTIVE CV ||||||||||||||||||||*/
-/* TODO implement interactive flexbox HTML CV */
-/*the containers*/
-.interactive-cv {
-  background-color: rgba(var(--secondary-color), .25);
-  border: 2.5px solid rgba(var(--tertiary-color), .25);
-  border-radius: 5px;
-  padding: 25px;
-  margin: 25px 0px;
-  /*display: inline; ---it doesn't like this --- */
-  display: block;
-}
-
-.cv-click {
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  vertical-align: top;
-}
-
-.cv-click:hover {
-  background-color: rgba(var(--secondary-color), .5);
-  border: 2.5px solid rgba(var(--tertiary-color), .5);
-  box-shadow: var(--button-glow-hover);
-}
-
-/*how to make expandable/collapsable?*/
-/*
-.interactive-cv div:target {
-  display: none;
-}
-*/
-
-.cv-header-1 {
-  text-align: left;
-  font-size: 48px;
-  font-weight: 700; /*bold*/
-}
-
-.cv-header-2 {
-  text-align: left;
-  font-size: 24px;
-  font-weight: 600; /*semibold*/
-}
-
-.cv-header-3 {
-  text-align: left;
-  font-size: 16px;
-  font-weight: 600; /*semibold*/
-}
-
-.cv-body-txt {
-  font-family: var(--body-font);
-	font-size: 12px;
+  font-size: 10px;
+  margin-bottom: 18px;
 }
 
 
@@ -449,82 +401,24 @@ a:visited {
 /*|||||||||||||||||||| GALLERY ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
-#gallery-page {
-  padding: var(--gallery-page-padding);
-}
-
-/*|||||||||||||||||||| FRAME ||||||||||||||||||||*/
-/* Container for all Gallery elements */
-#gallery-strip {
-  position: relative;
-  padding-top: 56px;
-}
-
-/* Name of Gallery section*/
-.gallery-topic {
-  clear: both;
-  font-size: 36px;
-}
-
-/* Box containing Gallery topic and matrix */
-.gallery-container {
-  margin: 0 -50px;
-  padding: 10px 0;
-  text-align: center;
-  position: relative;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
-  z-index: 10;
-}
-
-/* Box containing the Graphic Design matrix */
-#gd-menu {
-  background-color: rgba(var(--primary-color), 0.5);
-  border: 5px solid rgba(var(--primary-color), 0.75);
-  border-radius: 3px;
-}
-
-/* Box containing the Art matrix */
-#art-menu {
-  background-color: rgba(var(--secondary-color), 0.5);
-  border: 5px solid rgba(var(--secondary-color), 0.75);
-  border-radius: 3px;
-}
-
-/* Box containing the Other matrix */
-#other-menu {
-  background-color: rgba(var(--tertiary-color), 0.5);
-  border: 5px solid rgba(var(--tertiary-color), 0.75);
-  border-radius: 3px;
-}
-
 /* Subcontainer containing Gallery matrix */
-.gallery-container-2 {
-  text-align: center;
-  position: relative;
-  display: table;
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-
-/*|||||||||||||||||||| GRID ||||||||||||||||||||*/
-/* The matrix of projects */
+/* Mat */
 .grid {
-  /* background-color: black; */
-  /*
-  height: 200px;
-  width: 200px;
-  background-size: 400px 200px;
-  */
   height: calc(200 / var(--default-vw) * 100vw);
   width: calc(200 / var(--default-vw) * 100vw);
   background-size: calc(400 / var(--default-vw) * 100vw) calc(200 / var(--default-vw) * 100vw);
-  display: inline-block;
-  /*float: left; */
-  /* margin: 20px; */
   margin: calc(20 / var(--default-vw) * 100vw);
   z-index: 10;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-  border-radius: 1.5px;
+  border-radius: var(--image-border-radius);
   transition: transform 0.5s 0s; /* when descending (no longer hovering) */
 }
 
@@ -534,38 +428,7 @@ a:visited {
   transform: scale(1.2); /* grow a bit bigger */
   transition: transform 0.2s 0s; /* when ascending */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-  /* background-position: -200px 0px; */
   background-position: calc(-200 / var(--default-vw) * 100vw) 0px;
-}
-
-/* Invisible matrix items */
-.hidden-item {
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: none;
-  background-image: none;
-}
-
-/* Hover state of matrix items (no visible changes) */
-.hidden-item:hover {
-  background-color: rgba(0, 0, 0, 0);
-  cursor: auto;
-  transform: none;
-  transition: none;
-  box-shadow: none;
-  background-image: none;
-}
-
-
-/*|||||||||||||||||||| GD GRID HOVER STATES ||||||||||||||||||||*/
-/* TODO set up automatic file loading */
-/**
- * Automatically insert header img and create hover state by changing the class.
- * Opacity lowers to .5 on a black bg and a blur filter is applied upon hover.
- * Scale also increases slightly.
- * Refer to: https://stackoverflow.com/a/25876303
- */
-/* Project images to load for the Graphic Design matrix */
-.gd-grid {
 }
 
 #bu-dong-grid {
@@ -608,182 +471,25 @@ a:visited {
   background-image: url("assets/Tile-Immersive-Scholar.png");
 }
 
-
-/*|||||||||||||||||||| ART GRID HOVER STATES ||||||||||||||||||||*/
-/* Project images to load for the Art matrix */
-.art-grid {
-  background-image: url("assets/Tile-Mystery.jpg");
-}
-
-
-/*|||||||||||||||||||| OTHER GRID HOVER STATES ||||||||||||||||||||*/
-/* Project images to load for the Other matrix */
-.other-grid {
-  background-image: url("assets/Tile-Mystery.jpg");
-}
-
-
-/*|||||||||||||||||||| BUTTONS ||||||||||||||||||||*/
-/* Right/left buttons for Gallery matrix */
-.menu-button {
-  /*border: none;*/
-  display: inline-block;
-  outline: 0;
-  /*padding:16px 24px;*/
-  padding: 20% 24px;
-  vertical-align: middle;
-  overflow: hidden;
-  text-decoration: none;
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||| FOOTER ||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||||*/
+footer {
   text-align: center;
-  cursor: pointer;
-  /* white-space: nowrap; */
-  position: absolute;
-      top: 50%;
-  font-family: var(--heading-font);
-  background-color: rgb(20, 20, 20);
-  color: #cccccc;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-  z-index: 20;
-  border-radius: 1.5px;
-  border: 2.5px solid rgba(204, 204, 204, .5);
-  transform: translateY(-50%);
-  width: 60px;
+  background-color: rgb(var(--primary-color));
+  padding-top: var(--primary-spacing);
 }
 
-/* Gray hover state of Gallery section buttons */
-.menu-button:hover {
-  color: rgb(20, 20, 20);
-  background-color: #cccccc;
-  cursor: pointer;
-  border: 2.5px solid rgba(20, 20, 20, .5);
+#footer-logo {
+  height: 36px;
+  width: auto;
 }
 
-/* Arrow buttons for navigating between different tabs*/
-.arrow {
+#contact, #copyright {
   font-size: 14px;
 }
-
-/* Button to go to previous Gallery section */
-.menu-left {
-  left: -60px;
-}
-
-/* Button to go to next Gallery section */
-.menu-right {
-  right: -60px;
-}
-
-
-/*|||||||||||||||||||| TABS ||||||||||||||||||||*/
-#tab-group {
-  display: flex;
-}
-
-/* Tabs denoting different sections of Gallery */
-.section-tab {
-  top: 2.5px;
-  width: 33.333%;
-  position: absolute;
-  border: 2.5px solid rgb(50, 50, 50);
-  z-index: 5;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-  /* font-size: 12px; */
-  padding: 16px 24px;
-  transform: none;
-  box-sizing: border-box;
-  border-radius: 5px 5px 0px 0px; /* TL, TR, BR, BL */
-}
-
-/* Opaque white text hover state for section tabs */
-.section-tab:hover {
-  color: var(--font-color);
-}
-
-/* Styling for Graphic Design tab */
-#gd-tab {
-  background-color: rgba(var(--primary-color), 0.5);
-  border: 5px solid rgba(var(--primary-color), 0.75);
-  border-bottom: none;
-}
-
-/* Styling for Art tab */
-#art-tab {
-  margin: 0 auto;
-  left: 25%;
-  right: 25%;
-  background-color: rgba(var(--secondary-color), 0.5);
-  border: 5px solid rgba(var(--secondary-color), 0.75);
-  border-bottom: none;
-}
-
-/* Styling for Other tab */
-#other-tab {
-  right: 0%;
-  background-color: rgba(var(--tertiary-color), 0.5);
-  border: 5px solid rgba(var(--tertiary-color), 0.75);
-  border-bottom: none;
-}
-
-/* Styling for tab of current selected section */
-.current-tab {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 18px;
-  background-color: #cccccc;
-  z-index: 7;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, .75);
-  top: -8px;
-}
-
-
-/*||||||||||||||||||||||||||||||||||||||||*/
-/*||||||||||||||||||||||||||||||||||||||||*/
-/*|||||||||||||||||||| CONTACT ||||||||||||||||||||*/
-/*||||||||||||||||||||||||||||||||||||||||*/
-/*||||||||||||||||||||||||||||||||||||||||*/
-/* TODO fix this */
-form {
-  color: var(--font-color);
-	font-family: var(--body-font);
-}
-
-input[type=text], textarea {
-  font-family: var(--body-font);
-  background-color: #f4f4f4;
-  border: none;
-  border-radius: 4px;
-  width: 100%;
-}
-
-textarea {
-  max-width: 100%;
-}
-
-.c-label {
-  line-height: 1.5;
-  font-family: var(--heading-font);
-}
-
-input[type=submit] {
-  width: 100%;
-  font-size: 16px;
-}
-
-input[type=submit]:hover {
-	cursor: pointer;
-}
-
-.frame {
-  background-color: rgb(var(--primary-color));
-  border-radius: 5px;
-  padding: 20px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-
-
 
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -838,7 +544,7 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: 0vw 10vw 15px 10vw;
+    --main-content-padding: 0vw 10vw var(--primary-spacing) 10vw;
 
     /* Typography */
     --para-padding: 0vh 10vw;
@@ -898,57 +604,6 @@ input[type=submit]:hover {
     transform: translateY(-100%);
   }
 
-  .menu-left {
-    left: 0;
-  }
-
-  .menu-right {
-    right: 0;
-  }
-
-  .section-tab {
-    padding: 16px 12px;
-    top: 12px;
-    color: white;
-    font-size: 14px;
-    height: 63px;
-  }
-
-  .current-tab {
-    top: 0px;
-    font-size: 18px;
-    height: 69px;
-  }
-
-  #gd-tab {
-    background-color: rgba(var(--primary-color), 0.85);
-    border: 5px solid rgba(var(--primary-color), 1);
-  }
-
-  #art-tab {
-    background-color: rgba(var(--secondary-color), 0.85);
-    border: 5px solid rgba(var(--secondary-color), 1);
-  }
-
-  #other-tab {
-    background-color: rgba(var(--tertiary-color), 0.85);
-    border: 5px solid rgba(var(--tertiary-color), 1);
-  }
-
-  #gallery-strip {
-    padding-top: 0;
-  }
-
-  #tab-group {
-    position: fixed;
-      top: 100vh;
-      left: 60px;
-    width: calc(100% - 120px);
-    z-index: 90;
-    height: 64px;
-    transform: translateY(-100%);
-  }
-
   .grid {
     height: calc(400 / var(--default-vw) * 100vw);
     width: calc(400 / var(--default-vw) * 100vw);
@@ -958,22 +613,6 @@ input[type=submit]:hover {
   .grid:hover {
     background-position: calc(-400 / var(--default-vw) * 100vw) 0px;
   }
-
-  .gallery-topic {
-    font-size: 30px;
-  }
-}
-
-/* Values for smaller tablet-sized displays */
-@media (max-width: 650px) {
-  .section-tab {
-    font-size: 12px;
-    padding: 16px 8px;
-  }
-
-  .current-tab {
-    font-size: 16px;
-  }
 }
 
 /* Values for mobile-sized displays */
@@ -982,7 +621,7 @@ input[type=submit]:hover {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: 40px 5vw 15px 5vw;
+    --main-content-padding: var(--primary-spacing) 5vw var(--primary-spacing) 5vw;
 
     /* Typography */
     --para-padding: 0vh 5vw;
@@ -1004,15 +643,6 @@ input[type=submit]:hover {
     /********************/
     --about-img-width: calc(1200 / var(--default-vw) * 100vw);
     --about-img-height: calc(800 / var(--default-vw) * 100vw);
-
-    /********************/
-    /***** GALLERY PAGE *****/
-    /********************/
-    --gallery-page-padding: 40px 17.5vw 15px 17.5vw;
-
-    /********************/
-    /***** CONTACT PAGE *****/
-    /********************/
   }
 
   #logo-box {
@@ -1033,25 +663,6 @@ input[type=submit]:hover {
     /* padding-top: 110px; */
   }
 
-  .arrow {
-    font-size: 10px;
-    width: 50px;
-  }
-
-  .section-tab {
-    padding: 8px 4px;
-    font-size: 12px;
-  }
-
-  .current-tab {
-    font-size: 14px;
-  }
-
-  #tab-group {
-    left: 50px;
-    width: calc(100% - 100px);
-  }
-
   .grid {
     height: calc(800 / var(--default-vw) * 100vw);
     width: calc(800 / var(--default-vw) * 100vw);
@@ -1061,27 +672,5 @@ input[type=submit]:hover {
 
   .grid:hover {
     background-position: calc(-800 / var(--default-vw) * 100vw) 0px;
-  }
-
-  .gallery-topic {
-    font-size: 24px;
-  }
-}
-
-/* Values for smaller mobile-sized displays */
-@media (max-width: 400px) {
-  :root {
-    /********************/
-    /***** GALLERY PAGE *****/
-    /********************/
-    --gallery-page-padding: 40px 20vw 15px 20vw;
-  }
-
-  .section-tab {
-    font-size: 10px;
-  }
-
-  .current-tab {
-    font-size: 12px;
   }
 }
