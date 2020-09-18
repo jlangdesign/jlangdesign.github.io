@@ -6,8 +6,8 @@
 /* All CSS custom properties */
 :root {
   /* Typography */
-  --page-title-bottom-padding: 10px;
-  --heading-padding: 0vh 20vw;
+  --heading-top-padding: var(--secondary-spacing);
+  --heading-font-size: 48px;
   --subtitle-size: 24px;
   --story-padding: 0vh 10vw;
   --story-heading-text-align: left;
@@ -17,13 +17,6 @@
 
   /* Imagery */
   --project-media-width: 100%;
-}
-
-/* Change BG since you're deeper into site */
-body {
-  background: #616266 url("assets/gamebox.png") no-repeat fixed center;
-  background-size: cover;
-  margin: 0px;
 }
 
 /* General headings */
@@ -45,8 +38,10 @@ p, .story-section, .story-chapter, .story-subchapter, li {
 .header-img {
 }
 
-/* Project name at the very top */
+/* Name of project at the top */
 .project-name {
+  padding-top: var(--heading-top-padding);
+  font-size: var(--heading-font-size);
 }
 
 /* Short description/subtitle below the project name */
@@ -153,10 +148,10 @@ iframe {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Background for GD projects */
-body.gd-bg {
+/* body.gd-bg {
   background: #616266 url("assets/gamebox-gd.png") no-repeat fixed center;
   background-size: cover;
-}
+} */
 
 
 /*||||||||||||||||||||||||||||||||||||||||*/
@@ -174,20 +169,20 @@ body.gd-bg {
 /* Values for tablet-sized displays */
 @media (max-width: 768px) {
   :root {
-
+    --heading-font-size: 36px;
   }
 }
 
 /* Values for mobile-sized displays */
 @media (max-width: 600px) {
   :root {
-
+    --heading-top-padding: 0px;
   }
 }
 
 /* Values for smaller mobile-sized displays */
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   :root {
-
+    /* --heading-font-size: 24px; */
   }
 }
