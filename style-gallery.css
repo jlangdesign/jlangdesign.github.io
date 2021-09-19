@@ -9,7 +9,6 @@
   --heading-top-padding: var(--secondary-spacing);
   --heading-font-size: 48px;
   --subtitle-size: 24px;
-  --story-padding: 0vh 10vw;
   --story-heading-text-align: left;
   --story-section-font: 700 36px var(--heading-font);
   --story-chapter-font: 600 24px var(--heading-font);
@@ -27,11 +26,6 @@ h1, h2, h3, h4, h5, h6 {
 li {
   margin: 0;
   list-style-position: inside;
-}
-
-/* All story text */
-p, .story-section, .story-chapter, .story-subchapter, li {
-  padding: var(--story-padding);
 }
 
 /* Banner on top */
@@ -176,7 +170,6 @@ iframe {
 /* Values for mobile-sized displays */
 @media (max-width: 600px) {
   :root {
-    --heading-top-padding: 0px;
   }
 }
 

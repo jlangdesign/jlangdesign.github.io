@@ -11,8 +11,7 @@
   --default-vw: 1440; /* 100 vw = 1440 px */
   --primary-spacing: 36px;
   --secondary-spacing: 18px;
-  --padding-for-footer: 300px;
-  --main-content-padding: 0vw 20vw var(--padding-for-footer) 20vw;
+  --main-content-padding: 0vw 20vw var(--top-nav-height) 20vw;
 
   /* Typography */
   --heading-font: titillium web;
@@ -354,6 +353,7 @@ a:visited {
 /* Friendly interjection */
 #greeting {
   margin: 0;
+  margin-top: var(--primary-spacing);
 }
 
 /* Text of the welcome message */
@@ -481,10 +481,11 @@ footer {
   text-align: center;
   background-color: rgb(var(--primary-color));
   padding: var(--primary-spacing) 0px;
-  position: absolute;
-    bottom: 0;
+  /* position: absolute;
+    bottom: 0; */
   width: 100%;
   box-sizing: border-box;
+  margin-top: var(--top-nav-height);
 }
 
 #footer-logo {
@@ -572,7 +573,7 @@ footer {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: 0vw 10vw var(--padding-for-footer) 10vw;
+    --main-content-padding: 0vw 10vw var(--top-nav-height) 10vw;
 
     /* Typography */
     --para-padding: 0vh 10vw;
@@ -625,7 +626,7 @@ footer {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: var(--primary-spacing) 5vw var(--padding-for-footer) 5vw;
+    --main-content-padding: var(--primary-spacing) 5vw var(--top-nav-height) 5vw;
 
     /* Typography */
     --para-padding: 0vh 5vw;
