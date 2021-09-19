@@ -227,17 +227,18 @@ a:visited {
   justify-content: center;
 }
 
+/* Glowing hover state of logo */
+#logo-box:hover {
+  filter: drop-shadow(0 0 10px rgb(var(--secondary-color)));
+  color: rgb(var(--secondary-color));
+}
+
 /* Actual logo image */
 #logo {
   width: var(--logo-side-length);
   height: var(--logo-side-length);
   z-index: 110;
   margin: var(--logo-margin);
-}
-
-/* Glowing hover state of logo */
-#logo:hover {
-  box-shadow: var(--button-glow-hover);
 }
 
 /* Text attached to logo */
