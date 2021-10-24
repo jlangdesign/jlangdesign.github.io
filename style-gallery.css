@@ -100,16 +100,22 @@ li {
 
 /* Youtube videos */
 iframe {
-  height: 600px;
   display: block;
   margin: auto;
   width: var(--project-media-width);
+  aspect-ratio: 16 / 9;
+}
+
+/* Figma prototype */
+.figma-mobile-iframe {
+  aspect-ratio: 9 / 16;
 }
 
 /* Interactive InVision prototypes */
-.invision-iframe {
+.invision-tablet-iframe {
   width: var(--project-media-width);
-  height: 1030px;
+  /* height: 1030px; */
+  aspect-ratio: 3 / 4;
 }
 
 /*|||||||||||||||||||| PROJECT NAV ATTRIBUTES ||||||||||||||||||||*/
