@@ -175,6 +175,7 @@ a:visited {
   box-shadow: var(--button-box-shadow);
   /*margin: 0px;*/
   margin: auto;
+  margin-top: var(--primary-spacing);
   text-align: center;
   padding: var(--button-padding);
 }

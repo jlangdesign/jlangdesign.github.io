@@ -51,6 +51,7 @@ li {
   text-align: var(--story-heading-text-align);
   display: flex;
   gap: 10px;
+  margin-top: var(--primary-spacing);
 }
 
 .story-section:before,.story-section:after {
@@ -65,16 +66,20 @@ li {
 .story-chapter {
   font: var(--story-chapter-font);
   text-align: var(--story-heading-text-align);
+  margin-top: var(--secondary-spacing);
+  margin-bottom: var(--secondary-spacing);
 }
 
 /* Any headings within the story chapters */
 .story-subchapter {
   font: var(--story-subchapter-font);
   text-align: var(--story-heading-text-align);
+  margin-top: var(--secondary-spacing);
 }
 
 /* Button that'll take you back to Gallery page when clicked */
 .return-button {
+  margin-top: 72px;
 }
 
 /* Hover state for return button */
@@ -97,6 +102,7 @@ li {
   width: var(--project-media-width);
   display: block;
   margin: auto;
+  margin-bottom: var(--secondary-spacing);
   border-radius: var(--image-border-radius);
 }
 
