@@ -49,6 +49,16 @@ li {
 .story-section {
   font: var(--story-section-font);
   text-align: var(--story-heading-text-align);
+  display: flex;
+  gap: 10px;
+}
+
+.story-section:before,.story-section:after {
+  content: "";
+  text-decoration: line-through;
+  flex: 1;
+  border-bottom: solid 2px rgb(var(--secondary-color));
+  margin: auto;
 }
 
 /* Headings for Mission, Playthrough, and Results sections (in Process section) */

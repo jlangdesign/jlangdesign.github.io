@@ -262,6 +262,16 @@ a:visited {
 .home-section-title {
   margin-top: var(--primary-spacing);
   margin-bottom: var(--secondary-spacing);
+  display: flex;
+  gap: 10px;
+}
+
+.home-section-title:before, .home-section-title:after {
+  content: "";
+  text-decoration: line-through;
+  flex: 1;
+  border-bottom: solid 2px rgb(var(--secondary-color));
+  margin: auto;
 }
 
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
@@ -427,14 +437,14 @@ a:visited {
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
   border-radius: var(--image-border-radius);
-  transition: transform 0.5s 0s ease-in-out; /* when ascending (no longer hovering) */
+  transition: transform 0.3s 0s ease-in-out; /* when ascending (no longer hovering) */
 }
 
 /* Transformation (rising) hover state of matrix items */
 .grid:hover {
   cursor: pointer;
   transform: scale(0.9); /* shrink a little bit */
-  transition: transform 0.5s 0s ease-in-out; /* when descending */
+  transition: transform 0.3s 0s ease-in-out; /* when descending */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
   background-position: 100% 0px;
 }
