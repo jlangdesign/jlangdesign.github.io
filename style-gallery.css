@@ -72,9 +72,9 @@ li {
 }
 
 /* Links in the Links section */
-.links {
+/* .links {
   text-decoration: underline;
-}
+} */
 
 /* Links underneath PDFs that open the PDF in a separate tab */
 .pdf-links {
@@ -183,5 +183,6 @@ iframe {
 @media (max-width: 425px) {
   :root {
     /* --heading-font-size: 24px; */
+        --subtitle-size: 18px;
   }
 }
