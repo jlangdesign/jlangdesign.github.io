@@ -18,7 +18,7 @@
   --body-font: roboto;
   --font-color: rgb(255, 255, 255); /* white (#ffffff) */
   --list-margin: 1vh 20vw;
-  --max-line-length: 750px;
+  --max-line-length: 70ch;
   --para-padding: 0vh 20vw;
   --default-heading-size: 60px;
 
@@ -81,6 +81,7 @@
 /* HTML element */
 html {
   scroll-behavior: smooth;
+  line-height: 1.5;
 }
 
 /* Body element */
@@ -101,6 +102,8 @@ body {
 /* Main content (content outside of topnav and footer) */
 .main-content {
   padding: var(--main-content-padding);
+  /* max-width: var(--max-line-length);
+  margin: auto; */
 }
 
 /* Divs for the page to jump to so the topnav doesn't overlap with targeted content */
@@ -127,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: var(--body-font);
   color: var(--font-color);
-  /*max-width: var(--max-line-length);*/
+  /* max-width: var(--max-line-length); */
   /* padding: var(--para-padding); */
 }
 
@@ -141,7 +144,6 @@ ul, ol {
 li {
   font-family: var(--body-font);
   color: var(--font-color);
-  max-width: var(--max-line-length);
   margin: var(--list-margin);
 }
 
