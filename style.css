@@ -17,7 +17,7 @@
   --heading-font: titillium web;
   --body-font: roboto;
   --font-color: rgb(255, 255, 255); /* white (#ffffff) */
-  --list-margin: 1vh 20vw;
+  /* --list-margin: 1vh 20vw; */
   --max-line-length: 70ch;
   --para-padding: 0vh 20vw;
   --default-heading-size: 60px;
@@ -159,7 +159,7 @@ ul, ol {
 li {
   font-family: var(--body-font);
   color: var(--font-color);
-  margin: var(--list-margin);
+  /* margin: var(--list-margin); */
   /* margin: 0; */
   list-style-position: inside;
 }
@@ -178,6 +178,7 @@ a:visited {
 /* Formatting for text in anchors */
 .links {
   text-decoration: underline rgb(var(--secondary-color)) 2px;
+  font-family: var(--body-font);
 }
 
 .links:hover {
@@ -186,6 +187,8 @@ a:visited {
 
 /* Buttons used sitewide */
 .button {
+  box-sizing: border-box;
+  display: inline-block;
   font-family: var(--heading-font);
   color: var(--font-color);
   background-color: var(--button-bg-color);
@@ -428,6 +431,10 @@ a:visited {
   margin-bottom: 18px;
 }
 
+#cv-resume-button {
+  width: 100%;
+}
+
 
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
@@ -535,7 +542,6 @@ footer {
 }
 
 .back-to-top-button {
-  display: inline-block;
   font-size: 14px;
 }
 
@@ -619,8 +625,15 @@ footer {
   margin-top: var(--secondary-spacing);
 }
 
+/* Links in a list after the end of a story */
+.extra-links {
+  display: block;
+  margin: var(--secondary-spacing) 0px;
+}
+
 /* Button that'll take you back to Gallery page when clicked */
 .return-button {
+  width: 100%;
   margin-top: 72px;
 }
 
@@ -635,6 +648,7 @@ footer {
 
 /* Links underneath PDFs that open the PDF in a separate tab */
 .pdf-links {
+  display: block;
   text-align: center;
 }
 
