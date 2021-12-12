@@ -17,7 +17,7 @@
   --heading-font: titillium web;
   --body-font: roboto;
   --font-color: rgb(255, 255, 255); /* white (#ffffff) */
-  /* --list-margin: 1vh 20vw; */
+  --list-margin: 0 0 var(--secondary-spacing) 0;
   --max-line-length: 70ch;
   --para-padding: 0vh 20vw;
   --default-heading-size: 60px;
@@ -152,16 +152,13 @@ p {
 /* Lists */
 ul, ol {
   list-style-position: outside;
-  text-indent: -1em;
 }
 
 /* List elements */
 li {
   font-family: var(--body-font);
   color: var(--font-color);
-  /* margin: var(--list-margin); */
-  /* margin: 0; */
-  list-style-position: inside;
+  margin: var(--list-margin);
 }
 
 /* Anchor elements */
