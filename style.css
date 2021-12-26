@@ -647,6 +647,7 @@ footer {
 .pdf-links {
   display: block;
   text-align: center;
+  margin-bottom: var(--primary-spacing);
 }
 
 /*|||||||||||||||||||| IMAGES/OTHER VISUAL MEDIA ||||||||||||||||||||*/
@@ -664,7 +665,6 @@ footer {
   height: 600px;
   width: var(--project-media-width);
   display: block;
-  margin: auto;
 }
 
 /* Youtube videos */
