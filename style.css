@@ -102,7 +102,6 @@ html {
 /* Body element */
 body {
   margin: 0px;
-  /* background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center; */
   background: var(--main-bg-color) no-repeat fixed center;
   background-size: cover;
 }
@@ -452,12 +451,21 @@ a:visited {
   aspect-ratio: 1 / 1;
 
   display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
 
   z-index: 10;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
   border-radius: var(--image-border-radius);
+  overflow: hidden; /* so border-radius works */
   transition: transform 0.3s 0s ease-in-out; /* when ascending (no longer hovering) */
+}
+
+.grid-anchor > * {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 /* Transformation (rising) hover state of matrix items */
@@ -470,6 +478,7 @@ a:visited {
 }
 
 .grid-anchor-name {
+  z-index: 13;
   display: none;
   font-size: 36px;
   padding: var(--secondary-spacing);
@@ -479,8 +488,20 @@ a:visited {
   display: block;
 }
 
-/* Matrix item */
+.grid-anchor-icon {
+  z-index: 12;
+  height: 100%;
+  width: 100%;
+  display: none;
+  opacity: 0.25;
+}
+
+.grid-anchor:hover .grid-anchor-icon {
+  display: block;
+}
+
 .grid-anchor-bg {
+  z-index: 11;
   height: 100%;
   width: 100%;
   background-size: cover;
