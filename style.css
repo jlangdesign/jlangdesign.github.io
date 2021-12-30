@@ -102,7 +102,6 @@ html {
 /* Body element */
 body {
   margin: 0px;
-  /* background: var(--main-bg-color) url("assets/wandering_pattern.png") no-repeat fixed center; */
   background: var(--main-bg-color) no-repeat fixed center;
   background-size: cover;
 }
@@ -450,22 +449,27 @@ a:visited {
 .grid-anchor {
   flex-basis: calc(50% - var(--secondary-spacing));
   aspect-ratio: 1 / 1;
-}
 
-/* Mat */
-.grid {
-  height: 100%;
-  width: 100%;
-  background-size: 200% 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+
   z-index: 10;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
   border-radius: var(--image-border-radius);
+  overflow: hidden; /* so border-radius works */
   transition: transform 0.3s 0s ease-in-out; /* when ascending (no longer hovering) */
 }
 
+.grid-anchor > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 /* Transformation (rising) hover state of matrix items */
-.grid:hover {
+.grid-anchor:hover {
   cursor: pointer;
   transform: scale(0.9); /* shrink a little bit */
   transition: transform 0.3s 0s ease-in-out; /* when descending */
@@ -473,44 +477,80 @@ a:visited {
   background-position: 100% 0px;
 }
 
+.grid-anchor-name {
+  z-index: 13;
+  display: none;
+  font-size: 36px;
+  padding: var(--secondary-spacing);
+}
+
+.grid-anchor:hover .grid-anchor-name {
+  display: block;
+}
+
+.grid-anchor-icon {
+  z-index: 12;
+  height: 100%;
+  width: 100%;
+  display: none;
+  opacity: 0.25;
+}
+
+.grid-anchor:hover .grid-anchor-icon {
+  display: block;
+}
+
+.grid-anchor-bg {
+  z-index: 11;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-anchor:hover .grid-anchor-bg {
+  filter: brightness(25%) blur(4px);
+  clip-path: inset(0 0 0 0 round var(--image-border-radius));
+}
+
 #bu-dong-grid {
-  background-image: url("assets/Tile-bu-Dong.png");
+  background-image: url("gallery-img/budong-structure.png");
 }
 
 #pandoras-grid {
-  background-image: url("assets/Tile-Pandoras-Box.png");
+  background-image: url("gallery-img/pandoras-box-start.png");
 }
 
 #harmony-grid {
-  background-image: url("assets/Tile-Harmony.png");
+  background-image: url("gallery-img/Harmony-header.jpg");
 }
 
 #are3-grid {
-  background-image: url("assets/Tile-ARE3.png");
+  background-image: url("gallery-img/ARE3-cover.jpg");
 }
 
 #lizards-grid {
-  background-image: url("assets/Tile-Of-Lizards.png");
+  background-image: url("gallery-img/Handbook-cover.jpg");
 }
 
 #starry-grid {
-  background-image: url("assets/Tile-StarryReader.png");
+  background-image: url("gallery-img/StarryReader-Header.jpg");
 }
 
 #pb-grid {
-  background-image: url("assets/Tile-Picture-Booth.png");
+  background-image: url("gallery-img/Picture-Booth-Context.jpg");
 }
 
 #recon-grid {
-  background-image: url("assets/Tile-Reconstruction.png");
+  background-image: url("gallery-img/After-Kendama-03.png");
 }
 
 #pidgepanion-grid {
-  background-image: url("assets/Tile-Pidgepanion.png");
+  background-image: url("gallery-img/pidgepanion/Finale.png");
 }
 
 #immersive-grid{
-  background-image: url("assets/Tile-Immersive-Scholar.png");
+  background-image: url("gallery-img/Imm-Sch-Header.png");
 }
 
 /*||||||||||||||||||||||||||||||||||||||||*/
