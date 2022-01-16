@@ -431,6 +431,13 @@ a:visited {
   width: 100%;
 }
 
+#cv-resume-grayscale-link {
+  display: block;
+  text-align: center;
+  margin: var(--primary-spacing) auto;
+  font-size: 14px;
+}
+
 
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
