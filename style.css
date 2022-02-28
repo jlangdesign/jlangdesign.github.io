@@ -69,9 +69,9 @@
   /********************/
   /***** ABOUT SECTION *****/
   /********************/
-  --about-img-width: calc(600 / var(--default-vw) * 100vw);
+  /* --about-img-width: calc(600 / var(--default-vw) * 100vw);
   --about-img-height: calc(400 / var(--default-vw) * 100vw);
-  --about-img-bg-size: calc(var(--about-img-width) * 2) var(--about-img-height);
+  --about-img-bg-size: calc(var(--about-img-width) * 2) var(--about-img-height); */
 
   /********************/
   /***** GALLERY SECTION *****/
@@ -413,10 +413,14 @@ a:visited {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Header image for About page */
 .about-img {
-  background-image: url("assets/me-snake.jpg");
-  height: var(--about-img-height);
-  width: var(--about-img-width);
-  background-size: var(--about-img-bg-size);
+  background-image: url("assets/about-me.jpg");
+  /* height: var(--about-img-height);
+  width: var(--about-img-width); */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* background-size: var(--about-img-bg-size); */
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
   display: block;
   margin: auto;
   border-radius: var(--image-border-radius);
@@ -424,7 +428,8 @@ a:visited {
 
 /* Hover state of About image (changes to a different image) */
 .about-img:hover {
-  background-position: calc(var(--about-img-width) * -1) 0px;
+  /* background-position: calc(var(--about-img-width) * -1) 0px; */
+  background-position: 100% 0px;
 }
 
 .musing {
@@ -824,8 +829,8 @@ iframe {
     /********************/
     /***** ABOUT SECTION *****/
     /********************/
-    --about-img-width: calc(900 / var(--default-vw) * 100vw);
-    --about-img-height: calc(600 / var(--default-vw) * 100vw);
+    /* --about-img-width: calc(900 / var(--default-vw) * 100vw); */
+    /* --about-img-height: calc(600 / var(--default-vw) * 100vw); */
   }
 
   #top-nav-tab-group {
@@ -872,8 +877,8 @@ iframe {
     /********************/
     /***** ABOUT SECTION *****/
     /********************/
-    --about-img-width: calc(1200 / var(--default-vw) * 100vw);
-    --about-img-height: calc(800 / var(--default-vw) * 100vw);
+    /* --about-img-width: calc(1200 / var(--default-vw) * 100vw);
+    --about-img-height: calc(800 / var(--default-vw) * 100vw); */
 
     /********************/
     /***** GALLERY SECTION *****/
