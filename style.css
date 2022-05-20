@@ -744,6 +744,10 @@ iframe {
   aspect-ratio: 3 / 4;
 }
 
+.letterboxed {
+  background-color: black;
+}
+
 /*|||||||||||||||||||| PROJECT NAV ATTRIBUTES ||||||||||||||||||||*/
 /* Collection of section tabs for easy navigation */
 .tab-bar {
