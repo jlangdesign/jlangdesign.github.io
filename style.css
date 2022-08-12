@@ -183,6 +183,7 @@ figure {
 /* Formatting for text in anchors */
 .links {
   text-decoration: underline rgb(var(--secondary-color)) 2px;
+  text-underline-position: under;
   font-family: var(--body-font);
 }
 
@@ -728,7 +729,7 @@ footer {
   display: block;
 }
 
-/* Youtube videos */
+/* Vimeo videos */
 iframe {
   display: block;
   margin: auto;
