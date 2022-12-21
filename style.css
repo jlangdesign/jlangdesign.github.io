@@ -102,6 +102,7 @@
 html {
   scroll-behavior: smooth;
   line-height: 1.5;
+  font-size: 1.125em;
 }
 
 /* Body element */
@@ -387,7 +388,7 @@ figure {
 
 /*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
 /* Short welcome message and description of this site below the slideshow */
-#welcome-text {
+#welcome-section {
   text-align: center;
 }
 
@@ -398,7 +399,7 @@ figure {
 }
 
 /* Text of the welcome message */
-#welcome-txt {
+#welcome-text {
   /* padding: var(--para-padding); */
   max-width: initial;
   font-size: var(--welcome-text-size);
@@ -438,7 +439,7 @@ figure {
 }
 
 .musing {
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 18px;
 }
 
