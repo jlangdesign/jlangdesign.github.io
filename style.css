@@ -460,6 +460,16 @@ figure {
 /*|||||||||||||||||||| GALLERY ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+.disclaimer-text {
+  text-align: center;
+}
+
+.gallery-section-title {
+  font-size: var(--gallery-tile-name-size);
+  margin-top: var(--primary-spacing);
+  margin-bottom: var(--secondary-spacing);
+}
+
 /* Subcontainer containing Gallery matrix */
 .gallery-container {
   display: flex;
