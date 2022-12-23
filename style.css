@@ -92,8 +92,8 @@
   --subtitle-size: 24px;
   --story-heading-text-align: left;
   --story-section-font: 700 36px var(--heading-font);
-  --story-chapter-font: 600 24px var(--heading-font);
-  --story-subchapter-font: 600 18px var(--heading-font);
+  --story-chapter-font: 600 28px var(--heading-font);
+  --story-subchapter-font: 600 24px var(--heading-font);
 
   /* Imagery */
   --project-media-width: 100%;
@@ -122,8 +122,8 @@ body {
 /* Main content (content outside of topnav and footer) */
 .main-content {
   padding: var(--main-content-padding);
-  /* max-width: var(--max-line-length);
-  margin: auto; */
+  max-width: var(--max-line-length);
+  margin: auto;
 }
 
 /* Divs for the page to jump to so the topnav doesn't overlap with targeted content */
@@ -152,6 +152,10 @@ p, figcaption {
   color: var(--font-color);
   /* max-width: var(--max-line-length); */
   /* padding: var(--para-padding); */
+}
+
+figcaption {
+  font-size: 0.875rem;
 }
 
 /* Lists */
@@ -684,7 +688,7 @@ footer {
 .story-chapter {
   font: var(--story-chapter-font);
   text-align: var(--story-heading-text-align);
-  margin-top: var(--secondary-spacing);
+  margin-top: var(--primary-spacing);
   margin-bottom: var(--secondary-spacing);
 }
 
@@ -692,7 +696,7 @@ footer {
 .story-subchapter {
   font: var(--story-subchapter-font);
   text-align: var(--story-heading-text-align);
-  margin-top: var(--secondary-spacing);
+  margin-top: var(--primary-spacing);
 }
 
 /* Links in a list after the end of a story */
@@ -938,6 +942,6 @@ iframe {
 @media (max-width: 425px) {
   :root {
     /* --heading-font-size: 24px; */
-    --subtitle-size: 18px;
+    --subtitle-size: 20px;
   }
 }
