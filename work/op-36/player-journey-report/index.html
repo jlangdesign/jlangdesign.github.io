@@ -57,55 +57,122 @@
 						</figcaption>
           </figure>
 
-	        <h3 class="story-section">Overview</h3>
-          <p>
-            Note: Some content cannot be displayed due to the NDA.
-          </p>
-	        <p>
-	          [insert]
-	        </p>
+					<h3 class="story-section">Overview</h3>
+					<p>
+						Note: Some content cannot be displayed due to the NDA.
+					</p>
+					<p>
+						[insert]
+					</p>
 
-	        <h3 class="story-section">Process</h3>
+					<h3 class="story-section">Process</h3>
 
-	        <h4 class="story-chapter">Objectives</h4>
-          <p>
-	          [insert]
-	        </p>
+					<h4 class="story-chapter">Objectives</h4>
+					<ol>
+						<li>Make it easier for the coach to create end-of-semester progress reports for their students and parents.</li>
+						<li>Show students their progress in each part of the Op 36 program so they feel like they are improving, which will increase retention.</li>
+					</ol>
 
           <h4 class="story-chapter">Research</h4>
           <p>
-	          [insert]
+	          Due to feature requests and coaches’ current methods for assembling reports, we knew that it wasn’t easy for coaches to present progress at end of the semester to students. We needed this report to complete the Op 36 lifecycle of playing, training, and learning.
+	        </p>
+					<p>
+						We had an idea of what coaches would want, but we wanted to verify our assumptions. Thus, we asked a few of our coaches, “If you could generate a 1-page progress report for a student, what would you include?”
+					</p>
+					<p>
+						We limited the first version to 1 page because we wanted to:
+					</p>
+					<ol>
+						<li>Have an MVP to test as soon as possible</li>
+						<li>Know what was most important to our coaches</li>
+						<li>Keep it easy for parents and students to digest</li>
+					</ol>
+
+					<h4 class="story-chapter">Ideation</h4>
+          <p>
+	          From our coaches’ responses, we created a large list of desired items. Then, we designed a few iterations that included the most common responses - trying to squeeze as much as possible into one page - then shared it with our coaches for additional feedback.
 	        </p>
 
-          <h4 class="story-chapter">Ideation + Prototyping</h4>
+					<h4 class="story-chapter">Prototyping</h4>
           <p>
-	          [insert]
+	          To our surprise, we learned that the report now had too much data! Sure, it was useful, but parents and students probably wouldn’t feel excited or want to read through all of those tiny numbers, which defeats its purpose. It didn’t look friendly.
 	        </p>
+					<p>
+						One coach suggested that we design it to resemble an award as opposed to a page with rows and rows of numbers and icons (AKA a typical report). He shared his thoughts through a call with us, so we also got to learn more about his current process for generating reports.
+					</p>
+					<p>
+						That coach’s reasoning for the award concept made sense, and we knew that our printed certificates were popular products in our store, so we decided to design a few more variations with that in mind.
+					</p>
+					<p>
+						We reduced the amount of data displayed, made the numbers and icons bigger, and added a big badge. Each variation had slightly more data in certain sections than others.
+					</p>
+					<p>
+						From all of the research we had done so far, we felt like we were pretty close to an initial solution.
+					</p>
+					<p>
+						We sent out an email poll so we could quickly reach out to all of our coaches, get their vote for their favorite design, and see if there were any other critical pieces missing.
+					</p>
+					<p>
+						A few days after sending the poll, we reviewed the results. There were a few pieces of feedback, but we figured we could incorporate those in a later iteration - they didn’t sound like dealbreakers. Thus, we proceeded with the most popular design.
+					</p>
+					<p>
+						Finally, we had to design the flow for selecting the students and generating the reports in our web app. Using what we had learned from both historic and recent research, we included the ability to:
+					</p>
+					<ol>
+						<li>Select multiple students at one time</li>
+						<li>Apply a generic note to all students if desired</li>
+						<li>
+							Export the reports as one file for easy printing
+							<ol>
+								<li>In the future, we also want the ability to export them separately for easier emailing</li>
+							</ol>
+						</li>
+					</ol>
 
           <h4 class="story-chapter">Development</h4>
           <p>
-	          [insert]
+	          As usual, we prepared the project for handoff to our developer with tasks, specs, endpoint response data to use, and test cases (including edge cases).
 	        </p>
+					<p>
+						However, after the developer was done, I later refactored the code for the report itself to improve the structure, styling, and readability.
+					</p>
 
           <h4 class="story-chapter">Marketing + Release</h4>
           <p>
-	          [insert]
+	          Prior to release, I also worked on a drip campaign with my teammate. After deciding on the timing, messaging, and graphics, we launched the new report, then continued to remind our coaches about its existence and utility over time through our emails.
 	        </p>
+					<p>
+						We planned the emails based off of the time of the semester. For example, during the middle of the semester, we promoted it as a mid-semester progress report, whereas near the end, we pitched it as a great way for your students to remember you and your program after the last day of classes.
+					</p>
 
           <h4 class="story-chapter">Results</h4>
           <p>
-	          [insert]
+	          After releasing, we got a lot of emails where coaches told us they were excited to use the report, showed us how they were using the report, and/or shared ideas for potential improvements, so we knew our coaches were using it. It sounds like it was a success.
 	        </p>
+					<p>
+						We knew our coaches are happy with it, but we still had to measure our retention over time to see if the report helped us meet the business objective of improved retention.
+					</p>
 
           <h4 class="story-chapter">Reflection</h4>
           <p>
-	          [insert]
+	          Judging from the feedback, the Player Journey Report was one of our more successful features. However, it could have been even better if we were able to get more feedback from other types of users, such as the recipients of the reports (students and parents) and coaches that don’t normally use our reporting features.
 	        </p>
+					<p>
+						We also ran into a lot of technical issues along the way, so we didn’t have time to set up a good tracking mechanism to uncover usage patterns.
+					</p>
+					<ul>
+	          <li>Address technical debt ASAP. Our outdated React version meant that we were stuck with a library that didn’t allow us to include the student’s profile photo, which would make the reports easier to distinguish from one another and personalize them for the students.</li>
+						<li>Talk to coaches that don’t use reports at all and learn why.</li>
+						<li>Get feedback from actual parents and students.</li>
+						<li>Get feedback on the report generation flow.</li>
+						<li>Start thinking about what data to track earlier on in the project so we have more time to incorporate tracking.</li>
+	        </ul>
 
 	        <h3 class="story-section">Links</h3>
 
-	        <a rel="noreferrer noopener" href="[insert]" target="_blank" class="links extra-links">
-						[insert]
+	        <a rel="noreferrer noopener" href="https://operation36.golf/coach-technology/#headline-965-2389" target="_blank" class="links extra-links">
+						Operation 36 Golf - Coach Technology
 					</a>
 
 					<a rel="noreferrer noopener" class="button return-button" href="/#gallery">

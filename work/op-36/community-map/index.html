@@ -61,41 +61,69 @@
           <p>
             Note: Some content cannot be displayed due to the NDA.
           </p>
-	        <p>
+					<p>
 	          [insert]
 	        </p>
 
 	        <h3 class="story-section">Process</h3>
 
 	        <h4 class="story-chapter">Objectives</h4>
-          <p>
-	          [insert]
-	        </p>
+					<ol>
+	          <li>Allow prospective students to find a nearby Op 36 community to join and request an invite from the coach.</li>
+						<li>Provide coaches in the network with a way to advertise their programs and gather leads.</li>
+	        </ol>
 
           <h4 class="story-chapter">Research</h4>
           <p>
-	          [insert]
+	          We asked our team - some coaches, some parents of students, all potential adult students:
+	        </p>
+					<ul>
+						<li>How do you determine if a program is right for you (and/or your kids)?</li>
+						<li>As a coach, what do you want to know about your prospective students?</li>
+					</ul>
+					<p>
+	          Then, we defined our flow for <strong>both students and coaches</strong>. Due to technical limitations at the time, we couldn’t show class info at each location, but we were able to include most of the other info.
 	        </p>
 
-          <h4 class="story-chapter">Ideation + Prototyping</h4>
+          <h4 class="story-chapter">Ideation</h4>
           <p>
-	          [insert]
+	          Taking inspiration from apps like Google Maps and Asana, we designed a searchable map, location landing page view, and leads manager. We also tried a list view of communities to see if users preferred that (or if the map was too complex for us to develop for the MVP).
 	        </p>
+					<p>
+						Another area we weren’t sure about was the location and style of the “Request Program Information” form, so we tried some variations to get feedback there too.
+					</p>
+
+					<h4 class="story-chapter">Prototyping</h4>
+          <p>
+	          To see which variations were preferred, we created two prototypes for our team to test using the list/map and form variations.
+	        </p>
+					<p>
+						Our team’s feedback suggested that the map view was less overwhelming because there were <strong>more visuals than text</strong>, but the form with the dark background was better because it <strong>stood out</strong>. They also pointed out that we should have a <strong>form for students that don’t have a location near them</strong> and a <strong>button in the leads manager that sends an invite to the lead</strong> (so no need to navigate to the Invites page, and you can quickly invite many leads).
+					</p>
 
           <h4 class="story-chapter">Results</h4>
           <p>
-	          [insert]
+	          We didn’t define a threshold for “success,” but we did track metrics in our admin portal. We have accrued thousands of number of views, leads, and students created from leads every month, which means our feature was quite impactful.
+	        </p>
+					<p>
+	          Some coaches also told us that they got so many leads that they have waitlists, which was a sign that their programs are doing well.
 	        </p>
 
           <h4 class="story-chapter">Reflection</h4>
           <p>
-	          [insert]
+	          This was actually one of the first features I helped design here. It has been updated quite a few times since the initial release, and many more updates are in the works. Nevertheless, we would have benefitted from more touchpoints with coaches and families outside of our team, especially with a beta test build.
 	        </p>
+					<ul>
+	          <li>Do load testing. As we grew our number of facilities, the map and landing pages took longer and longer to load. We eventually had to implement caching and create landing pages not connected to the map.</li>
+						<li>Ask families that are not part of any Op 36 program to test the program search and “Request program information” flow.</li>
+						<li>Learn more about how coaches track and manage their leads (if they do). We later learned that some coaches wanted to import leads from other sources. We also learned that some coaches won’t respond to their leads because they are busy or don’t want them, which makes us look bad.</li>
+						<li>Design with a mobile-first mindset. At the time, we were so excited about this shiny new map feature that we didn’t think about how it would feel on mobile, and we had to come up with something quick.</li>
+	        </ul>
 
 	        <h3 class="story-section">Links</h3>
 
-	        <a rel="noreferrer noopener" href="[insert]" target="_blank" class="links extra-links">
-						[insert]
+	        <a rel="noreferrer noopener" href="https://operation36golf.com/community-map" target="_blank" class="links extra-links">
+						Operation 36 Golf - Community Map
 					</a>
 
 					<a rel="noreferrer noopener" class="button return-button" href="/#gallery">
