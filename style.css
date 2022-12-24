@@ -87,7 +87,7 @@
   /***** PROJECT STORIES *****/
   /********************/
   /* Typography */
-  --heading-top-padding: var(--secondary-spacing);
+  --heading-top-padding: var(--primary-spacing);
   --heading-font-size: 48px;
   --subtitle-size: 24px;
   --story-heading-text-align: left;
@@ -155,7 +155,8 @@ p, figcaption {
 }
 
 figcaption {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
 }
 
 /* Lists */
@@ -656,15 +657,24 @@ footer {
 
 /* Name of project at the top */
 .project-name {
-  padding-top: var(--heading-top-padding);
+  margin-top: var(--heading-top-padding);
   font-size: var(--heading-font-size);
 }
 
 /* Short description/subtitle below the project name */
 .subtitle {
   font-size: var(--subtitle-size);
-  padding: 0px;
-  padding-bottom: 25px;
+  margin: 0px;
+  margin-top: var(--secondary-spacing);
+  margin-bottom: var(--secondary-spacing);
+}
+
+.employer-name {
+  font-size: 0.75rem;
+  color: rgb(var(--secondary-color));
+  text-align: center;
+  margin-top: var(--secondary-spacing);
+  margin-bottom: var(--primary-spacing);
 }
 
 /* Headings for Overview, Process, and Links sections */
@@ -881,7 +891,7 @@ iframe {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: var(--primary-spacing) 5vw var(--top-nav-height) 5vw;
+    --main-content-padding: 0vw 5vw var(--top-nav-height) 5vw;
 
     /* Typography */
     --para-padding: 0vh 5vw;
