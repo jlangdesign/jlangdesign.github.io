@@ -587,8 +587,36 @@ figure {
   background-image: url("personal/pidgepanion/Finale.png");
 }
 
-#immersive-grid{
-  background-image: url("work/immersive-scholar/Imm-Sch-Header.jpg");
+#grid-player-journey {
+  background-image: url("work/op-36/player-journey-report/header-player-journey.webp");
+}
+
+#grid-starter-kit {
+  background-image: url("work/op-36/starter-kit/header-starter-kit.webp");
+}
+
+#grid-free-coach {
+  background-image: url("work/op-36/free-coach-account/header-free-coach.webp");
+}
+
+#grid-community-map {
+  background-image: url("work/op-36/community-map/header-community-map.webp");
+}
+
+#grid-academy-display {
+  background-image: url("work/op-36/academy-display/header-academy-display.webp");
+}
+
+#grid-op36-other {
+  background-image: url("work/op-36/other/header-op36-other.webp");
+}
+
+#grid-immersive-scholar {
+  background-image: url("work/immersive-scholar/header-immersive-scholar.webp");
+}
+
+#grid-assorted-logos {
+  background-image: url("work/freelance/logos/header-assorted-logos.webp");
 }
 
 /*||||||||||||||||||||||||||||||||||||||||*/
