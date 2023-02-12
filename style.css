@@ -16,7 +16,7 @@
   /* Typography */
   --heading-font: titillium web;
   --body-font: roboto;
-  --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+  --font-color: rgb(238, 238, 238); /* off-white (#eeeeee), less harsh than white (#ffffff) */
   --list-margin: 0 0 var(--secondary-spacing) 0;
   --max-line-length: 70ch;
   --para-padding: 0vh 20vw;
@@ -47,7 +47,7 @@
   --button-border-radius: 4px;
   --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   --button-padding: 15px;
-  --button-glow-hover: 0px 0px 10px rgba(255, 255, 255, 1);
+  --button-glow-hover: 0px 0px 10px rgba(238, 238, 238, 1);
 
   /* Images */
   --image-border-radius: 4px;
