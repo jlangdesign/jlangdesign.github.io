@@ -90,7 +90,7 @@
   --story-heading-text-align: left;
   --story-section-font: 700 36px var(--heading-font);
   --story-chapter-font: 600 28px var(--heading-font);
-  --story-subchapter-font: 600 24px var(--heading-font);
+  --story-subchapter-font: 600 22px var(--heading-font);
 
   /* Imagery */
   --project-media-width: 100%;
@@ -717,17 +717,17 @@ footer {
 
 /* Headings for Mission, Playthrough, and Results sections (in Process section) */
 .story-chapter {
-  font: var(--story-chapter-font);
   text-align: var(--story-heading-text-align);
+  font: var(--story-chapter-font);
   margin-top: var(--primary-spacing);
   margin-bottom: var(--secondary-spacing);
 }
 
 /* Any headings within the story chapters */
 .story-subchapter {
-  font: var(--story-subchapter-font);
   text-align: var(--story-heading-text-align);
-  margin-top: var(--primary-spacing);
+  font: var(--story-subchapter-font);
+  margin: var(--secondary-spacing) 0px;
 }
 
 /* Links in a list after the end of a story */
