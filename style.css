@@ -600,8 +600,8 @@ figure {
   background-image: url("work/op-36/academy-display/header-academy-display.webp");
 }
 
-#grid-op36-other {
-  background-image: url("work/op-36/other/header-op36-other.webp");
+#grid-op36-more {
+  background-image: url("work/op-36/more/header-op36-other.webp");
 }
 
 #grid-immersive-scholar {
@@ -688,6 +688,7 @@ footer {
   margin: 0px;
   margin-top: var(--secondary-spacing);
   margin-bottom: var(--secondary-spacing);
+  font-weight: 400;
 }
 
 .employer-name {
@@ -728,6 +729,7 @@ footer {
   text-align: var(--story-heading-text-align);
   font: var(--story-subchapter-font);
   margin: var(--secondary-spacing) 0px;
+  font-weight: 600;
 }
 
 /* Links in a list after the end of a story */
