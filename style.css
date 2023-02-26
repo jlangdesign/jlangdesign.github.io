@@ -16,7 +16,7 @@
   /* Typography */
   --heading-font: titillium web;
   --body-font: roboto;
-  --font-color: rgb(255, 255, 255); /* white (#ffffff) */
+  --font-color: rgb(238, 238, 238); /* off-white (#eeeeee), less harsh than white (#ffffff) */
   --list-margin: 0 0 var(--secondary-spacing) 0;
   --max-line-length: 70ch;
   --para-padding: 0vh 20vw;
@@ -25,6 +25,7 @@
   /* Color scheme */
   --primary-color: 54, 69, 79; /* charcoal (#36454f) */
   --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
+  --secondary-color-darker: 44, 127, 140; /* darker version of powderblue for accessibility */
   --tertiary-color: 0, 0, 96; /* navy (#000060) */
   --main-bg-color: rgb(33, 42, 49); /* charcoal minus 10% lightness */
 
@@ -41,14 +42,12 @@
   --top-nav-tab-padding: 0px 10px;
 
   /* Buttons */
-  --button-bg-color: rgba(var(--secondary-color), 0.5);
-  --button-border: 2px solid rgba(var(--tertiary-color), 0.25);
+  --button-bg-color: rgba(var(--secondary-color-darker), 1);
+  --button-border: 2px solid rgba(var(--tertiary-color), 1);
   --button-border-radius: 4px;
   --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   --button-padding: 15px;
-  --button-bg-color-hover: rgba(var(--secondary-color), 0.75);
-  --button-glow-hover: 0px 0px 10px rgba(255, 255, 255, 0.5);
-  --button-text-glow-hover: 0 0 1px rgba(255, 255, 255, 0.5);
+  --button-glow-hover: 0px 0px 10px rgba(238, 238, 238, 1);
 
   /* Images */
   --image-border-radius: 4px;
@@ -62,8 +61,6 @@
   --slideshow-max-height: 100vh;
   --game-name-size: 96px;
   --press-start-font-size: 24px;
-  --press-start-button-height: 10vh;
-  --press-start-button-width: 20vw;
   --welcome-text-size: 24px;
 
   /********************/
@@ -87,13 +84,13 @@
   /***** PROJECT STORIES *****/
   /********************/
   /* Typography */
-  --heading-top-padding: var(--secondary-spacing);
+  --heading-top-padding: var(--primary-spacing);
   --heading-font-size: 48px;
   --subtitle-size: 24px;
   --story-heading-text-align: left;
   --story-section-font: 700 36px var(--heading-font);
-  --story-chapter-font: 600 24px var(--heading-font);
-  --story-subchapter-font: 600 18px var(--heading-font);
+  --story-chapter-font: 600 28px var(--heading-font);
+  --story-subchapter-font: 600 22px var(--heading-font);
 
   /* Imagery */
   --project-media-width: 100%;
@@ -122,8 +119,8 @@ body {
 /* Main content (content outside of topnav and footer) */
 .main-content {
   padding: var(--main-content-padding);
-  /* max-width: var(--max-line-length);
-  margin: auto; */
+  max-width: var(--max-line-length);
+  margin: auto;
 }
 
 /* Divs for the page to jump to so the topnav doesn't overlap with targeted content */
@@ -152,6 +149,11 @@ p, figcaption {
   color: var(--font-color);
   /* max-width: var(--max-line-length); */
   /* padding: var(--para-padding); */
+}
+
+figcaption {
+  font-size: 0.75rem;
+  opacity: 0.8;
 }
 
 /* Lists */
@@ -197,6 +199,7 @@ figure {
   box-sizing: border-box;
   display: inline-block;
   font-family: var(--heading-font);
+  font-weight: bold;
   color: var(--font-color);
   background-color: var(--button-bg-color);
   border: var(--button-border);
@@ -212,8 +215,6 @@ figure {
 /* Hover state for sitewide buttons */
 .button:hover {
   box-shadow: var(--button-glow-hover);
-  text-shadow: var(--button-text-glow-hover);
-  background-color: var(--button-bg-color-hover);
   cursor: pointer;
 }
 
@@ -340,14 +341,17 @@ figure {
   justify-content: center;
   align-items: center;
   z-index: 95;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(var(--tertiary-color), .5);
 }
 
 /* Text on top of the slides */
 #game-name {
   text-align: center;
   font-size: var(--game-name-size);
-  text-shadow: 0px 0px 15px rgba(0, 0, 0, .75);
-  margin: 0px 0px 30px 0px;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  margin: 0px 0px var(--primary-spacing) 0px;
 }
 
 
@@ -355,17 +359,11 @@ figure {
 /* Button on top of slides that takes you to gallery */
 #press-start {
   font-size: var(--press-start-font-size);
-  height: var(--press-start-button-height);
-  width: var(--press-start-button-width);
-  padding: 0px;
+  padding: var(--secondary-spacing) var(--primary-spacing);
   margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Glowing hover state of button*/
-#press-start:hover {
 }
 
 
@@ -419,7 +417,7 @@ figure {
 /*||||||||||||||||||||||||||||||||||||||||*/
 /* Header image for About page */
 .about-img {
-  background-image: url("assets/about-me.jpg");
+  background-image: url("homepage/about-me.jpg");
   /* height: var(--about-img-height);
   width: var(--about-img-width); */
   width: 100%;
@@ -460,6 +458,16 @@ figure {
 /*|||||||||||||||||||| GALLERY ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
+.disclaimer-text {
+  text-align: center;
+}
+
+.gallery-section-title {
+  font-size: var(--gallery-tile-name-size);
+  margin-top: var(--primary-spacing);
+  margin-bottom: var(--secondary-spacing);
+}
+
 /* Subcontainer containing Gallery matrix */
 .gallery-container {
   display: flex;
@@ -516,7 +524,7 @@ figure {
   height: 100%;
   width: 100%;
   display: none;
-  opacity: 0.25;
+  opacity: 0.15;
 }
 
 .grid-anchor:hover .grid-anchor-icon {
@@ -537,43 +545,71 @@ figure {
 }
 
 #bu-dong-grid {
-  background-image: url("gallery-img/budong-structure.jpg");
+  background-image: url("personal/bu-dong/budong-structure.jpg");
 }
 
 #pandoras-grid {
-  background-image: url("gallery-img/pandoras-box-start.jpg");
+  background-image: url("personal/pandoras-box/pandoras-box-start.jpg");
 }
 
 #harmony-grid {
-  background-image: url("gallery-img/Harmony-header.jpg");
+  background-image: url("personal/harmony/Harmony-header.jpg");
 }
 
 #are3-grid {
-  background-image: url("gallery-img/ARE3-cover.jpg");
+  background-image: url("personal/are3/ARE3-cover.jpg");
 }
 
 #lizards-grid {
-  background-image: url("gallery-img/Handbook-cover.jpg");
+  background-image: url("personal/lizards-cat-thingies/Handbook-cover.jpg");
 }
 
 #starry-grid {
-  background-image: url("gallery-img/StarryReader-Header.jpg");
+  background-image: url("personal/starryreader/StarryReader-Header.jpg");
 }
 
 #pb-grid {
-  background-image: url("gallery-img/Picture-Booth-Context.jpg");
+  background-image: url("personal/picture-booth/Picture-Booth-Context.jpg");
 }
 
 #recon-grid {
-  background-image: url("gallery-img/After-Kendama-03.jpg");
+  background-image: url("personal/reocnstruction/After-Kendama-03.jpg");
 }
 
 #pidgepanion-grid {
-  background-image: url("gallery-img/pidgepanion/Finale.png");
+  background-image: url("personal/pidgepanion/Finale.png");
 }
 
-#immersive-grid{
-  background-image: url("gallery-img/Imm-Sch-Header.jpg");
+#grid-player-journey {
+  background-image: url("work/op-36/player-journey-report/header-player-journey.webp");
+}
+
+#grid-starter-kit {
+  background-image: url("work/op-36/starter-kit/header-starter-kit.webp");
+}
+
+#grid-free-coach {
+  background-image: url("work/op-36/free-coach-account/header-free-coach.webp");
+}
+
+#grid-community-map {
+  background-image: url("work/op-36/community-map/header-community-map.webp");
+}
+
+#grid-academy-display {
+  background-image: url("work/op-36/academy-display/header-academy-display.webp");
+}
+
+#grid-op36-more {
+  background-image: url("work/op-36/more/header-op36-other.webp");
+}
+
+#grid-immersive-scholar {
+  background-image: url("work/immersive-scholar/header-immersive-scholar.webp");
+}
+
+#grid-assorted-logos {
+  background-image: url("work/freelance/logos/header-assorted-logos.webp");
 }
 
 /*||||||||||||||||||||||||||||||||||||||||*/
@@ -642,15 +678,25 @@ footer {
 
 /* Name of project at the top */
 .project-name {
-  padding-top: var(--heading-top-padding);
+  margin-top: var(--heading-top-padding);
   font-size: var(--heading-font-size);
 }
 
 /* Short description/subtitle below the project name */
 .subtitle {
   font-size: var(--subtitle-size);
-  padding: 0px;
-  padding-bottom: 25px;
+  margin: 0px;
+  margin-top: var(--secondary-spacing);
+  margin-bottom: var(--secondary-spacing);
+  font-weight: 400;
+}
+
+.employer-name {
+  font-size: 0.75rem;
+  color: rgb(var(--secondary-color));
+  text-align: center;
+  margin-top: var(--secondary-spacing);
+  margin-bottom: var(--primary-spacing);
 }
 
 /* Headings for Overview, Process, and Links sections */
@@ -672,17 +718,18 @@ footer {
 
 /* Headings for Mission, Playthrough, and Results sections (in Process section) */
 .story-chapter {
-  font: var(--story-chapter-font);
   text-align: var(--story-heading-text-align);
-  margin-top: var(--secondary-spacing);
+  font: var(--story-chapter-font);
+  margin-top: var(--primary-spacing);
   margin-bottom: var(--secondary-spacing);
 }
 
 /* Any headings within the story chapters */
 .story-subchapter {
-  font: var(--story-subchapter-font);
   text-align: var(--story-heading-text-align);
-  margin-top: var(--secondary-spacing);
+  font: var(--story-subchapter-font);
+  margin: var(--secondary-spacing) 0px;
+  font-weight: 600;
 }
 
 /* Links in a list after the end of a story */
@@ -832,8 +879,6 @@ iframe {
     --slideshow-max-width: 100vw;
     --game-name-size: 60px;
     --press-start-font-size: 18px;
-    --press-start-button-height: 7.5vh;
-    --press-start-button-width: 30vw;
     --welcome-text-size: 21px;
 
     /********************/
@@ -867,7 +912,7 @@ iframe {
     /********************/
     /***** SITEWIDE *****/
     /********************/
-    --main-content-padding: var(--primary-spacing) 5vw var(--top-nav-height) 5vw;
+    --main-content-padding: 0vw 5vw var(--top-nav-height) 5vw;
 
     /* Typography */
     --para-padding: 0vh 5vw;
@@ -881,7 +926,6 @@ iframe {
     /********************/
     --start-screen-height: calc(100vh - 95px);
     --game-name-size: 48px;
-    --press-start-button-width: 40vw;
     --welcome-text-size: 18px;
 
     /********************/
@@ -928,6 +972,6 @@ iframe {
 @media (max-width: 425px) {
   :root {
     /* --heading-font-size: 24px; */
-    --subtitle-size: 18px;
+    --subtitle-size: 20px;
   }
 }
