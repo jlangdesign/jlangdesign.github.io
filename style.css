@@ -25,7 +25,7 @@
   /* Color scheme */
   --primary-color: 54, 69, 79; /* charcoal (#36454f) */
   --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
-  --secondary-color-darker: 44, 127, 140; /* darker version of powderblue for accessibility */
+  --secondary-color-darker: 40, 116, 128; /* darker version of powderblue for accessibility */
   --tertiary-color: 0, 0, 96; /* navy (#000060) */
   --main-bg-color: rgb(33, 42, 49); /* charcoal minus 10% lightness */
 
@@ -268,6 +268,7 @@ figure {
 #logo {
   width: var(--logo-side-length);
   height: var(--logo-side-length);
+  aspect-ratio: 1 / 1;
   z-index: 110;
   margin: var(--logo-margin);
 }
@@ -523,6 +524,7 @@ figure {
   z-index: 12;
   height: 100%;
   width: 100%;
+  aspect-ratio: 1 / 1;
   display: none;
   opacity: 0.15;
 }
@@ -631,6 +633,7 @@ footer {
 #footer-logo {
   height: 36px;
   width: auto;
+  aspect-ratio: 1 / 1;
 }
 
 #contact, #copyright {
@@ -764,6 +767,7 @@ footer {
 /* All images */
 .project-media {
   width: var(--project-media-width);
+  aspect-ratio: 16 / 9;
   display: block;
   margin: auto;
   margin-bottom: var(--secondary-spacing);
