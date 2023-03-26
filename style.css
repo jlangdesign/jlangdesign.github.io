@@ -25,7 +25,7 @@
   /* Color scheme */
   --primary-color: 54, 69, 79; /* charcoal (#36454f) */
   --secondary-color: 176, 224, 230; /* powderblue (#b0e0e6) */
-  --secondary-color-darker: 44, 127, 140; /* darker version of powderblue for accessibility */
+  --secondary-color-darker: 40, 116, 128; /* darker version of powderblue for accessibility */
   --tertiary-color: 0, 0, 96; /* navy (#000060) */
   --main-bg-color: rgb(33, 42, 49); /* charcoal minus 10% lightness */
 
