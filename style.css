@@ -772,6 +772,7 @@ footer {
   margin: auto;
   margin-bottom: var(--secondary-spacing);
   border-radius: var(--image-border-radius);
+  color: white; /* For alt text */
 }
 
 /* PDF files */
