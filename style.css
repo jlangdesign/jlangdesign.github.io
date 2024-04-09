@@ -123,14 +123,14 @@ body {
   margin: auto;
 }
 
-/* Divs for the page to jump to so the topnav doesn't overlap with targeted content */
-.anchor {
+/* Pseudo-elements for the page to jump to so the topnav doesn't overlap with targeted content */
+.jump-to:before {
+  content: '';
   display: block;
   position: relative;
-    top: calc((2 * var(--top-nav-padding) + var(--top-nav-height)) * -1);
-  height: 0px;
+  margin-top: calc((2 * var(--top-nav-padding) + var(--top-nav-height)) * -1);
+  height: calc((2 * var(--top-nav-padding) + var(--top-nav-height)));
   width: 0px;
-  visibility: hidden;
 }
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
