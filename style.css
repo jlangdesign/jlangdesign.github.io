@@ -582,6 +582,10 @@ figure {
   background-image: url("personal/pidgepanion/Finale.png");
 }
 
+#grid-locksmith-service {
+  background-image: url("work/keyme/locksmith-service-request/header-locksmith-service.webp");
+}
+
 #grid-player-journey {
   background-image: url("work/op-36/player-journey-report/header-player-journey.webp");
 }
