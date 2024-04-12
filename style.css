@@ -123,14 +123,14 @@ body {
   margin: auto;
 }
 
-/* Divs for the page to jump to so the topnav doesn't overlap with targeted content */
-.anchor {
+/* Pseudo-elements for the page to jump to so the topnav doesn't overlap with targeted content */
+.jump-to:before {
+  content: '';
   display: block;
   position: relative;
-    top: calc((2 * var(--top-nav-padding) + var(--top-nav-height)) * -1);
-  height: 0px;
+  margin-top: calc((2 * var(--top-nav-padding) + var(--top-nav-height)) * -1);
+  height: calc((2 * var(--top-nav-padding) + var(--top-nav-height)));
   width: 0px;
-  visibility: hidden;
 }
 
 /*|||||||||||||||||||| TEXT ||||||||||||||||||||*/
@@ -582,6 +582,10 @@ figure {
   background-image: url("personal/pidgepanion/Finale.png");
 }
 
+#grid-locksmith-service {
+  background-image: url("work/keyme/locksmith-service-request/header-locksmith-service.webp");
+}
+
 #grid-player-journey {
   background-image: url("work/op-36/player-journey-report/header-player-journey.webp");
 }
@@ -772,6 +776,7 @@ footer {
   margin: auto;
   margin-bottom: var(--secondary-spacing);
   border-radius: var(--image-border-radius);
+  color: white; /* For alt text */
 }
 
 /* PDF files */
