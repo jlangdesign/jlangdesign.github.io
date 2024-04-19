@@ -183,6 +183,11 @@ figure {
   margin: 0px;
 }
 
+img {
+  color: white; /* For alt text */
+  font-family: var(--body-font); /* For alt text */
+}
+
 /* Formatting for text in anchors */
 .links {
   text-decoration: underline rgb(var(--secondary-color)) 2px;
@@ -586,6 +591,10 @@ figure {
   background-image: url("work/keyme/locksmith-service-request/header-locksmith-service.webp");
 }
 
+#grid-sms-review {
+  background-image: url("work/keyme/sms-review-solicitation/header-sms-review.webp");
+}
+
 #grid-player-journey {
   background-image: url("work/op-36/player-journey-report/header-player-journey.webp");
 }
@@ -776,7 +785,6 @@ footer {
   margin: auto;
   margin-bottom: var(--secondary-spacing);
   border-radius: var(--image-border-radius);
-  color: white; /* For alt text */
 }
 
 /* PDF files */
