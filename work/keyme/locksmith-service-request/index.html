@@ -79,11 +79,147 @@
 						<li><strong>Phase 1</strong> - We started with an unpolished, existing locksmith service request form in our web portal and completely redesigned it to improve the user experience. This form and web portal existed for customers that discovered KeyMe's vehicle key services by browsing the internet (without visiting a kiosk).</li>
 						<li><strong>Phase 2</strong> - We then modified the kiosk flow to send the form instead of accepting all contact info directly. We also modified the web form slightly to improve the transition from kiosk to web, like autofilling some fields if the customer came from the kiosk and not directly from the KeyMe website. This flow benefits customers that tried duplicating their vehicle key at a KeyMe kiosk but couldn't do so because they actually needed a locksmith.</li>
 					</ul>
-          <p>
-            (Full process story currently in progress - stay tuned!)
-          </p>
+					<p>
+						Don't have time to read the process?
+						<a rel="noreferrer noopener" href="#results" class="links">Jump to Results!</a>
+					</p>
 
-          <h3 class="story-section">Results</h3>
+          <h3 class="story-section">Process</h3>
+
+					<h4 class="story-chapter">Objectives</h4>
+					<p>
+						We mainly wanted to increase the number of jobs booked for vehicle key duplication via kiosk. However, we also wanted to increase the number booked directly from our web portal form. From prior research on our customers, we were planning to connect the kiosk experience to the web portal experience (or something similar) so our customers would have an easier time typing. Thus, we had two objectives:
+					</p>
+					<ol>
+						<li>Make the service request form in our web portal easier to fill out.</li>
+						<li>
+							Streamline info collection for vehicle key dupliication jobs from kiosk customers.
+							<ol>
+								<li>We hypothesized that if the new web form was successful, we could direct kiosk customers to it instead of asking them to type the info directly into the kiosk. Personal devices are easier to type on than large kiosk screens.</li>
+							</ol>
+						</li>
+					</ol>
+
+					<h4 class="story-chapter">Research</h4>
+
+					<h5 class="story-subchapter">User Research</h5>
+					<p>
+						We couldn't interview actual customers at the time due to security concerns and financial constraints. Instead, we asked others from the organization to provide feedback on current and proposed designs from a customer's perspective. This and data from the analytics team allowed us to better understand our customers and their journeys.
+					</p>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							According to our analytics team, the average kiosk customer is female, in their mid-20s to mid-40s, and going through a stressful time in their lives (like buying a house). We didn't have demographic data from our web portal users, so we used our kiosk customer persona for the web portal redesign.
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							[User journey map as-is - web]
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							[User journey map as-is - kiosk]
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							[Task flow as-is - web]
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							[Task flow as-is - kiosk]
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							[Additional insights]
+						</figcaption>
+          </figure>
+
+					<h5 class="story-subchapter">Design Research</h5>
+					<p>
+						Additionally, we studied precedents and design heuristics, then used those to further audit our current designs. We couldn't find examples from competitors, but we did study long, step-by-step flows from other companies.
+					</p>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							Examples of onboarding, checkout, and wizard flows. They traditionally require multiple steps and input fields, yet they make long processes feel manageable.
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							Examples of wizard/form design heuristics from Nielsen Norman Group (NN/g) and Baymard Institute.
+						</figcaption>
+          </figure>
+
+					<h4 class="story-chapter">Ideation</h4>
+					<p>
+						Based on our research, we brainstormed several different options for the web portal form and kiosk experiences.
+					</p>
+
+					<h5 class="story-subchapter">Web Portal Form</h5>
+					<p>
+						Our ideation for the web portal form focused on the navigation system between steps. We explored different questions, orders of questions, and question formats as well.
+					</p>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							Different ideas for form navigation. Some required more development effort but provided better UX, while others were easier to implement but weren't as ideal UX-wise.
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							Examples of changes to questions and the order of questions.
+						</figcaption>
+          </figure>
+
+					<h5 class="story-subchapter">Kiosk</h5>
+					<p>
+						The kiosk is more sensitive to changes and requires a longer release cycle, so we didn't explore any large layout changes - only minor changes to copy and imagery. We did consider linking to the form via a QR code on the screen vs. asking the customer for their mobile number. However, the QR code could've caused accessibility issues, and we would've had to test libraries for generating unique codes. The mobile number input was the safest choice and the lowest level of effort for the time being.
+					</p>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							Design variations for the first page where the customer learns that they will need to book a locksmith.
+						</figcaption>
+          </figure>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							Design variations for the second page where the kiosk directs the customer to the web portal form, either by scanning a code or entering their mobile number.
+						</figcaption>
+          </figure>
+
+					<h5 class="story-subchapter">Design System</h5>
+					<p>
+						One detail that users noted was that the kiosk's and web portal form's UIs looked very different, as if they were from different companies. We tried designs where the kiosk's more colorful design system matched the web portal form's more minimalist design system - and vice versa. However, changing the kiosk to match would've taken too long. On the other hand, changing the web portal to match would've resulted in color contrast issues. Therefore, we kept both design systems as-is for the time being.
+					</p>
+					<figure>
+  	        <img src="" alt="[alt]" class="project-media">
+						<img src="" alt="[alt]" class="project-media">
+            <figcaption class="caption">
+							How the kiosk and web portal form would look if they had the same design systems.
+						</figcaption>
+          </figure>
+
+					<h4 class="story-chapter">Prototyping</h4>
+					<p>
+					</p>
+
+					<h4 class="story-chapter">Development</h4>
+					<p>
+					</p>
+
+					<h4 class="story-chapter">Results</h4>
           <p>
             Within two weeks of the new web form's release, the number of locksmith jobs booked for vehicle key duplication increased by 400%. Although the conversion from kiosk to web wasn't as high as we had hoped for, the conversion from the web form was much better than expected. Therefore, we considered this project a success.
           </p>
@@ -135,176 +271,13 @@
 						</figcaption>
           </figure>
 
-          <!--
-					<h3 class="story-section">Process</h3>
-
-					<h4 class="story-chapter">Objectives</h4>
-					<figure>
-  	        <img src="player-journey-user-journey.webp" alt="Old and new user journeys for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<ol>
-						<li>Make it easier for the coach to create end-of-semester progress reports for their students and parents.</li>
-						<li>Show students their progress in each part of the Op 36 program so they feel like they are improving, which will increase retention.</li>
-					</ol>
-
-          <h4 class="story-chapter">Research</h4>
-					<figure>
-  	        <img src="player-journey-research-1.webp" alt="Research for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-          <p>
-	          Due to feature requests and coaches’ current methods for assembling reports, we knew that it wasn’t easy for coaches to present progress at end of the semester to students. We needed this report to complete the Op 36 lifecycle of playing, training, and learning.
-	        </p>
+					<h4 class="story-chapter">Reflection</h4>
 					<p>
-						We had an idea of what coaches would want, but we wanted to verify our assumptions. Thus, we asked a few of our coaches, “If you could generate a 1-page progress report for a student, what would you include?”
-					</p>
-					<figure>
-  	        <img src="player-journey-research-2.webp" alt="Research for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<p>
-						We limited the first version to 1 page because we wanted to:
-					</p>
-					<ol>
-						<li>Have an MVP to test as soon as possible</li>
-						<li>Know what was most important to our coaches</li>
-						<li>Keep it easy for parents and students to digest</li>
-					</ol>
-
-					<h4 class="story-chapter">Ideation</h4>
-					<figure>
-  	        <img src="player-journey-ideation-1.webp" alt="Ideation for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-          <p>
-	          From our coaches’ responses, we created a large list of desired items. Then, we designed a few iterations that included the most common responses - trying to squeeze as much as possible into one page - then shared it with our coaches for additional feedback.
-	        </p>
-
-					<h4 class="story-chapter">Prototyping</h4>
-          <p>
-	          To our surprise, we learned that the report now had too much data! Sure, it was useful, but parents and students probably wouldn’t feel excited or want to read through all of those tiny numbers, which defeats its purpose. It didn’t look friendly.
-	        </p>
-					<figure>
-  	        <img src="player-journey-ideation-2.webp" alt="Ideation for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<p>
-						One coach suggested that we design it to resemble an award as opposed to a page with rows and rows of numbers and icons (AKA a typical report). He shared his thoughts through a call with us, so we also got to learn more about his current process for generating reports.
-					</p>
-					<figure>
-  	        <img src="player-journey-ideation-3.webp" alt="Ideation for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<p>
-						That coach’s reasoning for the award concept made sense, and we knew that our printed certificates were popular products in our store, so we decided to design a few more variations with that in mind.
-					</p>
-					<figure>
-  	        <img src="player-journey-ideation-4.webp" alt="Ideation for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<p>
-						We reduced the amount of data displayed, made the numbers and icons bigger, and added a big badge. Each variation had slightly more data in certain sections than others.
-					</p>
-					<p>
-						From all of the research we had done so far, we felt like we were pretty close to an initial solution.
-					</p>
-					<p>
-						We sent out an email poll so we could quickly reach out to all of our coaches, get their vote for their favorite design, and see if there were any other critical pieces missing.
-					</p>
-					<p>
-						A few days after sending the poll, we reviewed the results. There were a few pieces of feedback, but we figured we could incorporate those in a later iteration - they didn’t sound like dealbreakers. Thus, we proceeded with the most popular design.
-					</p>
-					<figure>
-  	        <img src="player-journey-ideation-5.webp" alt="Ideation for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<p>
-						Finally, we had to design the flow for selecting the students and generating the reports in our web app. Using what we had learned from both historic and recent research, we included the ability to:
-					</p>
-					<ol>
-						<li>Select multiple students at one time</li>
-						<li>Apply a generic note to all students if desired</li>
-						<li>
-							Export the reports as one file for easy printing
-							<ol>
-								<li>In the future, we also want the ability to export them separately for easier emailing</li>
-							</ol>
-						</li>
-					</ol>
-
-          <h4 class="story-chapter">Development</h4>
-					<figure>
-  	        <img src="player-journey-development.webp" alt="Development for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-          <p>
-	          As usual, we prepared the project for handoff to our developer with tasks, specs, endpoint response data to use, and test cases (including edge cases).
-	        </p>
-					<p>
-						However, after the developer was done, I later refactored the code for the report itself to improve the structure, styling, and readability.
 					</p>
 
-          <h4 class="story-chapter">Marketing + Release</h4>
-					<figure>
-  	        <img src="player-journey-marketing.webp" alt="Marketing for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-          <p>
-	          Prior to release, I also worked on a drip campaign with my teammate. After deciding on the timing, messaging, and graphics, we launched the new report, then continued to remind our coaches about its existence and utility over time through our emails.
-	        </p>
+					<h4 class="story-chapter">Next Steps</h4>
 					<p>
-						We planned the emails based off of the time of the semester. For example, during the middle of the semester, we promoted it as a mid-semester progress report, whereas near the end, we pitched it as a great way for your students to remember you and your program after the last day of classes.
 					</p>
-
-          <h4 class="story-chapter jump-to" id="results">Results</h4>
-					<figure>
-  	        <img src="player-journey-result.webp" alt="Result for Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-          <p>
-	          After releasing, we got a lot of emails where coaches told us they were excited to use the report, showed us how they were using the report, and/or shared ideas for potential improvements, so we knew our coaches were using it. It sounds like it was a success.
-	        </p>
-					<p>
-						We knew our coaches are happy with it, but we still had to measure our retention over time to see if the report helped us meet the business objective of improved retention.
-					</p>
-					<figure>
-  	        <img src="player-journey-highlights.webp" alt="Breakdown of Player Journey Report." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-					<figure>
-  	        <img src="player-journey-flow.webp" alt="Flow for generating Player Journey Reports." class="project-media">
-            <figcaption class="caption">
-						</figcaption>
-          </figure>
-
-          <h4 class="story-chapter">Reflection</h4>
-          <p>
-	          Judging from the feedback, the Player Journey Report was one of our more successful features. However, it could have been even better if we were able to get more feedback from other types of users, such as the recipients of the reports (students and parents) and coaches that don’t normally use our reporting features.
-	        </p>
-					<p>
-						We also ran into a lot of technical issues along the way, so we didn’t have time to set up a good tracking mechanism to uncover usage patterns.
-					</p>
-					<ul>
-	          <li>Address technical debt ASAP. Our outdated React version meant that we were stuck with a library that didn’t allow us to include the student’s profile photo, which would make the reports easier to distinguish from one another and personalize them for the students.</li>
-						<li>Talk to coaches that don’t use reports at all and learn why.</li>
-						<li>Get feedback from actual parents and students.</li>
-						<li>Get feedback on the report generation flow.</li>
-						<li>Start thinking about what data to track earlier on in the project so we have more time to incorporate tracking.</li>
-	        </ul>
-          -->
 
 	        <h3 class="story-section">Links</h3>
 
