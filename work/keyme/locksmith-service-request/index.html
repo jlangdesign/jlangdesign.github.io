@@ -93,7 +93,7 @@
 					<ol>
 						<li>Make the service request form in our web portal easier to fill out.</li>
 						<li>
-							Streamline info collection for vehicle key dupliication jobs from kiosk customers.
+							Streamline info collection for vehicle key duplication jobs from kiosk customers.
 							<ol>
 								<li>We hypothesized that if the new web form was successful, we could direct kiosk customers to it instead of asking them to type the info directly into the kiosk. Personal devices are easier to type on than large kiosk screens.</li>
 							</ol>
@@ -172,7 +172,7 @@
 					<figure>
   	        <img src="" alt="[alt]" class="project-media">
             <figcaption class="caption">
-							Different ideas for form navigation. Some required more development effort but provided better UX, while others were easier to implement but weren't as ideal UX-wise.
+							Different ideas for form navigation. Some required a higher LOE but provided better UX, while others were easier to implement but weren't as ideal UX-wise.
 						</figcaption>
           </figure>
 					<figure>
@@ -184,7 +184,7 @@
 
 					<h5 class="story-subchapter">Kiosk</h5>
 					<p>
-						The kiosk is more sensitive to changes and requires a longer release cycle, so we didn't explore any large layout changes - only minor changes to copy and imagery. We did consider linking to the form via a QR code on the screen vs. asking the customer for their mobile number. However, the QR code could've caused accessibility issues, and we would've had to test libraries for generating unique codes. The mobile number input was the safest choice and the lowest level of effort for the time being.
+						The kiosk is more sensitive to changes and requires a longer release cycle, so we didn't explore any large layout changes - only minor changes to copy and imagery. We did consider linking to the form via a QR code on the screen vs. asking the customer for their mobile number. However, the QR code could've caused accessibility issues, and we would've had to test libraries for generating unique codes. The mobile number input was the safest choice and the lowest level of effort (LOE) for the time being.
 					</p>
 					<figure>
   	        <img src="" alt="[alt]" class="project-media">
@@ -213,16 +213,84 @@
 
 					<h4 class="story-chapter">Prototyping</h4>
 					<p>
+						We tested the web portal designs and kiosk designs separately with our users and locksmiths, then combined the best-performing designs from each into a single prototype for final testing.
 					</p>
+					<p>
+						The key takeaways were:
+					</p>
+					<ol>
+						<li>
+							Our users preferred separate pages for each question in the form, and they liked the progress bar that displayed each step with its label.
+							<ol>
+								<li>Even though it would require a higher LOE, the progress bar made the form least overwhelming while still providing transparency.</li>
+								<li>The accordions occupied too much space vertically and felt too busy on mobile. They might have worked better if the form had fewer steps.</li>
+							</ol>
+						</li>
+						<li>
+							On the kiosk page with the key benefits, the key benefits in the same row were easier to digest instead of three separate rows.
+						</li>
+						<li>
+							Our locksmiths said the form needs to ask for the customer's general availability, not a specific date and time.
+							<ol>
+								<li>Locksmiths can't guarantee that the customer's chosen date and time are available, so they need a range of dates and times instead.</li>
+								<li>Therefore, we can only collect the customer's preferred days of the week and time periods (morning or afternoon).</li>
+							</ol>
+						</li>
+						<li>
+							If a customer was coming to the form from the link provided by the kiosk, the form needs a "Welcome" page to connect the two.
+							<ol>
+								<li>It serves as a transition and sets expectations for the key duplication process.</li>
+								<li>We wanted to add a Welcome page for both the web-only and kiosk-to-web customers, but we received some pushback for the former. After some discussions, we decided we would release MVP without it for the web-only flow, then consider adding it post-MVP.</li>
+							</ol>
+						</li>
+					</ol>
+					<p>We updated the designs accordingly, collected feedback to make sure the designs matched expectations, and got sign-off to begin.</p>
 
 					<h4 class="story-chapter">Development</h4>
 					<p>
+						During implementation and user acceptance testing, we found more changes to make to the form:
 					</p>
+					<ol>
+						<li>
+							Ask the customer for their car color and if their car has remote start.
+							<ol>
+								<li>Although car color shouldn't affect the key itself, locksmiths need to collect it to verify that the car belongs to the customer requesting service.</li>
+							</ol>
+						</li>
+						<li>
+							On mobile, convert the horizontal progress bar to a dropdown for easier implementation.
+						</li>
+						<li>
+							On the Welcome page, add a checkbox for the customer to check after reading the list of items they will need to bring to their appointment.
+							<ol>
+								<li>By checking the box, the customer confirms that they understand that they will need to bring these items.</li>
+							</ol>
+						</li>
+					</ol>
+					<p>
+						We were also asked to update the price displayed on the form and kiosk and create an email to be sent when an appointment has been confirmed.
+					</p>
+					<p>
+						While implementing all of the requested changes and gathering approval, we hdd spare time, so we also updated two other areas in the portal:
+					</p>
+					<ol>
+						<li><strong>The Vehicle Lockouts service request form.</strong> We applied the same design system as Vehicle Key Duplication for consistency.</li>
+						<li><strong>The Order Status feature.</strong> Not only did we update the design system to match, but we added more granular statuses for more transparency and made the feature more mobile-friendly.</li>
+					</ol>
 
-					<h4 class="story-chapter">Results</h4>
+					<h4 class="story-chapter" id="results">Results</h4>
           <p>
-            Within two weeks of the new web form's release, the number of locksmith jobs booked for vehicle key duplication increased by 400%. Although the conversion from kiosk to web wasn't as high as we had hoped for, the conversion from the web form was much better than expected. Therefore, we considered this project a success.
+            Within two weeks of the new web form's release, the number of locksmith jobs booked for vehicle key duplication increased by 400%. Although the conversion from kiosk to web (getting customers to input their mobile number and open the form) wasn't as high as we had hoped for, the conversion from the web form was much better than expected. Therefore, we considered this project a success.
           </p>
+					<p>
+						We noticed that within the form, the biggest dropoff points were:
+					</p>
+					<ol>
+						<li>From Car & Key to Service Location</li>
+						<li>From Service Summary to Checkout</li>
+						<li>From Service Location to Scheduling</li>
+					</ol>
+					<p>so we made a point to address these in post-MVP.</p>
 					<figure>
   	        <img src="locksmith-service-user-journey.webp" alt="User journeys before and after the kiosk and web form updates. In the old journey, the customer merely sent their contact info to the locksmith via the kiosk, and the locksmith and customer had to have long conversations to get all of the info needed for the job. In the new journey, the customer fills out a web form so the locksmith has all of the info they need without a long conversation." class="project-media">
             <figcaption class="caption">
@@ -273,11 +341,19 @@
 
 					<h4 class="story-chapter">Reflection</h4>
 					<p>
+						Considering the project scope and limitations, it went fairly smoothly. If we were to do this again, we should:
 					</p>
+					<ul>
+						<li>Get 1-2 paid users not affiliated with or familiar with us to through the entire kiosk and web portal form flows and gather their feedback. The more user feedback, the better, but we need to keep budget and time constraints in mind.</li>
+						<li>Finalize the requirements and list of questions with the locksmith team before implementation to reduce the number of last-minute changes.</li>
+					</ul>
 
 					<h4 class="story-chapter">Next Steps</h4>
-					<p>
-					</p>
+					<ol>
+						<li>Get user testing for both the web portal and kiosk flows to investigate the three biggest points of dropoff.</li>
+						<li>Add a Welcome page to the form for web-only customers for consistency and transparency.</li>
+						<li>Plan the implementation of a unified design system across kiosk, web portal, website, email, and other touchpoints.</li>
+					</ol>
 
 	        <h3 class="story-section">Links</h3>
 
