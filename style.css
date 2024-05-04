@@ -772,7 +772,6 @@ footer {
 /* Captions for images, videos, PDFs, etc. */
 .caption {
   display: block;
-  text-align: center;
   margin-bottom: var(--primary-spacing);
 }
 
