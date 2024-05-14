@@ -66,7 +66,7 @@
 						One of the main motivators for copying a key at a KeyMe kiosk is social proof - aka ratings and reviews. The more ratings a given kiosk has, the more credible it seems. However, while every kiosk has customers, not all of them leave reviews on their experiences. Therefore, kiosks with fewer reviews seem less trustworthy, and new customers are reluctant to try them out. We needed to encourage more reviews to draw more customers.
 					</p>
 					<p>
-						At the time, we solicited reviews via email. After a customer's order was fulfilled, the customer received an email asking about their experience. They were then directed to the Google Buisiness Profile (GBP) page for the kiosk and asked to leave a review. This method was ineffective because:
+						At the time, we solicited reviews via email. After a customer's order was fulfilled, the customer received an email asking about their experience. They were then directed to the Google Business Profile (GBP) page for the kiosk and asked to leave a review. This method was ineffective because:
 					</p>
 					<ul>
 						<li>Not every customer reads every email.</li>
@@ -86,7 +86,7 @@
 						<li>The SMS made it easier to get help (if needed) and then leave a review since both actions were on the same page.</li>
 					</ul>
 					<p>
-						Due to the complexity of order status notifications for shipped keys (vs. keys dispensed right from the kiosk), we limited our SMS receipts feature to dispense-only orders - which also happened to be our most common type of order. Customers that placed orders including at least one shipped key still received the traditional email receipt and review solicitation. In a future iteration, the feature could be expanded to cover shipped orders too.
+						Due to the complexity of order status notifications for mailed keys (vs. keys dispensed right from the kiosk), we limited our SMS receipts feature to dispense-only orders - which also happened to be our most common type of order. Customers that placed orders including at least one mailed key still received the traditional email receipt and review solicitation. In a future iteration, the feature could be expanded to cover mailed orders too.
 					</p>
 					<p>
 						Don't have time to read the process?
@@ -117,23 +117,23 @@
 						Because KeyMe kiosks offered both dispensed keys (dispensed immediately from the kiosk) and mailed keys (sent from our fulfillment center after a few days), we also had to consider multiple user journeys and task flows.
 					</p>
 					<figure>
-  	        <img src="sms-review-persona.webp" alt="A profile of a typical kiosk customer named Angelina. She is a young mom who recently bought a new house and a used car, and she wants a spare car key. She struggles to find options that are both affordable and convenient." class="project-media">
+  	        <img src="sms-review-persona.webp" alt="A profile of a typical kiosk customer named Silvia. She is a first-time homeowner that wants to copy her key so she can lease rooms out. She struggles to find options that are both affordable and convenient. Silvia also doesn't like phone calls - she prefers asynchronous methods like email or contact forms." class="project-media">
             <figcaption class="caption">
 							The average kiosk customer is female, in their mid-20s to mid-40s, and going through a stressful time in their lives (like buying a house). Customers' most common reasons for contacting our CX team are to request refunds on orders and get order status updates, so it's important that we make both easy to do.
 						</figcaption>
           </figure>
 					<figure>
-  	        <img src="sms-review-old-user-journey-dispensed.webp" alt="The old user journey for the web portal form. Angelina discovers the form, and it seems like a convenient option at first, but she is ultimately deterred by its length and lack of transparency." class="project-media">
-						<img src="sms-review-old-user-journey-mailed.webp" alt="The old user journey for the web portal form. Angelina discovers the form, and it seems like a convenient option at first, but she is ultimately deterred by its length and lack of transparency." class="project-media">
+  	        <img src="sms-review-old-user-journey-dispensed.webp" alt="The old user journey for dispensed-only orders. Silvia orders keys dispensed at the kiosk. When she tries them out at home, one of them doesn't work. She struggles to contact customer support because she has to dig through her emails, but she manages to contact them and get a refund. She also doesn't notice the review solicitation email." class="project-media">
+						<img src="sms-review-old-user-journey-mailed.webp" alt="The old user journey for mailed orders. Silvia orders a mix of dispensed and mailed keys. She tries the mailed keys when they arrive, and one of them doesn't work. She struggles to contact customer support because she has to dig through her emails, but she manages to contact them and get a refund. She doesn't notice the review solicitation email though." class="project-media">
             <figcaption class="caption">
-							The process of ordering a key is simple. But because all post-purchase communications are sent via email, the customer might not see them. Email addresses are also tedious to enter into the kiosk.
+							The process of ordering a key is simple. But because all post-purchase communications are sent via email, the customer might not see them, especially for orders that don't require tracking (i.e. keys dispensed right away). Email addresses are also tedious to enter into the kiosk.
 						</figcaption>
           </figure>
 					<figure>
-  	        <img src="sms-review-old-flow-dispensed-1.webp" alt="The old task flow for the web portal form, part 1 of 4. The customer finds the form online, lets us know that they have a working key, enters their address, and enters their contact info." class="project-media">
-						<img src="sms-review-old-flow-dispensed-2.webp" alt="The old task flow for the web portal form, part 2 of 4. The customer selects the make, model, and year of their car. Then, they choose an igntion type and indicate if they have buttons or not. After that, they share more info about their situation, like if they have proof of registration." class="project-media">
-						<img src="sms-review-old-flow-mailed-1.webp" alt="The old task flow for the web portal form, part 1 of 4. The customer finds the form online, lets us know that they have a working key, enters their address, and enters their contact info." class="project-media">
-						<img src="sms-review-old-flow-mailed-2.webp" alt="The old task flow for the web portal form, part 2 of 4. The customer selects the make, model, and year of their car. Then, they choose an igntion type and indicate if they have buttons or not. After that, they share more info about their situation, like if they have proof of registration." class="project-media">
+  	        <img src="sms-review-old-flow-dispensed-1.webp" alt="The old task flow for dispensed-only orders, part 1 of 2. The customer pays for their order, enters and confirms their email address for the receipt, waits for the keys to cut, and then their order session ends." class="project-media">
+						<img src="sms-review-old-flow-dispensed-2.webp" alt="The old task flow for dispensed-only orders, part 2 of 2. The customer receives the receipt via email, then receives a review solicitation email." class="project-media">
+						<img src="sms-review-old-flow-mailed-1.webp" alt="The old task flow for mailed orders, part 1 of 2. The customer enters their shipping info (name, email, and address), verifies their address, pays for their order, waits for keys to cut (if any dispensed keys are part of the order), and then their order session ends."  class="project-media">
+						<img src="sms-review-old-flow-mailed-2.webp" alt="The old task flow for mailed orders, part 2 of 2. The customer receives the receipt via email. When their order has shipped, they receive an email notification. Lastly, after they have received their order, they get a review solicitation email too." class="project-media">
             <figcaption class="caption">
 							The flows for dispensed and mailed keys are similar. The main difference is when the customer enters their email. For dispensed-only orders, customers enter it after paying for their order. For orders with at least 1 mailed key, they enter it on the address entry page prior to checkout.
 						</figcaption>
@@ -141,7 +141,7 @@
 
 					<h5 class="story-subchapter">Design Research</h5>
 					<p>
-						Inspired by <a rel="noreferrer noopener" href="https://www.podium.com/customer-stories/jackson-hewitt/" target="_blank" class="links">Jackson Hewitt's success story</a>, leadership wanted to try soliciting reviews via text. Therefore, we studied design precedents and heuristics for:
+						Inspired by <a rel="noreferrer noopener" href="https://www.podium.com/customer-stories/jackson-hewitt/" target="_blank" class="links">Jackson Hewitt's success story</a>, our leadership wanted to try soliciting reviews via text. Therefore, we studied design precedents and heuristics for:
 					</p>
 					<ul>
 						<li>Large displays like desktops, kiosks, or posters that text to your phone or give you QR codes to scan</li>
@@ -149,9 +149,9 @@
 						<li>Review solicitation methods</li>
 					</ul>
 					<figure>
-  	        <img src="sms-review-precedents-1.webp" alt="" class="project-media">
-						<img src="sms-review-precedents-2.webp" alt="" class="project-media">
-						<img src="sms-review-precedents-3.webp" alt="" class="project-media">
+  	        <img src="sms-review-precedents-1.webp" alt="Precedents for cross-platform communication (between mobile devices and large displays like desktops, posters and kiosks). Examples include scanning QR codes, texting to a number to get more info, and entering a phone number for an app to send a text to." class="project-media">
+						<img src="sms-review-precedents-2.webp" alt="Precedents for transactional notifications. Examples include order status, refund status, order confirmation, and receipts." class="project-media">
+						<img src="sms-review-precedents-3.webp" alt="Precedents for feedback solicitation. Examples for review formats include freeform text, choosing emojis or star values, and numerical scales. Examples for solicitation formats include text messages, emails, and in-app pop-ups with or without external links." class="project-media">
             <figcaption class="caption">
 							Examples of cross-platform interactions (large displays to mobile), receipts and order status notifications sent via SMS, and review solicitation methods.
 						</figcaption>
@@ -185,28 +185,28 @@
 						Additionally, we noted that most e-commerce sites offer both email and mobile order status updates, so we at least needed email for our mailed orders. Receipts for mailed orders are typically sent to customers' email addresses instead of texted to them. We recommended to our leadership that we consider keeping emails in the mailed order flow at least.
 					</p>
 					<figure>
-						<img src="sms-review-ideation-both-dispensed.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-both-mailed.webp" alt="" class="project-media">
+						<img src="sms-review-ideation-both-dispensed.webp" alt="Idea for new dispensed-only order task flow. If we want to replace the email receipt and solicitation with SMS, require the customer to enter both email and mobile, or choose between email and mobile, we need to update the email input page, email confirmation page, and session end page on the kiosk. We would also need to design an SMS receipt and a review solicitation webpage." class="project-media">
+						<img src="sms-review-ideation-both-mailed.webp" alt="Idea for new mailed order task flow. If we want to replace the email receipt and solicitation with SMS, require the customer to enter both email and mobile, or choose between email and mobile, we need to update the address entry page and session end page on the kiosk. We would also need to design an SMS receipt, SMS order shipped notification, SMS review solicitation, and a webpage for them to link to (for tracking order status, getting help, and leaving a review)." class="project-media">
             <figcaption class="caption">
-							[caption]
+							Proposed new flows and areas that would need to change if switching from email to SMS entirely, accepting both email and SMS, or allowing the customer to choose between email and SMS.
 						</figcaption>
           </figure>
 					<figure>
-						<img src="sms-review-ideation-changes-1.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-changes-2.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-changes-3.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-changes-4.webp" alt="" class="project-media">
+						<img src="sms-review-ideation-changes-1.webp" alt="Ideas for a 'Get Your Receipt' page on the kiosk that accept email, mobile number, both email and mobile number, or allow you to choose between email or mobile number." class="project-media">
+						<img src="sms-review-ideation-changes-2.webp" alt="Ideas for the kiosk page where the customer confirms the email, mobile number, or both email and mobile number they entered for their receipt." class="project-media">
+						<img src="sms-review-ideation-changes-3.webp" alt="Ideas for an address entry page on the kiosk that accept email, mobile number, both email and mobile number, or allow you to choose between email or mobile number." class="project-media">
+						<img src="sms-review-ideation-changes-4.webp" alt="Ideas for an 'End Session' page on the kiosk that display the email, mobile number, or both the email and mobile number entered for the receipt." class="project-media">
             <figcaption class="caption">
-							[caption]
+							Kiosk pages in the flow to update to accept/display only a mobile number, both email and mobile number, or either email or mobile number.
 						</figcaption>
           </figure>
 					<figure>
-						<img src="sms-review-ideation-changes-5.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-changes-6.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-changes-7.webp" alt="" class="project-media">
-						<img src="sms-review-ideation-changes-8.webp" alt="" class="project-media">
+						<img src="sms-review-ideation-changes-5.webp" alt="Ideas for converting the email receipt for dispensed-only orders to SMS and including a review solicitation. The customer gets a text with a thank you message, link to leave feedback, and order details (amount paid, order ID, and kiosk number). The link leads to a page with links to the contact form and a page to leave a review on Google." class="project-media">
+						<img src="sms-review-ideation-changes-6.webp" alt="Ideas for converting the email receipt for mailed orders to SMS. The customer gets a text with a thank you message, link to track their order and get help, and order details (amount paid, order ID, and kiosk number). The link leads to a page with the order details, a link to the detailed order tracking page, and a link to the contact form." class="project-media">
+						<img src="sms-review-ideation-changes-7.webp" alt="Ideas for converting the 'order shipped' email to SMS. The customer gets a text with a link to track their order and get help. The link leads to a page with the order details, a link to the detailed order tracking page, and a link to the contact form." class="project-media">
+						<img src="sms-review-ideation-changes-8.webp" alt="Ideas for a review solicitation text sent after the customer receives their mailed order. The customer gets a text with a thank you message, link to leave feedback, and order details (amount paid, order ID, and kiosk number). The link leads to a page with links to the contact form and a page to leave a review on Google." class="project-media">
 						<figcaption class="caption">
-							[caption]
+							New SMS flows that could replace each existing post-purchase email.
 						</figcaption>
 					</figure>
 					<p>
@@ -221,13 +221,13 @@
 						Our leadership also preferred that the solicitation be part of the SMS receipt instead of a message on the kiosk's End Session page (which appears after an order session has finished). According to historical data, we've had low interaction with QR codes elsewhere in the kiosk, and we would also have to generate a unique QR code for each kiosk. Data also suggests that customers don't pay attention to the End Session page, but our leadership thought it couldn't hurt to include a solicitation message there <em>in addition</em> to the one in the receipt.
 					</p>
 					<p>
-						For the solicitation design itself, they preferred designs based on the ones we were currently using in our review solicitation email tests.
+						For the solicitation page design itself, they preferred designs based on the ones we were currently using in our review solicitation email tests.
 					</p>
 					<figure>
-  	        <img src="sms-review-winner-dispensed.webp" alt="" class="project-media">
-						<img src="sms-review-winner-solicitation.webp" alt="" class="project-media">
+  	        <img src="sms-review-winner-dispensed.webp" alt="The flow we decided to move forward with. We decided to only test SMS receipts on dispensed-only orders. In the flow, the customer enters their mobile number for the receipt, the kiosk cuts the keys, and the order session ends. They then get an SMS receipt and review solicitation, which takes them to a page where they can get help or leave a review." class="project-media">
+						<img src="sms-review-winner-solicitation.webp" alt="The four review solicitation page designs we decided to test. They test different designs for the links to get help and links to leave a review." class="project-media">
             <figcaption class="caption">
-							[caption]
+							Flow for dispensed-only orders with SMS receipt and review solicitation plus review solicitation page designs to test. The latter is made of components (emojis, "Review us on Google" button, etc.) that we had been testing in email campaigns.
 						</figcaption>
           </figure>
 					<p>
@@ -244,24 +244,24 @@
 
           <h4 class="story-chapter" id="results">Results</h4>
 					<p>
-            We first released the feature to a subset of kiosks. Within two weeks, review volume increased by 200% to 300%. We later released to all kiosks, and after another two weeks, review volume increased by 121%. However, the average rating also dropped 28%, possibliy because we made it easier to leave any review - including bad ones.
+            We first released the feature to a subset of kiosks. Within two weeks, review volume increased by 200% to 300%. We later released to all kiosks, and after another two weeks, review volume increased by 121%. However, the average rating also dropped 28%, possibly because we made it easier to leave any review - including bad ones.
           </p>
 					<p>
 						Although a drop in rating wasn't ideal, we considered this feature successful because it increased review volume - our main goal and the most important SEO metric. Then, we started testing different landing page designs to see which one leads to the best balance between higher volume and higher ratings. We found that using emojis encourages reviews, and making it easier to get help with issues encourages more positive reviews.
 					</p>
 					<figure>
-  	        <img src="sms-review-new-user-journey-detailed-dispensed.webp" alt="" class="project-media">
+  	        <img src="sms-review-new-user-journey-detailed-dispensed.webp" alt="The new user journey for dispensed-only orders. Silvia orders keys dispensed at the kiosk. When she tries them out at home, one of them doesn't work. She is able to quickly get help because the link in the SMS receipt is easier to find. She gets a refund from customer support a day later, and she goes back to that link to leave a review." class="project-media">
             <figcaption class="caption">
-							With the new kiosk and web portal form experiences, we appear more trustworthy, the customer has an easier time filling out the form, and our locksmiths have an easier time booking jobs.
+							With the new SMS receipts and review solicitations for dispensed-only orders, customers have an easier time leaving a review and getting help. They also receive the message when the experience is fresh (right after their keys dispense), so the message feels more relevant, and they are more likely to leave a review.
 						</figcaption>
           </figure>
 					<figure>
-  	        <img src="sms-review-flow-1.webp" alt="Flow of placing an order on kiosk and being asked to leave a review at the end. After the customer places their order, the kiosk asks them to enther their mobile number for their receipt. The customer enters and confirms the number, then the kiosk cuts their key(s). Finally, the kiosk indicates that their order session has ended and asks for them to review their experience on Google." class="project-media">
+  	        <img src="sms-review-flow-1.webp" alt="The new task flow for dispensed-only orders, part 1 of 2. After the customer places their order, the kiosk asks them to enter their mobile number for their receipt. The customer enters and confirms the number, then the kiosk cuts their key(s). Finally, the kiosk indicates that their order session has ended and asks for them to review their experience on Google." class="project-media">
             <figcaption class="caption">
 						</figcaption>
           </figure>
 					<figure>
-  	        <img src="sms-review-flow-2.webp" alt="Flow of receiving an SMS receipt, going to the landing page, getting help and leaving a review on Google. The SMS receipt contains the order details and encourages the customer to leave feedback via a link. The link goes to a landing page with buttons where they can leave a review on Google and/or get help with their order via a contact form." class="project-media">
+  	        <img src="sms-review-flow-2.webp" alt="The new task flow for dispensed-only orders, part 2 of 2. The customer receives a receipt via SMS. The SMS receipt contains the order details and encourages the customer to leave feedback via a link. The link goes to a landing page with buttons where they can leave a review on Google and/or get help with their order via a contact form." class="project-media">
             <figcaption class="caption">
 						</figcaption>
           </figure>
