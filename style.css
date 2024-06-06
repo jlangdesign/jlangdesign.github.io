@@ -11,7 +11,8 @@
   --default-vw: 1440; /* 100 vw = 1440 px */
   --primary-spacing: 36px;
   --secondary-spacing: 18px;
-  --main-content-padding: 0vw 20vw var(--top-nav-height) 20vw;
+  --main-content-padding: var(--top-nav-height) 20vw;
+  --main-content-min-height: calc(100vh - var(--top-nav-height-padded));
 
   /* Typography */
   --heading-font: titillium web;
@@ -31,22 +32,28 @@
 
   /* Top navbar */
   --top-nav-flex-direction: row;
-  --top-nav-height: 35px;
+  --top-nav-height: 36px;
+  --top-nav-height-padded: calc(2 * var(--top-nav-padding-top-bottom) + var(--top-nav-height));
   --top-nav-font-size: 18px;
-  --top-nav-padding: 10px;
+  --top-nav-padding-top-bottom: var(--secondary-spacing);
+  --top-nav-padding-left-right: var(--primary-spacing);
+  --top-nav-padding: var(--top-nav-padding-top-bottom) var(--top-nav-padding-left-right);
   --logo-box-left-position: calc((100vw - 75vw) / 2);
   --logo-box-top-position: 10px;
   --logo-side-length: 32px;
   --logo-margin: 0px 10px 0px 0px;
   --logo-name-size: 24px;
-  --top-nav-tab-padding: 0px 10px;
+  --top-nav-tab-padding: 0px var(--secondary-spacing);
+
+  /* Footer */
+  --footer-padding: var(--primary-spacing);
 
   /* Buttons */
   --button-bg-color: rgba(var(--secondary-color-darker), 1);
   --button-border: 2px solid rgba(var(--tertiary-color), 1);
   --button-border-radius: 4px;
   --button-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  --button-padding: 15px;
+  --button-padding: 16px;
   --button-glow-hover: 0px 0px 10px rgba(238, 238, 238, 1);
 
   /* Images */
@@ -62,6 +69,9 @@
   --game-name-size: 96px;
   --press-start-font-size: 24px;
   --welcome-text-size: 24px;
+  --theater-areas: "text img";
+  --theater-columns: 1fr 1fr;
+  --theater-rows: 1fr;
 
   /********************/
   /***** ABOUT SECTION *****/
@@ -111,9 +121,11 @@ body {
 
 /* So main content and footer are beneath topnav */
 #page {
+  display: flex;
+  flex-flow: column;
   position: relative;
-    top: calc(2 * var(--top-nav-padding) + var(--top-nav-height));
-  min-height: 100vh;
+    top: calc(2 * var(--top-nav-padding-top-bottom) + var(--top-nav-height));
+  min-height: var(--main-content-min-height);
 }
 
 /* Main content (content outside of topnav and footer) */
@@ -128,8 +140,8 @@ body {
   content: '';
   display: block;
   position: relative;
-  margin-top: calc((2 * var(--top-nav-padding) + var(--top-nav-height)) * -1);
-  height: calc((2 * var(--top-nav-padding) + var(--top-nav-height)));
+  margin-top: calc((var(--top-nav-height-padded) + var(--secondary-spacing)) * -1);
+  height: calc(var(--top-nav-height-padded) + var(--secondary-spacing));
   width: 0px;
 }
 
@@ -190,7 +202,11 @@ img {
 
 /* Formatting for text in anchors */
 .links {
-  text-decoration: underline rgb(var(--secondary-color)) 2px;
+  /* Can't use shorthand for Safari */
+  /* text-decoration: underline rgb(var(--secondary-color)) 2px; */
+  text-decoration-line: underline;
+  text-decoration-color: rgb(var(--secondary-color));
+  text-decoration-thickness: 2px;
   text-underline-position: under;
   font-family: var(--body-font);
 }
@@ -242,7 +258,7 @@ img {
 
   display: flex;
   flex-direction: var(--top-nav-flex-direction);
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: var(--top-nav-height);
 }
@@ -254,9 +270,6 @@ img {
 
 /* Container with square JL logo and the "Jasmine Lang" text */
 #logo-box {
-  position: fixed;
-    left: var(--logo-box-left-position);
-    top: var(--logo-box-top-position);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -285,7 +298,10 @@ img {
   font-weight: bold;
 }
 
-/* Container with links to different pages */
+#top-nav-tab-group {
+  display: flex;
+}
+
 .top-nav-tab {
   padding: var(--top-nav-tab-padding);
 }
@@ -312,107 +328,57 @@ img {
 }
 
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
-/* Partially transparent black container behind the slideshow container */
 #theater {
-  background-color: rgba(0, 0, 0, 0.5);
-  /*width: 100vw;*/
   width: 100%;
-  height: var(--start-screen-height);
-  border-radius: 5px;
+  min-height: var(--main-content-min-height);
+  display: grid;
+  grid-template-areas: var(--theater-areas);
+  grid-template-columns: var(--theater-columns);
+  grid-template-rows: var(--theater-rows);
 }
 
-/* Container with all the image slides */
-#slideshow {
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  max-width: var(--slideshow-max-width);
-  max-height: var(--slideshow-max-height);
-  margin: auto;
-      top: 0%;
-      bottom: 0%;
-      left: 0%;
-      right: 0%;
-  background-color: black;
-  position: relative;
+#theater-text {
+  grid-area: text;
   display: flex;
+  flex-flow: column;
   justify-content: center;
-  align-items: center;
+  padding: var(--primary-spacing);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
-/* Container for #game-name and #press-start */
-#start-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 95;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(var(--tertiary-color), .5);
+#welcome {
+  text-align: left;
 }
 
-/* Text on top of the slides */
-#game-name {
-  text-align: center;
-  font-size: var(--game-name-size);
-  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
-  margin: 0px 0px var(--primary-spacing) 0px;
+#brief-intro {
+  font-family: var(--heading-font);
+  font-size: 36px;
 }
 
-
-/*|||||||||||||||||||| PRESS START BUTTON ||||||||||||||||||||*/
-/* Button on top of slides that takes you to gallery */
-#press-start {
-  font-size: var(--press-start-font-size);
-  padding: var(--secondary-spacing) var(--primary-spacing);
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#brief-intro strong {
+  color: rgb(var(--secondary-color));
 }
 
+#welcome-section-primary-action {
+  margin-top: var(--secondary-spacing);
+}
 
-/*|||||||||||||||||||| SLIDES AND ANIMATION ||||||||||||||||||||*/
 /* Class of each image in slideshow */
 .slide-img {
-  height: var(--start-screen-height);
-  width: var(--slideshow-max-width);
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--tertiary-color));
+  height: 100%;
+  width: 100%;
   margin: auto;
-  transition: opacity .5s ease-in;
-  position: absolute;
-    top: 0;
+  transition: opacity 0.5s ease-in;
   object-fit: cover;
 }
 
 .slide-img + .slide-img {
   opacity: 0;
-}
-
-
-/*|||||||||||||||||||| WELCOME ||||||||||||||||||||*/
-/* Short welcome message and description of this site below the slideshow */
-#welcome-section {
-  text-align: center;
-}
-
-/* Friendly interjection */
-#greeting {
-  margin: 0;
-  margin-top: var(--primary-spacing);
-}
-
-/* Text of the welcome message */
-#welcome-text {
-  /* padding: var(--para-padding); */
-  max-width: initial;
-  font-size: var(--welcome-text-size);
-}
-
-/* Note about responsiveness */
-#limitation {
-  padding: var(--para-padding);
-  max-width: initial;
 }
 
 
@@ -635,9 +601,7 @@ img {
 footer {
   text-align: center;
   background-color: rgb(var(--primary-color));
-  padding: var(--primary-spacing) 0px;
-  /* position: absolute;
-    bottom: 0; */
+  padding: var(--footer-padding);
   width: 100%;
   box-sizing: border-box;
   margin-top: var(--top-nav-height);
@@ -828,7 +792,7 @@ iframe {
 
 /* Anchor that allows you to jump to the different main sections */
 .section-tab {
-  font-family: titillium web;
+  font-family: var(--heading-font);
   background-color: rgba(54, 69, 79, .5);
   border: 5px solid rgba(54, 69, 79, .75);
   border-radius: 5px;
@@ -886,7 +850,6 @@ iframe {
     --default-heading-size: 54px;
 
     /* Top navbar */
-    --top-nav-flex-direction: column;
     --logo-box-left-position: 5vw;
 
     /********************/
@@ -904,11 +867,6 @@ iframe {
     /* --about-img-height: calc(600 / var(--default-vw) * 100vw); */
   }
 
-  #top-nav-tab-group {
-    position: fixed;
-    right: var(--logo-box-left-position);
-  }
-
   #game-name {
     margin: 0px 0px 20px 0px;
   }
@@ -919,6 +877,15 @@ iframe {
   :root {
     --heading-font-size: 36px;
     --gallery-tile-name-size: 28px;
+    --top-nav-padding-left-right: var(--secondary-spacing);
+    --footer-padding: var(--primary-spacing) var(--secondary-spacing);
+
+    /********************/
+    /***** HOME SECTION *****/
+    /********************/
+    --theater-areas: "text" "img";
+    --theater-columns: 1fr;
+    --theater-rows: 1fr 1fr;
   }
 }
 
@@ -935,6 +902,7 @@ iframe {
     --default-heading-size: 48px;
 
     /* Top navbar */
+    --top-nav-flex-direction: column;
     --top-nav-height: 75px;
 
     /********************/
@@ -961,10 +929,6 @@ iframe {
     --four-oh-four-svg-width: 75vw;
   }
 
-  #logo-box {
-    position: static;
-  }
-
   #top-nav-tab-group {
     position: static;
     right: auto;
@@ -989,5 +953,6 @@ iframe {
   :root {
     /* --heading-font-size: 24px; */
     --subtitle-size: 20px;
+    --top-nav-tab-padding: 0px 10px;
   }
 }
