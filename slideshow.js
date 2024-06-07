@@ -23,4 +23,4 @@ setInterval(function() {
 
 	// Set opacity of current slide to 1
 	slides[current].style.opacity = 1;
-}, 3000); // 3000 ms = 3 s
+}, 5000); // 5000 ms = 5 s
