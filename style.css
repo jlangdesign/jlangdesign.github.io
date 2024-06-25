@@ -58,7 +58,6 @@
 
   /* Images */
   --image-border-radius: 4px;
-  --image-border: 4px solid rgb(var(--secondary-color));
 
   /********************/
   /***** HOME SECTION *****/
@@ -83,7 +82,9 @@
   /********************/
   /***** GALLERY SECTION *****/
   /********************/
-  --gallery-tile-name-size: 36px;
+  --gallery-section-name-size: 36px;
+  --gallery-anchor-border: 1px solid rgb(var(--secondary-color));
+  --gallery-anchor-name-size: 28px;
 
   /********************/
   /***** 404 PAGE *****/
@@ -435,9 +436,9 @@ img {
 }
 
 .gallery-section-title {
-  font-size: var(--gallery-tile-name-size);
-  margin-top: var(--primary-spacing);
-  margin-bottom: var(--secondary-spacing);
+  font-size: var(--gallery-section-name-size);
+  margin-top: calc(var(--primary-spacing) * 2);
+  margin-bottom: var(--primary-spacing);
 }
 
 /* Subcontainer containing Gallery matrix */
@@ -446,152 +447,68 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--secondary-spacing);
+  gap: var(--primary-spacing);
 }
 
 .grid-anchor {
-  flex-basis: calc(50% - var(--secondary-spacing));
-  aspect-ratio: 1 / 1;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center;
-
   z-index: 10;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-  border-radius: var(--image-border-radius);
-  overflow: hidden; /* so border-radius works */
-  transition: transform 0.3s 0s ease-in-out; /* when ascending (no longer hovering) */
-}
-
-.grid-anchor > * {
-  grid-column: 1;
-  grid-row: 1;
+  border-radius: var(--button-border-radius);
+  border: var(--gallery-anchor-border);
+  overflow: hidden;
+  text-align: left;
+  padding: var(--secondary-spacing);
+  background-color: rgb(255, 255, 255, .05);
 }
 
 /* Transformation (rising) hover state of matrix items */
 .grid-anchor:hover {
+  box-shadow: var(--button-glow-hover);
   cursor: pointer;
-  transform: scale(0.9); /* shrink a little bit */
-  transition: transform 0.3s 0s ease-in-out; /* when descending */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-  background-position: 100% 0px;
+}
+
+.grid-anchor-img {
+  width: 100%;
+  margin-bottom: var(--secondary-spacing);
+  border-radius: calc(var(--button-border-radius) - 1px);
 }
 
 .grid-anchor-name {
-  z-index: 13;
-  display: none;
-  font-size: var(--gallery-tile-name-size);
-  padding: var(--secondary-spacing);
+  font-size: var(--gallery-anchor-name-size);
+  text-align: left;
+  margin: 0;
+  margin-bottom: var(--secondary-spacing);
 }
 
 .grid-anchor:hover .grid-anchor-name {
-  display: block;
+  color: rgb(var(--secondary-color));
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
-.grid-anchor-icon {
-  z-index: 12;
-  height: 100%;
+.grid-anchor-body-text {
+  margin: 0;
+  margin-bottom: var(--secondary-spacing);
+}
+
+.grid-anchor-tag-container {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  display: none;
-  opacity: 0.15;
+  display: flex;
+  flex-flow: wrap;
+  gap: 10px;
+  padding-top: 10px;
 }
 
-.grid-anchor:hover .grid-anchor-icon {
-  display: block;
+.grid-anchor-tag {
+  font-family: var(--body-font);
+  font-size: 0.75rem;
+  border: 1px solid white;
+  border-radius: 100px;
+  padding: 4px 10px;
+  opacity: 0.8;
 }
 
-.grid-anchor-bg {
-  z-index: 11;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.grid-anchor:hover .grid-anchor-bg {
-  filter: brightness(25%) blur(4px);
-  clip-path: inset(0 0 0 0 round var(--image-border-radius));
-}
-
-#bu-dong-grid {
-  background-image: url("personal/bu-dong/budong-structure.jpg");
-}
-
-#pandoras-grid {
-  background-image: url("personal/pandoras-box/pandoras-box-start.jpg");
-}
-
-#harmony-grid {
-  background-image: url("personal/harmony/Harmony-header.jpg");
-}
-
-#are3-grid {
-  background-image: url("personal/are3/ARE3-cover.jpg");
-}
-
-#lizards-grid {
-  background-image: url("personal/lizards-cat-thingies/Handbook-cover.jpg");
-}
-
-#starry-grid {
-  background-image: url("personal/starryreader/StarryReader-Header.jpg");
-}
-
-#pb-grid {
-  background-image: url("personal/picture-booth/Picture-Booth-Context.jpg");
-}
-
-#recon-grid {
-  background-image: url("personal/reocnstruction/After-Kendama-03.jpg");
-}
-
-#pidgepanion-grid {
-  background-image: url("personal/pidgepanion/Finale.png");
-}
-
-#grid-locksmith-service {
-  background-image: url("work/keyme/locksmith-service-request/header-locksmith-service.webp");
-}
-
-#grid-sms-review {
-  background-image: url("work/keyme/sms-review-solicitation/header-sms-review.webp");
-}
-
-#grid-player-journey {
-  background-image: url("work/op-36/player-journey-report/header-player-journey.webp");
-}
-
-#grid-starter-kit {
-  background-image: url("work/op-36/starter-kit/header-starter-kit.webp");
-}
-
-#grid-free-coach {
-  background-image: url("work/op-36/free-coach-account/header-free-coach.webp");
-}
-
-#grid-community-map {
-  background-image: url("work/op-36/community-map/header-community-map.webp");
-}
-
-#grid-academy-display {
-  background-image: url("work/op-36/academy-display/header-academy-display.webp");
-}
-
-#grid-op36-more {
-  background-image: url("work/op-36/more/header-op36-other.webp");
-}
-
-#grid-immersive-scholar {
-  background-image: url("work/immersive-scholar/header-immersive-scholar.webp");
-}
-
-#grid-assorted-logos {
-  background-image: url("work/freelance/logos/header-assorted-logos.webp");
-}
 
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
@@ -876,7 +793,7 @@ iframe {
 @media (max-width: 768px) {
   :root {
     --heading-font-size: 36px;
-    --gallery-tile-name-size: 28px;
+    --gallery-section-name-size: 28px;
     --top-nav-padding-left-right: var(--secondary-spacing);
     --footer-padding: var(--primary-spacing) var(--secondary-spacing);
 
@@ -921,7 +838,7 @@ iframe {
     /********************/
     /***** GALLERY SECTION *****/
     /********************/
-    --gallery-tile-name-size: 36px;
+    --gallery-section-name-size: 36px;
 
     /********************/
     /***** 404 PAGE *****/
