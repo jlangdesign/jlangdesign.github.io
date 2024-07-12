@@ -18,7 +18,7 @@
   --heading-font: titillium web;
   --body-font: roboto;
   --font-color: rgb(238, 238, 238); /* off-white (#eeeeee), less harsh than white (#ffffff) */
-  --list-margin: 0 0 var(--secondary-spacing) 0;
+  --list-margin: var(--secondary-spacing) 0;
   --max-line-length: 70ch;
   --para-padding: 0vh 20vw;
   --default-heading-size: 60px;
@@ -441,10 +441,14 @@ img {
   margin-bottom: var(--primary-spacing);
 }
 
+.gallery-section-desc {
+  margin-bottom: var(--primary-spacing);
+}
+
 /* Subcontainer containing Gallery matrix */
 .gallery-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   gap: var(--primary-spacing);
@@ -793,7 +797,7 @@ iframe {
 @media (max-width: 768px) {
   :root {
     --heading-font-size: 36px;
-    --gallery-section-name-size: 28px;
+    /* --gallery-section-name-size: 28px; */
     --top-nav-padding-left-right: var(--secondary-spacing);
     --footer-padding: var(--primary-spacing) var(--secondary-spacing);
 
@@ -838,7 +842,7 @@ iframe {
     /********************/
     /***** GALLERY SECTION *****/
     /********************/
-    --gallery-section-name-size: 36px;
+    /* --gallery-section-name-size: 36px; */
 
     /********************/
     /***** 404 PAGE *****/
