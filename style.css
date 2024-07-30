@@ -15,8 +15,8 @@
   --main-content-min-height: calc(100vh - var(--top-nav-height-padded));
 
   /* Typography */
-  --heading-font: titillium web;
-  --body-font: roboto;
+  --heading-font: titillium web, Tahoma, Arial, system-ui, sans-serif;
+  --body-font: roboto, Tahoma, Arial, system-ui, sans-serif;
   --font-color: rgb(238, 238, 238); /* off-white (#eeeeee), less harsh than white (#ffffff) */
   --list-margin: var(--secondary-spacing) 0;
   --max-line-length: 70ch;
@@ -660,7 +660,7 @@ footer {
 /* All images */
 .project-media {
   width: var(--project-media-width);
-  aspect-ratio: 16 / 9;
+  /* aspect-ratio: 16 / 9; */
   display: block;
   margin: auto;
   margin-bottom: var(--secondary-spacing);
