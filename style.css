@@ -721,6 +721,11 @@ iframe {
 
 }
 
+/* Add fade transition between pages on the site so the change is less abrupt */
+@view-transition {
+  navigation: auto;
+}
+
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
