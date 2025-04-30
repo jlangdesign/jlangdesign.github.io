@@ -421,6 +421,15 @@ img {
 /*||||||||||||||||||||||||||||||||||||||||*/
 .disclaimer-text {
   text-align: center;
+  font-style: italic;
+}
+
+.disclaimer-box {
+  width: 100%;
+  border: var(--gallery-anchor-border);
+  padding: var(--secondary-spacing);
+  background-color: rgb(255, 255, 255, .05);
+  border-radius: var(--button-border-radius);
 }
 
 .gallery-section-title {
