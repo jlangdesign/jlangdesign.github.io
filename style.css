@@ -430,6 +430,7 @@ img {
   padding: var(--secondary-spacing);
   background-color: rgb(255, 255, 255, .05);
   border-radius: var(--button-border-radius);
+  box-sizing: border-box;
 }
 
 .gallery-section-title {
@@ -880,5 +881,32 @@ iframe {
     /* --heading-font-size: 24px; */
     --subtitle-size: 1.25rem;
     --top-nav-tab-padding: 0px 10px;
+  }
+}
+
+@media print {
+  /* TODO FOR ACCESSIBILITY
+    https://piccalil.li/blog/printing-the-web-making-webpages-look-good-on-paper/
+    - Convert important images from bg img to <img> (for printing while hiding bg img)
+    - Add light mode (make sure fg-bg contrast is sufficient when printing without bg img - aka grayscale)
+    - Scale to different page sizes
+    - Add href text next to links, if unnecessary
+    - Set minimum # of lines of text on top/bottom of page to avoid orphans and widows
+  */
+
+  /* Hide unnecessary elements */
+  #topnav, footer {
+    display: none;
+  }
+
+  /* Move page content to top of page since topnav is hidden */
+  #page {
+    position: static;
+  }
+
+  /* This is mainly for fixing spacing on left and right sides when printing in Safari (Safari adds additional space) */
+  .main-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
