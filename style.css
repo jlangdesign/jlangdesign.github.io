@@ -12,7 +12,7 @@
   --primary-spacing: 36px;
   --secondary-spacing: 18px;
   --main-content-padding: var(--top-nav-height) 20vw;
-  --main-content-min-height: calc(100vh - var(--top-nav-height-padded));
+  --main-content-min-height: calc(100svh - var(--top-nav-height-padded));
 
   /* Typography */
   --heading-font: titillium web, Tahoma, Arial, system-ui, sans-serif;
@@ -20,7 +20,7 @@
   --font-color: rgb(238, 238, 238); /* off-white (#eeeeee), less harsh than white (#ffffff) */
   --list-margin: var(--secondary-spacing) 0;
   --max-line-length: 70ch;
-  --para-padding: 0vh 20vw;
+  --para-padding: 0svh 20vw;
   --default-heading-size: 3.75rem;
 
   /* Color scheme */
@@ -62,9 +62,9 @@
   /********************/
   /***** HOME SECTION *****/
   /********************/
-  --start-screen-height: calc(100vh - 55px);
+  --start-screen-height: calc(100svh - 55px);
   --slideshow-max-width: 75vw;
-  --slideshow-max-height: 100vh;
+  --slideshow-max-height: 100svh;
   --theater-areas: "text img";
   --theater-columns: 1fr 1fr;
   --theater-rows: 1fr;
@@ -778,7 +778,7 @@ iframe {
     --main-content-padding: 0vw 10vw var(--top-nav-height) 10vw;
 
     /* Typography */
-    --para-padding: 0vh 10vw;
+    --para-padding: 0svh 10vw;
     --default-heading-size: 3.375rem;
 
     /* Top navbar */
@@ -827,7 +827,7 @@ iframe {
     --main-content-padding: 0vw 5vw var(--top-nav-height) 5vw;
 
     /* Typography */
-    --para-padding: 0vh 5vw;
+    --para-padding: 0svh 5vw;
     --default-heading-size: 3rem;
 
     /* Top navbar */
@@ -837,7 +837,7 @@ iframe {
     /********************/
     /***** HOME SECTION *****/
     /********************/
-    --start-screen-height: calc(100vh - 95px);
+    --start-screen-height: calc(100svh - 95px);
 
     /********************/
     /***** ABOUT SECTION *****/
