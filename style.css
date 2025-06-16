@@ -12,7 +12,7 @@
   --primary-spacing: 36px;
   --secondary-spacing: 18px;
   --main-content-padding: var(--top-nav-height) 20vw;
-  --main-content-min-height: calc(100vh - var(--top-nav-height-padded));
+  --main-content-min-height: calc(100svh - var(--top-nav-height-padded));
 
   /* Typography */
   --heading-font: titillium web, Tahoma, Arial, system-ui, sans-serif;
@@ -20,7 +20,7 @@
   --font-color: rgb(238, 238, 238); /* off-white (#eeeeee), less harsh than white (#ffffff) */
   --list-margin: var(--secondary-spacing) 0;
   --max-line-length: 70ch;
-  --para-padding: 0vh 20vw;
+  --para-padding: 0svh 20vw;
   --default-heading-size: 3.75rem;
 
   /* Color scheme */
@@ -62,9 +62,9 @@
   /********************/
   /***** HOME SECTION *****/
   /********************/
-  --start-screen-height: calc(100vh - 55px);
+  --start-screen-height: calc(100svh - 55px);
   --slideshow-max-width: 75vw;
-  --slideshow-max-height: 100vh;
+  --slideshow-max-height: 100svh;
   --theater-areas: "text img";
   --theater-columns: 1fr 1fr;
   --theater-rows: 1fr;
@@ -430,6 +430,7 @@ img {
   padding: var(--secondary-spacing);
   background-color: rgb(255, 255, 255, .05);
   border-radius: var(--button-border-radius);
+  box-sizing: border-box;
 }
 
 .gallery-section-title {
@@ -777,7 +778,7 @@ iframe {
     --main-content-padding: 0vw 10vw var(--top-nav-height) 10vw;
 
     /* Typography */
-    --para-padding: 0vh 10vw;
+    --para-padding: 0svh 10vw;
     --default-heading-size: 3.375rem;
 
     /* Top navbar */
@@ -826,7 +827,7 @@ iframe {
     --main-content-padding: 0vw 5vw var(--top-nav-height) 5vw;
 
     /* Typography */
-    --para-padding: 0vh 5vw;
+    --para-padding: 0svh 5vw;
     --default-heading-size: 3rem;
 
     /* Top navbar */
@@ -836,7 +837,7 @@ iframe {
     /********************/
     /***** HOME SECTION *****/
     /********************/
-    --start-screen-height: calc(100vh - 95px);
+    --start-screen-height: calc(100svh - 95px);
 
     /********************/
     /***** ABOUT SECTION *****/
@@ -880,5 +881,32 @@ iframe {
     /* --heading-font-size: 24px; */
     --subtitle-size: 1.25rem;
     --top-nav-tab-padding: 0px 10px;
+  }
+}
+
+@media print {
+  /* TODO FOR ACCESSIBILITY
+    https://piccalil.li/blog/printing-the-web-making-webpages-look-good-on-paper/
+    - Convert important images from bg img to <img> (for printing while hiding bg img)
+    - Add light mode (make sure fg-bg contrast is sufficient when printing without bg img - aka grayscale)
+    - Scale to different page sizes
+    - Add href text next to links, if unnecessary
+    - Set minimum # of lines of text on top/bottom of page to avoid orphans and widows
+  */
+
+  /* Hide unnecessary elements */
+  #topnav, footer {
+    display: none;
+  }
+
+  /* Move page content to top of page since topnav is hidden */
+  #page {
+    position: static;
+  }
+
+  /* This is mainly for fixing spacing on left and right sides when printing in Safari (Safari adds additional space) */
+  .main-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
