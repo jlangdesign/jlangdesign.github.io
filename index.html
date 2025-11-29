@@ -3,113 +3,201 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Home page for Jasmine Lang's portfolio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Home page for Jasmine Lang&#39;s portfolio"
+    />
     <title>Jasmine Lang | Portfolio</title>
 
     <!-- FAVICON LINK -->
     <link rel="icon" type="image/png" href="/logo-favicon.svg" sizes="16x16" />
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS LINKS -->
     <link rel="stylesheet" type="text/css" href="/style.css" />
 
     <!-- JS LINKS -->
-    <script type="text/javascript" src="/addMainNav.js"></script>
-    <script type="text/javascript" src="/slideshow.js"></script>
+
+    <script src="/slideshow.js"></script>
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WG832BNXG"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0WG832BNXG"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-0WG832BNXG');
+      gtag("config", "G-0WG832BNXG");
     </script>
   </head>
-
-  <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-  <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-  <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-
   <body>
-    <div id="page">
+    <nav id="topnav">
+      <div>
+        <a rel="noreferrer noopener" id="logo-box" href="/">
+          <img src="/logo-favicon.svg" alt="Jlangdesign logo" id="logo" />
+          <span id="logo-name">Jasmine Lang</span>
+        </a>
+      </div>
+      <div id="top-nav-tab-group">
+        <a rel="noreferrer noopener" class="top-nav-tab" href="/">Home</a>
+        <a rel="noreferrer noopener" class="top-nav-tab" href="/#gallery"
+          >Gallery</a
+        >
+        <a rel="noreferrer noopener" class="top-nav-tab" href="/#about"
+          >About</a
+        >
+        <a rel="noreferrer noopener" class="top-nav-tab" href="#contact"
+          >Contact</a
+        >
+      </div>
+    </nav>
 
+    <div id="page">
       <div id="theater">
         <div id="theater-text">
           <h1 id="welcome">Hey there!</h1>
-          <p id="brief-intro">I'm a <strong>Product/UX Designer</strong> who enjoys <strong>user research</strong> and <strong>front-end development</strong>.</p>
+          <p id="brief-intro">
+            I'm a <strong>Product/UX Designer</strong> who enjoys
+            <strong>user research</strong> and
+            <strong>front-end development</strong>.
+          </p>
           <div>
-            <a rel="noreferrer noopener" href="/#gallery" class="button" id="welcome-section-primary-action">
+            <a
+              rel="noreferrer noopener"
+              href="/#gallery"
+              class="button"
+              id="welcome-section-primary-action"
+            >
               Browse my work
             </a>
           </div>
         </div>
-          <!-- <img class="slide-img" alt="KeyMe kiosk with an input field for phone number and mobile device with a locksmith service request web form. The kiosk says it will text the link to the web form to you so you can get a locksmith to duplicate your vehicle key." src="work/keyme/locksmith-service-request/header-locksmith-service.webp" /> -->
-          <!-- <img class="slide-img" alt="KeyMe kiosk showing a screen asking the customer to leave a review and mobile device asking the customer to tell KeyMe about their experience. The kiosk's screen is the screen shown after an order session ends. The mobile device displays a webpage with a button labeled 'Get help now' as well as five emojis labeled 'Poor', 'Bad', 'Okay', 'Good', and 'Great'." src="work/keyme/sms-review-solicitation/header-sms-review.webp" /> -->
-          <img class="slide-img" alt="Player Journey Report of a student in Division 2" src="work/op-36/player-journey-report/header-player-journey.webp" />
-          <img class="slide-img" alt="Free Coach Account registration form" src="work/op-36/free-coach-account/header-free-coach.webp" />
-          <img class="slide-img" alt="Community Map of Op 36 Golf programs" src="work/op-36/community-map/header-community-map.webp" />
-          <img class="slide-img" alt="Academy Display on a wall" src="work/op-36/academy-display/header-academy-display.webp" />
-          <img class="slide-img" alt="New Starter Kit box and print material design" src="work/op-36/starter-kit/header-starter-kit.webp" />
-          <img class="slide-img" alt="Other Operation 36 Golf features, such as the registration engine, lesson plans, and playing enhancements" src="work/op-36/more/header-op36-other.webp" />
-          <img class="slide-img" alt="Immersive Scholar's Tess-celestial display on the Art Wall in the Hunt Library" src="work/immersive-scholar/header-immersive-scholar.webp" />
-          <img class="slide-img" alt="Logos for NCSU's Leadership in Public Science, AHECTA, and No. IV E-sports Club" src="work/freelance/logos/header-assorted-logos.webp" />
+        <!-- <img class="slide-img" alt="KeyMe kiosk with an input field for phone number and mobile device with a locksmith service request web form. The kiosk says it will text the link to the web form to you so you can get a locksmith to duplicate your vehicle key." src="work/keyme/locksmith-service-request/header-locksmith-service.webp" /> -->
+        <!-- <img class="slide-img" alt="KeyMe kiosk showing a screen asking the customer to leave a review and mobile device asking the customer to tell KeyMe about their experience. The kiosk's screen is the screen shown after an order session ends. The mobile device displays a webpage with a button labeled 'Get help now' as well as five emojis labeled 'Poor', 'Bad', 'Okay', 'Good', and 'Great'." src="work/keyme/sms-review-solicitation/header-sms-review.webp" /> -->
+        <img
+          class="slide-img"
+          alt="Player Journey Report of a student in Division 2"
+          src="work/op-36/player-journey-report/header-player-journey.webp"
+        />
+        <img
+          class="slide-img"
+          alt="Free Coach Account registration form"
+          src="work/op-36/free-coach-account/header-free-coach.webp"
+        />
+        <img
+          class="slide-img"
+          alt="Community Map of Op 36 Golf programs"
+          src="work/op-36/community-map/header-community-map.webp"
+        />
+        <img
+          class="slide-img"
+          alt="Academy Display on a wall"
+          src="work/op-36/academy-display/header-academy-display.webp"
+        />
+        <img
+          class="slide-img"
+          alt="New Starter Kit box and print material design"
+          src="work/op-36/starter-kit/header-starter-kit.webp"
+        />
+        <img
+          class="slide-img"
+          alt="Other Operation 36 Golf features, such as the registration engine, lesson plans, and playing enhancements"
+          src="work/op-36/more/header-op36-other.webp"
+        />
+        <img
+          class="slide-img"
+          alt="Immersive Scholar's Tess-celestial display on the Art Wall in the Hunt Library"
+          src="work/immersive-scholar/header-immersive-scholar.webp"
+        />
+        <img
+          class="slide-img"
+          alt="Logos for NCSU's Leadership in Public Science, AHECTA, and No. IV E-sports Club"
+          src="work/freelance/logos/header-assorted-logos.webp"
+        />
       </div>
 
       <main class="main-content">
-
         <div class="jump-to" id="gallery"></div>
         <h2 class="home-section-title">Gallery</h2>
         <p class="disclaimer-text">
-          Note: In order to comply with my NDAs, some stories have info redacted or omitted.
+          Note: In order to comply with my NDAs, some stories have info redacted
+          or omitted.
         </p>
 
         <h3 class="gallery-section-title">KeyMe Locksmiths</h3>
         <ul class="gallery-section-desc">
-          <!-- <li><strong>My role</strong>: Led both research and end-to-end design as the only UX designer on the product team</li> -->
           <li>
             <strong>My role</strong>:
             <ul>
-              <li>Led both research and end-to-end design as the only UX designer on the product team</li>
-              <li>Increased locksmith jobs booked for vehicle key duplication by <strong>400%</strong> by streamlining info collection</li>
-              <li>Increased kiosk review volume on Google by <strong>120%</strong> by making it easier for customers to leave reviews</li>
+              <li>
+                Led both research and end-to-end design as the only UX designer
+                on the product team
+              </li>
+              <li>
+                Increased locksmith jobs booked for vehicle key duplication by
+                <strong>400%</strong> by streamlining info collection
+              </li>
+              <li>
+                Increased kiosk review volume on Google by
+                <strong>120%</strong> by making it easier for customers to leave
+                reviews
+              </li>
             </ul>
           </li>
           <li>
             <strong>I worked on</strong>:
             <ul>
-              <li>Kiosk and mobile-responsive web portal experiences for our customers, i.e. people who buy our keys or request our locksmith services (B2C)</li>
-              <li>Internal web app tools for our locksmiths and dispatchers (B2B)</li>
+              <li>
+                Kiosk and mobile-responsive web portal experiences for our
+                customers, i.e. people who buy our keys or request our locksmith
+                services (B2C)
+              </li>
+              <li>
+                Internal web app tools for our locksmiths and dispatchers (B2B)
+              </li>
             </ul>
           </li>
         </ul>
-				<div class="gallery-container">
+        <div class="gallery-container">
           <div class="disclaimer-box">
-            <p class="disclaimer-text">Work cannot be shown publicly due to NDA.</p>
+            <p class="disclaimer-text">
+              Work cannot be shown publicly due to NDA.
+            </p>
           </div>
           <!-- <a rel="noreferrer noopener" href="/work/keyme/locksmith-service-request" aria-label="Locksmith Service Request" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Locksmith Service Request" src="work/keyme/locksmith-service-request/header-locksmith-service.webp" />
-            <h3 class="grid-anchor-name">Locksmith Service Request</h3>
-            <p class="grid-anchor-body-text">Increased locksmith jobs booked for vehicle key duplication by 400% by streamlining info collection.</p>
-            <div class="grid-anchor-tag-container">
-              <span class="grid-anchor-tag">Kiosk</span>
-              <span class="grid-anchor-tag">Responsive web app</span>
-              <span class="grid-anchor-tag">Forms</span>
-            </div>
-					</a>
-          <a rel="noreferrer noopener" href="/work/keyme/sms-review-solicitation" aria-label="SMS Review Solicitation" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="SMS Review Solicitation" src="work/keyme/sms-review-solicitation/header-sms-review.webp" />
-            <h3 class="grid-anchor-name">SMS Review Solicitation</h3>
-            <p class="grid-anchor-body-text">Increased kiosk review volume on Google by 120% by making it easier for customers to leave reviews.</p>
-            <div class="grid-anchor-tag-container">
-              <span class="grid-anchor-tag">Kiosk</span>
-              <span class="grid-anchor-tag">Responsive web app</span>
-            </div>
-					</a> -->
+        <img loading="lazy" class="grid-anchor-img" alt="Locksmith Service Request" src="work/keyme/locksmith-service-request/header-locksmith-service.webp" />
+        <h3 class="grid-anchor-name">Locksmith Service Request</h3>
+        <p class="grid-anchor-body-text">Increased locksmith jobs booked for vehicle key duplication by 400% by streamlining info collection.</p>
+        <div class="grid-anchor-tag-container">
+            <span class="grid-anchor-tag">Kiosk</span>
+            <span class="grid-anchor-tag">Responsive web app</span>
+            <span class="grid-anchor-tag">Forms</span>
+        </div>
+    </a>
+    <a rel="noreferrer noopener" href="/work/keyme/sms-review-solicitation" aria-label="SMS Review Solicitation" class="grid-anchor">
+        <img loading="lazy" class="grid-anchor-img" alt="SMS Review Solicitation" src="work/keyme/sms-review-solicitation/header-sms-review.webp" />
+        <h3 class="grid-anchor-name">SMS Review Solicitation</h3>
+        <p class="grid-anchor-body-text">Increased kiosk review volume on Google by 120% by making it easier for customers to leave reviews.</p>
+        <div class="grid-anchor-tag-container">
+            <span class="grid-anchor-tag">Kiosk</span>
+            <span class="grid-anchor-tag">Responsive web app</span>
+        </div>
+    </a> -->
         </div>
 
         <h3 class="gallery-section-title">Operation 36 Golf</h3>
@@ -117,66 +205,158 @@
           <li>
             <strong>My role</strong>:
             <ul>
-              <li>Led both research and end-to-end design as the only UX designer on the product team</li>
-              <li>Helped develop features or fix bugs/UX issues and collaborated with our graphic designer on print and packaging</li>
+              <li>
+                Led both research and end-to-end design as the only UX designer
+                on the product team
+              </li>
+              <li>
+                Helped develop features or fix bugs/UX issues and collaborated
+                with our graphic designer on print and packaging
+              </li>
             </ul>
           </li>
-          <li><strong>I worked on</strong>: Web app and native mobile app experiences for our coaches (B2B and SaaS), students and their parents (B2C), and our sales and support teams</li>
+          <li>
+            <strong>I worked on</strong>: Web app and native mobile app
+            experiences for our coaches (B2B and SaaS), students and their
+            parents (B2C), and our sales and support teams
+          </li>
         </ul>
-				<div class="gallery-container">
-          <a rel="noreferrer noopener" href="/work/op-36/player-journey-report" aria-label="Player Journey Report" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Player Journey Report" src="/work/op-36/player-journey-report/header-player-journey.webp" />
+        <div class="gallery-container">
+          <a
+            rel="noreferrer noopener"
+            href="/work/op-36/player-journey-report"
+            aria-label="Player Journey Report"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Player Journey Report"
+              src="/work/op-36/player-journey-report/header-player-journey.webp"
+            />
             <h3 class="grid-anchor-name">Player Journey Report</h3>
-            <p class="grid-anchor-body-text">Reduced time spent on creating student reports by allowing coaches to automatically generate reports for entire classes.</p>
+            <p class="grid-anchor-body-text">
+              Reduced time spent on creating student reports by allowing coaches
+              to automatically generate reports for entire classes.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Web app</span>
               <span class="grid-anchor-tag">Print</span>
               <span class="grid-anchor-tag">Gamification</span>
               <span class="grid-anchor-tag">Reporting</span>
             </div>
-					</a>
-          <a rel="noreferrer noopener" href="/work/op-36/free-coach-account" aria-label="Free Coach Account Registration" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Free Coach Account Registration" src="work/op-36/free-coach-account/header-free-coach.webp" />
+          </a>
+          <a
+            rel="noreferrer noopener"
+            href="/work/op-36/free-coach-account"
+            aria-label="Free Coach Account Registration"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Free Coach Account Registration"
+              src="work/op-36/free-coach-account/header-free-coach.webp"
+            />
             <h3 class="grid-anchor-name">Free Coach Account Registration</h3>
-            <p class="grid-anchor-body-text">Generated hundreds of leads for our sales team by allowing coaches to create free accounts in our web app.</p>
+            <p class="grid-anchor-body-text">
+              Generated hundreds of leads for our sales team by allowing coaches
+              to create free accounts in our web app.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Responsive web app</span>
               <span class="grid-anchor-tag">Forms</span>
             </div>
-					</a>
-          <a rel="noreferrer noopener" href="/work/op-36/community-map" aria-label="Community Map and Leads Manager" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Community Map and Leads Manager" src="work/op-36/community-map/header-community-map.webp" />
+          </a>
+          <a
+            rel="noreferrer noopener"
+            href="/work/op-36/community-map"
+            aria-label="Community Map and Leads Manager"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Community Map and Leads Manager"
+              src="work/op-36/community-map/header-community-map.webp"
+            />
             <h3 class="grid-anchor-name">Community Map and Leads Manager</h3>
-            <p class="grid-anchor-body-text">Generated hundreds of student leads for our coaches by allowing students to browse golf facilities and contact coaches.</p>
+            <p class="grid-anchor-body-text">
+              Generated hundreds of student leads for our coaches by allowing
+              students to browse golf facilities and contact coaches.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Responsive web app</span>
               <span class="grid-anchor-tag">Forms</span>
             </div>
-					</a>
-          <a rel="noreferrer noopener" href="/work/op-36/academy-display" aria-label="Academy Display" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Academy Display" src="work/op-36/academy-display/header-academy-display.webp" />
+          </a>
+          <a
+            rel="noreferrer noopener"
+            href="/work/op-36/academy-display"
+            aria-label="Academy Display"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Academy Display"
+              src="work/op-36/academy-display/header-academy-display.webp"
+            />
             <h3 class="grid-anchor-name">Academy Display</h3>
-            <p class="grid-anchor-body-text">Marketed the Operation 36 program to prospective students at golf facilities by showcasing current student activity via a pro shop TV display.</p>
+            <p class="grid-anchor-body-text">
+              Marketed the Operation 36 program to prospective students at golf
+              facilities by showcasing current student activity via a pro shop
+              TV display.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Large-scale display</span>
               <span class="grid-anchor-tag">Responsive web app</span>
               <span class="grid-anchor-tag">Gamification</span>
             </div>
-					</a>
-          <a rel="noreferrer noopener" href="/work/op-36/starter-kit" aria-label="Starter Kit Redesign" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Starter Kit Redesign" src="work/op-36/starter-kit/header-starter-kit.webp" />
+          </a>
+          <a
+            rel="noreferrer noopener"
+            href="/work/op-36/starter-kit"
+            aria-label="Starter Kit Redesign"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Starter Kit Redesign"
+              src="work/op-36/starter-kit/header-starter-kit.webp"
+            />
             <h3 class="grid-anchor-name">Starter Kit Redesign</h3>
-            <p class="grid-anchor-body-text">Increased the Starter Kit's marketing and educational value by enhancing the unboxing experience, graphics, and learning materials.</p>
+            <p class="grid-anchor-body-text">
+              Increased the Starter Kit's marketing and educational value by
+              enhancing the unboxing experience, graphics, and learning
+              materials.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Packaging</span>
               <span class="grid-anchor-tag">Print</span>
               <span class="grid-anchor-tag">Gamification</span>
             </div>
           </a>
-          <a rel="noreferrer noopener" href="/work/op-36/more" aria-label="More Operation 36 Golf Projects" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="More Operation 36 Golf Projects" src="work/op-36/more/header-op36-other.webp" />
+          <a
+            rel="noreferrer noopener"
+            href="/work/op-36/more"
+            aria-label="More Operation 36 Golf Projects"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="More Operation 36 Golf Projects"
+              src="work/op-36/more/header-op36-other.webp"
+            />
             <h3 class="grid-anchor-name">More Operation 36 Golf Projects</h3>
-            <p class="grid-anchor-body-text">Streamlined work for coaches and drove student engagement with additional web and mobile app features, including a class registration engine, a facility revenue report, and guided training activities.</p>
+            <p class="grid-anchor-body-text">
+              Streamlined work for coaches and drove student engagement with
+              additional web and mobile app features, including a class
+              registration engine, a facility revenue report, and guided
+              training activities.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Mobile app</span>
               <span class="grid-anchor-tag">Responsive web app</span>
@@ -184,64 +364,154 @@
               <span class="grid-anchor-tag">Reporting</span>
               <span class="grid-anchor-tag">Forms</span>
             </div>
-					</a>
+          </a>
         </div>
 
         <h3 class="gallery-section-title">NCSU Libraries</h3>
         <ul class="gallery-section-desc">
-          <li><strong>My role</strong>: Led design efforts and developed web apps along with another front-end developer, project manager, primary investigators, and digital scholars in the Immersive Scholar research project</li>
-          <li><strong>I worked on</strong>: Web app experiences for library visitors</li>
+          <li>
+            <strong>My role</strong>: Led design efforts and developed web apps
+            along with another front-end developer, project manager, primary
+            investigators, and digital scholars in the Immersive Scholar
+            research project
+          </li>
+          <li>
+            <strong>I worked on</strong>: Web app experiences for library
+            visitors
+          </li>
         </ul>
         <div class="gallery-container">
-          <a rel="noreferrer noopener" href="/work/immersive-scholar" aria-label="Immersive Scholar" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Immersive Scholar" src="work/immersive-scholar/header-immersive-scholar.webp" />
+          <a
+            rel="noreferrer noopener"
+            href="/work/immersive-scholar"
+            aria-label="Immersive Scholar"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Immersive Scholar"
+              src="work/immersive-scholar/header-immersive-scholar.webp"
+            />
             <h3 class="grid-anchor-name">Immersive Scholar</h3>
-            <p class="grid-anchor-body-text">Increased awareness of digital scholars' data visualization art by building web apps for large-scale video walls.</p>
+            <p class="grid-anchor-body-text">
+              Increased awareness of digital scholars' data visualization art by
+              building web apps for large-scale video walls.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Large-scale display</span>
               <span class="grid-anchor-tag">Responsive web app</span>
             </div>
-					</a>
+          </a>
         </div>
 
         <h3 class="gallery-section-title">Freelance</h3>
         <ul class="gallery-section-desc">
-          <li><strong>My role</strong>: Worked with various clients as a solo visual designer</li>
+          <li>
+            <strong>My role</strong>: Worked with various clients as a solo
+            visual designer
+          </li>
           <li><strong>I worked on</strong>: Logo and brand designs</li>
         </ul>
         <div class="gallery-container">
-          <a rel="noreferrer noopener" href="/work/freelance/logos" aria-label="Assorted Logo Designs" class="grid-anchor">
-            <img loading="lazy" class="grid-anchor-img" alt="Assorted Logo Designs" src="work/freelance/logos/header-assorted-logos.webp" />
+          <a
+            rel="noreferrer noopener"
+            href="/work/freelance/logos"
+            aria-label="Assorted Logo Designs"
+            class="grid-anchor"
+          >
+            <img
+              loading="lazy"
+              class="grid-anchor-img"
+              alt="Assorted Logo Designs"
+              src="work/freelance/logos/header-assorted-logos.webp"
+            />
             <h3 class="grid-anchor-name">Assorted Logo Designs</h3>
-            <p class="grid-anchor-body-text">Visualized identities of different organizations by designing logos and simple brand guides for them.</p>
+            <p class="grid-anchor-body-text">
+              Visualized identities of different organizations by designing
+              logos and simple brand guides for them.
+            </p>
             <div class="grid-anchor-tag-container">
               <span class="grid-anchor-tag">Logo</span>
               <span class="grid-anchor-tag">Branding</span>
             </div>
-					</a>
+          </a>
         </div>
 
         <div class="jump-to" id="about"></div>
         <h2 class="home-section-title">About</h2>
-        <img loading="lazy" class="about-img" alt="Jasmine with user research data, wireframes, and code in the background." src="homepage/about-me.webp" />
-				<div class="about-txt">
-	        <p>
-            Hey there! I'm Jasmine, an end-to-end product/UX designer who also does user research, front-end development, and game design. I built this portfolio from scratch so I could continue honing my design and development skills, especially in accessibility. A few tidbits about my experience:
+        <img
+          loading="lazy"
+          class="about-img"
+          alt="Jasmine with user research data, wireframes, and code in the background."
+          src="homepage/about-me.webp"
+        />
+        <div class="about-txt">
+          <p>
+            Hey there! I'm Jasmine, an end-to-end product/UX designer who also
+            does user research, front-end development, and game design. I built
+            this portfolio from scratch so I could continue honing my design and
+            development skills, especially in accessibility. A few tidbits about
+            my experience:
           </p>
           <ul>
-            <li><strong>📦 Products I've designed</strong>: Mainly responsive web apps (internal and consumer-facing), native iOS/Android mobile apps, and emails. I've also dabbled in kiosk interfaces, packaging/print, and digital ads.</li>
-            <li><strong>💼 Fields I've worked in</strong>: B2B/SaaS, B2C, B2B2C - mainly in startup environments.</li>
-            <li><strong>🛠️ My toolbox</strong>: Figma, HTML, CSS, JavaScript, React, Photoshop, Illustrator, After Effects</li>
-            <li><strong>🌱 Currently studying</strong>: Accessibility and full-stack development</strong></li>
-            <li><strong>❤️ Other things I find fun</strong>: Gaming, reading, cooking, and learning languages :D</li>
+            <li>
+              <strong>📦 Products I've designed</strong>: Mainly responsive web
+              apps (internal and consumer-facing), native iOS/Android mobile
+              apps, and emails. I've also dabbled in kiosk interfaces,
+              packaging/print, and digital ads.
+            </li>
+            <li>
+              <strong>💼 Fields I've worked in</strong>: B2B/SaaS, B2C, B2B2C -
+              mainly in startup environments.
+            </li>
+            <li>
+              <strong>🛠️ My toolbox</strong>: Figma, HTML, CSS, JavaScript,
+              React, Photoshop, Illustrator, After Effects
+            </li>
+            <li>
+              <strong>🌱 Currently studying</strong>: Accessibility and
+              full-stack development
+            </li>
+            <li>
+              <strong>❤️ Other things I find fun</strong>: Gaming, reading,
+              cooking, and learning languages :D
+            </li>
           </ul>
-				</div>
+        </div>
 
-  			<a rel="noreferrer noopener" href="/homepage/cv-resume.pdf" type="application/pdf" class="button" id="cv-resume-button">
+        <a
+          rel="noreferrer noopener"
+          href="/homepage/cv-resume.pdf"
+          type="application/pdf"
+          class="button"
+          id="cv-resume-button"
+        >
           View my résumé (PDF)
         </a>
-
       </main>
+
+      <footer>
+        <img
+          loading="lazy"
+          src="/logo-favicon.svg"
+          alt="Jlangdesign logo"
+          id="footer-logo"
+        />
+        <p id="contact">
+          Want to get in touch? Message me at
+          <a
+            rel="noreferrer noopener"
+            href="mailto:langxjasmine@gmail.com"
+            class="links"
+            >langxjasmine@gmail.com</a
+          >!
+        </p>
+        <p id="copyright">© 2016 - 2025 Jasmine Lang</p>
+        <a rel="noreferrer noopener" href="#" class="button back-to-top-button">
+          Back to Top
+        </a>
+      </footer>
     </div>
   </body>
 </html>
