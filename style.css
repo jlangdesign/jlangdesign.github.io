@@ -80,7 +80,7 @@
   /********************/
   /***** GALLERY SECTION *****/
   /********************/
-  --gallery-section-name-size: 2.25rem;
+  --home-subsection-name-size: 2.25rem;
   --gallery-anchor-border: 1px solid rgb(var(--secondary-color));
   --gallery-anchor-name-size: 1.75rem;
 
@@ -337,6 +337,22 @@ img {
   margin: auto;
 }
 
+.home-section-desc {
+  margin-bottom: var(--primary-spacing);
+}
+
+.home-subsection-title {
+  font-size: var(--home-subsection-name-size);
+  margin-top: calc(var(--primary-spacing) * 2);
+  margin-bottom: var(--primary-spacing);
+}
+
+.home-sub-subsection-title {
+  font-size: var(--gallery-anchor-name-size);
+  margin-top: var(--primary-spacing);
+  margin-bottom: var(--secondary-spacing);
+}
+
 /*|||||||||||||||||||| SLIDESHOW CONTAINER ||||||||||||||||||||*/
 #theater {
   width: 100%;
@@ -427,16 +443,6 @@ img {
   background-color: rgb(255, 255, 255, 0.05);
   border-radius: var(--button-border-radius);
   box-sizing: border-box;
-}
-
-.gallery-section-title {
-  font-size: var(--gallery-section-name-size);
-  margin-top: calc(var(--primary-spacing) * 2);
-  margin-bottom: var(--primary-spacing);
-}
-
-.gallery-section-desc {
-  margin-bottom: var(--primary-spacing);
 }
 
 /* Subcontainer containing Gallery matrix */
@@ -568,10 +574,6 @@ footer {
 /*|||||||||||||||||||| PROJECT STORIES ||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||||*/
-/* Banner on top */
-.header-img {
-}
-
 /* Name of project at the top */
 .project-name {
   margin-top: var(--heading-top-padding);
@@ -581,10 +583,12 @@ footer {
 /* Short description/subtitle below the project name */
 .subtitle {
   font-size: var(--subtitle-size);
+  font-weight: 400;
+  font-family: var(--heading-font);
+  line-height: 1.3;
   margin: 0px;
   margin-top: var(--secondary-spacing);
   margin-bottom: var(--secondary-spacing);
-  font-weight: 400;
 }
 
 .subtitle + .grid-anchor-tag-container {
@@ -647,10 +651,6 @@ footer {
 .return-button {
   width: 100%;
   margin-top: 72px;
-}
-
-/* Hover state for return button */
-.return-button:hover {
 }
 
 /* Links in the Links section */
@@ -724,10 +724,6 @@ iframe {
   width: 33.333%;
 }
 
-/* Anchor that allows you to jump to the different sub sections */
-.section-sub-tab {
-}
-
 /* Add fade transition between pages on the site so the change is less abrupt */
 @view-transition {
   navigation: auto;
@@ -795,7 +791,7 @@ iframe {
 @media (max-width: 768px) {
   :root {
     --heading-font-size: 2.25rem;
-    /* --gallery-section-name-size: 28px; */
+    /* --home-subsection-name-size: 28px; */
     --top-nav-padding-left-right: var(--secondary-spacing);
     --footer-padding: var(--primary-spacing) var(--secondary-spacing);
 
@@ -843,10 +839,6 @@ iframe {
 
   #game-name {
     margin: 0px 0px 10px 0px;
-  }
-
-  #welcome {
-    /* padding-top: 110px; */
   }
 
   .grid-anchor {
