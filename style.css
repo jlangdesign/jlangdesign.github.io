@@ -128,7 +128,7 @@ body {
 }
 
 /* Main content (content outside of topnav and footer) */
-.main-content {
+#main-content {
   padding: var(--main-content-padding);
   max-width: var(--max-line-length);
   margin: auto;
@@ -206,14 +206,13 @@ figure {
 }
 
 img {
-  color: white; /* For alt text */
+  color: var(--font-color); /* For alt text */
   font-family: var(--body-font); /* For alt text */
 }
 
 /* Formatting for text in anchors */
 .links {
   /* Can't use shorthand for Safari */
-  /* text-decoration: underline rgb(var(--secondary-color)) 2px; */
   text-decoration-line: underline;
   text-decoration-color: rgb(var(--secondary-color));
   text-decoration-thickness: 1px;
@@ -278,6 +277,32 @@ img {
   color: rgb(var(--secondary-color));
 }
 
+/* Skip to main content link for accessibility */
+.skip-to-content {
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: fixed;
+  z-index: 999;
+  margin: var(--secondary-spacing);
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.skip-to-content:visited {
+  color: rgb(var(--tertiary-color));
+}
+
+.skip-to-content:focus {
+  height: auto;
+  width: auto;
+  clip: auto;
+  color: rgb(var(--tertiary-color));
+  background-color: var(--font-color);
+  border-color: rgb(var(--tertiary-color));
+}
+
 /* Container with square JL logo and the "Jasmine Lang" text */
 #logo-box {
   display: flex;
@@ -286,9 +311,7 @@ img {
   justify-content: center;
 }
 
-/* Glowing hover state of logo */
-#logo-box:hover {
-  filter: drop-shadow(0 0 10px rgb(var(--secondary-color)));
+#logo-box:hover #logo-name {
   color: rgb(var(--secondary-color));
 }
 
@@ -314,6 +337,11 @@ img {
 
 .top-nav-tab {
   padding: var(--top-nav-tab-padding);
+}
+
+#logo-box:focus #logo-name,
+.top-nav-tab:focus {
+  color: rgb(var(--secondary-color));
 }
 
 /*||||||||||||||||||||||||||||||||||||||||*/
